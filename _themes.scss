@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: dark) {
+   :root{
+      --background:rgb(13, 8, 14);
+      --background-20:rgb(13, 8, 14, 0.2);
+      --textcolor:rgb(255, 255, 255);
+      --textcolor-20:rgb(243, 234, 224, 0.2);
+   
+   }
+}
+
+@media (prefers-color-scheme: light){
+:root {
+      --background: rgb(255, 255, 255);
+      --background-20: rgba(255, 255, 255, 0.2);
+      --textcolor: rgb(13, 8, 14);
+      --textcolor-20: rgb(13, 8, 14, 0.2);
+   }
+}

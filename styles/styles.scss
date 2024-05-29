@@ -284,8 +284,8 @@ nav {
             width: 42px;
             z-index: 1;
             background-color: var(--textcolor);
-            -webkit-mask: url(assets/SVG/camod-logo-black.svg) no-repeat center;
-            mask: url(assets/SVG/camod-logo-black.svg) no-repeat center;
+            -webkit-mask: url(/assets/SVG/camod-logo-black.svg) no-repeat center;
+            mask: url(/assets/SVG/camod-logo-black.svg) no-repeat center;
          }
       }
 

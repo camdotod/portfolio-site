@@ -28,13 +28,13 @@ const html = document.documentElement;
 if (window.matchMedia('(prefers-color-scheme:dark)')) {
   html.classList.add("dark");
   toggleThemeButton.innerHTML = `
-  <span class="material-icons">light_mode</span>
+  <span class="material-icons" aria-hidden="true">light_mode</span>
   `;
 }
 else {
   html.classList.add("light");
   toggleThemeButton.innerHTML = `
-  <span class="material-icons">dark_mode</span>
+  <span class="material-icons" aria-hidden="true">dark_mode</span>
   `;
 }
 
@@ -48,12 +48,12 @@ toggleThemeButton.addEventListener("click", (event) => {
 
   if (html.classList.contains("dark")) {
     toggleThemeButton.innerHTML = `
-  <span class="material-icons">light_mode</span>
+  <span class="material-icons" aria-hidden="true">light_mode</span>
   `;
   }
   else {
     toggleThemeButton.innerHTML = `
-  <span class="material-icons">dark_mode</span>
+  <span class="material-icons" aria-hidden="true">dark_mode</span>
   `;
   }
 });

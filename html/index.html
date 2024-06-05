@@ -29,9 +29,9 @@
 <body class="body">
     <header id="header" class="body--section_header section">
         <nav id="nav-bar" class="navigation">
-            <a id="link-about-me" class="section--link_with-icon_lg" href="#about-me-anchor" tabindex="0">
+            <a id="link-about-me" class="section--link_with-icon_lg" href="#about-me-anchor" tabindex="0" aria-label="Camryn O'Donnell Home">
                 <span id="camod-logo"></span>
-                <p id="camod-name" class="section--heading_lg">Camryn O'Donnell</p>
+                <p aria-hidden="true" id="camod-name" class="section--heading_lg">Camryn O'Donnell</p>
             </a>
             <a id="link-portfolio" class="section--link section--heading_sm" href="#portfolio-anchor"
                 tabindex="0">portfolio</a>
@@ -68,7 +68,7 @@
                         cooking. I also enjoy playing video games & tabletop RPGs with friends!
                     </p>
                     <div id="about-me-content-link" class="section--link_button">
-                        <p class="link-button--label">Resume/CV:</p>
+                        <p class="link-button--label">Resumé/CV:</p>
                         <a id="download-resume" class="section--link-button link-button"
                             href="assets\documents\Camryn-ODonnell_Resume.pdf" download="Camryn-ODonnell_Resume" tabindex="0">
                             <span aria-hidden="true" class="material-icons ">download</span>
@@ -91,14 +91,14 @@
             </div>
             <!--Portfolio Items:-->
             <div class="section--container_column">
-                <div id="portfolio-content" class="section--container_columns_border-bottom">
+                <div id="portfolio-content" class="section--container_column_border-bottom">
                     <script src="/scripts/portfolioItems.js"></script>
                     <noscript>
                         This browser does not support JavaScript. Feel free to download my portfolio below.
                     </noscript>
                 </div>
-                <p id="coming-soon" class="section--heading_sm section--paragraph_centered">&#128295; More projects
-                    coming soon! &#128295;</p>
+                <p id="coming-soon" class="section--heading_sm section--paragraph_centered"><span aria-hidden="true">&#128295;</span> More projects
+                    coming soon! <span aria-hidden="true">&#128295;</span></p>
                 <!--Link to detailed portfolio-->
                 <div id="portfolio-link" class="section--link_bg-box">
                     <p class="link-button--label_sm">If you'd like a more in-depth look at my process, feel free to
@@ -114,7 +114,7 @@
         </section>
         <!--Contact-->
         <section id="contact" aria-label="Contact" class="body--section_contact section">
-            <h2 class="section--heading_lg"><span class="sr-only">Contact</span>Interested in my work?</h2>
+            <h2 class="section--heading_lg"><span class="sr-only">Contact: </span>Interested in my work?</h2>
 
             <div class="section--container_row_space-between">
                 <p class="section--heading_sm">Feel free to contact me!</p>
@@ -132,7 +132,7 @@
         </section>
     </main>
     <footer class="body--section_footer">
-        <button id="toggle-theme" class="toggle-button" tabindex="0"></button>
+        <button id="toggle-theme" aria-label="Toggle Light/Dark Mode" class="toggle-button" tabindex="0"></button>
         <p class="section--paragraph">Designed and Developed by Camryn O'Donnell</p>
     </footer>
 </body>

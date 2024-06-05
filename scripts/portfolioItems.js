@@ -98,15 +98,13 @@ projects.forEach((project) => {
    <summary id="${id}_summary" class="portfolio-item--header">
       <h3 id="${id}_title" class="portfolio-item--name">${project.name}<span class="sr-only">.</span>
       </h3>
-      <p id="${id}_date" class="portfolio-item--date"><span class="sr-only">Date: </span>${project.date}<span
-            class="sr-only">.</span>
+      <p id="${id}_date" class="portfolio-item--date"><span class="sr-only">Date: </span>${project.date}<span class="sr-only">.</span>
       </p>
       <div id="${id}_tags" class="portfolio-item--taglist">
          <span class="sr-only">Tags:</span>
          <p class="portfolio-item--tag">${tags[0]}</p>
          <span class="sr-only">,</span>
          <p class="portfolio-item--tag">${tags[1]}</p>
-         <span class="sr-only">.</span>
       </div>
       <span id="${id}_toggle-button" class="material-icons md-36 portfolio-item--accordion-button"
          aria-hidden="true">expand_more</span>

@@ -38,7 +38,6 @@
             <a id="link-contact" class="section--link section--heading_sm" href="#contact" tabindex="0">contact</a> 
         </nav>
     </header>
-    <button id="toggle-theme" class="body--toggle-button" tabindex="0"></button>
     <main>
         <!--About Me-->
         <section id="about-me" aria-label="About Me" class="body--section_about-me section">
@@ -71,7 +70,7 @@
                     <div id="about-me-content-link" class="section--link_button">
                         <p class="link-button--label">Resume/CV:</p>
                         <a id="download-resume" class="section--link-button link-button"
-                            href="https://fonts.google.com/icons">
+                            href="assets\documents\Camryn-ODonnell_Resume.pdf" download="Camryn-ODonnell_Resume" tabindex="0">
                             <span aria-hidden="true" class="material-icons ">download</span>
                             Download<span class="sr-only">Resume</span>
                         </a>
@@ -93,7 +92,7 @@
             <!--Portfolio Items:-->
             <div class="section--container_column">
                 <div id="portfolio-content" class="section--container_columns_border-bottom">
-                    <script src="/scripts/portfolioItem.js"></script>
+                    <script src="/scripts/portfolioItems.js"></script>
                     <noscript>
                         This browser does not support JavaScript. Feel free to download my portfolio below.
                     </noscript>
@@ -106,7 +105,7 @@
                         download my
                         portfolio here!
                     </p>
-                    <a id="download-portfolio" class="link-button" href="https://fonts.google.com/icons">
+                    <a id="download-portfolio" class="link-button" href="https://drive.google.com/file/d/1jjbdRse7Gbk-tiKkPJfSCeMcG1G8YarI/view" title="Google Drive: Camryn O'Donnell - Portfolio" tabindex="0" target="_blank">
                         <span aria-hidden="true" class="material-icons ">download</span>
                         Download<span class="sr-only">Portfolio</span>
                     </a>
@@ -120,11 +119,11 @@
             <div class="section--container_row_space-between">
                 <p class="section--heading_sm">Feel free to contact me!</p>
                 <div class="section--container_row">
-                    <a id="email" class="section--link_with-icon " href="mailto:camryn.odonnell@gmail.com">
+                    <a id="email" class="section--link_with-icon " href="mailto:camryn.odonnell@gmail.com" tabindex="0" target="_blank">
                         <span aria-hidden="true" class="material-icons green">mail_outline</span>
                         <span class="section--heading_md green">Email</span>
                     </a>
-                    <a id="linkedin" class="section--link_with-icon" href="404.html">
+                    <a id="linkedin" class="section--link_with-icon" href="https://www.linkedin.com/in/camryn-odonnell/" tabindex="0" target="_blank">
                         <span aria-hidden="true" class="material-icons blue">work_outline</span>
                         <span class="section--heading_md blue">LinkedIn</span>
                     </a>
@@ -133,6 +132,7 @@
         </section>
     </main>
     <footer class="body--section_footer">
+        <button id="toggle-theme" class="toggle-button" tabindex="0"></button>
         <p class="section--paragraph">Designed and Developed by Camryn O'Donnell</p>
     </footer>
 </body>

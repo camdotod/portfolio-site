@@ -22,3 +22,21 @@ $theme-map-dark: (
    $--green: #826a0d,
    $--yellow: #e3a327
 );
+
+$theme-map-desktop: (
+   $--font-size-xl: calc((64 / 16) * 1rem),
+   $--font-size-l: calc((36 / 16) * 1rem),
+   $--font-size-m: calc((24 / 16) * 1rem),
+   $--font-size-s: calc((20 / 16) * 1rem),
+   $--font-size-xs: calc((16 / 16) * 1rem),
+   $--padding-body: 5rem
+);
+
+$theme-map-mobile: (
+   $--font-size-xl: calc((48 / 16) * 1rem),
+   $--font-size-l: calc((24 / 16) * 1rem),
+   $--font-size-m: calc((20 / 16) * 1rem),
+   $--font-size-s: calc((18 / 16) * 1rem),
+   $--font-size-xs: calc((16 / 16) * 1rem),
+   $--padding-body: 2.5rem,
+);

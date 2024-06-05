@@ -4,6 +4,7 @@
 
 //Sass command: sass --watch styles\styles.scss:styles\styles.css
 
+// Themes
 @media (prefers-color-scheme: light) {
    :root {
       @include spread-map($theme-map-light);
@@ -16,28 +17,27 @@
    }
 }
 
+.light {
+   @include spread-map($theme-map-light);
+}
+
+.dark {
+   @include spread-map($theme-map-dark);
+}
+
+// Variables
 :root {
    color-scheme: light dark;
-   --font-size-xl: calc((64 / 16) * 1rem);
-
-   --font-size-l: calc((36 / 16) * 1rem);
-
-   --font-size-m: calc((24 / 16) * 1rem);
-
-   --font-size-s: calc((20 / 16) * 1rem);
-
-   --font-size-xs: calc((16 / 16) * 1rem);
-
-   --padding-body: 5rem;
+   @include spread-map($theme-map-desktop);
 
    .material-icons.md-36 {
       font-size: 36px;
    }
 
    font-family: "IBM Plex Sans", "Inter", "Arial", sans-serif;
-   color: var(--textColor);
 }
 
+// Media Queries
 @media screen and (max-width: 800px) {
    :root {
       --padding-body: 2.5rem;
@@ -71,15 +71,7 @@
 
 @media screen and (max-width: 580px) {
    :root {
-      --font-size-xl: calc((48 / 16) * 1rem);
-
-      --font-size-l: calc((24 / 16) * 1rem);
-
-      --font-size-m: calc((20 / 16) * 1rem);
-
-      --font-size-s: calc((18 / 16) * 1rem);
-
-      --font-size-xs: calc((16 / 16) * 1rem);
+      @include spread-map($theme-map-mobile);
    }
 
    body {
@@ -89,22 +81,16 @@
          padding-left: 0 !important;
          overflow: hidden;
       }
+
+      .section--avatar {
+         img {
+            width: 200px !important;
+         }
+      }
    }
 }
 
-* {
-   box-sizing: border-box;
-}
-
-.light {
-   @include spread-map($theme-map-light);
-}
-
-.dark {
-   @include spread-map($theme-map-dark);
-}
-
-/*Styles*/
+// Mixes
 .sr-only {
    position: absolute;
    left: -10000px;
@@ -112,15 +98,6 @@
    width: 1px;
    height: 1px;
    overflow: hidden;
-}
-
-.push {
-   margin-left: auto;
-}
-
-.heading3 {
-   font-size: var(--font-size-m);
-   font-weight: 600;
 }
 
 .red {
@@ -139,16 +116,7 @@
    color: var(--yellow);
 }
 
-.focus-link {
-   &:focus {
-      background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
-   }
-
-   &:focus-visible {
-      outline: 2px solid var(--textColor);
-      outline-offset: 0.25em;
-   }
-}
+// Animations
 
 @keyframes press {
    from {
@@ -159,7 +127,11 @@
       scale: 1;
    }
 }
-/*Elements*/
+
+//Elements
+* {
+   box-sizing: border-box;
+}
 
 h1,
 h2,
@@ -169,31 +141,13 @@ p {
    margin: 0;
 }
 
+// Classes
 .body {
    display: flex;
    flex-direction: column;
    margin: 0;
    background-color: var(--backgroundColor);
-
-   &--toggle-button {
-      position: fixed;
-      bottom: 5rem;
-      right: 5rem;
-      color: var(--backgroundColor);
-      background-color: var(--textColor);
-      border: none;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 2rem;
-      z-index: 3;
-      
-      span{
-         margin: 0;
-         padding: 0;
-         font-size: var(--font-size-l);
-      }
-          
-   }
+   color: var(--textColor);
 
    &--section {
       padding-left: var(--padding-body);
@@ -241,7 +195,18 @@ p {
 
       &_footer {
          @extend .body--section;
-         justify-content: flex-end;
+         justify-content: space-between;
+         align-items: baseline;
+      }
+
+      &_error {
+         @extend .body--section;
+         gap: 2.5rem;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: 50vh;
       }
    }
 }
@@ -432,8 +397,8 @@ p {
          gap: 1rem;
 
          &:hover {
+            background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
             text-decoration: none;
-            background-color: var(--textColor);
          }
 
          &_lg {
@@ -497,6 +462,28 @@ p {
       &_sm {
          font-size: var(--font-size-xs);
       }
+   }
+}
+
+.toggle-button {
+   color: var(--backgroundColor);
+   background-color: var(--textColor);
+   border: none;
+   width: calc(var(--font-size-l) + 1.5rem);
+   height: calc(var(--font-size-l) + 1.5rem);
+   border-radius: calc((var(--font-size-l) + 1.5rem) / 2);
+   z-index: 3;
+   flex-shrink: 0;
+
+   span {
+      margin: 0;
+      padding: 0;
+      font-size: var(--font-size-l);
+   }
+
+   &:focus {
+      outline: 2px solid var(--textColor);
+      outline-offset: 3px;
    }
 }
 
@@ -674,25 +661,5 @@ p {
    &--video {
       width: 100%;
       height: 600px;
-   }
-}
-
-//404 Error Page
-#error {
-   display: flex;
-   flex-direction: column;
-   gap: 2.5rem;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   height: 80vh;
-
-   h2 {
-      font-size: 120px;
-      font-weight: normal;
-   }
-
-   p {
-      font-size: var(--font-size-l);
    }
 }

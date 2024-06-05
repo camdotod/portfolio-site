@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
    <!--Meta Tags-->
@@ -26,28 +26,28 @@
       rel="stylesheet">
 </head>
 
-<body>
-   <header id="header" class="padding-sides">
-      <nav id="nav-bar">
-         <a id="link-about-me" class="focus-link" href="/#about-me" tabindex="0">
-            <img id="link-about-me-logo" src="./camod-logo-white@2x.png">
-            <span id="link-about-me-text">Camryn O'Donnell</span>
+<body class="body">
+   <header id="header" class="body--section_header section">
+      <nav id="nav-bar" class="navigation">
+         <a id="link-about-me" class="section--link_with-icon_lg" href="index.html" tabindex="0">
+            <span id="camod-logo"></span>
+            <p id="camod-name" class="section--heading_lg">Camryn O'Donnell</p>
          </a>
-         <!--<button id="menu-button"class="material-symbols-outlined" tab-index="0">menu</button>-->
-         <a id="link-portfolio" class="focus-link" href="/#portfolio" tabindex="0">portfolio</a>
-         <a id="link-contact" class="focus-link" href="#contact" tabindex="0">contact</a>
+         <a id="link-portfolio" class="section--link section--heading_sm" href="index.html#portfolio-anchor"
+            tabindex="0">portfolio</a>
+         <a id="link-contact" class="section--link section--heading_sm" href="index.html#contact" tabindex="0">contact</a>
       </nav>
    </header>
    <main>
-      <section id="error">
-         <h2>404</h2>
-         <p>Sorry! Looks like that page wasn't found.</p>
+      <section id="error-message" class="body--section_error">
+         <h2 class="section--heading_xl">404</h2>
+         <p class="section--heading_md">Sorry! Looks like that page wasn't found.</p>
       </section>
    </main>
-   <footer class="padding-sides">
-      <p>Designed and Developed by Camryn O'Donnell</p>
+   <footer class="body--section_footer">
+      <button id="toggle-theme" class="toggle-button" tabindex="0"></button>
+      <p class="section--paragraph">Designed and Developed by Camryn O'Donnell</p>
    </footer>
 </body>
 <script src="/scripts/script.js"></script>
-
 </html>

@@ -1,36 +1,33 @@
-//$red: rgb(193, 72, 31);
-//$blue: rgb(115, 149, 181);
-//$green: rgb(130, 106, 13);
-//$yellow: rgb(227, 163, 39);
+//Colors
 $--textColor: --textColor;
-$--textColor-20:--textColor-20;
+$--textColor-20: --textColor-20;
 $--backgroundColor: --backgroundColor;
-$--backgroundColor-20:--backgroundColor-20;
+$--backgroundColor-20: --backgroundColor-20;
 $--red: --red;
 $--blue: --blue;
 $--green: --green;
 $--yellow: --yellow;
 
+//Fonts
+$--font-size-xl: --font-size-xl;
+$--font-size-l: --font-size-l;
+$--font-size-m: --font-size-m;
+$--font-size-s: --font-size-s;
+$--font-size-xs: --font-size-xs;
+
+//Layout
+$--padding-body: --padding-body;
 
 @mixin font-size($size) {
    @if $size==xl {
-      font-size: calc((48/16)*1rem);
-   }
-
-   @else if $size ==l {
-      font-size: calc((24/16)*1rem);
-   }
-
-   @else if $size ==m {
-      font-size: calc((20/16)*1rem);
-   }
-
-   @else if $size==s {
-      font-size: calc((14/16)*1rem);
-   }
-
-   @else {
+      font-size: calc((48 / 16) * 1rem);
+   } @else if $size ==l {
+      font-size: calc((24 / 16) * 1rem);
+   } @else if $size ==m {
+      font-size: calc((20 / 16) * 1rem);
+   } @else if $size==s {
+      font-size: calc((14 / 16) * 1rem);
+   } @else {
       font-size: initial;
    }
-
 }

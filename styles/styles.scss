@@ -1,18 +1,32 @@
 @import "variables";
 @import "themes";
+@import "mixin";
 
+//Sass command: sass --watch styles\styles.scss:styles\styles.css
+
+@media (prefers-color-scheme: light) {
+   :root {
+      @include spread-map($theme-map-light);
+   }
+}
+
+@media (prefers-color-scheme: dark) {
+   :root {
+      @include spread-map($theme-map-dark);
+   }
+}
 
 :root {
    color-scheme: light dark;
-   --font-size-xl: calc((64/16)*1rem);
+   --font-size-xl: calc((64 / 16) * 1rem);
 
-   --font-size-l: calc((36/16)*1rem);
+   --font-size-l: calc((36 / 16) * 1rem);
 
-   --font-size-m: calc((24/16)*1rem);
+   --font-size-m: calc((24 / 16) * 1rem);
 
-   --font-size-s: calc((20/16)*1rem);
+   --font-size-s: calc((20 / 16) * 1rem);
 
-   --font-size-xs: calc((16/16)*1rem);
+   --font-size-xs: calc((16 / 16) * 1rem);
 
    --padding-body: 5rem;
 
@@ -20,18 +34,15 @@
       font-size: 36px;
    }
 
-   font-family: 'IBM Plex Sans',
-   'Inter',
-   'Arial',
-   sans-serif;
-   color: var(--textcolor);
+   font-family: "IBM Plex Sans", "Inter", "Arial", sans-serif;
+   color: var(--textColor);
 }
 
-@media screen and (max-width:800px) {
-   :root{
+@media screen and (max-width: 800px) {
+   :root {
       --padding-body: 2.5rem;
    }
-   
+
    body {
       .portfolio-item--container_responsive-grid {
          display: flex;
@@ -39,7 +50,7 @@
          width: 100%;
          gap: 2.5rem;
          margin-bottom: 5em;
-         box-sizing: "border-box",
+         box-sizing: "border-box";
       }
 
       .portfolio-item--image_hero {
@@ -60,15 +71,15 @@
 
 @media screen and (max-width: 580px) {
    :root {
-      --font-size-xl: calc((48/16)*1rem);
+      --font-size-xl: calc((48 / 16) * 1rem);
 
-      --font-size-l: calc((24/16)*1rem);
+      --font-size-l: calc((24 / 16) * 1rem);
 
-      --font-size-m: calc((20/16)*1rem);
+      --font-size-m: calc((20 / 16) * 1rem);
 
-      --font-size-s: calc((18/16)*1rem);
+      --font-size-s: calc((18 / 16) * 1rem);
 
-      --font-size-xs: calc((16/16)*1rem);
+      --font-size-xs: calc((16 / 16) * 1rem);
    }
 
    body {
@@ -83,6 +94,14 @@
 
 * {
    box-sizing: border-box;
+}
+
+.light {
+   @include spread-map($theme-map-light);
+}
+
+.dark {
+   @include spread-map($theme-map-dark);
 }
 
 /*Styles*/
@@ -105,28 +124,28 @@
 }
 
 .red {
-   color: $red;
+   color: var(--red);
 }
 
 .green {
-   color: $green;
+   color: var(--green);
 }
 
 .blue {
-   color: $blue;
+   color: var(--blue);
 }
 
 .yellow {
-   color: $yellow;
+   color: var(--yellow);
 }
 
 .focus-link {
    &:focus {
-      background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textcolor-20) 50%);
+      background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
    }
 
    &:focus-visible {
-      outline: 2px solid var(--textcolor);
+      outline: 2px solid var(--textColor);
       outline-offset: 0.25em;
    }
 }
@@ -137,7 +156,7 @@
    }
 
    to {
-      scale: 1.0;
+      scale: 1;
    }
 }
 /*Elements*/
@@ -150,12 +169,31 @@ p {
    margin: 0;
 }
 
-
 .body {
    display: flex;
    flex-direction: column;
    margin: 0;
-   background-color: var(--background);
+   background-color: var(--backgroundColor);
+
+   &--toggle-button {
+      position: fixed;
+      bottom: 5rem;
+      right: 5rem;
+      color: var(--backgroundColor);
+      background-color: var(--textColor);
+      border: none;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 2rem;
+      z-index: 3;
+      
+      span{
+         margin: 0;
+         padding: 0;
+         font-size: var(--font-size-l);
+      }
+          
+   }
 
    &--section {
       padding-left: var(--padding-body);
@@ -175,8 +213,8 @@ p {
          z-index: 1;
          top: 0;
 
-         background-color: var(--background);
-         border-bottom: 1px solid var(--textcolor);
+         background-color: var(--backgroundColor);
+         border-bottom: 1px solid var(--textColor);
       }
 
       &_about-me {
@@ -198,7 +236,7 @@ p {
          @extend .body--section;
          flex-direction: column;
          padding-top: 2.5rem;
-         border-top: 1px solid var(--textcolor);
+         border-top: 1px solid var(--textColor);
       }
 
       &_footer {
@@ -246,12 +284,12 @@ p {
    }
 
    &--container {
-      &_row{
+      &_row {
          display: flex;
          gap: 1rem;
          flex-wrap: wrap;
 
-         &_space-between{
+         &_space-between {
             display: flex;
             gap: 1.5rem;
             justify-content: space-between;
@@ -271,7 +309,7 @@ p {
             display: flex;
             flex-direction: column;
             width: 100%;
-            border-bottom: 1px solid var(--textcolor);
+            border-bottom: 1px solid var(--textColor);
          }
       }
 
@@ -328,7 +366,7 @@ p {
 
    &--paragraph {
       font-size: 1rem;
-      &_centered{
+      &_centered {
          align-self: center;
          text-align: center;
       }
@@ -341,7 +379,7 @@ p {
       height: fit-content;
       margin-left: auto;
 
-      border: 2px dotted $yellow;
+      border: 2px dotted var(--yellow);
 
       animation: fade-in-right;
       animation-duration: 800ms;
@@ -350,7 +388,7 @@ p {
    &--link {
       width: fit-contents;
       text-decoration: none;
-      color: var(--textcolor);
+      color: var(--textColor);
 
       &:hover {
          text-decoration: underline;
@@ -361,11 +399,11 @@ p {
       }
 
       &:focus {
-         background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textcolor-20) 50%);
+         background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
       }
 
       &:focus-visible {
-         outline: 2px solid var(--textcolor);
+         outline: 2px solid var(--textColor);
          outline-offset: 0.25em;
       }
 
@@ -383,7 +421,7 @@ p {
          justify-content: center;
          padding: 2rem 4rem;
          gap: 2.5rem;
-         background-color: var(--background);
+         background-color: var(--backgroundColor);
          filter: invert(5%);
       }
 
@@ -393,11 +431,10 @@ p {
          align-items: center;
          gap: 1rem;
 
-            &:hover{
-               text-decoration: none;
-               background-color: var(--textcolor);
-
-            }
+         &:hover {
+            text-decoration: none;
+            background-color: var(--textColor);
+         }
 
          &_lg {
             @extend .section--link;
@@ -411,11 +448,10 @@ p {
             font-size: var(--font-size-l);
             text-decoration: none;
 
-
             span {
                height: 40px;
                width: 42px;
-               background-color: var(--textcolor);
+               background-color: var(--textColor);
                -webkit-mask: url(/assets/SVG/camod-logo-black.svg) no-repeat center;
                mask: url(/assets/SVG/camod-logo-black.svg) no-repeat center;
             }
@@ -430,8 +466,8 @@ p {
    gap: 6px;
    padding: 0.5rem 1rem;
    height: fit-content;
-   background-color: $red;
-   color: var(--textcolor);
+   background-color: var(--red);
+   color: var(--backgroundColor);
    font-size: var(--font-size-s);
 
    text-decoration: none;
@@ -442,17 +478,16 @@ p {
    }
 
    &:active {
-      color: inherit;
       scale: 0.9;
       transition: all 100ms;
    }
 
    &:focus {
-      outline: 2px solid var(--textcolor);
+      outline: 2px solid var(--textColor);
    }
 
    &:focus-visible {
-      outline: 2px solid var(--textcolor);
+      outline: 2px solid var(--textColor);
       animation: press 0.5s ease;
    }
 
@@ -489,16 +524,16 @@ p {
       justify-content: flex-start;
       align-items: baseline;
       position: relative;
-      border-top: 1px solid var(--textcolor);
+      border-top: 1px solid var(--textColor);
 
       cursor: pointer;
 
       &:focus {
-         background-color: var(--textcolor-20);
+         background-color: var(--textColor-20);
       }
 
       &:focus-visible {
-         outline: 3px solid $yellow;
+         outline: 3px solid var(--yellow);
       }
    }
 
@@ -554,7 +589,7 @@ p {
       flex-direction: column;
       padding-bottom: 5rem;
       overflow: hidden;
-      border-bottom: 1px solid var(--textcolor);
+      border-bottom: 1px solid var(--textColor);
    }
 
    &--container {
@@ -586,13 +621,13 @@ p {
       &_objective {
          @extend .portfolio-item--description;
          flex: 1;
-         min-width: 300px,
+         min-width: 300px;
       }
 
       &_summary {
          @extend .portfolio-item--description;
          flex: 2;
-         min-width: 300px,
+         min-width: 300px;
       }
 
       &_figure {

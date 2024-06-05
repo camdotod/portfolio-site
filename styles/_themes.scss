@@ -1,18 +1,24 @@
-@media (prefers-color-scheme: dark) {
-   :root{
-      --background:rgb(13, 8, 14);
-      --background-20:rgb(13, 8, 14, 0.2);
-      --textcolor:rgb(255, 255, 255);
-      --textcolor-20:rgb(243, 234, 224, 0.2);
-   
-   }
-}
+@import "variables";
+@import "mixin";
 
-@media (prefers-color-scheme: light){
-:root {
-      --background: rgb(255, 255, 255);
-      --background-20: rgba(255, 255, 255, 0.2);
-      --textcolor: rgb(13, 8, 14);
-      --textcolor-20: rgb(13, 8, 14, 0.2);
-   }
-}
+$theme-map-light: (
+   $--textColor: rgb(13, 8, 14),
+   $--textColor-20: rgb(13, 8, 14, 0.2),
+   $--backgroundColor: rgb(255, 255, 255),
+   $--backgroundColor-20: rgb(243, 234, 224, 0.2),
+   $--red: #c1481f,
+   $--blue: #4575a5,
+   $--green: #957a0f,
+   $--yellow: #9c6c0d
+);
+
+$theme-map-dark: (
+   $--textColor: rgb(255, 255, 255),
+   $--textColor-20: rgb(243, 234, 224, 0.2),
+   $--backgroundColor: rgb(13, 8, 14),
+   $--backgroundColor-20: rgb(13, 8, 14, 0.2),
+   $--red: #d55130,
+   $--blue: #628bb3,
+   $--green: #826a0d,
+   $--yellow: #e3a327
+);

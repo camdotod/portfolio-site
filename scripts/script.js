@@ -5,40 +5,58 @@ let accBtn = document.getElementsByClassName("portfolio-item--accordion-button")
 for (let i = 0; i < details.length; i++) {
   details[i].addEventListener("toggle", (event) => {
     console.log(accBtn[i]);
-    if (details[i].open){
+    if (details[i].open) {
       accBtn[i].classList.add("portfolio-item--accordion-button_active");
-      details[i].ariaLabel= "Expanded";
+      details[i].ariaLabel = "Expanded";
       console.log("Change to X");
     }
 
-    else{
+    else {
       accBtn[i].classList.remove("portfolio-item--accordion-button_active");
-      details[i].ariaLabel= "Collapsed";
+      details[i].ariaLabel = "Collapsed";
       console.log("Change to +");
     }
 
   });
 }
 
-//Handle Tool Tips
-const tooltips = document.querySelectorAll('.tool-tip');
-const tooltipsText = document.querySelectorAll('.tool-tip-text')
 
-for (let i = 0; i < tooltips.length; i++) {
-  tooltips[i].addEventListener("mouseover", (event) => {
-    console.log("Mouseover Detected");
-    console.log(event.clientX + " " + event.clientY);
-    var x = (event.clientX) + 'px',
-      y = (event.clientY) + 'px';
+const toggleThemeButton = document.getElementById("toggle-theme");
+const html = document.documentElement;
+("toggle-theme");
 
-    tooltipsText[i].style.top = y;
-    tooltipsText[i].style.left = x;
-  });
+if (window.matchMedia('(prefers-color-scheme:dark)')) {
+  html.classList.add("dark");
+  toggleThemeButton.innerHTML = `
+  <span class="material-icons">light_mode</span>
+  `;
 }
-window.onmousemove = function (e) {
-  for (var i = 0; i < tooltips.length; i++) {
+else {
+  html.classList.add("light");
+  toggleThemeButton.innerHTML = `
+  <span class="material-icons">dark_mode</span>
+  `;
+}
+
+const toggleTheme = (element, class0, class1) => {
+  element.classList.toggle(class0);
+  element.classList.toggle(class1);
+}
+
+toggleThemeButton.addEventListener("click", (event) => {
+  toggleTheme(html, 'light', 'dark');
+
+  if (html.classList.contains("dark")) {
+    toggleThemeButton.innerHTML = `
+  <span class="material-icons">light_mode</span>
+  `;
   }
-};
+  else {
+    toggleThemeButton.innerHTML = `
+  <span class="material-icons">dark_mode</span>
+  `;
+  }
+});
 
 //Style Tag Colours
 const tags = document.getElementsByClassName('portfolio-item--tag');

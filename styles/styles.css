@@ -1,29 +1,37 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background:rgb(13, 8, 14);
-    --background-20:rgb(13, 8, 14, 0.2);
-    --textcolor:rgb(255, 255, 255);
-    --textcolor-20:rgb(243, 234, 224, 0.2);
-  }
-}
 @media (prefers-color-scheme: light) {
   :root {
-    --background: rgb(255, 255, 255);
-    --background-20: rgba(255, 255, 255, 0.2);
-    --textcolor: rgb(13, 8, 14);
-    --textcolor-20: rgb(13, 8, 14, 0.2);
+    --textColor: rgb(13, 8, 14);
+    --textColor-20: rgba(13, 8, 14, 0.2);
+    --backgroundColor: rgb(255, 255, 255);
+    --backgroundColor-20: rgba(243, 234, 224, 0.2);
+    --red: #c1481f;
+    --blue: #4575a5;
+    --green: #957a0f;
+    --yellow: #9c6c0d;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --textColor: rgb(255, 255, 255);
+    --textColor-20: rgba(243, 234, 224, 0.2);
+    --backgroundColor: rgb(13, 8, 14);
+    --backgroundColor-20: rgba(13, 8, 14, 0.2);
+    --red: #d55130;
+    --blue: #628bb3;
+    --green: #826a0d;
+    --yellow: #e3a327;
   }
 }
 :root {
   color-scheme: light dark;
-  --font-size-xl: calc((64/16)*1rem);
-  --font-size-l: calc((36/16)*1rem);
-  --font-size-m: calc((24/16)*1rem);
-  --font-size-s: calc((20/16)*1rem);
-  --font-size-xs: calc((16/16)*1rem);
+  --font-size-xl: calc((64 / 16) * 1rem);
+  --font-size-l: calc((36 / 16) * 1rem);
+  --font-size-m: calc((24 / 16) * 1rem);
+  --font-size-s: calc((20 / 16) * 1rem);
+  --font-size-xs: calc((16 / 16) * 1rem);
   --padding-body: 5rem;
   font-family: "IBM Plex Sans", "Inter", "Arial", sans-serif;
-  color: var(--textcolor);
+  color: var(--textColor);
 }
 :root .material-icons.md-36 {
   font-size: 36px;
@@ -55,11 +63,11 @@
 }
 @media screen and (max-width: 580px) {
   :root {
-    --font-size-xl: calc((48/16)*1rem);
-    --font-size-l: calc((24/16)*1rem);
-    --font-size-m: calc((20/16)*1rem);
-    --font-size-s: calc((18/16)*1rem);
-    --font-size-xs: calc((16/16)*1rem);
+    --font-size-xl: calc((48 / 16) * 1rem);
+    --font-size-l: calc((24 / 16) * 1rem);
+    --font-size-m: calc((20 / 16) * 1rem);
+    --font-size-s: calc((18 / 16) * 1rem);
+    --font-size-xs: calc((16 / 16) * 1rem);
   }
   body #camod-name {
     width: 0;
@@ -70,6 +78,28 @@
 }
 * {
   box-sizing: border-box;
+}
+
+.light {
+  --textColor: rgb(13, 8, 14);
+  --textColor-20: rgba(13, 8, 14, 0.2);
+  --backgroundColor: rgb(255, 255, 255);
+  --backgroundColor-20: rgba(243, 234, 224, 0.2);
+  --red: #c1481f;
+  --blue: #4575a5;
+  --green: #957a0f;
+  --yellow: #9c6c0d;
+}
+
+.dark {
+  --textColor: rgb(255, 255, 255);
+  --textColor-20: rgba(243, 234, 224, 0.2);
+  --backgroundColor: rgb(13, 8, 14);
+  --backgroundColor-20: rgba(13, 8, 14, 0.2);
+  --red: #d55130;
+  --blue: #628bb3;
+  --green: #826a0d;
+  --yellow: #e3a327;
 }
 
 /*Styles*/
@@ -92,26 +122,26 @@
 }
 
 .red {
-  color: rgb(193, 72, 31);
+  color: var(--red);
 }
 
 .green {
-  color: rgb(130, 106, 13);
+  color: var(--green);
 }
 
 .blue {
-  color: rgb(115, 149, 181);
+  color: var(--blue);
 }
 
 .yellow {
-  color: rgb(227, 163, 39);
+  color: var(--yellow);
 }
 
 .focus-link:focus {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 50%, var(--textcolor-20) 50%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
 }
 .focus-link:focus-visible {
-  outline: 2px solid var(--textcolor);
+  outline: 2px solid var(--textColor);
   outline-offset: 0.25em;
 }
 
@@ -136,7 +166,24 @@ p {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: var(--background);
+  background-color: var(--backgroundColor);
+}
+.body--toggle-button {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  color: var(--backgroundColor);
+  background-color: var(--textColor);
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  z-index: 3;
+}
+.body--toggle-button span {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-l);
 }
 .body--section, .body--section_footer, .body--section_contact, .body--section_portfolio, .body--section_about-me, .body--section_header {
   padding-left: var(--padding-body);
@@ -153,8 +200,8 @@ p {
   position: sticky;
   z-index: 1;
   top: 0;
-  background-color: var(--background);
-  border-bottom: 1px solid var(--textcolor);
+  background-color: var(--backgroundColor);
+  border-bottom: 1px solid var(--textColor);
 }
 .body--section_about-me {
   flex-direction: column;
@@ -170,7 +217,7 @@ p {
 .body--section_contact {
   flex-direction: column;
   padding-top: 2.5rem;
-  border-top: 1px solid var(--textcolor);
+  border-top: 1px solid var(--textColor);
 }
 .body--section_footer {
   justify-content: flex-end;
@@ -228,7 +275,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid var(--textcolor);
+  border-bottom: 1px solid var(--textColor);
 }
 .section--container_text {
   display: flex;
@@ -281,14 +328,14 @@ p {
   min-width: 230px;
   height: fit-content;
   margin-left: auto;
-  border: 2px dotted rgb(227, 163, 39);
+  border: 2px dotted var(--yellow);
   animation: fade-in-right;
   animation-duration: 800ms;
 }
 .section--link, .section--link_with-icon_lg, .section--link_with-icon {
   width: fit-contents;
   text-decoration: none;
-  color: var(--textcolor);
+  color: var(--textColor);
 }
 .section--link:hover, .section--link_with-icon_lg:hover, .section--link_with-icon:hover {
   text-decoration: underline;
@@ -297,10 +344,10 @@ p {
   opacity: 0.8;
 }
 .section--link:focus, .section--link_with-icon_lg:focus, .section--link_with-icon:focus {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 50%, var(--textcolor-20) 50%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
 }
 .section--link:focus-visible, .section--link_with-icon_lg:focus-visible, .section--link_with-icon:focus-visible {
-  outline: 2px solid var(--textcolor);
+  outline: 2px solid var(--textColor);
   outline-offset: 0.25em;
 }
 .section--link_button {
@@ -316,7 +363,7 @@ p {
   justify-content: center;
   padding: 2rem 4rem;
   gap: 2.5rem;
-  background-color: var(--background);
+  background-color: var(--backgroundColor);
   filter: invert(5%);
 }
 .section--link_with-icon {
@@ -326,7 +373,7 @@ p {
 }
 .section--link_with-icon:hover {
   text-decoration: none;
-  background-color: var(--textcolor);
+  background-color: var(--textColor);
 }
 .section--link_with-icon_lg {
   display: flex;
@@ -341,7 +388,7 @@ p {
 .section--link_with-icon_lg span {
   height: 40px;
   width: 42px;
-  background-color: var(--textcolor);
+  background-color: var(--textColor);
   -webkit-mask: url(/assets/SVG/camod-logo-black.svg) no-repeat center;
   mask: url(/assets/SVG/camod-logo-black.svg) no-repeat center;
 }
@@ -352,8 +399,8 @@ p {
   gap: 6px;
   padding: 0.5rem 1rem;
   height: fit-content;
-  background-color: rgb(193, 72, 31);
-  color: var(--textcolor);
+  background-color: var(--red);
+  color: var(--backgroundColor);
   font-size: var(--font-size-s);
   text-decoration: none;
 }
@@ -362,15 +409,14 @@ p {
   transition: all 100ms;
 }
 .link-button:active {
-  color: inherit;
   scale: 0.9;
   transition: all 100ms;
 }
 .link-button:focus {
-  outline: 2px solid var(--textcolor);
+  outline: 2px solid var(--textColor);
 }
 .link-button:focus-visible {
-  outline: 2px solid var(--textcolor);
+  outline: 2px solid var(--textColor);
   animation: press 0.5s ease;
 }
 .link-button--label {
@@ -401,14 +447,14 @@ p {
   justify-content: flex-start;
   align-items: baseline;
   position: relative;
-  border-top: 1px solid var(--textcolor);
+  border-top: 1px solid var(--textColor);
   cursor: pointer;
 }
 .portfolio-item--header:focus {
-  background-color: var(--textcolor-20);
+  background-color: var(--textColor-20);
 }
 .portfolio-item--header:focus-visible {
-  outline: 3px solid rgb(227, 163, 39);
+  outline: 3px solid var(--yellow);
 }
 .portfolio-item--name {
   font-size: var(--font-size-l);
@@ -453,7 +499,7 @@ p {
   flex-direction: column;
   padding-bottom: 5rem;
   overflow: hidden;
-  border-bottom: 1px solid var(--textcolor);
+  border-bottom: 1px solid var(--textColor);
 }
 .portfolio-item--container_rows {
   display: flex;

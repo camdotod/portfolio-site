@@ -1,7 +1,16 @@
-$red: rgb(193, 72, 31);
-$blue: rgb(115, 149, 181);
-$green: rgb(130, 106, 13);
-$yellow: rgb(227, 163, 39);
+//$red: rgb(193, 72, 31);
+//$blue: rgb(115, 149, 181);
+//$green: rgb(130, 106, 13);
+//$yellow: rgb(227, 163, 39);
+$--textColor: --textColor;
+$--textColor-20:--textColor-20;
+$--backgroundColor: --backgroundColor;
+$--backgroundColor-20:--backgroundColor-20;
+$--red: --red;
+$--blue: --blue;
+$--green: --green;
+$--yellow: --yellow;
+
 
 @mixin font-size($size) {
    @if $size==xl {

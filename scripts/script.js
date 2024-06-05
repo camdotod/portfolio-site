@@ -1,21 +1,18 @@
 //Handle Portfolio Items
 let details = document.getElementsByClassName("portfolio-item");
-let accBtn = document.getElementsByClassName("accordion-button");
+let accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
 
 for (let i = 0; i < details.length; i++) {
   details[i].addEventListener("toggle", (event) => {
-
-    details[i].classList.toggle("active");
-
     console.log(accBtn[i]);
     if (details[i].open){
-      accBtn[i].style.transform= "rotate("+ 180 + "deg)";
+      accBtn[i].classList.add("portfolio-item--accordion-button_active");
       details[i].ariaLabel= "Expanded";
       console.log("Change to X");
     }
 
     else{
-      accBtn[i].style.transform= "rotate("+ 0 + "deg)";
+      accBtn[i].classList.remove("portfolio-item--accordion-button_active");
       details[i].ariaLabel= "Collapsed";
       console.log("Change to +");
     }
@@ -44,7 +41,7 @@ window.onmousemove = function (e) {
 };
 
 //Style Tag Colours
-const tags = document.getElementsByClassName('item-tag');
+const tags = document.getElementsByClassName('portfolio-item--tag');
 for (let i = 0; i < tags.length; i++) {
   console.log(tags[i])
   if (tags[i].innerHTML === "UX/UI Design") {

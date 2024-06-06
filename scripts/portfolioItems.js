@@ -5,7 +5,7 @@ const projects = [
       date: "September 2022-April 2023",
       tags: "Design Research,Product Design",
 
-      heroimg: "/assets/Capstone Assets/CODonnell-Capstone_Hero-Shot.jpg",
+      heroimg: "/assets/Capstone Assets/Capstone-Image_0.jpg",
       heroalt: "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",
 
       objective: "To investigate if alternative forms of work, such as third spaces, could benefit delivery of psychotherapy and counselling in Ontario.",

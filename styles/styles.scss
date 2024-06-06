@@ -166,9 +166,10 @@ p {
    color: var(--textColor);
 
    &--section {
+      display: flex;
+      flex-direction: column;
       padding-left: var(--padding-body);
       padding-right: var(--padding-body);
-      display: flex;
       margin-bottom: var(--padding-body);
       gap: 2rem;
 
@@ -189,14 +190,12 @@ p {
 
       &_about-me {
          @extend .body--section;
-         flex-direction: column;
          height: fit-content;
          min-height: 100vh;
       }
 
       &_portfolio {
          @extend .body--section;
-         flex-direction: column;
          position: relative;
          align-items: center;
          padding: 0;
@@ -204,16 +203,14 @@ p {
 
       &_contact {
          @extend .body--section;
-         flex-direction: column;
          padding-top: 2.5rem;
          border-top: 1px solid var(--textColor);
          opacity: 1;
          transform: translateY(0px);
-         transition: all 400ms ease-in-out;
+         transition: transform,opacity 400ms ease-in-out;
 
          &_hidden {
             @extend .body--section;
-            flex-direction: column;
             padding-top: 2.5rem;
             border-top: 1px solid var(--textColor);
             opacity: 0;
@@ -223,14 +220,17 @@ p {
 
       &_footer {
          @extend .body--section;
+         flex-direction: row;
          justify-content: space-between;
          align-items: baseline;
+         margin-top: var(--padding-body);
+         margin-bottom: calc(var(--padding-body)/2);
+
       }
 
       &_error {
          @extend .body--section;
          gap: 2.5rem;
-         flex-direction: column;
          justify-content: center;
          align-items: center;
          width: 100%;
@@ -280,7 +280,6 @@ p {
       &_row {
          display: flex;
          gap: 1rem;
-         flex-wrap: wrap;
 
          &_space-between {
             display: flex;
@@ -319,6 +318,7 @@ p {
       height: fit-content;
       border-radius: 100px;
       overflow: visible;
+      margin-right: var(--padding-body);
 
       img {
          width: 250px;
@@ -359,6 +359,8 @@ p {
 
    &--paragraph {
       font-size: 1rem;
+      opacity: 0.8;
+
       &_centered {
          align-self: center;
          text-align: center;
@@ -392,7 +394,7 @@ p {
       }
 
       &:focus {
-         background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 50%, var(--textColor-20) 50%);
+         background: linear-gradient(to bottom, rgb(0, 0, 0, 0.0001) 60%, var(--textColor-20) 60%);
       }
 
       &:focus-visible {
@@ -678,7 +680,7 @@ p {
    &--image {
       width: 100%;
       height: auto;
-      opacity: 0.8;
+      opacity: 0.9;
       object-fit: cover;
 
       &_hero {

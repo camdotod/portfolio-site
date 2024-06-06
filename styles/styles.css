@@ -134,6 +134,16 @@
     scale: 1;
   }
 }
+@keyframes fade-in-right {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 @keyframes slide-down {
   from {
     transform: translateY(-150px);
@@ -144,12 +154,12 @@
     opacity: 1;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -427,36 +437,6 @@ p {
   font-size: var(--font-size-xs);
 }
 
-.toggle-button {
-  color: var(--backgroundColor);
-  background-color: var(--textColor);
-  border: none;
-  width: calc(var(--font-size-l) + 1.5rem);
-  height: calc(var(--font-size-l) + 1.5rem);
-  border-radius: calc((var(--font-size-l) + 1.5rem) / 2);
-  z-index: 3;
-  flex-shrink: 0;
-}
-.toggle-button span {
-  margin: 0;
-  padding: 0;
-  font-size: var(--font-size-l);
-}
-.toggle-button:focus {
-  outline: 2px solid var(--textColor);
-  outline-offset: 3px;
-}
-
-@keyframes fade-in-right {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
 .portfolio-item--header {
   display: flex;
   flex-wrap: wrap;
@@ -599,6 +579,26 @@ p {
 .figure--video {
   width: 100%;
   height: 600px;
+}
+
+.toggle-button {
+  color: var(--backgroundColor);
+  background-color: var(--textColor);
+  border: none;
+  width: calc(var(--font-size-l) + 1.5rem);
+  height: calc(var(--font-size-l) + 1.5rem);
+  border-radius: calc((var(--font-size-l) + 1.5rem) / 2);
+  z-index: 3;
+  flex-shrink: 0;
+}
+.toggle-button span {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-l);
+}
+.toggle-button:focus {
+  outline: 2px solid var(--textColor);
+  outline-offset: 3px;
 }
 
 /*# sourceMappingURL=styles.css.map */

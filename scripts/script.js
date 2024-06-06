@@ -5,11 +5,9 @@ const accBtn = document.getElementsByClassName("portfolio-item--accordion-button
 
 for (let i = 0; i < portfolioItem.length; i++) {
   portfolioItem[i].addEventListener("toggle", (event) => {
-    console.log(accBtn[i]);
     if (portfolioItem[i].open) {
       accBtn[i].classList.add("portfolio-item--accordion-button_active");
       portfolioItem[i].ariaLabel = "Expanded";
-      console.log("Change to X");
       toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
     }
 
@@ -17,9 +15,6 @@ for (let i = 0; i < portfolioItem.length; i++) {
       toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
       accBtn[i].classList.remove("portfolio-item--accordion-button_active");
       portfolioItem[i].ariaLabel = "Collapsed";
-      console.log("Change to +");
-      //portfolioItem[i].style.animationIterationCount= parseInt(portfolioItem[i].style.animationIterationCount) + 1;
-      //console.log(portfolioItem[i].style.animationIterationCount);
     }
 
   });
@@ -46,7 +41,6 @@ else {
 const toggleClass = (element, class0, class1) => {
   element.classList.toggle(class0);
   element.classList.toggle(class1);
-  console.log("Class is toggled");
 }
 
 toggleThemeButton.addEventListener("click", (event) => {
@@ -68,16 +62,13 @@ toggleThemeButton.addEventListener("click", (event) => {
 const tags = document.getElementsByClassName('portfolio-item--tag');
 
 for (let i = 0; i < tags.length; i++) {
-  console.log(tags[i])
   if (tags[i].innerHTML === "UX/UI Design") {
     tags[i].classList.add("green");
   }
   else if (tags[i].innerHTML === "Product Design") {
-    console.log("Changing tag color to red");
     tags[i].classList.add("red");
   }
   else if (tags[i].innerHTML === "Design Research") {
-    console.log("Changing tag color to blue");
     tags[i].classList.add("blue");
   }
 }
@@ -93,9 +84,6 @@ for (let i = 0; i < tags.length; i++) {
   }
 
   function checkPosition() {
-    console.log(contactSection);
-    console.log(contactSection.getBoundingClientRect());
-
     let positionFromTop = contactSection.getBoundingClientRect().top;
 
     

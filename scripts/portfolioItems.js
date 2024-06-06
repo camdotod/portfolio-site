@@ -80,7 +80,7 @@ const projects = [
 
    },
 
-]
+];
 
 //Get container to insert elements into
 const projectContainer = document.getElementById("portfolio-content");
@@ -191,18 +191,3 @@ projects.forEach((project) => {
             `;
    }
 });
-
-/*customElements.define('project',
-   class extends HTMLElement {
-      constructor() {
-         super();
-
-         const template = document.getElementById('project');
-         const templateContent = template.content;
-
-         this.attachShadow({ mode: 'open' }).appendChild(
-            templateContent.cloneNode(true)
-         );
-      }
-   }
-);*/

@@ -111,7 +111,7 @@ projects.forEach((project) => {
    </summary>
 
    <!--Content Block--------->
-   <div class="portfolio-item--details">
+   <div class="details portfolio-item--details_collapsed">
 
       <!--Hero Image-->
       <img id="${id}_hero" class="portfolio-item--image_hero" src="${project.heroimg}" alt="${project.heroalt}">

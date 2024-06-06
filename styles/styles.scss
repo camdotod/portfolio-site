@@ -128,6 +128,22 @@
    }
 }
 
+@keyframes slide-down {
+   from {
+      transform: translateY(-150px);
+      opacity: 0.2;
+   }
+
+   to {
+      transform: translateY(0px);
+      opacity: 1;
+   }
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
 //Elements
 * {
    box-sizing: border-box;
@@ -164,7 +180,7 @@ p {
          padding-bottom: 32px;
 
          position: sticky;
-         z-index: 1;
+         z-index: 2;
          top: 0;
 
          background-color: var(--backgroundColor);
@@ -191,6 +207,18 @@ p {
          flex-direction: column;
          padding-top: 2.5rem;
          border-top: 1px solid var(--textColor);
+         opacity: 1;
+         transform: translateY(0px);
+         transition: all 400ms ease-in-out;
+
+         &_hidden {
+            @extend .body--section;
+            flex-direction: column;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--textColor);
+            opacity: 0;
+            transform: translateY(var(--padding-body));
+         }
       }
 
       &_footer {
@@ -494,7 +522,7 @@ p {
    }
 
    to {
-      transform: translateX(0);
+      transform: translateX(0px);
       opacity: 1;
    }
 }
@@ -512,11 +540,13 @@ p {
       align-items: baseline;
       position: relative;
       border-top: 1px solid var(--textColor);
+      background-color: var(--backgroundColor);
+      z-index: 1;
 
       cursor: pointer;
 
       &:focus {
-         background-color: var(--textColor-20);
+         outline: 3px solid var(--yellow);
       }
 
       &:focus-visible {
@@ -573,10 +603,27 @@ p {
 
    &--details {
       display: flex;
+      height: auto;
       flex-direction: column;
       padding-bottom: 5rem;
       overflow: hidden;
       border-bottom: 1px solid var(--textColor);
+      z-index: 0;
+      overflow: hidden;
+      transform: translate(0);
+      transition: transform ease 500ms;
+
+      &_collapsed {
+         display: flex;
+         height: auto;
+         flex-direction: column;
+         padding-bottom: 5rem;
+         overflow: hidden;
+         border-bottom: 1px solid var(--textColor);
+         z-index: 0;
+         overflow: hidden;
+         transform: translateY(-100px);
+      }
    }
 
    &--container {

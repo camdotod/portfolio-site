@@ -134,6 +134,20 @@
     scale: 1;
   }
 }
+@keyframes slide-down {
+  from {
+    transform: translateY(-150px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -153,7 +167,7 @@ p {
   background-color: var(--backgroundColor);
   color: var(--textColor);
 }
-.body--section, .body--section_error, .body--section_footer, .body--section_contact, .body--section_portfolio, .body--section_about-me, .body--section_header {
+.body--section, .body--section_error, .body--section_footer, .body--section_contact_hidden, .body--section_contact, .body--section_portfolio, .body--section_about-me, .body--section_header {
   padding-left: var(--padding-body);
   padding-right: var(--padding-body);
   display: flex;
@@ -166,7 +180,7 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   position: sticky;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   background-color: var(--backgroundColor);
   border-bottom: 1px solid var(--textColor);
@@ -186,6 +200,16 @@ p {
   flex-direction: column;
   padding-top: 2.5rem;
   border-top: 1px solid var(--textColor);
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 400ms ease-in-out;
+}
+.body--section_contact_hidden {
+  flex-direction: column;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--textColor);
+  opacity: 0;
+  transform: translateY(var(--padding-body));
 }
 .body--section_footer {
   justify-content: space-between;
@@ -429,7 +453,7 @@ p {
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
@@ -445,10 +469,12 @@ p {
   align-items: baseline;
   position: relative;
   border-top: 1px solid var(--textColor);
+  background-color: var(--backgroundColor);
+  z-index: 1;
   cursor: pointer;
 }
 .portfolio-item--header:focus {
-  background-color: var(--textColor-20);
+  outline: 3px solid var(--yellow);
 }
 .portfolio-item--header:focus-visible {
   outline: 3px solid var(--yellow);
@@ -493,10 +519,26 @@ p {
 }
 .portfolio-item--details {
   display: flex;
+  height: auto;
   flex-direction: column;
   padding-bottom: 5rem;
   overflow: hidden;
   border-bottom: 1px solid var(--textColor);
+  z-index: 0;
+  overflow: hidden;
+  transform: translate(0);
+  transition: transform ease 500ms;
+}
+.portfolio-item--details_collapsed {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--textColor);
+  z-index: 0;
+  overflow: hidden;
+  transform: translateY(-100px);
 }
 .portfolio-item--container_rows {
   display: flex;

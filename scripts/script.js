@@ -25,7 +25,9 @@ const toggleThemeButton = document.getElementById("toggle-theme");
 const html = document.documentElement;
 ("toggle-theme");
 
-if (window.matchMedia('(prefers-color-scheme:dark)')) {
+console.log(window.matchMedia('(prefers-color-scheme:dark)'));
+
+if (window.matchMedia('(prefers-color-scheme:dark)').matches === true) {
   html.classList.add("dark");
   toggleThemeButton.innerHTML = `
   <span class="material-icons" aria-hidden="true">light_mode</span>

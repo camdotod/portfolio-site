@@ -154,7 +154,7 @@ projects.forEach((project) => {
             </figcaption>
          </figure>
          <figure id="${id}_panel-4" class="portfolio-item--figure figure">
-            <img class="portfolio-item--description_figure" src="${project.panel4img}" alt="${project.panel4alt}">
+            <img class="figure--image" src="${project.panel4img}" alt="${project.panel4alt}">
             <figcaption class="portfolio-item--description_figure">
                <h4 class="figure--heading">${project.panel4title}</h4>
                <p class="figure--text">${project.panel4text}</p>

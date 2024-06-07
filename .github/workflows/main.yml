@@ -17,3 +17,8 @@ jobs:
         server: camrynodonnell.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/site-version-archive/**
+          README.md

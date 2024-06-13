@@ -435,7 +435,7 @@ p {
       &_with-icon {
          @extend .section--link;
          display: flex;
-         align-items: center;
+         align-items: start;
          gap: 1rem;
 
          &:hover {

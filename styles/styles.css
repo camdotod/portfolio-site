@@ -379,7 +379,7 @@ p {
 }
 .section--link_with-icon {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 1rem;
 }
 .section--link_with-icon:hover {

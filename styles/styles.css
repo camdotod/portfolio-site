@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media (prefers-color-scheme: light) {
   :root {
     --textColor: rgb(13, 8, 14);
@@ -91,15 +95,7 @@
     --font-size-xs: 1rem;
     --padding-body: 2.5rem;
   }
-  body #camod-name {
-    width: 0;
-    height: 0;
-    padding-left: 0 !important;
-    overflow: hidden;
-  }
-  body .section--avatar img {
-    width: 200px !important;
-  }
+
 }
 .sr-only {
   position: absolute;

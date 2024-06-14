@@ -30,77 +30,30 @@
         rel="stylesheet">
 </head>
 
-<body class="body">
-    <header id="header" class="bg-white dark:bg-black flex px-10 md:px-20 pt-8 pb-6 z-10 sticky top-0">
-        <nav id="nav-bar" class="container flex items-end justify-end gap-4">
-            <a id="link-about-me" class="text-4xl mr-auto flex gap-4" href="/" tabindex="0"
-                aria-label="Camryn O'Donnell Home">
-                <svg id="cam-od-logo" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.04 142.54"
-                    class="fill-black dark:fill-white w-10 h-10">
-                    <g id="Layer_3" data-name="Layer 3">
-                        <path class="cls-1"
-                            d="M125.66,62.14c9.79-23.29,9.44-44.4-2.95-55.26-19.22-16.85-59.06-1.77-90.71,34.32C.36,77.31-9.38,118.78,9.84,135.63c5.26,4.6,12.09,6.91,20.08,6.91,6.69,0,14.19-1.61,22.23-4.88,5.07-2.05,10.21-4.69,15.31-7.85-2.19-2.52-4.13-5.28-5.75-8.22-4.46,2.72-8.92,5-13.32,6.78-13.74,5.56-25.39,5.47-31.94-.28-14.5-12.71-3.91-49.46,23.09-80.27C60.08,24.39,85.27,9.94,102.54,9.94c5.43,0,10.09,1.44,13.57,4.48,4.42,3.88,6.51,9.99,6.51,17.49s-2.13,16.58-6.15,26.12c-3.89-1.19-8.01-1.84-12.28-1.84-23.09,0-41.88,18.79-41.88,41.88,0,7.19,1.82,13.96,5.01,19.86,1.6,2.96,3.55,5.7,5.79,8.18,7.67,8.49,18.76,13.83,31.08,13.83,23.08,0,41.87-18.78,41.87-41.87,0-15.24-8.18-28.59-20.38-35.93ZM104.18,129.91c-9.05,0-17.22-3.8-23.02-9.87-2.32-2.43-4.26-5.21-5.72-8.27-1.99-4.15-3.11-8.8-3.11-13.71,0-17.56,14.29-31.85,31.85-31.85,2.73,0,5.39.34,7.92.99-4.84,9.18-11.28,18.58-19.08,27.49-3.94,4.49-8.06,8.67-12.28,12.51,1.25,3.21,3.15,6.09,5.52,8.51,4.95-4.38,9.75-9.22,14.3-14.42,8.6-9.81,15.58-20.01,20.82-30.02,8.82,5.67,14.66,15.56,14.66,26.79,0,17.56-14.3,31.85-31.85,31.85Z" />
-                    </g>
-                </svg>
-                <p aria-hidden="true" id="camod-name" class="w-0 md:w-fit h-0 md:h-fit !pl-0 overflow-hidden">Camryn
-                    O'Donnell</p>
-            </a>
-            <a id="link-portfolio" class="hover:underline focus-visible:outline focus-visible:outline-2 
-           focus-visible:outline-offset-1
-           focus-visible:outline-inherit focus-visible:underline" href="./html/about.html" tabindex="0">about</a>
-            <a id="link-portfolio" class="hover:underline" href="./html/portfolio.html" tabindex="0">portfolio</a>
-            <a id="link-contact" class="hover:underline" href="./html/contact.html" tabindex="0">contact</a>
-        </nav>
-    </header>
-    <main>
+<body class="h-screen bg-white dark:bg-black text-black dark:text-white font-sans">
+    <main class="flex flex-col gap-10 self-stretch">
         <!--About Me-->
-        <section id="about-me" aria-label="About Me" class="body--section_about-me">
-            <div id="about-me-anchor" class="section--anchor_about-me anchor"></div>
-            <div id="about-me-content" class="section--container_row">
-                <div id="headshot-container" class="section--avatar">
-                    <img src="/assets/CODonnell-Headshot-300x300.png" id="headshot"
-                        alt="A headshot of Camryn O'Donnell">
-                </div>
-                <div id="bio" class="section--container_text">
-                    <h1 class="font-sans text-white text-4xl">Hi!<br>My Name is Camryn O'Donnell</h1>
-                    <p class="section--heading_lg heading2">I am a <span role="text" class="red">multidisciplinary
-                            designer</span> with an
-                        interest in <span role="text" class="green">UX/UI design</span> & <span role="text"
-                            class="blue">design research.</span>
+        <section id=""
+            class="bg-[url('/assets/line-distortions-4-transparentcolours.png')] bg-[length:2000px_auto] 2xl:bg-cover">
+            <div class="flex flex-col md:items-end md:flex-row-reverse p-10 md:p-20 gap-5 md:gap-20 w-full bg-white/70 dark:bg-black/70">
+                <img class="w-32 h-32 md:w-60 md:h-60 grow-0 rounded-full" src="/assets/CODonnell-Headshot-300x300.png" id="headshot"
+                    alt="A headshot of Camryn O'Donnell">
+                <div id="bio" class="flex flex-col gap-5">
+                    <h1 class="text-2xl md:text-4xl">Hi!<br>My Name is Camryn O'Donnell</h1>
+                    <p class="text-lg md:text-2xl">I am a multidisciipinary designer with an
+                        interest in UX/UI design and design research.
                     </p>
-                    <p class="section--paragraph">I'm passionate about design and I'm always looking for new ways in
-                        which design can be used as a
-                        tool to bridge gaps and help others! Design research is one of my areas of expertise and I am
-                        eager to explore a wide range of fields and design methodologies including co-design,
-                        participatory design, and speculative design.
-                        <br><br>
-                        What interests me most about design is learning how people interact with the objects and systems
-                        surrounding them and I think this context is key to uncovering the root of any problem. Through
-                        continuous collaboration and learning I hope to make a positive impact on the world around me.
-                        <br><br>
-                        When I’m not working, I love being creative, whether that’s drawing, sewing, making music, or
-                        cooking. I also enjoy playing video games & tabletop RPGs with friends!
-                    </p>
-                    <div id="about-me-content-link" class="section--link_button">
-                        <p class="link-button--label">CV:</p>
-                        <a id="download-resume" class="section--link-button link-button"
-                            href="assets\documents\Camryn-ODonnell_CV.pdf" download="Camryn-ODonnell_CV_June-2024"
-                            tabindex="0">
-                            <span aria-hidden="true" class="material-icons ">download</span>
-                            Download<span class="sr-only">CV</span>
-                        </a>
-                    </div>
                 </div>
-            </div>
-            <!--Callout-->
-            <div id="callout-work" class="section--callout">
-                <p class="section--heading_sm heading4 yellow">I'm currently looking for work in Canada!</p>
             </div>
         </section>
+
+        <nav class="flex flex-col md:flex-row gap-5 justify-start px-10 md:px-20">
+            <a class="after:content-arrow hover:underline" href="html/portfolio.html" tabindex="0">Explore my work</a>
+            <a class="after:content-arrow hover:underline" href="html/about.html" tabindex="0">Learn more about me</a>
+        </nav>
     </main>
-    <footer class="body--section_footer">
-        <!--<button id="toggle-theme" aria-label="Toggle Light/Dark Mode" class="toggle-button" tabindex="0"></button>-->
-        <p class="section--paragraph">Designed & Developed by Camryn O'Donnell</p>
+    <footer class="shrink-0 px-10 md:px-20 pt-10 flex justify-end text-right">
+        <p class="text-xs md:text-base opactiy-70">Designed & Developed by Camryn O'Donnell</p>
     </footer>
 </body>
 

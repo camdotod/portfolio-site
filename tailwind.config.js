@@ -15,7 +15,7 @@ module.exports = {
         sans: ['IBM Plex Sans', 'Inter', 'Arial','sans-serif'],
       },
       content:{
-        'arrow':'"_→"',
+        'arrow':'" →"',
       },
     },
   },

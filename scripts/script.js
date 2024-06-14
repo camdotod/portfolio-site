@@ -2,6 +2,8 @@
 const portfolioItem = document.getElementsByClassName("portfolio-item");
 const details = document.getElementsByClassName("details");
 const accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
+const modal = document.getElementById("modal");
+const modalButton = document.getElementById("modal-button");
 
 for (let i = 0; i < portfolioItem.length; i++) {
   portfolioItem[i].addEventListener("toggle", (event) => {
@@ -19,6 +21,19 @@ for (let i = 0; i < portfolioItem.length; i++) {
 
   });
 }
+
+const toggleClass = (element, class0, class1) => {
+  element.classList.toggle(class0);
+  element.classList.toggle(class1);
+}
+
+const toggleModal =(event)=>{
+  console.log("Hover detected");
+  toggleClass(modal, "visible", "invisible");
+}
+
+modalButton.addEventListener('mouseover',toggleModal);
+modalButton.addEventListener('mouseleave',toggleModal);
 
 // Handle Theme Button
 const toggleThemeButton = document.getElementById("toggle-theme");
@@ -38,11 +53,6 @@ else {
   toggleThemeButton.innerHTML = `
   <span class="material-icons" aria-hidden="true">dark_mode</span>
   `;
-}
-
-const toggleClass = (element, class0, class1) => {
-  element.classList.toggle(class0);
-  element.classList.toggle(class1);
 }
 
 toggleThemeButton.addEventListener("click", (event) => {

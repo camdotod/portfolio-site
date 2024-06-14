@@ -14,9 +14,9 @@ const popCategories = (categoryArr) => {
    //Create categories and name headings after
    categoryArr.forEach((name, index) => {
       projectList.innerHTML += `
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 w-full">
        <h2 class="font-semibold">${name}</h2>
-       <ul id="${name}-category-${index}" class="category-list list-none grid md:grid-cols-2 gap-5 md:gap-x-10 gap-y-5">
+       <ul id="${name}-category-${index}"w-full class="category-list list-none grid w-full md:grid-cols-2 gap-5 md:gap-x-20 gap-y-5">
        </ul>
     </div>
        `;

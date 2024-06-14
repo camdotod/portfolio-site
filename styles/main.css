@@ -667,10 +667,6 @@ video {
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -846,8 +842,8 @@ video {
   height: 2.5rem;
 }
 
-.h-40 {
-  height: 10rem;
+.h-32 {
+  height: 8rem;
 }
 
 .h-60 {
@@ -863,16 +859,16 @@ video {
   height: 100vh;
 }
 
+.h-5\/6 {
+  height: 83.333333%;
+}
+
+.h-\[70vh\] {
+  height: 70vh;
+}
+
 .h-full {
   height: 100%;
-}
-
-.h-64 {
-  height: 16rem;
-}
-
-.h-32 {
-  height: 8rem;
 }
 
 .w-0 {
@@ -883,8 +879,8 @@ video {
   width: 2.5rem;
 }
 
-.w-40 {
-  width: 10rem;
+.w-32 {
+  width: 8rem;
 }
 
 .w-\[this-is\\\\\] {
@@ -907,12 +903,12 @@ video {
   width: 100vw;
 }
 
-.w-64 {
-  width: 16rem;
+.w-5\/6 {
+  width: 83.333333%;
 }
 
-.w-32 {
-  width: 8rem;
+.w-4\/6 {
+  width: 66.666667%;
 }
 
 .max-w-full {
@@ -1471,10 +1467,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .gap-y-5 {
@@ -2100,6 +2092,11 @@ video {
   padding-right: 2.5rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .\!pl-0 {
   padding-left: 0px !important;
 }
@@ -2188,9 +2185,9 @@ video {
   font-family: IBM Plex Sans, Inter, Arial, sans-serif;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -2208,24 +2205,14 @@ video {
   line-height: 1;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-xs {
@@ -2341,6 +2328,10 @@ video {
 
 .no-underline {
   text-decoration-line: none;
+}
+
+.decoration-red {
+  text-decoration-color: #d55130;
 }
 
 .decoration-solid {
@@ -3433,12 +3424,24 @@ p {
   content: var(--tw-content);
 }
 
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.hover\:cursor-help:hover {
+  cursor: help;
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:decoration-red:hover {
+  text-decoration-color: #d55130;
 }
 
 .before\:hover\:text-center:hover::before {
@@ -3503,30 +3506,22 @@ p {
 }
 
 @media (min-width: 768px) {
+  .md\:h-60 {
+    height: 15rem;
+  }
+
   .md\:h-fit {
     height: -moz-fit-content;
     height: fit-content;
   }
 
-  .md\:h-64 {
-    height: 16rem;
-  }
-
-  .md\:h-60 {
-    height: 15rem;
+  .md\:w-60 {
+    width: 15rem;
   }
 
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .md\:w-64 {
-    width: 16rem;
-  }
-
-  .md\:w-60 {
-    width: 15rem;
   }
 
   .md\:grid-cols-2 {
@@ -3547,6 +3542,10 @@ p {
 
   .md\:items-end {
     align-items: flex-end;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
   }
 
   .md\:gap-0 {
@@ -3600,6 +3599,11 @@ p {
     padding-right: 5rem;
   }
 
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .md\:pl-10 {
     padding-left: 2.5rem;
   }
@@ -3621,6 +3625,11 @@ p {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

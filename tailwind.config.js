@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -13,6 +13,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['IBM Plex Sans', 'Inter', 'Arial','sans-serif'],
+      },
+      content:{
+        'arrow':'"_→"',
       },
     },
   },

@@ -70,10 +70,25 @@
             class="w-full flex flex-col items-start md:flex-row gap-5 md:gap-10 divide-y-2 md:divide-y-0 divide-x-0 md:divide-x-2 divide-inherit text-xl md:text-2xl">
             <div id="filters" class="w-full sm:w-1/6 flex flex-col grow-0 gap-4 md:gap-6 ">
                <p>Sort By:</p>
-               <div class="flex md:flex-col gap-6">
-                  <button id="date-sort" class="hover:font-bold">Date</button>
-                  <button id="name-sort" class="hover:font-bold">Name</button>
-                  <button id="tags-sort" class="hover:font-bold">Tags</button>
+               <div class="flex md:flex-col gap-4 md:gap-6 justify-start items-start">
+                  <div class="flex md:flex-col gap-4 justify-start items-start">
+                     <input id="date-sort" type="radio" name="sort" class="hidden peer" value="">
+                     <label for="date-sort" class="peer-checked:font-bold hover:underline active:underline">
+                        Date
+                     </label>
+                  </div>
+                  <div class="flex md:flex-col gap-4 justify-start items-start">
+                     <input id="name-sort" type="radio" name="sort" class="hidden peer" value="">
+                     <label for="name-sort" class="peer-checked:font-bold hover:underline active:underline">
+                        Name
+                     </label>
+                  </div>
+                  <div class="flex md:flex-col gap-4 justify-start items-start">
+                     <input id="tags-sort" type="radio" name="sort" class="hidden peer" value="">
+                     <label for="tags-sort" class="peer-checked:font-bold hover:underline active:underline">
+                        Tags
+                     </label>
+                  </div>
                </div>
             </div>
             <div id="project-list" class="flex flex-col pt-10 md:pt-0 md:pl-10 gap-14 self-stretch">
@@ -100,6 +115,6 @@
       <p class="opacity-70 text-right">Designed & Developed by Camryn O'Donnell</p>
    </footer>
 </body>
-<script src="/scripts/portfolioIndex.js"></script>
-<script src="/scripts/portfolioItems.js"></script>
+<script type="module" src="/scripts/portfolioIndex.js"></script>
+
 </html>

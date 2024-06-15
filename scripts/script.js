@@ -1,25 +1,3 @@
-//Handle Portfolio Items
-const portfolioItem = document.getElementsByClassName("portfolio-item");
-const details = document.getElementsByClassName("details");
-const accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
-
-for (let i = 0; i < portfolioItem.length; i++) {
-  portfolioItem[i].addEventListener("toggle", (event) => {
-    if (portfolioItem[i].open) {
-      accBtn[i].classList.add("portfolio-item--accordion-button_active");
-      portfolioItem[i].ariaLabel = "Expanded";
-      toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
-    }
-
-    else {
-      toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
-      accBtn[i].classList.remove("portfolio-item--accordion-button_active");
-      portfolioItem[i].ariaLabel = "Collapsed";
-    }
-
-  });
-}
-
 // Handle Theme Button
 const toggleThemeButton = document.getElementById("toggle-theme");
 const html = document.documentElement;
@@ -59,21 +37,6 @@ toggleThemeButton.addEventListener("click", (event) => {
   `;
   }
 });
-
-//Style Tag Colours
-const tags = document.getElementsByClassName('portfolio-item--tag');
-
-for (let i = 0; i < tags.length; i++) {
-  if (tags[i].innerHTML === "UX/UI Design") {
-    tags[i].classList.add("green");
-  }
-  else if (tags[i].innerHTML === "Product Design") {
-    tags[i].classList.add("red");
-  }
-  else if (tags[i].innerHTML === "Design Research") {
-    tags[i].classList.add("blue");
-  }
-}
 
 //Contact Scroll Animation
 (function () {

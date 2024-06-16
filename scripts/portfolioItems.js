@@ -1,110 +1,152 @@
-import {projects} from "./projects.js";
+import { projects } from "./projects.js";
 //Get container to insert elements into
-const projectContainer = document.getElementById("portfolio-content");
+const projectContainer = document.getElementsByClassName("portfolio-item");
+console.log(projectContainer[0].id);
+const pageName = projectContainer[0].id.replaceAll("-", " ");
 
-//Create Project Elements
-projects.forEach((project) => {
-   const tags = project.tags.split(",");
-   const id = project.name.toLowerCase().replaceAll(" ", "-");
+const projectNames = projects.map((project) => project.name);
+const projectIndex = projectNames.indexOf(pageName);
+const projectTags = projects[projectIndex].tags.split(",");
+//
+/*const portfolioItem = document.getElementsByClassName("portfolio-item");
+const details = document.getElementsByClassName("details");
+const accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
+const modal = document.getElementById("modal");
+const modalButton = document.getElementById("modal-button");
 
-   projectContainer.innerHTML += `
+for (let i = 0; i < portfolioItem.length; i++) {
+   portfolioItem[i].addEventListener("toggle", (event) => {
+      if (portfolioItem[i].open) {
+         accBtn[i].classList.add("portfolio-item--accordion-button_active");
+         portfolioItem[i].ariaLabel = "Expanded";
+         toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
+      }
 
-   <details id="${id}" class="portfolio-item">
+      else {
+         toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
+         accBtn[i].classList.remove("portfolio-item--accordion-button_active");
+         portfolioItem[i].ariaLabel = "Collapsed";
+      }
+
+   });
+}*/
+function createProject() {
+  console.log("Making the Project...");
+  projectContainer[0].innerHTML += `
+<div id="${projectContainer[0].id}" class="w-full flex flex-col gap-10">
 
    <!--Project Title & Info-->
-   <summary id="${id}_summary" class="portfolio-item--header">
-      <h3 id="${id}_title" class="portfolio-item--name">${project.name}<span class="sr-only">.</span>
-      </h3>
-      <p id="${id}_date" class="portfolio-item--date"><span class="sr-only">Date: </span>${project.date}<span class="sr-only">.</span>
-      </p>
-      <div id="${id}_tags" class="portfolio-item--taglist">
-         <span class="sr-only">Tags:</span>
-         <p class="portfolio-item--tag">${tags[0]}</p>
-         <span class="sr-only">,</span>
-         <p class="portfolio-item--tag">${tags[1]}</p>
+   <div class="w-full h-fit gap-10 md:gap-20 md:flex-row flex flex-col-reverse">
+      <div id="${projectContainer[0].id}_details" class="w-full md:w-1/6 flex flex-col justify-start items-start gap-6 md:gap-10">
+         <div class="self-stretch flex-col md:flex-col justify-start items-start gap-4 md:gap-6 flex">
+            <h1 id="${projectContainer.id}_title" class="text-5xl">${projects[projectIndex].name}<span
+                  class="sr-only">.</span>
+            </h1>
+            <div id="${projectContainer[0].id}_tags" class="flex flex-col justify-start items-start gap-4">
+               <span class="sr-only">Tags:</span>
+               <p class="w-fit tag p-2 text-xl border border-solid">${projectTags[0]}</p>
+               <span class="sr-only">,</span>
+               <p class="w-fit text-xl tag p-2 border">${projectTags[1]}</p>
+            </div>
+            <p id="${projectContainer[0].id}_date" class="opacity-70"><span class="sr-only">Date:
+               </span>${projects[projectIndex].date}<span class="sr-only">.</span>
+            </p>
+         </div>
+         <div id="${projectContainer[0].id}_objective" class="flex flex-col justify-start items-start gap-4">
+            <h2 class="font-bold text-xl">Objective</h2>
+            <p class="">${projects[projectIndex].objective}</p>
+         </div>
+         <div class="flex flex-col justify-start items-start gap-4">
+            <h2 class="font-bold text-xl">Tools</h2>
+            <p class="">${projects[projectIndex].tools}</p>
+         </div>
       </div>
-      <span id="${id}_toggle-button" class="material-icons md-36 portfolio-item--accordion-button"
-         aria-hidden="true">expand_more</span>
-   </summary>
-
-   <!--Content Block--------->
-   <div class="details portfolio-item--details_collapsed">
-
       <!--Hero Image-->
-      <img id="${id}_hero" class="portfolio-item--image_hero" src="${project.heroimg}" alt="${project.heroalt}">
-
-      <!--Objective & Summary-->
-
-      <div id="${id}_introduction" class="portfolio-item--container_rows">
-         <div id="${id}_objective" class="portfolio-item--description_objective">
-            <h4 class="figure--heading heading3">Objective</h4>
-            <p class="figure--text objective-desc">${project.objective}</p>
-         </div>
-         <div id="${id}_summary" class="portfolio-item--description_summary">
-            <h4 class="figure--heading heading3">Summary</h4>
-            <p class="figure--text objective-desc summary-desc">${project.summary}</p>
-         </div>
-      </div>
-
-      <!--Panels-->
-
-      <div class="portfolio-item--container_responsive-grid">
-         <figure id="${id}_panel-1" class="portfolio-item--figure figure">
-            <img class="figure--image" src="${project.panel1img}" alt="${project.panel1alt}">
-            <figcaption class="portfolio-item--description_figure">
-               <h4 class="figure--heading">${project.panel1title}</h4>
-               <p class="figure--text">${project.panel1text}</p>
-            </figcaption>
-         </figure>
-         <figure id="${id}_panel-2" class="portfolio-item--figure figure">
-            <img class="figure--image" src="${project.panel2img}" alt="${project.panel2alt}">
-            <figcaption class="portfolio-item--description_figure">
-               <h4 class="figure--heading">${project.panel2title}</h4>
-               <p class="figure--text">${project.panel2text}</p>
-            </figcaption>
-         </figure>
-         <figure id="${id}_panel-3" class="portfolio-item--figure figure">
-            <img class=" figure--image" src="${project.panel3img}" alt="${project.panel3alt}">
-            <figcaption class="portfolio-item--description_figure">
-               <h4 class=" figure--heading">${project.panel3title}</h4>
-               <p class="figure--text">${project.panel3text}</p>
-            </figcaption>
-         </figure>
-         <figure id="${id}_panel-4" class="portfolio-item--figure figure">
-            <img class="figure--image" src="${project.panel4img}" alt="${project.panel4alt}">
-            <figcaption class="portfolio-item--description_figure">
-               <h4 class="figure--heading">${project.panel4title}</h4>
-               <p class="figure--text">${project.panel4text}</p>
-            </figcaption>
-         </figure>
-      </div>
-      <figure id="${id}_panel-5" class="portfolio-item--figure figure">
-      </figure>
+      <img id="${projectContainer[0].id}_hero" class="flex-1 min-w-0 self-stretch object-cover" src="${projects[projectIndex].heroimg}"
+         alt="${projects[projectIndex].heroalt}">
    </div>
-</details>
+
+   <!--Summary-->
+   <div id="${projectContainer[0].id}_summary" class="flex flex-col justify-start items-start gap-4">
+      <h2 class="font-bold text-xl">Summary</h2>
+      <p>${projects[projectIndex].summary}</p>
+   </div>
+   <hr id="process-anchor">
+   
+   <!--Content Block--------->
+   <div id="process" class="flex flex-col relative">
+   <div class="absolute -left-5 h-full">
+   <a href="#process-anchor" class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-black dark:border-white bg-white dark:bg-black z-10">↑</a>
+   </div>
+   </div>
+</div>
    `;
+}
 
-   const panel5 = document.getElementById(`${id}_panel-5`);
+function createPanel(index) {
+  const panelContainer = document.getElementById("process");
+  console.log("Creating Panel");
 
-   if (project.panel5media === "video") {
-      panel5.innerHTML += `
-      <iframe class="figure--video" width="100%" height="100%" src="${project.panel5video}" title="YouTube video player"
-   frameborder="0"
-   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <figcaption class="portfolio-item--description_figure">
-         <h4 class="figure--heading">${project.panel5title}</h4>
-         <p class="figure--text">${project.panel5text}</p>
-      </figcaption>
-      `;
-   }
-   else {
-      panel5.innerHTML += `
-         <img class="portfolio-item--description_figure" src="${project.panel5img}" alt="${project.panel5alt}">
-         <figcaption class="portfolio-item--description_figure">
-            <h4 class="figure--heading">${project.panel5title}</h4>
-            <p class="figure--text">${project.panel5text}</p>
+  if (index === 4 && projects[projectIndex].panel5media === "video") {
+    console.log("Creating Video");
+    panelContainer.innerHTML += `
+         <figure class="pl-5 md:pl-20 pb-20 border-l-2 flex-col justify-start items-start gap-6 inline-flex">
+            <h2 class="text-xl md:text-2xl">${projects[projectIndex].panel5title}</h2>   
+            <iframe class="aspect-video" width="100%" height="100%" src="${projects[projectIndex].panel5video}"
+               title="YouTube video player" frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption class="portfolio-item--description_figure">
+               <p class="opacity-70">${projects[projectIndex].panel5text}</p>
+            </figcaption>
+         </figure>
+         `;
+  } else {
+    panelContainer.innerHTML += `
+      <figure id="${projectContainer[0].id}_panel-${index}"
+         class="pl-5 md:pl-20 pb-20 border-l-2 flex-col justify-start items-start gap-6 inline-flex">
+         <h2 class="text-xl md:text-2xl">${projects[projectIndex].figtitle[index]}</h2>
+         <img class="aspect-square md:aspect-video opacity-80 object-cover" src="${projects[projectIndex].figimg[index]}" alt="${projects[projectIndex].figalt[index]}">
+         <figcaption class="">
+            <details class="group flex flex-col gap-6">
+               <summary class="flex flex-col gap-6 items-start">
+                  <p class="">${projects[projectIndex].figtext[index]}</p>
+                  <p class=" group-open:hidden group-hover:underline opacity-70 hover:underline cursor-pointer">Show More...</p>
+                  <p class=" hidden group-open:block group-hover:underline opacity-70 hover:underline cursor-pointer">...Show Less</p>
+               </summary>
+               <h3 class="text-2xl pt-6 ">Iterations:</h3>
+               <div class="flex gap-10">
+                  <p class="">Details Details Details</p>
+                  <p class="">Details Details Details</p>
+                  <p class="">Details Details Details</p>
+               </div>
+            </details>
          </figcaption>
-            `;
-   }
-});
+      </figure>`;
+  }
+}
+
+if (projectIndex > -1) {
+  createProject();
+  createPanel(0);
+  createPanel(1);
+  createPanel(2);
+  createPanel(3);
+  createPanel(4);
+}
+//Style Tag Colours
+const tags = document.getElementsByClassName("tag");
+
+for (let i = 0; i < tags.length; i++) {
+  if (tags[i].innerHTML === "UX/UI Design") {
+    tags[i].classList.add("text-green");
+    tags[i].classList.add("border-green");
+  } else if (tags[i].innerHTML === "Product Design") {
+    tags[i].classList.add("text-red");
+    tags[i].classList.add("border-red");
+  } else if (tags[i].innerHTML === "Design Research") {
+    tags[i].classList.add("text-blue");
+    tags[i].classList.add("border-blue");
+  } else {
+  }
+}

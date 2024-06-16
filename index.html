@@ -1,62 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="">
-
-<head>
+  <head>
     <!--Meta Tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark light">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
 
     <!--Site Info-->
     <title>Camryn O'Donnell</title>
-    <meta name="description"
-        content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design.">
-    <meta name="author" content="Camryn O'Donnell">
+    <meta
+      name="description"
+      content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design."
+    />
+    <meta name="author" content="Camryn O'Donnell" />
 
-    <link rel="icon" type="image/x-icon" href="/assets/SVG/camod-logo-black.svg">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/SVG/camod-logo-black.svg"
+    />
 
     <!--Stylesheet-->
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css" />
 
     <!--Material Design Icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!--IBM Plex Sans-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="h-screen bg-white dark:bg-black text-black dark:text-white font-sans flex flex-col">
-    <main class="flex flex-col gap-10 h-fit">
-        <!--About Me-->
-        <section id=""
-            class="h-[70vh] bg-[url('/assets/line-distortions-4-transparentcolours.png')] bg-[length:2000px_auto] 2xl:bg-cover">
-            <div class="h-full flex flex-col md:items-end md:flex-row-reverse justify-end py-10 px-10 md:px-20 md:py-20 gap-5 md:gap-20 w-full bg-white/70 dark:bg-black/70">
-                <img class="w-32 h-32 md:w-60 md:h-60 grow-0 rounded-full" src="/assets/CODonnell-Headshot-300x300.png" id="headshot"
-                    alt="A headshot of Camryn O'Donnell">
-                <div id="bio" class="flex flex-col gap-5">
-                    <h1 class="text-2xl md:text-4xl">Hi!<br>My Name is Camryn O'Donnell</h1>
-                    <p class="text-lg md:text-2xl">I am a multidisciipinary designer with an
-                        interest in UX/UI design and design research.
-                    </p>
-                </div>
-            </div>
-        </section>
+  <body
+    class="flex h-screen flex-col bg-white font-sans text-black dark:bg-black dark:text-white"
+  >
+    <main class="flex h-fit flex-col gap-10">
+      <!--About Me-->
+      <section
+        id=""
+        class="h-[70vh] bg-[url('/assets/line-distortions-4-transparentcolours.png')] bg-[length:2000px_auto] 2xl:bg-cover"
+      >
+        <div
+          class="flex h-full w-full flex-col justify-end gap-5 bg-white/70 px-10 py-10 md:flex-row-reverse md:items-end md:gap-20 md:px-20 md:py-20 dark:bg-black/70"
+        >
+          <img
+            class="h-32 w-32 grow-0 rounded-full md:h-60 md:w-60"
+            src="/assets/CODonnell-Headshot-300x300.png"
+            id="headshot"
+            alt="A headshot of Camryn O'Donnell"
+          />
+          <div id="bio" class="flex flex-col gap-5">
+            <h1 class="text-2xl md:text-4xl">
+              Hi!<br />My Name is Camryn O'Donnell
+            </h1>
+            <p class="text-lg md:text-2xl">
+              I am a multidisciipinary designer with an interest in UX/UI design
+              and design research.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <nav class="flex flex-col md:flex-row gap-5 md:gap-20 justify-start px-10 md:px-20 md:text-lg">
-            <a class="after:content-arrow hover:underline" href="html/portfolio.html" tabindex="0">Explore my work</a>
-            <a class="after:content-arrow hover:underline" href="html/about.html" tabindex="0">Learn more about me</a>
-        </nav>
+      <nav
+        class="flex flex-col justify-start gap-5 px-10 md:flex-row md:gap-20 md:px-20 md:text-lg"
+      >
+        <a
+          class="after:content-arrow hover:underline"
+          href="html/portfolio.html"
+          tabindex="0"
+          >Explore my work</a
+        >
+        <a
+          class="after:content-arrow hover:underline"
+          href="html/about.html"
+          tabindex="0"
+          >Learn more about me</a
+        >
+      </nav>
     </main>
-    <footer class="shrink-0 px-10 mt-auto md:px-20 py-10 flex justify-end text-right">
-        <p class="text-xs md:text-base opacity-70">Designed & Developed by Camryn O'Donnell</p>
+    <footer
+      class="mt-auto flex shrink-0 justify-end px-10 py-10 text-right md:px-20"
+    >
+      <p class="text-xs opacity-70 md:text-base">
+        Designed & Developed by Camryn O'Donnell
+      </p>
     </footer>
-</body>
+  </body>
 
-<script src="/scripts/script.js"></script>
-
+  <script src="/scripts/script.js"></script>
 </html>

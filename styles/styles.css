@@ -4,7 +4,31 @@
 
 :root .material-icons.md-36 {
   font-size: 36px;
-  --white: 225 225 225;
+  --text-color:        
+;
+}
+
+@layer base {
+  @media (prefers-color-scheme: light) {
+    :root {
+      --textColor: 13 8 14;
+      --backgroundColor: 255 255 255;
+      --red: 193 72 31;
+      --blue: 69 117 165;
+      --green: 149 122 15;
+      --yellow: 156 108 13;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --textColor: 255 255 255;
+      --backgroundColor: 13 8 14;
+      --red: 213 81 48;
+      --blue: 98 139 179;
+      --green: 130 106 13;
+      --yellow: 227 163 39;
+    }
+  }
 }
 
 * {

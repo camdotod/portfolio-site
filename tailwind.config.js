@@ -5,15 +5,12 @@ module.exports = {
   content: ["./html/*.html", "./scripts/*.js", "index.html", "404.html"],
   theme: {
     colors: {
-      white: {
-        DEFAULT: "rgba(255, 255, 255)",
-        light: "rgba(255, 255, 255, 0.5)",
-      },
-      black: "#0D080E",
-      red: "#d55130",
-      blue: "#628bb3",
-      green: "#826a0d",
-      yellow: "#e3a327",
+      "fg-color": "rgb(var(--textColor)/<alpha-value>)",
+      "bg-color": "rgb(var(--backgroundColor)/<alpha-value>)",
+      red: "rgb(var(--red)/<alpha-value>)",
+      blue: "rgb(var(--blue)/<alpha-value>)",
+      green: "rgb(var(--green)/<alpha-value>)",
+      yellow: "rgb(var(--yellow)/<alpha-value>)",
       transparent: "transparent",
     },
     extend: {
@@ -34,19 +31,19 @@ module.exports = {
       glint: {
         "0%": {
           "background-image":
-            "linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(255,255,255,0.5) 19%, rgba(255,255,255,1) 41%)",
+            "linear-gradient(90deg, rgb(var(--textColor)/1) 0%, rgb(var(--textColor)/0.5) 19%, rgb(var(--textColor)/1) 41%)",
           "background-size": "400% 400%",
           "background-position": "-50px 0",
         },
         "30%": {
           "background-image":
-            "linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(255,255,255,0.5) 19%, rgba(255,255,255,1) 41%)",
+            "linear-gradient(90deg, rgb(var(--textColor)/1) 0%, rgb(var(--textColor)/0.5) 19%, rgb(var(--textColor)/1) 41%)",
           "background-size": "400% 400%",
           "background-position": "100px 0",
         },
         "100%": {
           "background-image":
-            "linear-gradient(90deg, rgba(243,243,243,1) 0%, rgba(255,255,255,0.5) 19%, rgba(255,255,255,1) 41%)",
+            "linear-gradient(90deg, rgb(var(--textColor)/1) 0%, rgb(var(--textColor)/0.5) 19%, rgb(var(--textColor)/1) 41%)",
           "background-size": "400% 400%",
           "background-position": "100px 0",
         },

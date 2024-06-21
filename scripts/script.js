@@ -83,7 +83,7 @@ toggleThemeButton.addEventListener("click", (event) => {
 function addHeader() {
   addClasses(
     header,
-    "sticky top-0 z-10 flex bg-white px-10 pb-6 pt-8 md:px-20 dark:bg-black w-full",
+    "sticky top-0 z-10 flex bg-bg-color px-10 pb-6 pt-8 md:px-20 w-full",
   );
 
   var folder = ".";
@@ -94,18 +94,18 @@ function addHeader() {
 
   header.innerHTML = `
 <nav id="nav-bar" class="w-full flex items-end justify-end gap-4 md:gap-8 xl:gap-12">
-  <a id="link-landing-page" class="group mr-auto flex gap-4 text-4xl" href="/" tabindex="0"
+  <a id="link-landing-page" class="group focus-visible:underline focus-visible:outline-none focus-visible:underline-offset-4 focus-visible:decoration-1 mr-auto flex gap-4 text-4xl" href="/" tabindex="0"
     aria-label="Back to Landing Page">
     <span id="cam-od-logo"
-      class="logo group-hover:animate-glint group-hover:bg-transparent h-10 w-10 bg-black dark:bg-white"></span>
+      class="logo group-hover:animate-glint group-hover:bg-transparent group-focus-visible:animate-glint group-focus-visible:bg-transparent h-10 w-10 bg-fg-color"></span>
     <p aria-hidden="true" id="camod-name"
-      class="h-0 w-0 overflow-hidden bg-clip-text !pl-0 text-white md:h-fit md:w-fit">
+      class="h-0 w-0 overflow-hidden bg-clip-text !pl-0 md:h-fit md:w-fit">
       Camryn O'Donnell
     </p>
   </a>
-  <a id="link-about-me" class="hover:underline focus:underline" href="${folder}/about.html" tabindex="0">about</a>
-  <a id="link-portfolio" class="hover:underline" href="${folder}/portfolio.html" tabindex="0">portfolio</a>
-  <a id="link-contact" class="hover:underline" href="${folder}/contact.html" tabindex="0">contact</a>
+  <a id="link-about-me" class="hover:underline focus:underline focus-visible:outline-offset-4 focus-visible:outline focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/about.html" tabindex="0">about</a>
+  <a id="link-portfolio" class="hover:underline focus:underline focus-visible:outline-offset-4 focus-visible:outline focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/portfolio.html" tabindex="0">portfolio</a>
+  <a id="link-contact" class="hover:underline focus:underline focus-visible:outline-offset-4 focus-visible:outline focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/contact.html" tabindex="0">contact</a>
 </nav>
 `;
 

@@ -83,8 +83,13 @@ function createProject() {
    <div id="process" class="flex flex-col relative">
       <div class="absolute -left-5 h-full">
          <a href="#process-anchor"
-            class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-black dark:border-white bg-white dark:bg-black z-10">↑</a>
+            class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-fg-color bg-bg-color z-10">↑</a>
       </div>
+   </div>
+   <!--Next/Previous Page------>
+   <div class="flex justify-between">
+      <a href="" class="underline" tabindex="0" ><< Previous Project</a>
+      <a href="" class="underline" tabindex="0">Next Project >></a>
    </div>
 </div>
    `;
@@ -148,7 +153,7 @@ for (let i = 0; i < tags.length; i++) {
   if (tags[i].innerHTML === "UX/UI Design") {
     tags[i].classList.add("text-green");
     tags[i].classList.add("border-green");
-  } else if (tags[i].innerHTML === "Product Design") {
+  } else if (tags[i].innerHTML === "Industrial Design") {
     tags[i].classList.add("text-red");
     tags[i].classList.add("border-red");
   } else if (tags[i].innerHTML === "Design Research") {

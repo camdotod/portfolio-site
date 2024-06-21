@@ -4,6 +4,7 @@
 
 :root .material-icons.md-36 {
   font-size: 36px;
+  --white: 225 225 225;
 }
 
 * {
@@ -16,6 +17,11 @@ html {
 
 summary::marker {
   display: none;
+}
+
+.logo {
+  -webkit-mask-image: url(/assets/SVG/camod-logo-black.svg);
+  mask-image: url(/assets/SVG/camod-logo-black.svg);
 }
 
 /*# sourceMappingURL=styles.css.map */

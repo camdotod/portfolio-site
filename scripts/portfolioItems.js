@@ -7,7 +7,7 @@ const pageName = projectContainer[0].id.replaceAll("-", " ");
 const projectNames = projects.map((project) => project.name);
 const projectIndex = projectNames.indexOf(pageName);
 const projectTags = projects[projectIndex].tags.split(",");
-//
+
 /*const portfolioItem = document.getElementsByClassName("portfolio-item");
 const details = document.getElementsByClassName("details");
 const accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
@@ -30,6 +30,11 @@ for (let i = 0; i < portfolioItem.length; i++) {
 
    });
 }*/
+
+/**
+ * Create main layout and container for the page
+ * @returns HTML Elements
+ */
 function createProject() {
   console.log("Making the Project...");
   projectContainer[0].innerHTML += `
@@ -37,7 +42,8 @@ function createProject() {
 
    <!--Project Title & Info-->
    <div class="w-full h-fit gap-10 md:gap-20 md:flex-row flex flex-col-reverse">
-      <div id="${projectContainer[0].id}_details" class="w-full md:w-1/6 flex flex-col justify-start items-start gap-6 md:gap-10">
+      <div id="${projectContainer[0].id}_details"
+         class="w-full md:w-1/6 flex flex-col justify-start items-start gap-6 md:gap-10">
          <div class="self-stretch flex-col md:flex-col justify-start items-start gap-4 md:gap-6 flex">
             <h1 id="${projectContainer.id}_title" class="text-5xl">${projects[projectIndex].name}<span
                   class="sr-only">.</span>
@@ -62,8 +68,8 @@ function createProject() {
          </div>
       </div>
       <!--Hero Image-->
-      <img id="${projectContainer[0].id}_hero" class="flex-1 min-w-0 self-stretch object-cover" src="${projects[projectIndex].heroimg}"
-         alt="${projects[projectIndex].heroalt}">
+      <img id="${projectContainer[0].id}_hero" class="flex-1 min-w-0 self-stretch object-cover"
+         src="${projects[projectIndex].heroimg}" alt="${projects[projectIndex].heroalt}">
    </div>
 
    <!--Summary-->
@@ -72,12 +78,13 @@ function createProject() {
       <p>${projects[projectIndex].summary}</p>
    </div>
    <hr id="process-anchor">
-   
+
    <!--Content Block--------->
    <div id="process" class="flex flex-col relative">
-   <div class="absolute -left-5 h-full">
-   <a href="#process-anchor" class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-black dark:border-white bg-white dark:bg-black z-10">↑</a>
-   </div>
+      <div class="absolute -left-5 h-full">
+         <a href="#process-anchor"
+            class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-black dark:border-white bg-white dark:bg-black z-10">↑</a>
+      </div>
    </div>
 </div>
    `;

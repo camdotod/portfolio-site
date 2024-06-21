@@ -45,36 +45,39 @@ const toggleModal = (event) => {
   toggleClass(modal, "visible", "invisible");
 };
 
-modalButton.addEventListener("mouseover", toggleModal);
+if (modalButton) {
+  modalButton.addEventListener("mouseover", toggleModal);
+}
 
 // * Theme Button
 //console.log(window.matchMedia("(prefers-color-scheme:dark)"));
-
-if (window.matchMedia("(prefers-color-scheme:dark)").matches === true) {
-  html.classList.add("dark");
-  toggleThemeButton.innerHTML = `
-  <span class="material-icons" aria-hidden="true">light_mode</span>
-  `;
-} else {
-  html.classList.add("light");
-  toggleThemeButton.innerHTML = `
-  <span class="material-icons" aria-hidden="true">dark_mode</span>
-  `;
-}
-
-toggleThemeButton.addEventListener("click", (event) => {
-  toggleClass(html, "light", "dark");
-
-  if (html.classList.contains("dark")) {
+if (toggleThemeButton) {
+  if (window.matchMedia("(prefers-color-scheme:dark)").matches === true) {
+    html.classList.add("dark");
     toggleThemeButton.innerHTML = `
   <span class="material-icons" aria-hidden="true">light_mode</span>
   `;
   } else {
+    html.classList.add("light");
     toggleThemeButton.innerHTML = `
   <span class="material-icons" aria-hidden="true">dark_mode</span>
   `;
   }
-});
+
+  toggleThemeButton.addEventListener("click", (event) => {
+    toggleClass(html, "light", "dark");
+
+    if (html.classList.contains("dark")) {
+      toggleThemeButton.innerHTML = `
+  <span class="material-icons" aria-hidden="true">light_mode</span>
+  `;
+    } else {
+      toggleThemeButton.innerHTML = `
+  <span class="material-icons" aria-hidden="true">dark_mode</span>
+  `;
+    }
+  });
+}
 
 /**
  * Add header element to page

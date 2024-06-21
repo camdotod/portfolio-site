@@ -1,7 +1,7 @@
 import { projects } from "./projects.js";
 //Get container to insert elements into
 const projectContainer = document.getElementsByClassName("portfolio-item");
-console.log(projectContainer[0].id);
+//console.log(projectContainer[0].id);
 const pageName = projectContainer[0].id.replaceAll("-", " ");
 
 const projectNames = projects.map((project) => project.name);
@@ -36,7 +36,7 @@ for (let i = 0; i < portfolioItem.length; i++) {
  * @returns HTML Elements
  */
 function createProject() {
-  console.log("Making the Project...");
+  //console.log("Making the Project...");
   projectContainer[0].innerHTML += `
 <div id="${projectContainer[0].id}" class="w-full flex flex-col gap-10">
 
@@ -86,21 +86,22 @@ function createProject() {
             class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-fg-color bg-bg-color z-10">↑</a>
       </div>
    </div>
-   <!--Next/Previous Page------>
-   <div class="flex justify-between">
-      <a href="" class="underline" tabindex="0" ><< Previous Project</a>
-      <a href="" class="underline" tabindex="0">Next Project >></a>
-   </div>
 </div>
    `;
 }
 
+/**<!--Next/Previous Page------>
+   <div class="flex justify-between">
+      <a href="" class="underline" tabindex="0" ><< Previous Project</a>
+      <a href="" class="underline" tabindex="0">Next Project >></a>
+   </div> */
+
 function createPanel(index) {
   const panelContainer = document.getElementById("process");
-  console.log("Creating Panel");
+  //console.log("Creating Panel");
 
   if (index === 4 && projects[projectIndex].panel5media === "video") {
-    console.log("Creating Video");
+    //console.log("Creating Video");
     panelContainer.innerHTML += `
          <figure class="pl-5 md:pl-20 pb-20 border-l-2 flex-col justify-start items-start gap-6 inline-flex">
             <h2 class="text-xl md:text-2xl">${projects[projectIndex].panel5title}</h2>   

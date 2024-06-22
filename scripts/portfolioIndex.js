@@ -3,6 +3,10 @@ import { projects } from "./projects.js";
 let dateSortBtn = document.getElementById("date-sort");
 let nameSortBtn = document.getElementById("name-sort");
 let tagsSortBtn = document.getElementById("tags-sort");
+const radiogroup = document.querySelectorAll('[name="sort"]');
+let dateSortLabel = document.getElementById("date-sort-label");
+let nameSortLabel = document.getElementById("name-sort-label");
+let tagsSortLabel = document.getElementById("tags-sort-label");
 let projectList = document.getElementById("project-list");
 let categoryNames = [];
 let categoryList = document.getElementsByClassName("category-list");
@@ -36,6 +40,10 @@ const addProject = (project, index) => {
    `;
 };
 
+/**
+ * Sort the projects in the index
+ * @param {string} sort - ID of input element being pressed
+ */
 const setSort = (sort) => {
   if (sort === "name-sort") {
     //Get project names through each project's name
@@ -108,13 +116,51 @@ const setSort = (sort) => {
   }
 };
 
+const handleKeyDown = (key, sort) => {
+  if (key === "Space" || key === "Enter") {
+    let buttonName = sort.replace("-label", "");
+    setSort(buttonName);
+    // Set radio buttons
+    radiogroup.forEach((input) => {
+      input.id === buttonName
+        ? (input.checked = true)
+        : (input.checked = false);
+    });
+  }
+};
+
 setSort("tags-sort");
 tagsSortBtn.setAttribute("checked", true);
 
 //Detect which button is pushed
-dateSortBtn.addEventListener("click", (e) => setSort(e.target.id));
-nameSortBtn.addEventListener("click", (e) => setSort(e.target.id));
-tagsSortBtn.addEventListener("click", (e) => setSort(e.target.id));
+tagsSortBtn.addEventListener("click", (e) => {
+  setSort(e.target.id);
+  console.log(tagsSortBtn.checked);
+  console.log(nameSortBtn.checked);
+  console.log(dateSortBtn.checked);
+});
+tagsSortLabel.addEventListener("keydown", (e) =>
+  handleKeyDown(e.code, e.target.id),
+);
+nameSortBtn.addEventListener("click", (e) => {
+  setSort(e.target.id);
+  console.log(tagsSortBtn.checked);
+  console.log(nameSortBtn.checked);
+  console.log(dateSortBtn.checked);
+});
+nameSortLabel.addEventListener("keydown", (e) =>
+  handleKeyDown(e.code, e.target.id),
+);
+dateSortBtn.addEventListener("click", (e) => {
+  setSort(e.target.id);
+  console.log(tagsSortBtn.checked);
+  console.log(nameSortBtn.checked);
+  console.log(dateSortBtn.checked);
+});
+dateSortLabel.addEventListener("keydown", (e) =>
+  handleKeyDown(e.code, e.target.id),
+);
+
 //Create category containers
 
 //Fill category containers with projects

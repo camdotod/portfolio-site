@@ -82,73 +82,58 @@
         <h1 id="" class="text-5xl">Portfolio</h1>
 
         <div
-          class="divide-inherit flex w-full flex-col items-start gap-5 divide-x-0 divide-y-2 text-lg md:flex-row md:gap-10 md:divide-x-2 md:divide-y-0"
+          class="divide-inherit flex w-full flex-col items-start gap-5 divide-x-0 divide-y text-lg md:flex-row md:gap-10 md:divide-x-2 md:divide-y-0"
         >
           <fieldset
             id="filters"
-            class="flex w-full grow-0 flex-col gap-4 text-xl sm:w-1/6 md:gap-6"
+            class="flex w-full grow-0 gap-4 pt-4 text-xl sm:w-1/6 md:flex-col md:gap-6"
             role="radiogroup"
           >
             <legend>Sort By:</legend>
-            <div
-              class="flex items-start justify-start has-[:checked]:order-first md:flex-col"
+            <input
+              id="tags-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="tags-sort"
+              id="tags-sort-label"
+              tabindex="0"
+              class="peer-checked:text-bg-color border-fg-color w-fit border px-2 py-1 hover:border-green hover:bg-green/10 focus:border-green focus:bg-green/10 active:underline peer-checked:border peer-checked:border-green peer-checked:bg-green peer-checked:outline-green dark:peer-checked:font-medium"
             >
-              <input
-                id="date-sort"
-                type="radio"
-                name="sort"
-                class="peer hidden"
-                value=""
-              />
-              <label
-                for="date-sort"
-                class="peer-checked:border-fg-color border-bg-color border px-2 py-1 hover:underline peer-checked:border"
-                tabindex="0"
-                role="radio"
-              >
-                Date
-              </label>
-            </div>
-            <div
-              class="flex items-start justify-start has-[:checked]:order-first md:flex-col"
-            >
+              Tags
+            </label>
+            <div class="flex items-start justify-start md:flex-col">
               <input
                 id="name-sort"
                 type="radio"
                 name="sort"
                 class="peer hidden"
-                tabindex="0"
-                role="radio"
               />
               <label
                 for="name-sort"
-                class="peer-checked:border-fg-color border-bg-color border px-2 py-1 hover:underline peer-checked:border"
+                id="name-sort-label"
                 tabindex="0"
-                aria-controls="project-list"
-                role="radio"
+                class="peer-checked:text-bg-color border-fg-color w-fit border px-2 py-1 hover:border-red hover:bg-red/10 focus:border-red focus:bg-red/10 active:underline peer-checked:border peer-checked:border-red peer-checked:bg-red peer-checked:outline-red dark:peer-checked:font-medium"
               >
                 Name
               </label>
             </div>
-            <div
-              class="flex items-start justify-start has-[:checked]:order-first md:flex-col"
-            >
+            <div class="flex items-start justify-start md:flex-col">
               <input
-                id="tags-sort"
+                id="date-sort"
                 type="radio"
                 name="sort"
                 class="peer hidden"
-                value=""
-                tabindex="0"
-                role="radio"
               />
               <label
-                for="tags-sort"
-                class="peer-checked:border-fg-color border-bg-color border px-2 py-1 hover:underline peer-checked:border"
+                for="date-sort"
+                id="date-sort-label"
+                class="peer-checked:text-bg-color border-fg-color w-fit border px-2 py-1 hover:border-blue hover:bg-blue/10 focus:border-blue focus:bg-blue/10 active:underline peer-checked:border peer-checked:border-blue peer-checked:bg-blue peer-checked:outline-blue dark:peer-checked:font-medium"
                 tabindex="0"
-                aria-controls="project-list"
               >
-                Tags
+                Date
               </label>
             </div>
           </fieldset>

@@ -1,6 +1,7 @@
 //Project "Database"
-import { projects } from './projects.js';
+import { projects } from "./projects.js";
 
+//Testing
 //Get container to insert elements into
 const projectContainer = document.getElementById("portfolio-content");
 
@@ -99,8 +100,7 @@ projects.forEach((project) => {
          <p class="figure--text">${project.panel5text}</p>
       </figcaption>
       `;
-   }
-   else {
+   } else {
       panel5.innerHTML += `
          <a href="${project.panel1img}" target="_blank" title="Open Image in New Tab"><img class="portfolio-item--description_figure" src="${project.panel5img}" alt="${project.panel5alt}"></a>
          <figcaption class="portfolio-item--description_figure">
@@ -112,16 +112,14 @@ projects.forEach((project) => {
 });
 
 //Style Tag Colours
-const tags = document.getElementsByClassName('portfolio-item--tag');
+const tags = document.getElementsByClassName("portfolio-item--tag");
 
 for (let i = 0; i < tags.length; i++) {
    if (tags[i].innerHTML === "UX/UI Design") {
       tags[i].classList.add("green");
-   }
-   else if (tags[i].innerHTML === "Product Design") {
+   } else if (tags[i].innerHTML === "Product Design") {
       tags[i].classList.add("red");
-   }
-   else if (tags[i].innerHTML === "Design Research") {
+   } else if (tags[i].innerHTML === "Design Research") {
       tags[i].classList.add("blue");
    }
 }
@@ -129,21 +127,28 @@ for (let i = 0; i < tags.length; i++) {
 //Handle Portfolio Items
 const portfolioItem = document.getElementsByClassName("portfolio-item");
 const details = document.getElementsByClassName("details");
-const accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
+const accBtn = document.getElementsByClassName(
+   "portfolio-item--accordion-button"
+);
 
 for (let i = 0; i < portfolioItem.length; i++) {
    portfolioItem[i].addEventListener("toggle", (event) => {
       if (portfolioItem[i].open) {
          accBtn[i].classList.add("portfolio-item--accordion-button_active");
          portfolioItem[i].ariaLabel = "Expanded";
-         toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
-      }
-
-      else {
-         toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
+         toggleClass(
+            details[i],
+            "portfolio-item--details",
+            "portfolio-item--details_collapsed"
+         );
+      } else {
+         toggleClass(
+            details[i],
+            "portfolio-item--details",
+            "portfolio-item--details_collapsed"
+         );
          accBtn[i].classList.remove("portfolio-item--accordion-button_active");
          portfolioItem[i].ariaLabel = "Collapsed";
       }
-
    });
 }

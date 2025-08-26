@@ -2,7 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./html/*.html", "./scripts/*.js", "index.html", "404.html"],
+  content: ["./*.html", "./scripts/*.js", "*.html", "index.html"],
   theme: {
     colors: {
       "fg-color": "rgb(var(--textColor)/<alpha-value>)",

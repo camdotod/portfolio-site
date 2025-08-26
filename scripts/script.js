@@ -42,11 +42,12 @@ function setLayout() {
 // * Modal
 const toggleModal = (event) => {
   console.log("Hover detected");
-  toggleClass(modal, "visible", "invisible");
+  toggleClass(modal, "hidden", "flex");
 };
 
 if (modalButton) {
   modalButton.addEventListener("mouseover", toggleModal);
+  modalButton.addEventListener("mouseleave", toggleModal);
 }
 
 // * Theme Button

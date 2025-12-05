@@ -52,7 +52,7 @@ function createProject() {
                <span class="sr-only">Tags:</span>
                <p class="w-fit tag p-2 text-xl border border-solid">${projectTags[0]}</p>
                <span class="sr-only">,</span>
-               <p class="w-fit text-xl tag p-2 border">${projectTags[1]}</p>
+               ${projectTags[1] ? `<p class="w-fit text-xl tag p-2 border">${projectTags[1]}</p>` : ""}
             </div>
             <p id="${projectContainer[0].id}_date" class="opacity-70"><span class="sr-only">Date:
                </span>${projects[projectIndex].date}<span class="sr-only">.</span>
@@ -121,19 +121,7 @@ function createPanel(index) {
          <h2 class="text-xl md:text-2xl">${projects[projectIndex].figtitle[index]}</h2>
          <img class="aspect-square md:aspect-video opacity-80 object-cover" src="${projects[projectIndex].figimg[index]}" alt="${projects[projectIndex].figalt[index]}">
          <figcaption class="">
-            <details class="group flex flex-col gap-6">
-               <summary class="flex flex-col gap-6 items-start">
                   <p class="">${projects[projectIndex].figtext[index]}</p>
-                  <p class=" group-open:hidden group-hover:underline opacity-70 hover:underline cursor-pointer">Show More...</p>
-                  <p class=" hidden group-open:block group-hover:underline opacity-70 hover:underline cursor-pointer">...Show Less</p>
-               </summary>
-               <h3 class="text-2xl pt-6 ">Iterations:</h3>
-               <div class="flex gap-10">
-                  <p class="">Details Details Details</p>
-                  <p class="">Details Details Details</p>
-                  <p class="">Details Details Details</p>
-               </div>
-            </details>
          </figcaption>
       </figure>`;
   }

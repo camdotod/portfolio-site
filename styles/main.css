@@ -245,6 +245,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -299,14 +302,26 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink-0 {
     flex-shrink: 0;
+  }
+  .flex-grow {
+    flex-grow: 1;
   }
   .grow-0 {
     flex-grow: 0;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -448,6 +463,9 @@
   .border-red {
     border-color: rgb(var(--red)/1);
   }
+  .border-b-fg-color {
+    border-bottom-color: rgb(var(--textColor)/1);
+  }
   .border-b-fg-color\/50 {
     border-bottom-color: rgb(var(--textColor)/1);
     @supports (color: color-mix(in lab, red, red)) {
@@ -513,6 +531,9 @@
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pl-0 {
+    padding-left: calc(var(--spacing) * 0);
   }
   .pl-0\! {
     padding-left: calc(var(--spacing) * 0) !important;
@@ -593,6 +614,10 @@
   .opacity-80 {
     opacity: 80%;
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -651,14 +676,38 @@
       background-color: rgb(var(--blue)/1);
     }
   }
+  .peer-checked\:bg-blue\/10 {
+    &:is(:where(.peer):checked ~ *) {
+      background-color: rgb(var(--blue)/1);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, rgb(var(--blue)/1) 10%, transparent);
+      }
+    }
+  }
   .peer-checked\:bg-green {
     &:is(:where(.peer):checked ~ *) {
       background-color: rgb(var(--green)/1);
     }
   }
+  .peer-checked\:bg-green\/10 {
+    &:is(:where(.peer):checked ~ *) {
+      background-color: rgb(var(--green)/1);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, rgb(var(--green)/1) 10%, transparent);
+      }
+    }
+  }
   .peer-checked\:bg-red {
     &:is(:where(.peer):checked ~ *) {
       background-color: rgb(var(--red)/1);
+    }
+  }
+  .peer-checked\:bg-red\/10 {
+    &:is(:where(.peer):checked ~ *) {
+      background-color: rgb(var(--red)/1);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, rgb(var(--red)/1) 10%, transparent);
+      }
     }
   }
   .peer-checked\:text-bg-color {
@@ -1371,6 +1420,11 @@ summary::marker {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -1394,11 +1448,6 @@ summary::marker {
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @keyframes glint {
   0% {
@@ -1431,12 +1480,12 @@ summary::marker {
       --tw-divide-y-reverse: 0;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-ease: initial;
       --tw-content: "";
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
-      --tw-outline-style: solid;
     }
   }
 }

@@ -15,7 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["IBM Plex Sans", "Inter", "Arial", "sans-serif"],
+        sans: ["Public Sans", "IBM Plex Sans", "Inter", "Arial", "sans-serif"],
       },
       content: {
         arrow: '" →"',
@@ -68,4 +68,4 @@ module.exports = {
   ],
 };
 
-//npx tailwindcss -i ./styles/styles.css -o ./styles/main.css --watch
+//npx @tailwindcss/cli -i ./styles/styles.css -o ./styles/main.css --watch

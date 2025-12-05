@@ -120,8 +120,8 @@ function createPanel(index) {
          class="pl-5 md:pl-20 pb-20 border-l-2 flex-col justify-start items-start gap-6 inline-flex">
          <h2 class="text-xl md:text-2xl">${projects[projectIndex].figtitle[index]}</h2>
          <img class="aspect-square md:aspect-video opacity-80 object-cover" src="${projects[projectIndex].figimg[index]}" alt="${projects[projectIndex].figalt[index]}">
-         <figcaption class="">
-                  <p class="">${projects[projectIndex].figtext[index]}</p>
+         <figcaption class="self-stretch">
+                  <p class="flex flex-col">${projects[projectIndex].figtext[index]}</p>
          </figcaption>
       </figure>`;
   }

@@ -38,7 +38,7 @@
     />
   </head>
 
-  <body class="bg-bg-color font-sans text-fg-color">
+  <body class="bg-bg-color text-fg-color font-sans">
     <header>
       <noscript>Your browser does not support JavaScript</noscript>
     </header>
@@ -49,13 +49,13 @@
           <div
             id="modal-container
           "
-            class="flex flex-col gap-5 md:flex-row"
+            class="flex w-full flex-col gap-5 md:flex-row"
           >
             <p class="leading-relaxed">
               I am a
               <span
                 id="modal-button"
-                class="underline decoration-dotted hover:cursor-help hover:decoration-red"
+                class="decoration-red md:decoration-fg-color md:hover:decoration-red underline decoration-dotted md:hover:cursor-help"
                 >multidisciplinary designer</span
               >
               with an interest in UX/UI design & design research. <br /><br />I
@@ -65,12 +65,12 @@
             </p>
             <aside
               id="modal"
-              class="hidden flex-col gap-5 border-l border-red pl-5 md:pl-10"
+              class="border-red flex flex-col gap-5 border-l pl-5 md:hidden md:w-full md:pl-10"
             >
-              <h2 class="self-stretch text-xl text-red">
+              <h2 class="text-red min-w-0 self-stretch text-xl">
                 What is a multidisciplinary designer?
               </h2>
-              <p class="self-stretch opacity-70">
+              <p class="min-w-0 self-stretch opacity-70">
                 A multidisciplinary designer is a designer who has access to a
                 broad skill set encompassing multiple fields including
                 industrial/product design, UX/UI design, graphic design,
@@ -105,43 +105,11 @@
           </p>
         </div>
       </section>
-      <hr />
       <p class="leading-relaxed">
         When I’m not working, I love being creative, whether that’s drawing,
         sewing, making music, or cooking. I also enjoy playing video games &
         tabletop RPGs with friends!
       </p>
-      <div>
-        <div class="flex flex-col items-end gap-10 md:flex-row">
-          <figure
-            class="flex flex-col items-start justify-start gap-5 self-stretch md:w-1/4"
-          >
-            <figcaption>A photo of Gillian Anderson:</figcaption>
-            <img
-              class="w-full object-cover"
-              src="/assets/about/FF77biZX0AY1FfK.jpg"
-            />
-          </figure>
-          <figure
-            class="flex flex-col items-start justify-start gap-5 md:w-1/4"
-          >
-            <figcaption>A photo of Gillian Anderson:</figcaption>
-            <img
-              class="w-full object-cover"
-              src="/assets/about/FF76TnGXoAcBtIM.jpg"
-            />
-          </figure>
-          <figure
-            class="flex flex-col items-start justify-start gap-5 md:w-2/5"
-          >
-            <figcaption>A photo of Gillian Anderson:</figcaption>
-            <img
-              class="w-full object-cover"
-              src="/assets/about/FF78kfNX0BA3bGr.jpg"
-            />
-          </figure>
-        </div>
-      </div>
     </main>
     <footer>
       <noscript

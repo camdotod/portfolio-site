@@ -18,7 +18,7 @@ let categoryList = document.getElementsByClassName("category-list");
  */
 const popCategories = (categoryArr, sort) => {
   //Clear projectList
-  let sortName = sort.split("-").shift();
+  let sortName = sort.split("_").shift();
 
   projectList.innerHTML = `<div class="sr-only" aria-role="region" aria-live="polite">Projects sorted by ${sortName}.</div>`;
 
@@ -36,7 +36,7 @@ const popCategories = (categoryArr, sort) => {
 
 const addProject = (project, index) => {
   categoryList[index].innerHTML += `
-      <li><a class="after:content-[''] hover:after:content-arrow hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "-")}.html" tabindex="0">${project.name}</a></li>
+      <li><a class="after:content-[''] hover:after:content-arrow hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "_")}.html" tabindex="0">${project.name}</a></li>
    `;
 };
 
@@ -78,7 +78,12 @@ const setSort = (sort) => {
       });
     }
   } else if (sort === "tags-sort") {
-    categoryNames = ["UX/UI Design", "Design Research", "Industrial Design"];
+    categoryNames = [
+      "UX/UI Design",
+      "Design Research",
+      "Industrial Design",
+      "Design Anthropology",
+    ];
 
     popCategories(categoryNames, sort);
 

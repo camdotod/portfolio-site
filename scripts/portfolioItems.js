@@ -2,7 +2,7 @@ import { projects } from "./projects.js";
 //Get container to insert elements into
 const projectContainer = document.getElementsByClassName("portfolio-item");
 //console.log(projectContainer[0].id);
-const pageName = projectContainer[0].id.replaceAll("-", " ");
+const pageName = projectContainer[0].id.replaceAll("_", " ");
 
 const projectNames = projects.map((project) => project.name);
 const projectIndex = projectNames.indexOf(pageName);

@@ -98,10 +98,9 @@ function addHeader() {
 
   header.innerHTML = `
 <nav id="nav-bar" class="w-full flex items-end justify-end gap-4 md:gap-8 xl:gap-12">
-  <a id="link-landing-page" class="group focus-visible:underline focus-visible:outline-hidden focus-visible:underline-offset-4 focus-visible:decoration-1 mr-auto flex gap-4 text-4xl" href="/" tabindex="0"
+  <a id="link-landing-page" class="mr-auto flex gap-4 text-4xl active:opacity-80" href="/" tabindex="0"
     aria-label="Back to home page">
-    <span id="cam-od-logo"
-      class="logo group-hover:animate-glint group-hover:bg-transparent group-focus-visible:animate-glint group-focus-visible:bg-transparent h-10 w-10 bg-fg-color"></span>
+    <img src="assets/Logo-P22.png" class="h-10 rounded-xl" aria-hidden>
   </a>
   <a id="link-portfolio" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/portfolio.html" tabindex="0">projects</a>
   <a id="link-portfolio" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/process.html" tabindex="0">design process</a>

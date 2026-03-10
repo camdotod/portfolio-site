@@ -11,9 +11,9 @@ export const projects = [
     heroalt: "",
 
     objective:
-      "To help members better understand their payment status to prevent unnecessary calls to administrative staff.",
+      "To help union members better understand their payment status and prevent unnecessary calls to administrative staff.",
     summary:
-      "In partnership with the organization’s admin and developers, I redesigned the payment history page on the member portal to more clearly communicate payments and current balance of members.",
+      "In partnership with the organization’s admin and developers, I redesigned the payment history page on the member portal to be more clear and transparent about payments and current balances.",
 
     figimg: [
       "/assets/Dues Dashboard/Dues_Dashboard-Image_1.png",
@@ -33,13 +33,19 @@ export const projects = [
 
     figtitle: [
       "Understanding Members' Complaints",
-      "Assessing the Interface",
-      "Proposed Redesign",
+      "Identifying Where We Could Bridge Communication",
+      "Redesigning the Dues Dashboard",
       "Developer Hand-off",
       "Final Implementation",
     ],
 
-    figtext: ["", "", "", "", ""],
+    figtext: [
+      "LiUNA has over 100000 members across North America. To maintain membership, members must pay their dues each month. At the outset of this project, administrators were receiving calls from memebers who were confused about issues with their dues payments. They said that they would often deal with cases where the member had forgotten to pay their dues while between work, and thinking that they were up-to-date, thought their current employer wasn’t paying their dues. Members would ask for information about when they missed the payment and who was responsible, which the admin would have to look up manually in their database. This process was time consuming for administrators, and distressing for members. As well, there would often be troubles communicating issues because the admin's database categorized the data differently than how members understood it, leading to more frustration and miscommuniation.",
+      "Speaking with the developer, I found that through all the touchpoints, members were not able to easily access this key information. One of these touchpoints was a <strong>web-based portal</strong>, which members could access on their phone or desktop. Since members were already familiar with this, it could be a great place to put this information, so it was decided that this would be redesigned.",
+      "One simple change would be to add a “Current Balance” section. This would present members with an immediate summary of the status of their account. Further tweaks included reformatting the table to make it easier to read, and adding colour and icons to help users locate information faster.",
+      "After receiving more feedback from stakeholders, it was decided that we would move forward with implementation. An external agency was responsible for the web-portal so technical specifications would need to be prepared. In collaboration with the developer, I created detailed documentation showing the changes to the design, including mobile and desktop layout, styling, states, and specific API variables used to get data for each element.",
+      "The final design was implemented on the web-portal with the new Current Balance Section and layout. Since implementation admin has reported less calls to the office from members.",
+    ],
   },
   {
     name: "Counter-cartography of Housing in Ottawa",

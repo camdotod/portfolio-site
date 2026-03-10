@@ -26,8 +26,8 @@ const popCategories = (categoryArr, sort) => {
   categoryArr.forEach((name, index) => {
     projectList.innerHTML += `
     <div class="flex flex-col gap-5 w-full">
-       <h2 class="text-xl font-semibold">${name}</h2>
-       <ul id="${name}-category-${index}"w-full class="category-list list-none grid w-full md:grid-cols-2 gap-4 md:gap-x-20 md:gap-y-5">
+       <h2 class="font-bold opacity-80">${name}</h2>
+       <ul id="${name}-category-${index}" class="category-list list-none grid w-full md:grid-cols-2 gap-3 md:gap-x-20 md:gap-y-5">
        </ul>
     </div>
        `;
@@ -36,7 +36,7 @@ const popCategories = (categoryArr, sort) => {
 
 const addProject = (project, index) => {
   categoryList[index].innerHTML += `
-      <li><a class="after:content-[''] hover:after:content-arrow hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "_")}.html" tabindex="0">${project.name}</a></li>
+      <li><a class="after:content-[''] hover:after:content-['→'] hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "_")}.html" tabindex="0">${project.name}</a></li>
    `;
 };
 
@@ -48,11 +48,9 @@ const setSort = (sort) => {
   if (sort === "name-sort") {
     //Get project names through each project's name
     let projectNames = projects.map((project) => project.name);
-    console.log(projectNames);
 
     //Make category names
     categoryNames = projectNames.map((name) => name.charAt(0));
-    console.log(categoryNames);
 
     //Remove repeated letters
     categoryNames = [...new Set(categoryNames)];

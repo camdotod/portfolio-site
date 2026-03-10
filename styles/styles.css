@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tailwindcss' layer(utilities);
+@import "tailwindcss";
+@import "tailwindcss" layer(utilities);
 
 @config '../tailwind.config.js';
 
@@ -24,7 +24,7 @@
 @layer utilities {
   :root .material-icons.md-36 {
     font-size: 36px;
-    --text-color:           
+    --text-color:             
 ;
   }
 }

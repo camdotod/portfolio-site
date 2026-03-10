@@ -83,7 +83,7 @@ function createProject() {
    <div id="process" class="flex flex-col relative">
       <div class="absolute -left-5 h-full">
          <a href="#process-anchor"
-            class="sticky flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-fg-color bg-bg-color z-10">↑</a>
+            class="hidden sticky md:flex justify-center text-xl items-center top-10 w-10 h-10 rounded-full border-2 border-fg-color bg-bg-color z-10">↑</a>
       </div>
    </div>
 </div>
@@ -117,9 +117,9 @@ function createPanel(index) {
   } else {
     panelContainer.innerHTML += `
       <figure id="${projectContainer[0].id}_panel-${index}"
-         class="pl-5 md:pl-20 pb-20 border-l-2 flex-col justify-start items-start gap-6 inline-flex">
+         class=" md:pl-20 pb-20 md:border-l-2 flex-col justify-start items-start gap-6 inline-flex">
          <h2 class="text-xl md:text-2xl">${projects[projectIndex].figtitle[index]}</h2>
-         <img class="aspect-square md:aspect-video opacity-80 object-cover" src="${projects[projectIndex].figimg[index]}" alt="${projects[projectIndex].figalt[index]}">
+         <img class="aspect-video w- md:w-auto object-contain object-center md:object-cover" src="${projects[projectIndex].figimg[index]}" alt="${projects[projectIndex].figalt[index]}">
          <figcaption class="self-stretch">
                   <p class="flex flex-col">${projects[projectIndex].figtext[index]}</p>
          </figcaption>

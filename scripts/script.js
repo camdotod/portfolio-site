@@ -139,7 +139,7 @@ function addFooter() {
   );
 
   footer.innerHTML = `
-<p class="text-right opacity-60">
+<p class="text-right text-sm opacity-70">
   Designed & Developed by Camryn O'Donnell
 </p>
 `;

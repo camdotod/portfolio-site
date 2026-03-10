@@ -32,9 +32,9 @@ const addClasses = (element, classes) => {
 setLayout();
 
 function setLayout() {
-  if (document.title !== "Camryn O'Donnell") {
-    addHeader();
-  }
+  // Insert header
+  addHeader();
+
   // Insert footer
   addFooter();
 }
@@ -87,7 +87,7 @@ if (toggleThemeButton) {
 function addHeader() {
   addClasses(
     header,
-    "sticky top-0 z-10 flex bg-bg-color px-10 pb-6 pt-8 md:px-20 w-full",
+    "sticky top-0 z-10 flex bg-bg-color px-6 pb-6 pt-8 md:px-60 w-full",
   );
 
   var folder = ".";
@@ -129,11 +129,11 @@ function addHeader() {
  * @returns HTML Element
  */
 function addFooter() {
-  addClasses(footer, "flex flex-col gap-6 px-6 border-t py-10 md:px-60");
+  addClasses(footer, "flex flex-col gap-6 px-6 border-t mt-10 py-10 md:px-60");
 
   footer.innerHTML = `
     <div id="footer-text" class="flex flex-col gap-4">
-          <p>Contact Me</p>
+          <h2 class="text-xl">Contact Me</h2>
           <p class="text-sm opacity-80">Interested in my work?</p>
         </div>
         <div id="social-buttons" class="flex gap-20 flex-wrap gap-y-4">

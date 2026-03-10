@@ -49,57 +49,77 @@
   <body
     class="bg-bg-color text-fg-color flex h-screen flex-col bg-white font-sans"
   >
-    <main class="flex h-fit flex-col gap-10">
-      <!--About Me-->
-      <section
-        id=""
-        class="bg-lines h-[70vh] bg-size-[2000px_auto] 2xl:bg-cover"
-      >
+    <header id="header">
+      <noscript>Your browser does not support JavaScript</noscript>
+    </header>
+    <main class="flex flex-col gap-10">
+      <div id="introduction" class="flex flex-col gap-10 px-6 md:px-60">
+        <h1 class="font-medium">Camryn O'Donnell</h1>
+        <div id="titles" class="flex flex-col gap-2">
+          <p class="text-blue text-xl">multidisciplinary designer</p>
+          <p class="text-sm">
+            ux/ui design | service design | industrial design | graphic design
+          </p>
+        </div>
+      </div>
+      <div id="recent-projects" class="flex flex-col">
         <div
-          class="flex h-full w-full flex-col justify-end gap-5 bg-white/70 px-10 py-10 md:flex-row-reverse md:items-end md:gap-20 md:px-20 md:py-20 dark:bg-black/70"
+          id="recent-projects-banner"
+          class="bg-red flex items-center justify-between self-stretch px-6 md:px-60"
         >
-          <img
-            class="h-48 w-48 grow-0 rounded-full md:h-60 md:w-60"
-            src="/assets/CODonnell-Headshot-300x300.png"
-            id="headshot"
-            alt="A headshot of Camryn O'Donnell"
-          />
-          <div id="bio" class="flex flex-col gap-5">
-            <h1 class="text-4xl md:text-5xl">
-              Welcome! <br />
-              My name is Camryn O'Donnell
-            </h1>
-            <p class="text-lg md:text-2xl">
-              I'm a
-              <span
-                class="decoration-fg-color underline decoration-wavy underline-offset-4"
-                >multidiscipinary designer</span
-              >
-              located in Toronto, Ontario
-            </p>
-            <p class="opacity-90 md:text-2xl">
-              ux/ui design | service design | industrial design | graphic design
-            </p>
+          <h2 class="text-xl font-medium">Recent Projects:</h2>
+          <a
+            href="portfolio.html"
+            id="see-all-button"
+            class="flex items-center gap-0.5"
+          >
+            <p class="py-4 underline">See all</p>
+            <span class="material-icons">arrow_right_alt</span>
+          </a>
+        </div>
+        <div
+          id="recent-projects-carousel"
+          class="flex snap-x snap-mandatory overflow-x-scroll"
+        >
+          <div id="project-1" class="w-full shrink-0 snap-center">
+            <div class="flex flex-col gap-4 px-6 py-8 md:px-60">
+              <h3 id="project-title-1" class="text-4xl">
+                Solving Miscommunications
+              </h3>
+              <p id="description-1" class="truncate">
+                Helping union members better understand their dues payments with
+                a simple UI fix and by also doing
+              </p>
+            </div>
+            <img
+              src="assets\Dues Dashboard\Dues_Dashboard-Image_0.png"
+              alt="Dues dashboard hero image"
+            />
+          </div>
+          <div id="project-1" class="w-full shrink-0 snap-center">
+            <div class="flex flex-col gap-4 px-6 py-8 md:px-60">
+              <h3 id="project-title-1" class="text-4xl">
+                Imagining New Ways of Delivering Therapy
+              </h3>
+              <p id="description-1" class="truncate">We're imagining</p>
+            </div>
+            <img
+              src="assets\Capstone Assets\Capstone-Image_0.jpg"
+              alt="Dues dashboard hero image"
+            />
           </div>
         </div>
-      </section>
-
-      <nav
-        class="flex flex-col justify-start gap-5 px-10 text-lg md:flex-row md:gap-20 md:px-20"
-      >
-        <a
-          class="underline after:absolute after:pl-1 after:transition-transform after:content-['→'] hover:after:translate-x-2"
-          href="portfolio.html"
-          tabindex="0"
-          >Explore my work</a
-        >
-        <a
-          class="underline after:absolute after:pl-1 after:transition-transform after:content-['→'] hover:after:translate-x-2"
-          href="about.html"
-          tabindex="0"
-          >Learn more about me</a
-        >
-      </nav>
+      </div>
+      <div id="design-process" class="flex flex-col gap-10 px-6 py-20 md:px-60">
+        <h2 class="text-xl italic">About the design process</h2>
+        <p class="opacity-80">
+          As a designer, I believe in the ways that design can impact people’s
+          lives. For many problems, big and small, it can provide clarity and
+          connect people, bridge gaps in understanding. Basically introduce how
+          I’m multidiscpilinary and tease the design process
+        </p>
+        <a href="/process.html" class="underline">Learn more</a>
+      </div>
     </main>
     <footer>
       <noscript

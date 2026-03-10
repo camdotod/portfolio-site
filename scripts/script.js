@@ -99,17 +99,13 @@ function addHeader() {
   header.innerHTML = `
 <nav id="nav-bar" class="w-full flex items-end justify-end gap-4 md:gap-8 xl:gap-12">
   <a id="link-landing-page" class="group focus-visible:underline focus-visible:outline-hidden focus-visible:underline-offset-4 focus-visible:decoration-1 mr-auto flex gap-4 text-4xl" href="/" tabindex="0"
-    aria-label="Back to Landing Page">
+    aria-label="Back to home page">
     <span id="cam-od-logo"
       class="logo group-hover:animate-glint group-hover:bg-transparent group-focus-visible:animate-glint group-focus-visible:bg-transparent h-10 w-10 bg-fg-color"></span>
-    <p aria-hidden="true" id="camod-name"
-      class="h-0 w-0 overflow-hidden bg-clip-text pl-0! md:h-fit md:w-fit">
-      Camryn O'Donnell
-    </p>
   </a>
-  <a id="link-about-me" class="hover:underline focus:underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/about.html" tabindex="0">about</a>
-  <a id="link-portfolio" class="hover:underline focus:underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/portfolio.html" tabindex="0">portfolio</a>
-  <a id="link-contact" class="hover:underline focus:underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/contact.html" tabindex="0">contact</a>
+  <a id="link-portfolio" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/portfolio.html" tabindex="0">projects</a>
+  <a id="link-portfolio" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/process.html" tabindex="0">design process</a>
+  <a id="link-about-me" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/about.html" tabindex="0">about</a>
 </nav>
 `;
 
@@ -133,14 +129,57 @@ function addHeader() {
  * @returns HTML Element
  */
 function addFooter() {
-  addClasses(
-    footer,
-    "flex h-fit w-full justify-end px-10 pb-10 pt-20 md:px-20 mt-auto",
-  );
+  addClasses(footer, "flex flex-col gap-6 px-6 border-t py-10 md:px-60");
 
   footer.innerHTML = `
-<p class="text-right text-sm opacity-70">
-  Designed & Developed by Camryn O'Donnell
-</p>
+    <div id="footer-text" class="flex flex-col gap-4">
+          <p>Contact Me</p>
+          <p class="text-sm opacity-80">Interested in my work?</p>
+        </div>
+        <div id="social-buttons" class="flex gap-20 flex-wrap gap-y-4">
+          <a
+            href="https://mailto:camryn.odonnell@gmail.com"
+            id="email-button"
+            role="button"
+            tabindex="0"
+            target="_blank"
+            class="text-green flex items-center gap-2"
+          >
+            <span aria-hidden="true" class="material-icons">alternate_email</span>
+            <p class="font-bold underline decoration-2 underline-offset-2">
+              Email
+            </p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/camryn-odonnell/"
+            id="linkedin-button"
+            role="button"
+            tabindex="0"
+            target="_blank"
+            class="text-blue flex items-center gap-2"
+          >
+            <span aria-hidden="true" class="material-icons">work</span>
+            <p class="font-bold underline decoration-2 underline-offset-2">
+              LinkedIn
+            </p>
+          </a>
+          <a
+            href="https://github.com/camdotod"
+            class="text-red flex items-center gap-2"
+            id="github-button"
+            role="button"
+            target="_blank"
+            tabindex="0"
+          >
+            <p aria-hidden="true" class="material-icons">code</p>
+            <p class="font-bold underline decoration-2 underline-offset-2">
+              GitHub
+            </p>
+          </a>
+    
+        </div>
+        <a href="https://github.com/camdotod/portfolio-site" class="text-right self-stretch underline text-sm opacity-70">
+    Designed & Developed by Camryn O'Donnell
+    </a>
 `;
 }

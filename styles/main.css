@@ -24,6 +24,8 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-relaxed: 1.625;
+    --radius-lg: 0.5rem;
+    --radius-2xl: 1rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --aspect-video: 16 / 9;
@@ -478,8 +480,14 @@
   .overflow-x-scroll {
     overflow-x: scroll;
   }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -552,14 +560,35 @@
   .bg-yellow {
     background-color: rgb(var(--yellow)/1);
   }
+  .bg-\[url\(\/assets\/SVG\/diagonal-crosshatch\.svg\)\] {
+    background-image: url(/assets/SVG/diagonal-crosshatch.svg);
+  }
+  .bg-\[url\(\/assets\/SVG\/diagonal-hatch-2\.svg\)\] {
+    background-image: url(/assets/SVG/diagonal-hatch-2.svg);
+  }
+  .bg-\[url\(assets\/SVG\/diagonal-hatch-2\.svg\)\] {
+    background-image: url(assets/SVG/diagonal-hatch-2.svg);
+  }
+  .bg-\[url\(assets\\SVG\\diagonal-crosshatch\.svg\)\] {
+    background-image: url(assets\SVG\diagonal-crosshatch.svg);
+  }
+  .bg-\[url\(assets\\SVG\\diagonal-hatch-2\.svg\)\] {
+    background-image: url(assets\SVG\diagonal-hatch-2.svg);
+  }
   .bg-lines {
     background-image: url("/assets/line-distortions-4-transparentcolours.png");
+  }
+  .bg-none {
+    background-image: none;
   }
   .bg-size-\[2000px_auto\] {
     background-size: 2000px auto;
   }
   .bg-clip-text {
     background-clip: text;
+  }
+  .bg-repeat {
+    background-repeat: repeat;
   }
   .object-contain {
     object-fit: contain;
@@ -573,11 +602,17 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);

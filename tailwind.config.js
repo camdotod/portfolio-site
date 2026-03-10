@@ -9,6 +9,7 @@ module.exports = {
       "bg-color": "rgb(var(--backgroundColor)/<alpha-value>)",
       red: "rgb(var(--red)/<alpha-value>)",
       blue: "rgb(var(--blue)/<alpha-value>)",
+      cobalt: "rgb(var(--cobalt)/<alpha-value>)",
       green: "rgb(var(--green)/<alpha-value>)",
       yellow: "rgb(var(--yellow)/<alpha-value>)",
       transparent: "transparent",

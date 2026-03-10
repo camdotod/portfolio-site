@@ -24,7 +24,7 @@
 @layer utilities {
   :root .material-icons.md-36 {
     font-size: 36px;
-    --text-color:             
+    --text-color:                       
 ;
   }
 }
@@ -37,6 +37,7 @@
       --red: 193 72 31;
       --blue: 69 117 165;
       --green: 130 106 13;
+      --cobalt: 0 20 200;
       --yellow: 156 108 13;
     }
   }
@@ -46,6 +47,7 @@
       --backgroundColor: 13 8 14;
       --red: 213 81 48;
       --blue: 98 139 179;
+      --cobalt: 0 20 200;
       --green: 149 122 15;
       --yellow: 227 163 39;
     }
@@ -67,4 +69,8 @@ summary::marker {
 .logo {
   -webkit-mask-image: url(/assets/SVG/camod-logo-black.svg);
   mask-image: url(/assets/SVG/camod-logo-black.svg);
+}
+
+em {
+  font-style: italic;
 }

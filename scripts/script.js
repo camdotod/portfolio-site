@@ -100,7 +100,7 @@ function addHeader() {
 <nav id="nav-bar" class="w-full flex items-end justify-end gap-4 md:gap-8 xl:gap-12">
   <a id="link-landing-page" class="mr-auto flex gap-4 text-4xl active:opacity-80" href="/" tabindex="0"
     aria-label="Back to home page">
-    <img src="assets/Logo-P22.png" class="h-10 rounded-xl" aria-hidden>
+    <img src="/assets/Logo-P22.png" class="h-10 rounded-xl" aria-hidden>
   </a>
   <a id="link-portfolio" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/portfolio.html" tabindex="0">projects</a>
   <a id="link-portfolio" class="underline focus-visible:outline-offset-4 focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-fg-color" href="${folder}/process.html" tabindex="0">design process</a>
@@ -177,7 +177,7 @@ function addFooter() {
           </a>
     
         </div>
-        <a href="https://github.com/camdotod/portfolio-site" class="text-right self-stretch underline text-sm opacity-70">
+        <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right self-stretch underline text-sm opacity-70">
     Designed & Developed by Camryn O'Donnell
     </a>
 `;

@@ -25,6 +25,9 @@ module.exports = {
       backgroundImage: {
         lines: 'url("/assets/line-distortions-4-transparentcolours.png")',
         hatch: 'url("/assets/SVG/diagonal-hatch-2.svg")',
+        "hatch-fresh-400": 'url("/assets/SVG/hatch-fresh-400.svg")',
+        "hatch-fresh-100": 'url("/assets/SVG/hatch-fresh-100.svg")',
+        "hatch-fresh-900": 'url("/assets/SVG/hatch-fresh-900.svg")',
       },
     },
     keyframes: {

@@ -351,6 +351,9 @@
   .w-full {
     width: 100%;
   }
+  .w-lvw {
+    width: 100lvw;
+  }
   .w-svw {
     width: 100svw;
   }
@@ -629,6 +632,9 @@
   .border-red {
     border-color: rgb(var(--red)/1);
   }
+  .border-vigor-600 {
+    border-color: var(--color-vigor-600);
+  }
   .bg-bg-color {
     background-color: rgb(var(--backgroundColor)/1);
   }
@@ -673,6 +679,9 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .object-fill {
+    object-fit: fill;
   }
   .object-\[75\%_75\%\] {
     object-position: 75% 75%;

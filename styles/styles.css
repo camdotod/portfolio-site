@@ -24,9 +24,31 @@
 @layer utilities {
   :root .material-icons.md-36 {
     font-size: 36px;
-    --text-color:                       
+    --text-color:                                                  
 ;
   }
+}
+
+@theme {
+  --color-vigor-100: oklch(97% 0.014911 356.6);
+  --color-vigor-400: oklch(77% 0.136222 18.5);
+  --color-vigor-600: oklch(47% 0.187166 21.7);
+  --color-vigor-900: oklch(27.1% 0.107507 26.6);
+
+  --color-grit-100: oklch(97.7% 0.133186 108.6);
+  --color-grit-400: oklch(77% 0.110713 83.1);
+  --color-grit-600: oklch(47% 0.136952 40.5);
+  --color-grit-900: oklch(27% 0.075153 43.9);
+
+  --color-fresh-100: oklch(97% 0.065494 131.1);
+  --color-fresh-400: oklch(77% 0.166748 153.5);
+  --color-fresh-600: oklch(47.1% 0.114574 153.4);
+  --color-fresh-900: oklch(27% 0.067125 154.7);
+
+  --color-calm-100: oklch(97.8% 0.031779 196.6);
+  --color-calm-400: oklch(77% 0.117388 260.1);
+  --color-calm-600: oklch(47% 0.25462 267.7);
+  --color-calm-900: oklch(27% 0.176145 265.1);
 }
 
 @layer base {
@@ -73,4 +95,16 @@ summary::marker {
 
 em {
   font-style: italic;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+strong {
+  opacity: 100% !important;
 }

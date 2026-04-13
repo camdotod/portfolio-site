@@ -14,18 +14,14 @@
     />
     <meta name="author" content="Camryn O'Donnell" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/SVG/camod-logo-black.svg"
-    />
+    <link rel="icon" type="image/x-icon" href="/assets/Logo-P22.png" />
 
     <!--Stylesheet-->
     <link rel="stylesheet" href="/styles/main.css" />
 
-    <!--Material Design Icons-->
+    <!--Material Design Symbols-->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,chevron_line_up,deployed_code,download,menu,work&display=block"
       rel="stylesheet"
     />
 
@@ -44,61 +40,84 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="bg-bg-color text-fg-color font-sans">
-    <header>
+    <header id="header">
       <noscript>Your browser does not support JavaScript</noscript>
     </header>
     <main class="flex flex-col gap-10 px-6 md:gap-20 md:px-60">
-      <h1 class="font-medium md:text-xl">About</h1>
-      <section class="flex flex-col gap-20 md:flex-row">
-        <div class="flex flex-col gap-10">
-          <p class="leading-relaxed">
-            Hi! My name is Camryn <em>(they/them)</em>
-          </p>
-          <p>
+      <h1 class="font-display font-medium md:text-xl">About</h1>
+      <section class="flex flex-col gap-20 self-stretch">
+        <div
+          class="flex flex-col gap-6 self-stretch lg:flex-row-reverse lg:justify-between"
+        >
+          <img
+            src="/assets/CODonnell-Headshot-300x300.png"
+            alt="Close-up photo of Camryn"
+            class="size-40 shrink rounded-4xl lg:size-64"
+          />
+          <p class="max-w-xl opacity-80">
+            Hi! My name is Camryn
+            <em class="text-grit-600 dark:text-grit-400 text-sm"
+              >(they/them)</em
+            >
+            <br /><br />
             I'm a multidisciplinary designer based in Toronto, Ontario, Canada.
-          </p>
-          <p>
+            <br /><br />
             I’ve had experience working in a number of settings, including
             commercial product design, app development, and community projects.
             <br /><br />I started my education in design at Carleton University,
             where I completed a Bachelor’s in Industrial Design, and hope to
             pursue a graduate degree in the future.
           </p>
-          <div
-            id="resume-callout"
-            class="flex items-center justify-between gap-10 bg-[url(/assets/SVG/diagonal-hatch-2.svg)] p-4"
-          >
-            <p class="font-medium">Check out my resume:</p>
-            <a
-              role="button"
-              tabindex="0"
-              class="bg-blue flex items-center gap-2 rounded-lg px-4 py-2"
-              href="/assets/documents/Camryn-ODonnell_Resume.pdf"
-              ><span class="material-icons" aria-hidden>download</span
-              >Download</a
-            >
-          </div>
-          <p class="leading-relaxed">
-            I am passionate about learning how design can be used as a tool to
-            bridge gaps and help others—particularly in education, health care,
-            and public service.
-            <br /><br />What interests me most is how the design process helps
-            us tackle complex problems through knowledge, collaboration, and
-            empathy. I believe in design for everyone, and I hope to continue
-            learning how to facilitate positive change in our world.
-          </p>
         </div>
+        <div
+          id="resume-callout"
+          class="bg-hatch flex max-w-xl items-center justify-between gap-10 p-4"
+        >
+          <p class="font-medium">Check out my resume:</p>
+          <a
+            role="button"
+            tabindex="0"
+            class="bg-calm-600 text-bg-color dark:text-fg-color flex items-center gap-2 rounded-lg px-4 py-2"
+            href="/assets/documents/Camryn-ODonnell_Resume.pdf"
+            ><span class="material-symbols-outlined" aria-hidden>download</span
+            >Download</a
+          >
+        </div>
+        <p class="max-w-xl">
+          I am passionate about learning how design can be used as a tool to
+          bridge gaps and help others—particularly in education, health care,
+          and public service.
+          <br /><br />What interests me most is how the design process helps us
+          tackle complex problems through knowledge, collaboration, and empathy.
+          I believe in design for everyone, and I hope to continue learning how
+          to facilitate positive change in our world.
+        </p>
       </section>
-      <p class="leading-relaxed">
+      <p class="max-w-xl">
         When I’m not working, I enjoy experimenting with different crafts and
-        working on personal projects. I love to draw, sew, cook, and make
-        crosswords!
+        working on personal projects. I love to draw, sew, cook, and
+        <a
+          href="https://crosshare.org/crosswords/aWY0Aj2vgJbqm9d0Hn1s/show-and-tell"
+          class="hover:decoration-fg-color decoration-fg-color/50 underline underline-offset-2 active:opacity-60"
+        >
+          make crosswords!</a
+        >
       </p>
     </main>
-    <footer></footer>
+    <footer>
+      <noscript>Your browser does not support JavaScript</noscript>
+    </footer>
   </body>
   <script src="/scripts/script.js"></script>
 </html>

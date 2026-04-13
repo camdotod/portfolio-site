@@ -17,12 +17,14 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Public Sans", "IBM Plex Sans", "Inter", "Arial", "sans-serif"],
+        display: ["Archivo", "Public Sans"],
       },
       content: {
         arrow: '" →"',
       },
       backgroundImage: {
         lines: 'url("/assets/line-distortions-4-transparentcolours.png")',
+        hatch: 'url("/assets/SVG/diagonal-hatch-2.svg")',
       },
     },
     keyframes: {

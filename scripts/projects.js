@@ -48,6 +48,60 @@ export const projects = [
     ],
   },
   {
+    name: "ManeFrame: Social App for Hairstylists",
+    year: "2025",
+    date: "July 2024–October 2025",
+    tools: "Figma",
+    tags: "UX/UI Design",
+
+    heroimg: "/assets/ManeFrame/hero_placeholder.png",
+    heroalt: "Screens from the app",
+
+    objective: "",
+    summary: "",
+
+    figimg: [
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_1.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_2.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_5.png",
+    ],
+
+    figalt: ["", "", "", ""],
+
+    figtitle: ["", "", "", "", ""],
+
+    figtext: ["", "", "", "", ""],
+  },
+  {
+    name: "Kitchenwares for Canadian Tire",
+    year: "2022",
+    date: "August 2021–August 2022",
+    tools: "SolidWorks, InDesign, Illustrator, Microsoft Office",
+    tags: "Industrial Design",
+
+    heroimg: "",
+    heroalt: "Vida by Paderno hand mixer",
+
+    objective: "",
+    summary: "",
+
+    figimg: [
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_1.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_2.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_5.png",
+    ],
+
+    figalt: ["", "", "", ""],
+
+    figtitle: ["", "", "", "", ""],
+
+    figtext: ["", "", "", "", ""],
+  },
+  {
     name: "Counter-cartography of Housing in Ottawa",
     year: "2023",
     date: "February 2023-April 2023",

@@ -7,25 +7,21 @@
     <meta name="color-scheme" content="dark light" />
 
     <!--Site Info-->
-    <title>Counter-cartography of Housing in Ottawa</title>
+    <title>LiUNA Dues Dashboard</title>
     <meta
       name="description"
       content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design."
     />
     <meta name="author" content="Camryn O'Donnell" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/SVG/camod-logo-black.svg"
-    />
+    <link rel="icon" type="image/x-icon" href="/assets/Logo-P22.png" />
 
     <!--Stylesheet-->
     <link rel="stylesheet" href="/styles/main.css" />
 
-    <!--Material Design Icons-->
+    <!--Material Design Symbols-->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,arrow_circle_down,arrow_circle_up,chevron_line_up,deployed_code,download,menu,work&display=block"
       rel="stylesheet"
     />
 
@@ -43,6 +39,14 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="bg-bg-color text-fg-color font-sans">
@@ -50,15 +54,924 @@
       <noscript>For best site experience, please enable JavaScript</noscript>
     </header>
 
-    <main
-      id="Dues_Dashboard"
-      class="portfolio-item flex flex-col items-start gap-10 p-10 md:p-20"
-    >
-      <noscript>Please enable Javascript to view this project</noscript>
+    <main class="flex flex-col">
+      <!-- Introduction -------------------------------------------------------------->
+
+      <section class="border-fg-color/20 flex h-svh flex-col gap-4 border-b">
+        <div
+          id="title"
+          class="flex items-baseline justify-between px-6 md:px-60"
+        >
+          <h1 class="font-display font-medium">LiUNA Dues Dashboard</h1>
+          <p
+            class="text-xs opacity-50"
+            aria-label="September 2024 to April 2025"
+          >
+            Sept 2024–Apr 2025
+          </p>
+          <!-- Change text between desktop & mobile?? -->
+        </div>
+        <div
+          class="border-fg-color/20 flex grow flex-col-reverse lg:flex-row lg:items-center lg:gap-12 lg:border-t"
+        >
+          <div
+            id="intro-text"
+            class="flex flex-col gap-10 px-6 py-10 md:px-60 lg:pr-0"
+          >
+            <h2 class="font-display text-4xl lg:text-5xl">
+              Reducing Member Complaints With A Simple UI Fix
+            </h2>
+            <p class="max-w-xl opacity-80">
+              When working within a large organization, it can feel impossible
+              to solve day-to-day issues because they’re often tied up in the
+              foundational systems that keep it running. But by listening to the
+              people these issues affect and understanding how they work
+              together, we can sometimes find the solution in fixing a simple
+              miscommunication.
+            </p>
+            <div
+              class="bg-fresh-100 dark:bg-fresh-900 w-fit rounded-lg px-1.5 py-[3px]"
+            >
+              <p class="text-fresh-600 dark:text-fresh-400 text-sm">
+                Reading Time: 5 mins
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-1 basis-0 overflow-hidden lg:h-auto lg:self-stretch"
+          >
+            <img
+              id="hero-shot"
+              class="min-w-0 flex-1 basis-0 object-cover object-[75%_75%]"
+              src="\assets\Dues Dashboard/Dues_Dashboard-Image_0.png"
+              alt="Desktop and mobile versions of the dues dashboard screen. The screens are overlapped on top of a green background."
+            />
+          </div>
+        </div>
+      </section>
+      <article id="article" class="flex flex-col">
+        <!-- The Problem with Dues Payments ------------------------------------------->
+
+        <section
+          id="section-1"
+          class="border-fg-color/20 flex flex-col gap-14 border-b py-16"
+        >
+          <h3
+            class="font-display px-6 pb-4 text-3xl font-thin opacity-70 md:px-60 lg:text-5xl"
+          >
+            The Problem with Arrears Notices
+          </h3>
+          <div
+            class="text-fg-color/80 flex h-fit flex-col gap-10 self-stretch lg:flex-row"
+          >
+            <!-- Intro -->
+            <div class="flex flex-col gap-8 px-6 lg:px-60">
+              <p class="max-w-xl">
+                When I started this project, my primary contact was a developer
+                who maintains an application that keeps track of dues payments
+                at a local union branch. He was looking for help with
+                potentially redesigning this application to solve an issue they
+                were having.
+              </p>
+              <h4 class="font-display text-fg-color text-xl font-medium">
+                Members' Complaints
+              </h4>
+              <p class="max-w-xl">
+                At the time, he explained that they were having problems with
+                members getting into arguments with administrators about being
+                late on payments.
+              </p>
+            </div>
+            <!-- Problem Storyboard -->
+            <div
+              id="problem-storyboard"
+              class="flex h-svh flex-col divide-x divide-y self-stretch overflow-hidden border"
+            >
+              <figure
+                class="flex min-w-0 flex-1 basis-0 flex-col self-stretch overflow-hidden"
+              >
+                <div
+                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden"
+                >
+                  <img
+                    class="min-w-0 flex-1 basis-0 object-cover"
+                    src="/assets/Dues Dashboard/problem_comic_1.png"
+                    alt="Drawing of a member looking at an envelope with a warning symbol on it."
+                  />
+                </div>
+                <figcaption class="bg-bg-color shrink-0 self-stretch p-4">
+                  <p class="max-w-lg text-sm">
+                    Members were calling the office, complaining about receiving
+                    alarming notices that they hadn’t paid their dues (i.e. “in
+                    arrears”).
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure
+                class="flex min-w-0 flex-1 basis-0 flex-col self-stretch overflow-hidden"
+              >
+                <div
+                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden"
+                >
+                  <img
+                    class="min-w-0 flex-1 basis-0 object-cover"
+                    src="/assets/Dues Dashboard/problem_comic_2.png"
+                    alt="Drawing of a member calling the office with their mobile phone while reading their arrears notice. A thought bubble beside the person's head reads: '??'"
+                  />
+                </div>
+                <figcaption class="p-4">
+                  <p class="max-w-xl grow-0 text-sm">
+                    Many of them were surprised and concerned because they
+                    thought that their employer had missed a payment.
+                  </p>
+                </figcaption>
+              </figure>
+
+              <figure
+                class="flex min-w-0 flex-1 basis-0 flex-col self-stretch overflow-hidden"
+              >
+                <div
+                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden"
+                >
+                  <img
+                    class="min-w-0 flex-1 basis-0 object-cover"
+                    src="/assets/Dues Dashboard/problem_comic_3.png"
+                    alt="Drawing of a member having a conversation with one of the administrators over the phone. The member looks angry and the administrator looks stressed. Overlapping speech bubbles imply it is a heated conversation."
+                  />
+                </div>
+                <figcaption class="p-4">
+                  <p class="max-w-xl grow-0 text-sm">
+                    When administrators would try to explain this using their
+                    records, members were getting confused about what payments
+                    were counting towards which months.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- The Problem -->
+          <div class="text-fg-color/80 flex flex-col gap-10 px-6 lg:px-60">
+            <h4 class="font-display text-fg-color text-xl font-medium">
+              Fixing the dues application
+            </h4>
+            <p class="max-w-xl">
+              Some union staff had suggested that they change how the payments
+              were recorded in the application, so that admin could explain it
+              more easily. But the developer explained that these changes they
+              would require a complete overhaul of the application.
+              <br /><br />
+              This would take a long time, and to add to this, many of the more
+              experienced admin were used to how the application worked and
+              would have to learn a new system.
+            </p>
+            <div
+              id="pros-cons-summary"
+              class="flex gap-4 self-stretch font-medium"
+            >
+              <div id="pros" class="flex flex-col gap-6">
+                <div id="pro1" class="flex gap-4">
+                  <div
+                    class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                    aria-label="Pro:"
+                  >
+                    arrow_circle_up
+                  </div>
+                  <p class="flex-1">Reduce member complaints</p>
+                </div>
+                <div id="pro2" class="flex gap-4">
+                  <div
+                    class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                    aria-label="Pro:"
+                  >
+                    arrow_circle_up
+                  </div>
+                  <p class="flex-1">Simpler to understand</p>
+                </div>
+              </div>
+              <div id="cons" class="flex flex-col gap-6">
+                <div id="con1" class="flex gap-4">
+                  <div
+                    class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                    aria-label="Con:"
+                  >
+                    arrow_circle_down
+                  </div>
+                  <p class="flex-1">Costly implementation</p>
+                </div>
+                <div id="con2" class="flex gap-4">
+                  <div
+                    class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                    aria-label="Con:"
+                  >
+                    arrow_circle_down
+                  </div>
+                  <p class="flex-1">Admin have to learn a new system</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-calm-100 dark:bg-calm-900 flex flex-col gap-6 px-6 py-14 md:px-60"
+          >
+            <p class="text-calm-900/80 dark:text-calm-100/80">
+              This left them with the question:
+            </p>
+            <p class="text-calm-900 dark:text-calm-100 font-display text-2xl">
+              If it wasn’t feasible to completely change the application, how
+              else could they alleviate confusion about members’ dues payments?
+            </p>
+          </div>
+        </section>
+
+        <!-- Finding the Miscommunication ------------------------------------------------------->
+
+        <section
+          id="section-2"
+          class="border-fg-color/20 flex flex-col gap-12 border-b py-16"
+        >
+          <div class="flex flex-col gap-8 px-6 md:px-60">
+            <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+              Finding the Miscommunication
+            </h3>
+            <p class="max-w-xl">
+              Before I started exploring solutions, I wanted to reallywhy
+              members were calling the office. understand
+              <strong>why members were calling the office.</strong>
+            </p>
+            <div
+              id="questions"
+              class="flex flex-col gap-6 md:flex-row md:justify-around"
+            >
+              <div class="flex items-center gap-4 md:flex-col">
+                <img
+                  src="\assets\Dues Dashboard\database.svg"
+                  alt="Icon of a computer screen showing a database."
+                  class="aspect-square w-20 md:w-40"
+                />
+                <em class="md:text-center"
+                  >How were the dues payments shown to the admin?</em
+                >
+              </div>
+
+              <div class="flex items-center gap-4 md:flex-col">
+                <img
+                  src="\assets\Dues Dashboard\arrears-notice.svg"
+                  alt="Icon of an envelope with a warning symbol on it."
+                  class="aspect-square w-20 md:w-40"
+                />
+                <em class="md:text-center"
+                  >What did the “in arrears” notice tell the members?</em
+                >
+              </div>
+
+              <div class="flex items-center gap-4 md:flex-col">
+                <img
+                  src="\assets\Dues Dashboard\payment-history.svg"
+                  alt="Icon of a receipt with a magnifying glass over it."
+                  class="aspect-square w-20 md:w-40"
+                />
+                <em class="md:text-center">
+                  Was there a way for members to check their payment history?
+                </em>
+              </div>
+            </div>
+            <p class="bg-hatch max-w-xl border p-6">
+              What I learned was that there was a
+              <strong>disconnect</strong> between how members and administrators
+              understood the dues payments, worsened by a lack of transparency.
+            </p>
+          </div>
+          <!-- Measuring Cup Explanation -->
+          <div
+            id="measuring-cup-explanation"
+            class="divide-fg-color/50 flex flex-col divide-y border"
+          >
+            <h4 class="bg-fg-color text-bg-color px-6 py-4 font-semibold">
+              How admin view dues payments:
+            </h4>
+
+            <figure id="fig-1" class="flex justify-between">
+              <figcaption class="max-w-xl p-6 text-sm">
+                In the program, a member’s balance could be thought of like a
+                measuring cup, with each line representing a month of dues.
+              </figcaption>
+
+              <div
+                class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
+              >
+                <img
+                  src="/assets/Dues Dashboard/measuring_cup.png"
+                  alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the July line."
+                />
+              </div>
+            </figure>
+
+            <figure id="fig-2" class="flex justify-between">
+              <figcaption class="max-w-xl p-6 text-sm">
+                When a member makes a payment, the cup fills to the next line.
+                If a payment is missed, the next would contribute to the
+                previous month.
+              </figcaption>
+
+              <div
+                class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
+              >
+                <img
+                  src="/assets/Dues Dashboard/making_payment.png"
+                  alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. Above the cup is the text '$42' and an arrow showing it is going into the cup. The cup is filled to the August line."
+                />
+              </div>
+            </figure>
+
+            <figure id="fig-3" class="flex flex-col lg:flex-row">
+              <figcaption class="max-w-xl p-6 text-sm">
+                If a member still had outstanding payments after a certain
+                amount of time, the program would generate an arrears notice.
+                This would tell the member how “full” their measuring cup was.
+              </figcaption>
+
+              <div class="bg-hatch p-6">
+                <img
+                  src="/assets/Dues Dashboard/measurement_reading.png"
+                  alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the August line. An arrow points from this line to the text 'You are paid up to August'"
+                />
+              </div>
+            </figure>
+
+            <figure id="fig-4" class="flex flex-col lg:flex-row">
+              <figcaption class="max-w-xl p-6 text-sm">
+                <span class="underline underline-offset-2">For example:</span>
+                Say in one year, you worked January-September and
+                November-December, and in October you had forgotten to pay your
+                dues. When you got your notice in December, it would say
+                <strong> “Paid up to November”. </strong>
+              </figcaption>
+
+              <div class="bg-hatch p-4">
+                <img
+                  src="/assets/Dues Dashboard/missed_payment.png"
+                  alt="A series of measuring cups showing the sequence of the months of October, November, and December. In October, it shows $0 being added to the cup and it's filled to the September line. In November, it shows $42 being added to the cup, now filled to the October line. In December, it shows $42 being added to the cup, now filled to the November line."
+                />
+              </div>
+            </figure>
+          </div>
+          <div class="flex flex-col gap-6 px-6 md:px-60">
+            <p class="max-w-xl">
+              <strong>This is where the confusion began.</strong>
+              <br /><br />Because it was being communicated in terms of time,
+              some members thought it was saying
+              <strong>“you didn’t pay your dues in December”</strong>.
+            </p>
+            <figure>
+              <img
+                id="journey-map"
+                src="/assets/Dues Dashboard/journey_map.svg"
+                alt="FILL_IN_ALT_TEXT"
+              />
+            </figure>
+            <p class="max-w-xl opacity-80">
+              If they wanted to get clarification on when the payment was
+              missed, there was a payment history page on the members portal,
+              but this had no information on who was responsible for the missed
+              payment. <br /><br />Having exhausted the options available to
+              them, members would call the office, perhaps feeling alarmed,
+              frustrated, and confused. And for the administrators, trying to
+              explain a complicated system to someone who is already in distress
+              becomes a huge challenge.
+            </p>
+          </div>
+        </section>
+
+        <!-- Bridging the Gap ------------------------------------------------------>
+
+        <section
+          id="section-3"
+          class="border-fg-color/20 flex flex-col gap-10 border-b px-6 py-16 md:px-60"
+        >
+          <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+            Bridging the Gap
+          </h3>
+          <p class="max-w-xl opacity-80">
+            The thing was,
+            <strong>all the information was in the system</strong>—what payments
+            were being missed, who was responsible for them—it just wasn’t being
+            shown to the members. <br /><br />I suggested that they didn’t need
+            to overhaul the program, they just had to
+            <strong> change how it was being communicated. </strong>
+            This could be done by updating the
+            <strong> existing payment history page.</strong>
+          </p>
+          <figure>
+            <img
+              id="bridging-the-gap"
+              src="/assets/Dues Dashboard/bridging_gap_graphic_V.svg"
+              alt="FILL_IN_ALT_TEXT"
+            />
+          </figure>
+          <p class="max-w-xl opacity-80">
+            With the information readily available, members wouldn’t have to
+            call the office in the first place. This would prevent costly
+            changes to the database and keep the system that the administrators
+            knew best.
+          </p>
+        </section>
+
+        <!-- Redesigning the Payment Page --------------------------------------------->
+
+        <section
+          id="section-4"
+          class="border-fg-color/20 flex flex-col gap-20 border-b py-16"
+        >
+          <div class="flex flex-col gap-10 px-6 md:px-60">
+            <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+              Redesigning the Payment Page
+            </h3>
+            <p class="max-w-xl opacity-80">
+              Working within a limited budget, I focused on how I could make
+              things clearer using <strong>content and styling</strong>.
+              <br /><br />I avoided making major changes or adding complicated
+              new features that would slow down implementation. At this stage,
+              it was important to work closely with the developer to understand
+              the technical limitations of what data could be displayed and how
+              we could format it.
+            </p>
+          </div>
+          <!-- Key Changes -->
+          <div class="flex flex-col gap-20">
+            <!-- Key Change 1 -->
+            <div class="flex flex-col gap-10">
+              <div class="px-6 md:px-60">
+                <p class="font-display text-fg-color max-w-xl text-xl">
+                  To start, I reevaluated
+                  <strong>what data the table should show</strong>:
+                </p>
+              </div>
+              <div id="key-changes-1" class="viewer relative flex">
+                <details id="k1-t1" class="k1-t group peer flex flex-col" open>
+                  <summary
+                    class="k1-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                    tabindex="-1"
+                  >
+                    Previous Version
+                  </summary>
+                  <figure
+                    id="k1-details"
+                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
+                  >
+                    <div class="bg-hatch flex w-full justify-center px-6">
+                      <img
+                        class="object-cover"
+                        src="/assets/Dues Dashboard/kc1-before.png"
+                        alt="FILL_IN_ALT_TEXT"
+                      />
+                    </div>
+                    <figcaption
+                      class="flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                    >
+                      <p class="text-fg-color/80 max-w-xl">
+                        In the previous version, the table displaying the
+                        payment history was unclear & lacked crucial
+                        information.
+                      </p>
+                      <ol
+                        class="text-vigor-900 dark:text-vigor-100 flex list-decimal flex-col items-stretch self-stretch px-6"
+                      >
+                        <li>
+                          Names of columns were vague and didn’t describe their
+                          content well.
+                        </li>
+                        <li>
+                          “Date” and “Description” fields seemed redundant.
+                        </li>
+                        <li>
+                          Sorting by “Description” and “Amount” wasn’t helpful
+                          to members.
+                        </li>
+                      </ol>
+                    </figcaption>
+                  </figure>
+                </details>
+                <details id="k1-t2" class="k1-t group peer flex flex-col">
+                  <summary
+                    class="k1-btn font-display border-fg-color/50 active:bg-fg-color/5 relative flex w-fit cursor-pointer items-center gap-2 border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                  >
+                    <div
+                      id="alert-dot"
+                      class="bg-fresh-400 h-2 w-2 rounded-lg"
+                      aria-hidden
+                    ></div>
+                    Updated Version
+                  </summary>
+                  <figure
+                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
+                  >
+                    <div class="bg-hatch flex w-full justify-center px-6">
+                      <img
+                        class="object-cover"
+                        src="/assets/Dues Dashboard/kc1-after.png"
+                        alt="FILL_IN_ALT_TEXT"
+                      />
+                    </div>
+                    <figcaption
+                      class="flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                    >
+                      <p class="text-fg-color/80">
+                        To provide members with the complete picture of their
+                        payment history, columns could be renamed and more data
+                        could be added.
+                      </p>
+                      <ol
+                        class="text-fresh-900 dark:text-fresh-100 flex list-decimal flex-col items-stretch px-6"
+                      >
+                        <li>
+                          Combined “Date” and “Description” into “Period”.
+                        </li>
+                        <li>Renamed fields for better clarity.</li>
+                        <li>
+                          Added columns for who made the payment and what the
+                          total balance was that month.
+                        </li>
+                        <li>Removed sorting features.</li>
+                      </ol>
+                    </figcaption>
+                  </figure>
+                </details>
+              </div>
+            </div>
+
+            <!-- Key Change 2 -->
+            <div class="flex flex-col gap-10">
+              <div class="px-6 md:px-60">
+                <p class="font-display text-fg-color max-w-xl text-xl">
+                  Next was the overall <strong>lack of readability.</strong>
+                </p>
+              </div>
+              <div id="key-changes-2" class="viewer relative flex">
+                <details id="k2-t1" class="k2-t group peer flex flex-col" open>
+                  <summary
+                    class="k2-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                    tabindex="-1"
+                  >
+                    Previous Version
+                  </summary>
+                  <figure
+                    id="k2-details"
+                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                  >
+                    <div class="bg-hatch flex w-full justify-center px-6">
+                      <img
+                        class="object-cover"
+                        src="/assets/Dues Dashboard/kc2-before.png"
+                        alt="FILL_IN_ALT_TEXT"
+                      />
+                    </div>
+                    <figcaption
+                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                    >
+                      <p>
+                        A lack of visual hierarchy made it difficult to find
+                        what you were looking for, and there were some
+                        challenges with the responsive design on mobile devices.
+                      </p>
+                      <ol
+                        class="text-vigor-900 dark:text-vigor-100 flex list-decimal flex-col items-stretch gap-2 px-6"
+                      >
+                        <li>Similar text formatting made it harder to read.</li>
+                        <li>
+                          On mobile, the stacking of the rows made it awkward to
+                          read and scroll through.
+                        </li>
+                      </ol>
+                    </figcaption>
+                  </figure>
+                </details>
+                <details id="k2-t2" class="k2-t group peer flex flex-col">
+                  <summary
+                    class="k2-btn font-display border-fg-color/50 active:bg-fg-color/5 relative flex w-fit cursor-pointer items-center gap-2 border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                  >
+                    <div
+                      id="alert-dot"
+                      class="bg-fresh-400 h-2 w-2 rounded-lg"
+                      aria-hidden
+                    ></div>
+                    Updated Version
+                  </summary>
+                  <figure
+                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                  >
+                    <div class="bg-hatch flex w-full justify-center px-6">
+                      <img
+                        class="object-cover"
+                        src="/assets/Dues Dashboard/kc2-after.png"
+                        alt="FILL_IN_ALT_TEXT"
+                      />
+                    </div>
+                    <figcaption
+                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                    >
+                      <p>
+                        The table layout could be preserved on the mobile
+                        version and important information could be highlighted
+                        using colour-coding.
+                      </p>
+                      <ol
+                        class="text-fresh-900 dark:text-fresh-100 flex list-decimal flex-col items-stretch gap-2 px-6"
+                      >
+                        <li>
+                          Added text formatting to emphasise important
+                          information.
+                        </li>
+                        <li>
+                          Colour-coded the “Balance” to show which periods the
+                          member was owing or had credit.
+                        </li>
+                      </ol>
+                    </figcaption>
+                  </figure>
+                </details>
+              </div>
+            </div>
+
+            <!-- Key Change 3 -->
+
+            <div class="flex flex-col gap-10">
+              <div class="px-6 md:px-60">
+                <p class="font-display text-fg-color max-w-xl text-xl">
+                  The final priority was providing members with a
+                  <strong>clear summary</strong>, so they could check their
+                  account at a glance.
+                </p>
+              </div>
+              <div id="key-changes-3" class="viewer relative flex">
+                <details class="k3-t group peer flex flex-col" open>
+                  <summary
+                    tabindex="-1"
+                    class="k3-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                  >
+                    Previous Version
+                  </summary>
+                  <figure
+                    id="k3-details"
+                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                  >
+                    <div class="bg-hatch flex w-full justify-center px-6">
+                      <img
+                        class="object-cover"
+                        src="/assets/Dues Dashboard/kc3-before.png"
+                        alt="The top of the payment history page with labelled with numbers."
+                      />
+                    </div>
+                    <figcaption
+                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                    >
+                      <p>
+                        When a member opened the dues dashboard, there was no
+                        summary of their account.
+                      </p>
+                      <ol
+                        class="text-vigor-900 dark:text-vigor-100 flex list-decimal flex-col items-stretch gap-2 px-6"
+                      >
+                        <li>
+                          Payment button shown, but no information on the status
+                          of their account.
+                        </li>
+                      </ol>
+                    </figcaption>
+                  </figure>
+                </details>
+                <details class="k3-t group peer flex flex-col">
+                  <summary
+                    class="k3-btn font-display border-fg-color/50 active:bg-fg-color/5 relative flex w-fit cursor-pointer items-center gap-2 border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                  >
+                    <div
+                      id="alert-dot"
+                      class="bg-fresh-400 h-2 w-2 rounded-lg"
+                      aria-hidden
+                    ></div>
+                    Updated Version
+                  </summary>
+                  <figure
+                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                  >
+                    <div class="bg-hatch flex w-full justify-center px-6">
+                      <img
+                        class="object-cover"
+                        src="/assets/Dues Dashboard/kc3-after.png"
+                        alt="FILL_IN_ALT_TEXT"
+                      />
+                    </div>
+                    <figcaption
+                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                    >
+                      <p>
+                        A summary could be added to allow members to see their
+                        account status at a glance.
+                      </p>
+                      <ol
+                        class="text-fresh-900 dark:text-fresh-100 flex list-decimal flex-col items-stretch gap-2 px-6"
+                      >
+                        <li>Displayed the member’s current balance.</li>
+                        <li>Displayed the upcoming due date.</li>
+                        <li>Displayed the status of the account.</li>
+                      </ol>
+                    </figcaption>
+                  </figure>
+                </details>
+              </div>
+            </div>
+          </div>
+          <!-- Final Concepts -->
+          <div class="flex h-svh flex-col gap-10 overflow-hidden">
+            <div class="px-6 md:px-60">
+              <p class="max-w-xl">
+                I put together three different versions of the payment history
+                page, and proposed these new features. These options showed
+                different desktop/mobile layout at different levels of effort of
+                implementation.
+              </p>
+            </div>
+            <div
+              id="concept-carousel"
+              class="flex flex-1 snap-x snap-mandatory gap-6 self-stretch overflow-x-scroll overflow-y-hidden px-6 lg:justify-between lg:overflow-auto lg:px-60"
+            >
+              <figure
+                class="flex w-full min-w-0 shrink-0 snap-center flex-col items-center gap-6 self-stretch overflow-hidden lg:w-auto lg:shrink"
+              >
+                <figcaption class="flex shrink-0 flex-col items-center gap-2">
+                  <h4 class="font-display text-xl lg:text-2xl">Concept 1</h4>
+                  <p
+                    class="text-fg-color/80 bg-grit-100 dark:bg-grit-900 rounded-lg px-1.5 py-[3px]"
+                  >
+                    Scrollable Table
+                  </p>
+                </figcaption>
+                <div class="grow overflow-hidden">
+                  <img
+                    class="h-full object-contain"
+                    src="/assets/Dues Dashboard/concept_1.png"
+                    alt="FILL_IN_ALT_TEXT"
+                  />
+                </div>
+              </figure>
+              <figure
+                class="flex w-full shrink-0 snap-center flex-col items-center gap-6 self-stretch overflow-hidden lg:w-auto lg:shrink"
+              >
+                <figcaption class="flex shrink-0 flex-col items-center gap-2">
+                  <h4 class="font-display text-xl lg:text-2xl">Concept 2</h4>
+                  <p
+                    class="text-fg-color/80 bg-fresh-100 dark:bg-fresh-900 rounded-lg px-1.5 py-[3px]"
+                  >
+                    Condensed Table
+                  </p>
+                </figcaption>
+                <div class="grow overflow-hidden">
+                  <img
+                    class="h-full object-contain"
+                    src="/assets/Dues Dashboard/concept_2.png"
+                    alt="FILL_IN_ALT_TEXT"
+                  />
+                </div>
+              </figure>
+              <figure
+                class="flex w-full shrink-0 snap-center flex-col items-center gap-6 self-stretch overflow-hidden lg:w-auto lg:shrink"
+              >
+                <figcaption class="flex shrink-0 flex-col items-center gap-2">
+                  <h4 class="font-display text-xl lg:text-2xl">Concept 3</h4>
+                  <p
+                    class="text-fg-color/80 bg-calm-100 dark:bg-calm-900 rounded-lg px-1.5 py-[3px]"
+                  >
+                    Condensed With Break
+                  </p>
+                </figcaption>
+                <div class="grow overflow-hidden">
+                  <img
+                    class="h-full object-contain"
+                    src="/assets/Dues Dashboard/concept_3.png"
+                    alt="FILL_IN_ALT_TEXT"
+                  />
+                </div>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- Introducing the New Design -->
+
+        <section id="section-5" class="flex flex-col gap-10 py-16">
+          <div class="px-6 md:px-60">
+            <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+              Introducing the New Design
+            </h3>
+            <p class="text-fg-color/80">
+              In the end, the team agreed to proceed with
+              <strong>Concept 3</strong>.
+            </p>
+          </div>
+          <!-- Final Concept -->
+          <div id="final-concept" class="viewer relative flex">
+            <details class="fc-t group peer flex flex-col" open>
+              <summary
+                tabindex="-1"
+                id="fc-t1-btn"
+                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+              >
+                Overview
+              </summary>
+              <figure
+                id="fc-details"
+                class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+              >
+                <div
+                  class="bg-hatch flex w-full justify-center px-6 py-16 lg:px-60"
+                >
+                  <img
+                    class="object-cover"
+                    src="/assets/Dues Dashboard/overview.png"
+                    alt="FILL_IN_ALT_TEXT"
+                  />
+                </div>
+                <figcaption class="self-stretch px-6 pt-4 pb-10 opacity-80">
+                  <p>The completed mobile and desktop layouts.</p>
+                </figcaption>
+              </figure>
+            </details>
+            <details id="fc-t2" class="fc-t group peer flex flex-col">
+              <summary
+                id="fc-t2-btn"
+                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+              >
+                Features & API
+              </summary>
+              <figure
+                class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+              >
+                <div
+                  class="bg-hatch flex w-full justify-center overflow-x-scroll px-10 py-16"
+                >
+                  <img
+                    class="object-cover"
+                    src="/assets/Dues Dashboard/feat_api_0.png"
+                    alt="FILL_IN_ALT_TEXT"
+                  />
+                </div>
+                <figcaption
+                  class="gap-2 self-stretch px-6 pt-4 pb-10 opacity-80"
+                >
+                  <p>
+                    Documentation describing how to call for data in the table.
+                  </p>
+                </figcaption>
+              </figure>
+            </details>
+            <details id="fc-t3" class="fc-t group peer flex flex-col">
+              <summary
+                id="fc-t3-btn"
+                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+              >
+                Current Balance
+              </summary>
+              <figure
+                class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+              >
+                <div class="bg-hatch flex w-full justify-center px-10 py-16">
+                  <img
+                    class="object-cover"
+                    src="/assets/Dues Dashboard/current_bal.png"
+                    alt="FILL_IN_ALT_TEXT"
+                  />
+                </div>
+                <figcaption
+                  class="gap-2 self-stretch px-6 pt-4 pb-10 opacity-80"
+                >
+                  <p>
+                    Documentation for the different states and styling of the
+                    "Current Balance" section.
+                  </p>
+                </figcaption>
+              </figure>
+            </details>
+          </div>
+          <!-- Final Summary -->
+          <div class="px-6 md:px-60">
+            <p class="max-w-xl opacity-80">
+              Since hand-off, the new payment history page has been implemented
+              and is now being used by members. So far, responses have been
+              positive and according to the office staff, calls have reduced.
+              <br /><br /><br />Although I only had a small role in updating
+              this system, I learned a lot about navigating the interconnected
+              needs of the people who use it. It’s difficult, especially when
+              every change has an effect on so many people, but to me this shows
+              that there is immense potential for improvement simply through
+              bridging some gaps.
+            </p>
+          </div>
+        </section>
+      </article>
     </main>
 
     <footer></footer>
   </body>
-  <script type="module" src="/scripts/portfolioItems.js"></script>
+  <script type="module" src="/scripts/dd.js"></script>
   <script src="/scripts/script.js"></script>
 </html>

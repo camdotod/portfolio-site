@@ -9,34 +9,53 @@ let nameSortLabel = document.getElementById("name-sort-label");
 let tagsSortLabel = document.getElementById("tags-sort-label");
 let projectList = document.getElementById("project-list");
 let categoryNames = [];
-let categoryList = document.getElementsByClassName("category-list");
+
+/**
+ * Toggle between two classes
+ * @param {HTMLElement} element - Element the class is on
+ * @param {string} class0 - First class name
+ * @param {string} class1 - Second class name
+ */
+const toggleClass = (element, class0, class1) => {
+  element.classList.toggle(class0);
+  element.classList.toggle(class1);
+};
 
 /**
  * Populate Categories based on Sort
  * @param {Array} categoryArr - List of categories
  * @returns HTML Elements
  */
-const popCategories = (categoryArr, sort) => {
+const popCategory = (sort) => {
   //Clear projectList
   let sortName = sort.split("_").shift();
 
-  projectList.innerHTML = `<div class="sr-only" aria-role="region" aria-live="polite">Projects sorted by ${sortName}.</div>`;
-
-  //Create categories and name headings after
-  categoryArr.forEach((name, index) => {
-    projectList.innerHTML += `
-    <div class="flex flex-col gap-5 w-full">
-       <h2 class="font-bold opacity-80">${name}</h2>
-       <ul id="${name}-category-${index}" class="category-list list-none grid w-full md:grid-cols-2 gap-3 md:gap-x-20 md:gap-y-5">
-       </ul>
-    </div>
-       `;
-  });
+  projectList.innerHTML = `
+    <div class="sr-only" aria-role="region" aria-live="polite">Projects sorted by ${sortName}.</div>
+    `;
 };
 
 const addProject = (project, index) => {
-  categoryList[index].innerHTML += `
-      <li><a class="after:content-[''] hover:after:content-['→'] hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "_")}.html" tabindex="0">${project.name}</a></li>
+  projectList.innerHTML += `
+    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/20 border hover:bg-fg-color/10 active:bg-fg-color/5" tabindex="0" data-name="${project.name}">
+        <div
+          id="project-details-${index}"
+          class="flex items-baseline gap-3 divide-x divide-fg-color/20 px-3"
+        >
+          <p class="grow py-2 text-sm">${project.tags}</p>
+          <p class="text-sm">${project.year}</p>
+        </div>
+        <div id="project-title${index}" class="flex items-center px-3 py-3 text-2xl">
+          <h2 class="grow font-display group-hover:font-medium group-active:font-medium">${project.name}</h2>
+          <span class="material-symbols-outlined">expand_content</span>
+        </div>
+        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80">
+          <img
+            src="${project.heroimg}"
+            alt="${project.heroalt}"
+          />
+        </div>
+    </li>
    `;
 };
 
@@ -45,15 +64,16 @@ const addProject = (project, index) => {
  * @param {string} sort - ID of input element being pressed
  */
 const setSort = (sort) => {
+  console.log("Sorting...");
+
+  popCategory(sort);
+
   if (sort === "name-sort") {
     //Get project names through each project's name
     let projectNames = projects.map((project) => project.name);
 
     //Make category names
-    categoryNames = projectNames.map((name) => name.charAt(0));
-
-    //Remove repeated letters
-    categoryNames = [...new Set(categoryNames)];
+    categoryNames = projectNames.map((name) => name);
 
     //Sort alphabetically
     categoryNames.sort(function (a, b) {
@@ -66,11 +86,10 @@ const setSort = (sort) => {
       return 0;
     });
 
-    popCategories(categoryNames, sort);
-
+    //Add Projects
     for (let i = 0; i < categoryNames.length; i++) {
       projects.forEach((project) => {
-        if (project.name.charAt(0) === categoryNames[i]) {
+        if (project.name === categoryNames[i]) {
           addProject(project, i);
         }
       });
@@ -82,8 +101,6 @@ const setSort = (sort) => {
       "Industrial Design",
       "Design Anthropology",
     ];
-
-    popCategories(categoryNames, sort);
 
     for (let i = 0; i < categoryNames.length; i++) {
       projects.forEach((project) => {
@@ -106,8 +123,6 @@ const setSort = (sort) => {
     });
     //Remove repeated letters
     categoryNames = [...new Set(categoryNames)];
-
-    popCategories(categoryNames, sort);
 
     for (let i = 0; i < categoryNames.length; i++) {
       projects.forEach((project) => {
@@ -132,41 +147,74 @@ const handleKeyDown = (key, sort) => {
   }
 };
 
-setSort("tags-sort");
-tagsSortBtn.setAttribute("checked", true);
+setSort("date-sort");
+dateSortBtn.setAttribute("checked", true);
 
 //Detect which button is pushed
 tagsSortBtn.addEventListener("click", (e) => {
   setSort(e.target.id);
-  console.log(tagsSortBtn.checked);
-  console.log(nameSortBtn.checked);
-  console.log(dateSortBtn.checked);
+  console.log("Sorted by tag");
 });
 tagsSortLabel.addEventListener("keydown", (e) =>
   handleKeyDown(e.code, e.target.id),
 );
 nameSortBtn.addEventListener("click", (e) => {
   setSort(e.target.id);
-  console.log(tagsSortBtn.checked);
-  console.log(nameSortBtn.checked);
-  console.log(dateSortBtn.checked);
+  console.log("Sorted by name");
 });
 nameSortLabel.addEventListener("keydown", (e) =>
   handleKeyDown(e.code, e.target.id),
 );
 dateSortBtn.addEventListener("click", (e) => {
   setSort(e.target.id);
-  console.log(tagsSortBtn.checked);
-  console.log(nameSortBtn.checked);
-  console.log(dateSortBtn.checked);
+  console.log("Sorted by date");
 });
 dateSortLabel.addEventListener("keydown", (e) =>
   handleKeyDown(e.code, e.target.id),
 );
 
-//Create category containers
+const projectTiles = document.querySelectorAll("li");
+const modal = document.querySelector("#project-modal");
+const modalCloseButton = document.querySelector("#close-button");
 
-//Fill category containers with projects
+const projectTitle = document.getElementById("project-title");
+const projectYr = document.getElementById("project-yr");
+const projectTags = document.getElementById("project-tags");
+const projectDesc = document.getElementById("project-desc");
+const projectImage1 = document.getElementById("project-img-1");
+const caseStudyLink = document.getElementById("case-study-link");
+
+projectTiles.forEach((tile) => {
+  tile.addEventListener("click", (event) => {
+    console.log("Clicked " + tile.getAttribute("data-name"));
+    toggleClass(modal, "hidden", "flex");
+
+    let projectName = tile.getAttribute("data-name");
+    let clickedProject = projects.filter((prj) => {
+      return prj.name === projectName;
+    });
+
+    if (projectName == "Dues Dashboard") {
+      caseStudyLink.classList.remove("hidden");
+      caseStudyLink.classList.add("flex");
+    } else {
+      caseStudyLink.classList.remove("flex");
+      caseStudyLink.classList.add("hidden");
+    }
+
+    projectTitle.innerText = projectName;
+    projectYr.innerText = clickedProject[0].year;
+    projectTags.innerText = clickedProject[0].tags;
+    projectDesc.innerText = clickedProject[0].summary;
+
+    projectImage1.setAttribute("src", clickedProject[0].heroimg);
+    projectImage1.setAttribute("alt", clickedProject[0].heroalt);
+  });
+});
+
+modalCloseButton.addEventListener("click", (event) => {
+  toggleClass(modal, "hidden", "flex");
+});
 
 /*projectList.innerHTML = `
    <div id="sortName-category-0"class="flex flex-col gap-8">
@@ -177,3 +225,6 @@ dateSortLabel.addEventListener("keydown", (e) =>
 <div class="grid md:grid-cols-2 gap-5 md:gap-x-10 gap-y-5">
    <a href="">${projects[0].name}</a>
 </div>*/
+
+// Old list item:
+/*<li><a class="after:content-[''] hover:after:content-['→'] hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "_")}.html" tabindex="0">${project.name}</a></li>*/

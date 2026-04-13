@@ -14,18 +14,14 @@
     />
     <meta name="author" content="Camryn O'Donnell" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/SVG/camod-logo-black.svg"
-    />
+    <link rel="icon" type="image/x-icon" href="/assets/Logo-P22.png" />
 
     <!--Stylesheet-->
     <link rel="stylesheet" href="/styles/main.css" />
 
-    <!--Material Design Icons-->
+    <!--Material Design Symbols-->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,chevron_line_up,collapse_content,deployed_code,expand_content,menu,open_in_new,work&display=block"
       rel="stylesheet"
     />
 
@@ -44,6 +40,14 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="text-fg-color bg-bg-color font-sans">
@@ -54,7 +58,10 @@
     </header>
 
     <!--Projects Header-->
-    <h1 id="page-title" class="px-6 font-medium md:px-60 md:text-xl">
+    <h1
+      id="page-title"
+      class="font-display px-6 font-medium md:px-60 md:text-xl"
+    >
       Projects
     </h1>
 
@@ -62,33 +69,51 @@
     <main class="flex h-fit flex-col items-start gap-10">
       <section
         id="portfolio-index"
-        class="flex w-full flex-col gap-10 px-6 md:px-60"
+        class="flex w-full flex-col gap-10 px-6 py-10 md:px-60"
         aria-label="All Projects"
       >
         <div
-          class="flex w-full flex-col items-start gap-0 divide-x-0 divide-y-2 text-lg md:flex-row md:gap-10 md:divide-x-2 md:divide-y-0"
+          class="flex w-full flex-col items-start gap-0 divide-x-0 divide-y-1 md:divide-y-0 lg:flex-row-reverse lg:gap-10"
         >
           <fieldset
             id="filters"
-            class="flex w-full grow-0 gap-4 pt-4 pb-4 text-xl sm:w-1/6 md:flex-col md:gap-6 md:pb-0"
+            class="flex w-full grow-0 pt-4 pb-4 lg:w-1/6 lg:flex-col lg:gap-6 lg:pb-0"
             role="radiogroup"
           >
-            <legend>Sort By:</legend>
-            <input
-              id="tags-sort"
-              type="radio"
-              name="sort"
-              class="peer hidden"
-            />
-            <label
-              for="tags-sort"
-              id="tags-sort-label"
-              tabindex="0"
-              class="border-fg-color hover:border-green hover:bg-green/10 focus:border-green focus:bg-green/10 peer-checked:border-green peer-checked:bg-green/10 peer-checked:outline-green w-fit border px-2 py-1 peer-checked:border active:underline"
-            >
-              Tags
-            </label>
-            <div class="flex items-start justify-start md:flex-col">
+            <legend class="font-display text-sm">Sort By:</legend>
+            <div class="flex">
+              <input
+                id="date-sort"
+                type="radio"
+                name="sort"
+                class="peer hidden"
+              />
+              <label
+                for="date-sort"
+                id="date-sort-label"
+                class="hover:bg-calm-400/20 focus:bg-calm-400/20 peer-checked:bg-calm-400/20 peer-checked:outline-calm-400 w-fit rounded-2xl px-4 py-2 font-medium active:underline"
+                tabindex="0"
+              >
+                Date
+              </label>
+            </div>
+            <div class="flex">
+              <input
+                id="tags-sort"
+                type="radio"
+                name="sort"
+                class="peer hidden"
+              />
+              <label
+                for="tags-sort"
+                id="tags-sort-label"
+                tabindex="0"
+                class="hover:bg-fresh-400/20 focus:bg-fresh-400/20 peer-checked:bg-fresh-400/20 peer-checked:outline-fresbg-fresh-400 w-fit rounded-2xl px-4 py-2 font-medium active:underline"
+              >
+                Tags
+              </label>
+            </div>
+            <div class="flex">
               <input
                 id="name-sort"
                 type="radio"
@@ -99,36 +124,118 @@
                 for="name-sort"
                 id="name-sort-label"
                 tabindex="0"
-                class="border-fg-color hover:border-red hover:bg-red/10 peer-checked:bg-red/10 focus:border-red focus:bg-red/10 peer-checked:border-red peer-checked:outline-red w-fit border px-2 py-1 peer-checked:border active:underline"
+                class="hover:bg-vigor-400/20 focus:bg-vigor-400/20 peer-checked:bg-vigor-400/20 peer-checked:outline-vigbg-vigor-400 w-fit rounded-2xl px-4 py-2 font-medium active:underline"
               >
                 Name
               </label>
             </div>
-            <div class="flex items-start justify-start md:flex-col">
-              <input
-                id="date-sort"
-                type="radio"
-                name="sort"
-                class="peer hidden"
-              />
-              <label
-                for="date-sort"
-                id="date-sort-label"
-                class="border-fg-color hover:border-blue hover:bg-blue/10 focus:border-blue focus:bg-blue/10 peer-checked:border-blue peer-checked:bg-blue/10 peer-checked:outline-blue w-fit border px-2 py-1 peer-checked:border active:underline"
-                tabindex="0"
-              >
-                Date
-              </label>
-            </div>
           </fieldset>
-          <div
+          <ol
             id="project-list"
-            class="flex w-full flex-col gap-16 pt-10 md:w-4/6 md:pt-0 md:pl-10"
+            class="flex w-full flex-col gap-4 pt-4 lg:grid lg:grid-cols-2"
           >
             <noscript>This content requires JavaScript to be enabled.</noscript>
-          </div>
+          </ol>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div
+        id="project-modal"
+        class="bg-bg-color fixed top-0 z-10 hidden h-svh w-svw touch-none flex-col divide-y border shadow-2xl lg:top-24 lg:mx-60 lg:mb-24 lg:h-auto lg:w-auto"
+      >
+        <div class="font-display flex items-center px-6 pt-16 pb-3 text-2xl">
+          <!-- Title -->
+          <p id="project-title" class="grow">LiUNA Dues Dashboard</p>
+
+          <!-- Close Button -->
+          <button
+            id="close-button"
+            class="active:bg-fg-color/10 h-10 w-10 rounded-2xl active:opacity-80"
+            aria-label="Close project details"
+          >
+            <span
+              id="menu-button-icon"
+              class="material-symbols-outlined align-middle"
+              >collapse_content</span
+            >
+          </button>
+        </div>
+        <div
+          id="project-detals"
+          class="flex items-baseline gap-3 divide-x px-6"
+        >
+          <p id="project-tags" class="grow py-2 text-sm">UX/UI Design</p>
+          <p id="project-yr" class="text-sm">2025</p>
+        </div>
+        <div
+          id="project-carousel"
+          class="relative flex grow touch-pan-x overflow-x-scroll lg:h-60 lg:grow-0"
+        >
+          <img
+            id="project-img-1"
+            src="/assets/Dues Dashboard/Dues_Dashboard-Image_0.png"
+            alt="preview"
+          />
+          <img
+            src="/assets/Dues Dashboard/Dues_Dashboard-Image_3.png"
+            alt="preview"
+          />
+          <img
+            src="/assets/Dues Dashboard/Dues_Dashboard-Image_4.png"
+            alt="preview"
+          />
+        </div>
+        <div
+          class="flex grow flex-col divide-y lg:flex-row lg:divide-x lg:divide-y-0"
+        >
+          <div id="project-desc" class="grow p-6">
+            In partnership with the organization’s admin and developers, I
+            redesigned the payment history page on the member portal to be more
+            clear and transparent about payments and current balances.
+          </div>
+          <div
+            id="caption-1"
+            class="block px-6 py-3 md:flex-col lg:flex lg:gap-2"
+          >
+            <p class="inline text-sm opacity-80">Image 1:</p>
+            <p class="inline text-sm lg:text-base">
+              Final design for mobile and desktop platforms
+            </p>
+          </div>
+          <div
+            id="caption-2"
+            class="bg-hatch block self-stretch truncate px-6 py-3 md:flex-col lg:flex lg:gap-2"
+          >
+            <p class="inline text-sm opacity-80">Image 2:</p>
+            <p class="inline w-full border text-sm opacity-80 lg:text-base">
+              Speaking with the developer, I found that through all the
+              touchpoints, members were not able to easily access this key
+              information. One of these touchpoints was a
+              <strong>web-based portal</strong>, which members could access on
+              their phone or desktop. Since members were already familiar with
+              this, it could be a great place to put this information, so it was
+              decided that this would be redesigned.
+            </p>
+          </div>
+          <div
+            id="caption-3"
+            class="bg-hatch block truncate px-6 py-3 md:flex-col lg:flex lg:gap-2"
+          >
+            <p class="inline text-sm opacity-80">Image 3:</p>
+            <p class="inline text-sm opacity-80 lg:text-base">
+              Documentation given to 3rd party developers
+            </p>
+          </div>
+        </div>
+        <a
+          id="case-study-link"
+          href="portfolio/Dues_Dashboard.html"
+          class="bg-calm-600 text-bg-color dark:bg-calm-400 flex justify-center self-stretch py-4 underline"
+        >
+          Read the case study →
+        </a>
+      </div>
     </main>
     <footer>
       <noscript

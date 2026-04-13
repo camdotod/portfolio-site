@@ -14,18 +14,14 @@
     />
     <meta name="author" content="Camryn O'Donnell" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/SVG/camod-logo-black.svg"
-    />
+    <link rel="icon" type="image/x-icon" href="/assets/Logo-P22.png" />
 
     <!--Stylesheet-->
     <link rel="stylesheet" href="/styles/main.css" />
 
-    <!--Material Design Icons-->
+    <!--Material Design Symbols-->
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,arrow_right_alt,chevron_line_up,deployed_code,menu,work&display=block"
       rel="stylesheet"
     />
 
@@ -44,6 +40,14 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body
@@ -54,9 +58,11 @@
     </header>
     <main class="flex flex-col gap-10">
       <div id="introduction" class="flex flex-col gap-10 px-6 md:px-60">
-        <h1 class="font-medium md:text-xl">Camryn O'Donnell</h1>
+        <h1 class="font-display font-medium md:text-xl">Camryn O'Donnell</h1>
         <div id="titles" class="flex flex-col gap-2">
-          <p class="text-cobalt text-xl underline underline-offset-4">
+          <p
+            class="text-calm-600 dark:text-calm-400 font-display text-xl underline underline-offset-4"
+          >
             multidisciplinary designer
           </p>
           <p class="text-sm">
@@ -67,16 +73,18 @@
       <div id="recent-projects" class="flex flex-col border-b">
         <div
           id="recent-projects-banner"
-          class="flex items-center justify-between self-stretch bg-[url(/assets/SVG/diagonal-hatch-2.svg)] px-6 md:px-60"
+          class="bg-hatch flex items-center justify-between self-stretch px-6 md:px-60"
         >
-          <h2 class="text-xl font-medium">Recent Projects:</h2>
+          <h2 class="font-display text-xl font-medium">Recent Projects:</h2>
           <a
             href="portfolio.html"
             id="see-all-button"
             class="flex items-center gap-0.5"
           >
-            <p class="py-4 underline">See all</p>
-            <span class="material-icons">arrow_right_alt</span>
+            <p class="font-display py-4 underline underline-offset-2">
+              See all
+            </p>
+            <span class="material-symbols-outlined">arrow_right_alt</span>
           </a>
         </div>
         <div
@@ -89,16 +97,21 @@
             class="w-full shrink-0 snap-center"
           >
             <div class="flex flex-col gap-4 px-6 py-8 md:px-60">
-              <h3 id="project-title-1" class="text-4xl">
-                Solving Miscommunications
+              <h3 id="project-title-1" class="font-display text-3xl">
+                LiUNA Dues Dashboard
               </h3>
               <p id="description-1" class="truncate">
-                Helping union members better understand their dues payments with
-                a simple UI fix and by also doing
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
             <img
-              src="assets\Dues Dashboard\DD-HeroShot.png"
+              src="assets\Dues Dashboard/Dues_Dashboard-Image_0.png"
               alt="Dues dashboard hero image"
               class="w-full"
             />
@@ -109,10 +122,18 @@
             class="w-full shrink-0 snap-center"
           >
             <div class="flex flex-col gap-4 px-6 py-8 md:px-60">
-              <h3 id="project-title-2" class="text-4xl">
+              <h3 id="project-title-2" class="font-display text-3xl">
                 Imagining New Ways of Delivering Therapy
               </h3>
-              <p id="description-1" class="truncate">We're imagining</p>
+              <p id="description-1" class="truncate">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
             </div>
             <img
               src="assets\Capstone Assets\Capstone-Image_0.jpg"
@@ -123,18 +144,28 @@
         </div>
       </div>
       <div id="design-process" class="flex flex-col gap-10 px-6 py-20 md:px-60">
-        <h2 class="text-xl italic">About the design process</h2>
-        <p class="opacity-80">
-          The design process is at the
-          <strong>foundation of all of my work</strong>, no matter what the end
-          product looks like. <br /><br />It’s a way of thinking about problems
-          as a whole, with consideration for the people and systems surrounding
-          them. It involves building relationships with people, looking at
-          things from different perspectives, and allowing yourself to question
-          what is possible. <br /><br />To me, the practice of design is a
-          commitment to creating things that truly address the needs of people.
-        </p>
-        <a href="/process.html" class="text-cobalt underline">Learn more →</a>
+        <h2 class="font-display text-xl italic">About the design process</h2>
+        <div
+          class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+        >
+          <p class="max-w-xl opacity-80">
+            The design process is at the
+            <strong>foundation of all of my work</strong>, no matter what the
+            end product looks like. <br /><br />It’s a way of thinking about
+            problems as a whole, with consideration for the people and systems
+            surrounding them. It involves building relationships with people,
+            looking at things from different perspectives, and allowing yourself
+            to question what is possible. <br /><br />To me, the practice of
+            design is a commitment to creating things that truly address the
+            needs of people.
+          </p>
+          <a
+            href="/process.html"
+            class="decoration-fg-color/50 font-display font-medium underline underline-offset-2"
+            tabindex="0"
+            >Learn more →</a
+          >
+        </div>
       </div>
     </main>
     <footer>

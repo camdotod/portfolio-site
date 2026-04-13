@@ -288,159 +288,255 @@
 
         <section
           id="section-2"
-          class="border-fg-color/20 flex flex-col gap-12 border-b py-16"
+          class="border-fg-color/20 flex flex-col gap-16 border-b py-20"
         >
-          <div class="flex flex-col gap-8 px-6 md:px-60">
+          <div class="flex flex-col gap-10 px-6 md:px-60">
             <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
               Finding the Miscommunication
             </h3>
-            <p class="max-w-xl">
+            <p class="text-fg-color/80 max-w-xl">
               Before I started exploring solutions, I wanted to reallywhy
               members were calling the office. understand
               <strong>why members were calling the office.</strong>
             </p>
-            <div
-              id="questions"
-              class="flex flex-col gap-6 md:flex-row md:justify-around"
-            >
-              <div class="flex items-center gap-4 md:flex-col">
-                <img
-                  src="\assets\Dues Dashboard\database.svg"
-                  alt="Icon of a computer screen showing a database."
-                  class="aspect-square w-20 md:w-40"
-                />
-                <em class="md:text-center"
-                  >How were the dues payments shown to the admin?</em
-                >
-              </div>
+          </div>
 
-              <div class="flex items-center gap-4 md:flex-col">
-                <img
-                  src="\assets\Dues Dashboard\arrears-notice.svg"
-                  alt="Icon of an envelope with a warning symbol on it."
-                  class="aspect-square w-20 md:w-40"
-                />
-                <em class="md:text-center"
-                  >What did the “in arrears” notice tell the members?</em
+          <!-- Question 1 -->
+          <section id="q1" class="text-fg-color/80 flex flex-col gap-10">
+            <div class="text-fg-color/80 flex flex-col gap-10 px-6 lg:px-60">
+              <div
+                id="q1-header"
+                class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
+              >
+                <div
+                  class="text-fresh-900 dark:text-fresh-100 flex flex-col gap-4"
                 >
+                  <p class="opacity-70">My first question was...</p>
+                  <h4 class="font-display text-xl font-medium">
+                    What did the arrears notice tell members?
+                  </h4>
+                </div>
+                <div class="w-20 shrink-0 grow-0">
+                  <img
+                    src="\assets\Dues Dashboard\arrears-notice.svg"
+                    alt="Icon of an envelope with a warning symbol on it."
+                    class="aspect-square text-sm italic"
+                  />
+                </div>
               </div>
-
-              <div class="flex items-center gap-4 md:flex-col">
-                <img
-                  src="\assets\Dues Dashboard\payment-history.svg"
-                  alt="Icon of a receipt with a magnifying glass over it."
-                  class="aspect-square w-20 md:w-40"
-                />
-                <em class="md:text-center">
-                  Was there a way for members to check their payment history?
-                </em>
-              </div>
+              <p class="max-w-xl">
+                If members still had outstanding payments after a certain amount
+                of time, they would be sent an arrears notice that looks
+                something like this:
+              </p>
             </div>
-            <p class="bg-hatch max-w-xl border p-6">
-              What I learned was that there was a
-              <strong>disconnect</strong> between how members and administrators
-              understood the dues payments, worsened by a lack of transparency.
-            </p>
-          </div>
-          <!-- Measuring Cup Explanation -->
-          <div
-            id="measuring-cup-explanation"
-            class="divide-fg-color/50 flex flex-col divide-y border"
-          >
-            <h4 class="bg-fg-color text-bg-color px-6 py-4 font-semibold">
-              How admin view dues payments:
-            </h4>
-
-            <figure id="fig-1" class="flex justify-between">
-              <figcaption class="max-w-xl p-6 text-sm">
-                In the program, a member’s balance could be thought of like a
-                measuring cup, with each line representing a month of dues.
-              </figcaption>
-
-              <div
-                class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
-              >
-                <img
-                  src="/assets/Dues Dashboard/measuring_cup.png"
-                  alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the July line."
-                />
-              </div>
-            </figure>
-
-            <figure id="fig-2" class="flex justify-between">
-              <figcaption class="max-w-xl p-6 text-sm">
-                When a member makes a payment, the cup fills to the next line.
-                If a payment is missed, the next would contribute to the
-                previous month.
-              </figcaption>
-
-              <div
-                class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
-              >
-                <img
-                  src="/assets/Dues Dashboard/making_payment.png"
-                  alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. Above the cup is the text '$42' and an arrow showing it is going into the cup. The cup is filled to the August line."
-                />
-              </div>
-            </figure>
-
-            <figure id="fig-3" class="flex flex-col lg:flex-row">
-              <figcaption class="max-w-xl p-6 text-sm">
-                If a member still had outstanding payments after a certain
-                amount of time, the program would generate an arrears notice.
-                This would tell the member how “full” their measuring cup was.
-              </figcaption>
-
-              <div class="bg-hatch p-6">
-                <img
-                  src="/assets/Dues Dashboard/measurement_reading.png"
-                  alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the August line. An arrow points from this line to the text 'You are paid up to August'"
-                />
-              </div>
-            </figure>
-
-            <figure id="fig-4" class="flex flex-col lg:flex-row">
-              <figcaption class="max-w-xl p-6 text-sm">
-                <span class="underline underline-offset-2">For example:</span>
-                Say in one year, you worked January-September and
-                November-December, and in October you had forgotten to pay your
-                dues. When you got your notice in December, it would say
-                <strong> “Paid up to November”. </strong>
-              </figcaption>
-
-              <div class="bg-hatch p-4">
-                <img
-                  src="/assets/Dues Dashboard/missed_payment.png"
-                  alt="A series of measuring cups showing the sequence of the months of October, November, and December. In October, it shows $0 being added to the cup and it's filled to the September line. In November, it shows $42 being added to the cup, now filled to the October line. In December, it shows $42 being added to the cup, now filled to the November line."
-                />
-              </div>
-            </figure>
-          </div>
-          <div class="flex flex-col gap-6 px-6 md:px-60">
-            <p class="max-w-xl">
-              <strong>This is where the confusion began.</strong>
-              <br /><br />Because it was being communicated in terms of time,
-              some members thought it was saying
-              <strong>“you didn’t pay your dues in December”</strong>.
-            </p>
-            <figure>
+            <figure class="bg-hatch px-6 py-4">
               <img
-                id="journey-map"
-                src="/assets/Dues Dashboard/journey_map.svg"
-                alt="FILL_IN_ALT_TEXT"
+                id="example-arrears-notice"
+                src=""
+                class="align-center bg-hatch text-center"
+                alt="Mockup of the arrears notice letter. The notice reads 'Notice of Arrears: You are hereby notified that you are behind in your dues by the amount of $43.00 There is a table below showing month owing and amount. It says 'Due Dec-2025', Amount:43.00"
               />
             </figure>
-            <p class="max-w-xl opacity-80">
-              If they wanted to get clarification on when the payment was
-              missed, there was a payment history page on the members portal,
-              but this had no information on who was responsible for the missed
-              payment. <br /><br />Having exhausted the options available to
-              them, members would call the office, perhaps feeling alarmed,
-              frustrated, and confused. And for the administrators, trying to
-              explain a complicated system to someone who is already in distress
-              becomes a huge challenge.
-            </p>
-          </div>
+            <div class="px-6 lg:px-60">
+              <p class="max-w-xl">
+                From this notice, you might assume that you owed $43.00 from a
+                missed payment in December 2025. <br /><br />
+                However, this was not always true—it could be the case that the
+                missed payment was from a different month.
+              </p>
+            </div>
+          </section>
+
+          <!-- Question 2-->
+          <section id="q2" class="text-fg-color/80 flex flex-col gap-10">
+            <div class="flex flex-col gap-10 px-6 lg:px-60">
+              <div
+                id="q2-header"
+                class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
+              >
+                <div
+                  class="text-fresh-900 dark:text-fresh-100 flex flex-col gap-4"
+                >
+                  <p class="opacity-70">This led me to ask...</p>
+                  <h4 class="font-display text-xl font-medium">
+                    How did the dues application keep track of payments?
+                  </h4>
+                </div>
+                <div class="w-20 shrink-0 grow-0">
+                  <img
+                    src="\assets\Dues Dashboard\database.svg"
+                    alt="Icon of a computer screen showing a database."
+                    class="aspect-square text-sm italic"
+                  />
+                </div>
+              </div>
+              <p class="text-fg-color/80 max-w-xl">
+                In order to understand how the date on the arrears notice could
+                be “wrong”, we have to understand how the admin application
+                keeps track of dues payments:
+              </p>
+            </div>
+
+            <!-- Measuring Cup Diagrams -->
+            <div
+              class="text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 border-fresh-400 divide-fresh-400 flex flex-col divide-y border-t border-b lg:border"
+            >
+              <figure id="fig-1" class="flex justify-between">
+                <figcaption class="max-w-xl p-6 text-sm">
+                  In the program, a member’s balance could be thought of like a
+                  measuring cup, with each line representing a month of dues.
+                </figcaption>
+
+                <div
+                  class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
+                >
+                  <img
+                    src="/assets/Dues Dashboard/measuring_cup.png"
+                    alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the July line."
+                    class="themed"
+                  />
+                </div>
+              </figure>
+
+              <figure id="fig-2" class="flex justify-between">
+                <figcaption class="max-w-xl p-6 text-sm">
+                  When a member makes a payment, the cup fills to the next line.
+                  If a payment is missed, the next would contribute to the
+                  previous month.
+                </figcaption>
+
+                <div
+                  class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
+                >
+                  <img
+                    src="/assets/Dues Dashboard/making_payment.png"
+                    class="themed"
+                    alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. Above the cup is the text '$42' and an arrow showing it is going into the cup. The cup is filled to the August line."
+                  />
+                </div>
+              </figure>
+              <figure id="fig-3" class="flex flex-col lg:flex-row">
+                <figcaption class="max-w-xl p-6 text-sm">
+                  If a member still had outstanding payments after a certain
+                  amount of time, the program would generate an arrears notice.
+                  This would tell the member how “full” their measuring cup was.
+                </figcaption>
+
+                <div class="bg-hatch p-6">
+                  <img
+                    src="/assets/Dues Dashboard/measurement_reading.png"
+                    class="themed"
+                    alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the August line. An arrow points from this line to the text 'You are paid up to August'"
+                  />
+                </div>
+              </figure>
+            </div>
+
+            <div class="px-6 lg:px-60">
+              <p class="max-w-xl">
+                So when we look at the
+                <a
+                  class="decoration-fg-color/50 hover:decoration-fg-color underline underline-offset-2"
+                  href="#example-arrears-notice"
+                  >example arrears notice</a
+                >
+                it could be that the member missed their December payment or it
+                could be a scenario like this:
+              </p>
+            </div>
+
+            <figure
+              id="fig-4"
+              class="border-fresh-400 text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 flex flex-col border-t border-b lg:flex-row"
+            >
+              <figcaption class="max-w-xl p-6 text-sm">
+                Say in one year, you worked January-September and
+                November-December, and in October you had forgotten to pay your
+                dues while in between jobs.
+              </figcaption>
+
+              <div class="bg-hatch flex flex-col items-center gap-4 px-6 py-4">
+                <img
+                  src="/assets/Dues Dashboard/missed_payment.png"
+                  class="themed"
+                  alt="A series of measuring cups showing the sequence of the months of October, November, and December. In October, it shows $0 being added to the cup and it's filled to the September line. In November, it shows $42 being added to the cup, now filled to the October line. In December, it shows $42 being added to the cup, now filled to the November line."
+                />
+                <p class="text-fg-color text-xl font-semibold">
+                  Month owing: DEC-2025
+                </p>
+              </div>
+            </figure>
+            <div class="px-6 lg:px-60">
+              <p class="max-w-xl">
+                This made sense to the admin because they were used to the
+                application and also knew when the payment was made, who it was
+                made by, how much was paid, etc., but without further
+                information, members were being left in the dark.
+              </p>
+            </div>
+          </section>
+
+          <!-- Question 3 -->
+          <section id="q3" class="text-fg-color/80 flex flex-col gap-10">
+            <div class="flex flex-col gap-10 px-6 lg:px-60">
+              <div
+                id="q2-header"
+                class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
+              >
+                <div
+                  class="text-fresh-900 dark:text-fresh-100 flex flex-col gap-4"
+                >
+                  <p class="opacity-70">This made me think...</p>
+                  <h4 class="font-display text-xl font-medium">
+                    Were there any other options for members to check their dues
+                    payments?
+                  </h4>
+                </div>
+                <div class="w-20 shrink-0 grow-0">
+                  <img
+                    src="\assets\Dues Dashboard\payment-history.svg"
+                    alt="Icon of a receipt with a magnifying glass over it."
+                    class="aspect-square text-sm italic"
+                  />
+                </div>
+              </div>
+              <p class="text-fg-color/80 max-w-xl">
+                I asked the developer if there were any other touchpoints
+                members had access to to get more information before calling the
+                office.
+                <br />
+                <br />He said there was one other option for members to check
+                their dues payments: the dues dashboard on the member portal.
+              </p>
+            </div>
+            <figure
+              class="bg-grit-400 dark:bg-grit-600 flex flex-col items-center gap-2 px-6 pt-8 pb-4"
+            >
+              <img
+                src=""
+                class="bg-hatch text-center italic"
+                alt="Screenshot of the desktop version of the dues dashboard."
+              />
+              <figcaption class="font-semibold">
+                Dues Dashboard - Desktop
+              </figcaption>
+            </figure>
+            <div class="flex flex-col gap-10 px-6 lg:px-60">
+              <p class="max-w-xl">
+                This page showed their payment history, but as you can see, this
+                could be hard to read and didn’t provide information on who was
+                responsible for the missed payment.
+              </p>
+              <p>
+                This left members with no other choice but to call the office.
+                By then, members might be feeling alarmed, frustrated, and
+                confused. And for the administrators, trying to explain a
+                complicated system to someone who is already in distress is a
+                huge challenge.
+              </p>
+            </div>
+          </section>
         </section>
 
         <!-- Bridging the Gap ------------------------------------------------------>

@@ -359,6 +359,15 @@
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
   }
+  .min-w-16 {
+    min-width: calc(var(--spacing) * 16);
+  }
+  .min-w-20 {
+    min-width: calc(var(--spacing) * 20);
+  }
+  .min-w-24 {
+    min-width: calc(var(--spacing) * 24);
+  }
   .flex-1 {
     flex: 1;
   }
@@ -477,6 +486,9 @@
   .gap-14 {
     gap: calc(var(--spacing) * 14);
   }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
   }
@@ -542,6 +554,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         border-color: color-mix(in oklab, rgb(var(--textColor)/1) 50%, transparent);
       }
+    }
+  }
+  .divide-fresh-400 {
+    :where(& > :not(:last-child)) {
+      border-color: var(--color-fresh-400);
     }
   }
   .self-stretch {
@@ -618,6 +635,9 @@
       border-color: color-mix(in oklab, rgb(var(--textColor)/1) 50%, transparent);
     }
   }
+  .border-fresh-400 {
+    border-color: var(--color-fresh-400);
+  }
   .border-green {
     border-color: rgb(var(--green)/1);
   }
@@ -644,6 +664,9 @@
   }
   .bg-grit-100 {
     background-color: var(--color-grit-100);
+  }
+  .bg-grit-400 {
+    background-color: var(--color-grit-400);
   }
   .bg-vigor-100 {
     background-color: var(--color-vigor-100);
@@ -764,6 +787,9 @@
   }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-right {
     text-align: right;
@@ -1494,6 +1520,12 @@
       overflow: auto;
     }
   }
+  .lg\:border {
+    @media (width >= 64rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .lg\:border-0 {
     @media (width >= 64rem) {
       border-style: var(--tw-border-style);
@@ -1559,6 +1591,11 @@
       gap: calc(var(--spacing) * 12);
     }
   }
+  .dark\:border-fresh-600 {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--color-fresh-600);
+    }
+  }
   .dark\:bg-calm-400 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-calm-400);
@@ -1572,6 +1609,11 @@
   .dark\:bg-fresh-900 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-fresh-900);
+    }
+  }
+  .dark\:bg-grit-600 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-grit-600);
     }
   }
   .dark\:bg-grit-900 {

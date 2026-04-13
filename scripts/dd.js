@@ -1,7 +1,7 @@
 // Images
 const measuringCupImgs = document
-  .querySelector("#measuring-cup-explanation")
-  .querySelectorAll("img");
+  .querySelector("#q2")
+  .querySelectorAll(".themed");
 const journeyMap = document.querySelector("#journey-map");
 const bridgeImg = document.querySelector("#bridging-the-gap");
 
@@ -21,7 +21,6 @@ if (darkModeMql && darkModeMql.matches) {
     replaceDarkImg(img, ".png");
   });
 
-  journeyMap.src = "/assets/Dues Dashboard/journey_map_dark.png";
   replaceDarkImg(bridgeImg, ".svg");
 } else {
   // light mode

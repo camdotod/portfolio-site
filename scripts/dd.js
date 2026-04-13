@@ -2,7 +2,6 @@
 const measuringCupImgs = document
   .querySelector("#q2")
   .querySelectorAll(".themed");
-const journeyMap = document.querySelector("#journey-map");
 const bridgeImg = document.querySelector("#bridging-the-gap");
 
 //Change elements for dark theme
@@ -10,8 +9,12 @@ const darkModeMql =
   window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
 
 function replaceDarkImg(img, ext) {
-  let source = img.src.slice(0, img.src.indexOf(ext));
-  img.src = `${source}_dark${ext}`;
+  try {
+    let source = img.src.slice(0, img.src.indexOf(ext));
+    img.src = `${source}_dark${ext}`;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 if (darkModeMql && darkModeMql.matches) {

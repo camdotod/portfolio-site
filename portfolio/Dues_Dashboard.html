@@ -53,24 +53,21 @@
     <header id="header">
       <noscript>For best site experience, please enable JavaScript</noscript>
     </header>
-
-    <main class="flex flex-col">
+    <a
+      href="#header"
+      id="project-title"
+      class="bg-bg-color border-fg-color/20 sticky top-0 z-[1] flex items-baseline justify-between border-b px-6 py-4 md:px-60"
+    >
+      <h1 class="font-display font-medium">LiUNA Dues Dashboard</h1>
+      <p class="text-xs opacity-50" aria-label="September 2024 to April 2025">
+        Sept 2024–Apr 2025
+      </p>
+      <!-- Change text between desktop & mobile?? -->
+    </a>
+    <main class="sticky flex flex-col">
       <!-- Introduction -------------------------------------------------------------->
 
       <section class="border-fg-color/20 flex h-svh flex-col gap-4 border-b">
-        <div
-          id="title"
-          class="flex items-baseline justify-between px-6 md:px-60"
-        >
-          <h1 class="font-display font-medium">LiUNA Dues Dashboard</h1>
-          <p
-            class="text-xs opacity-50"
-            aria-label="September 2024 to April 2025"
-          >
-            Sept 2024–Apr 2025
-          </p>
-          <!-- Change text between desktop & mobile?? -->
-        </div>
         <div
           class="border-fg-color/20 flex grow flex-col-reverse lg:flex-row lg:items-center lg:gap-12 lg:border-t"
         >
@@ -78,7 +75,7 @@
             id="intro-text"
             class="flex flex-col gap-10 px-6 py-10 md:px-60 lg:pr-0"
           >
-            <h2 class="font-display text-4xl lg:text-5xl">
+            <h2 class="font-display text-4xl lg:max-w-xl lg:text-5xl">
               Reducing Member Complaints With A Simple UI Fix
             </h2>
             <p class="max-w-xl opacity-80">
@@ -116,30 +113,31 @@
           id="section-1"
           class="border-fg-color/20 flex flex-col gap-14 border-b py-16"
         >
-          <h3
-            class="font-display px-6 pb-4 text-3xl font-thin opacity-70 md:px-60 lg:text-5xl"
-          >
-            The Problem with Arrears Notices
-          </h3>
+          <div class="flex flex-col gap-8 px-6 md:px-60">
+            <h3
+              class="font-display text-fg-color/70 pb-4 text-3xl font-thin lg:text-5xl"
+            >
+              The Problem with Arrears Notices
+            </h3>
+            <p class="text-fg-color/80 max-w-xl">
+              When I started this project, my primary contact was a developer
+              who maintains an application that keeps track of dues payments at
+              a local union branch. He was looking for help with potentially
+              redesigning this application to solve an issue they were having.
+            </p>
+          </div>
           <div
             class="text-fg-color/80 flex h-fit flex-col gap-10 self-stretch lg:flex-row"
           >
-            <!-- Intro -->
-            <div class="flex flex-col gap-8 px-6 lg:px-60">
-              <p class="max-w-xl">
-                When I started this project, my primary contact was a developer
-                who maintains an application that keeps track of dues payments
-                at a local union branch. He was looking for help with
-                potentially redesigning this application to solve an issue they
-                were having.
-              </p>
+            <!-- Members' Complaints -->
+            <div class="flex flex-col gap-8 px-6 md:px-60">
               <h4 class="font-display text-fg-color text-xl font-medium">
                 Members' Complaints
               </h4>
               <p class="max-w-xl">
-                At the time, he explained that they were having problems with
-                members getting into arguments with administrators about being
-                late on payments.
+                At the time, he explained that admin were getting calls from
+                members who had received an arrears notice and were confused
+                about when they missed their dues payments.
               </p>
             </div>
             <!-- Problem Storyboard -->
@@ -211,35 +209,39 @@
             </div>
           </div>
           <!-- The Problem -->
-          <div class="text-fg-color/80 flex flex-col gap-10 px-6 lg:px-60">
-            <h4 class="font-display text-fg-color text-xl font-medium">
-              Fixing the dues application
-            </h4>
-            <p class="max-w-xl">
-              Some union staff had suggested that they change how the payments
-              were recorded in the application, so that admin could explain it
-              more easily. But the developer explained that these changes they
-              would require a complete overhaul of the application.
-              <br /><br />
-              This would take a long time, and to add to this, many of the more
-              experienced admin were used to how the application worked and
-              would have to learn a new system.
-            </p>
+          <div
+            class="text-fg-color/80 flex flex-col gap-8 px-6 md:px-60 lg:flex-row lg:items-center"
+          >
+            <div class="flex flex-col gap-8">
+              <h4 class="font-display text-fg-color text-xl font-medium">
+                Fixing the dues application
+              </h4>
+              <p class="max-w-xl">
+                Some union staff had suggested that they change how the payments
+                were recorded in the application, so that admin could explain it
+                more easily. But the developer explained that these changes they
+                would require a complete overhaul of the application.
+                <br /><br />
+                This would take a long time, and to add to this, many of the
+                more experienced admin were used to how the application worked
+                and would have to learn a new system.
+              </p>
+            </div>
             <div
               id="pros-cons-summary"
-              class="flex gap-4 self-stretch font-medium"
+              class="flex gap-4 self-stretch font-medium lg:self-center"
             >
               <div id="pros" class="flex flex-col gap-6">
-                <div id="pro1" class="flex gap-4">
+                <div id="pro1" class="flex gap-4 lg:items-center">
                   <div
-                    class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                    class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl lg:text-5xl"
                     aria-label="Pro:"
                   >
                     arrow_circle_up
                   </div>
-                  <p class="flex-1">Reduce member complaints</p>
+                  <p class="flex-1 lg:text-xl">Reduce member complaints</p>
                 </div>
-                <div id="pro2" class="flex gap-4">
+                <div id="pro2" class="flex gap-4 lg:items-center">
                   <div
                     class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
                     aria-label="Pro:"
@@ -250,7 +252,7 @@
                 </div>
               </div>
               <div id="cons" class="flex flex-col gap-6">
-                <div id="con1" class="flex gap-4">
+                <div id="con1" class="flex gap-4 lg:items-center">
                   <div
                     class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
                     aria-label="Con:"
@@ -259,7 +261,7 @@
                   </div>
                   <p class="flex-1">Costly implementation</p>
                 </div>
-                <div id="con2" class="flex gap-4">
+                <div id="con2" class="flex gap-4 lg:items-center">
                   <div
                     class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
                     aria-label="Con:"
@@ -288,22 +290,22 @@
 
         <section
           id="section-2"
-          class="border-fg-color/20 flex flex-col gap-16 border-b py-20"
+          class="border-fg-color/20 flex flex-col gap-14 border-b py-20"
         >
-          <div class="flex flex-col gap-10 px-6 md:px-60">
+          <div class="flex flex-col gap-8 px-6 md:px-60">
             <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
               Finding the Miscommunication
             </h3>
             <p class="text-fg-color/80 max-w-xl">
-              Before I started exploring solutions, I wanted to reallywhy
-              members were calling the office. understand
+              Before I started exploring solutions, I wanted to really
+              understand
               <strong>why members were calling the office.</strong>
             </p>
           </div>
 
           <!-- Question 1 -->
           <section id="q1" class="text-fg-color/80 flex flex-col gap-10">
-            <div class="text-fg-color/80 flex flex-col gap-10 px-6 lg:px-60">
+            <div class="text-fg-color/80 flex flex-col gap-10 px-6 md:px-60">
               <div
                 id="q1-header"
                 class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
@@ -330,27 +332,31 @@
                 something like this:
               </p>
             </div>
-            <figure class="bg-hatch px-6 py-4">
-              <img
-                id="example-arrears-notice"
-                src=""
-                class="align-center bg-hatch text-center"
-                alt="Mockup of the arrears notice letter. The notice reads 'Notice of Arrears: You are hereby notified that you are behind in your dues by the amount of $43.00 There is a table below showing month owing and amount. It says 'Due Dec-2025', Amount:43.00"
-              />
+            <figure class="bg-hatch px-6 py-6 md:px-60">
+              <div class="">
+                <img
+                  id="example-arrears-notice"
+                  src="/assets/Dues Dashboard/notice_of_arrears_sample.svg"
+                  class="align-center bg-hatch text-center"
+                  alt="Mockup of the arrears notice letter. The notice reads 'Notice of Arrears: You are hereby notified that you are behind in your dues by the amount of $43.00 There is a table below showing month owing and amount. It says 'Due Dec-2025', Amount:43.00"
+                />
+              </div>
             </figure>
-            <div class="px-6 lg:px-60">
+            <div class="px-6 md:px-60">
               <p class="max-w-xl">
                 From this notice, you might assume that you owed $43.00 from a
                 missed payment in December 2025. <br /><br />
-                However, this was not always true—it could be the case that the
-                missed payment was from a different month.
+                <strong>
+                  However, this was not always true—it could be the case that
+                  the missed payment was from a different month.
+                </strong>
               </p>
             </div>
           </section>
 
           <!-- Question 2-->
           <section id="q2" class="text-fg-color/80 flex flex-col gap-10">
-            <div class="flex flex-col gap-10 px-6 lg:px-60">
+            <div class="flex flex-col gap-10 px-6 md:px-60">
               <div
                 id="q2-header"
                 class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
@@ -380,7 +386,7 @@
 
             <!-- Measuring Cup Diagrams -->
             <div
-              class="text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 border-fresh-400 divide-fresh-400 flex flex-col divide-y border-t border-b lg:border"
+              class="text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 border-fresh-400 divide-fresh-400 dark:divide-fresh-600 flex flex-col divide-y border-t border-b lg:border"
             >
               <figure id="fig-1" class="flex justify-between">
                 <figcaption class="max-w-xl p-6 text-sm">
@@ -433,7 +439,7 @@
               </figure>
             </div>
 
-            <div class="px-6 lg:px-60">
+            <div class="px-6 md:px-60">
               <p class="max-w-xl">
                 So when we look at the
                 <a
@@ -467,7 +473,7 @@
                 </p>
               </div>
             </figure>
-            <div class="px-6 lg:px-60">
+            <div class="px-6 md:px-60">
               <p class="max-w-xl">
                 This made sense to the admin because they were used to the
                 application and also knew when the payment was made, who it was
@@ -479,7 +485,7 @@
 
           <!-- Question 3 -->
           <section id="q3" class="text-fg-color/80 flex flex-col gap-10">
-            <div class="flex flex-col gap-10 px-6 lg:px-60">
+            <div class="flex flex-col gap-10 px-6 md:px-60">
               <div
                 id="q2-header"
                 class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
@@ -511,10 +517,10 @@
               </p>
             </div>
             <figure
-              class="bg-grit-400 dark:bg-grit-600 flex flex-col items-center gap-2 px-6 pt-8 pb-4"
+              class="bg-hatch flex flex-col items-center gap-2 px-6 pt-8 pb-4"
             >
               <img
-                src=""
+                src="/assets/Dues Dashboard/old_desktop.png"
                 class="bg-hatch text-center italic"
                 alt="Screenshot of the desktop version of the dues dashboard."
               />
@@ -522,55 +528,158 @@
                 Dues Dashboard - Desktop
               </figcaption>
             </figure>
-            <div class="flex flex-col gap-10 px-6 lg:px-60">
-              <p class="max-w-xl">
-                This page showed their payment history, but as you can see, this
-                could be hard to read and didn’t provide information on who was
-                responsible for the missed payment.
-              </p>
-              <p>
-                This left members with no other choice but to call the office.
-                By then, members might be feeling alarmed, frustrated, and
-                confused. And for the administrators, trying to explain a
-                complicated system to someone who is already in distress is a
-                huge challenge.
-              </p>
-            </div>
           </section>
+
+          <!-- Answer -->
+
+          <div class="flex flex-col gap-8 px-6 md:px-60">
+            <p class="max-w-xl">
+              This page showed their payment history, but as you can see, this
+              could be hard to read and didn’t provide information on who was
+              responsible for the missed payment.
+            </p>
+            <h4 class="font-display text-fg-color text-xl font-medium">
+              So why were members calling the office?
+            </h4>
+            <p class="max-w-xl">
+              Due to the unintuitive way the system categorized dues payments,
+              the arrears notice and dues dashboard didn’t show them the full
+              picture. Members were often left searching for more information,
+              and their only option was to call the office.
+            </p>
+            <section id="member-journey" class="flex flex-col">
+              <div id="step-1" class="flex items-center gap-4">
+                <span
+                  class="material-symbols-outlined bg-vigor-100 text-vigor-600 dark:bg-vigor-900 dark:text-vigor-400 flex h-10 w-10 rounded-2xl p-2"
+                  >alternate_email</span
+                >
+                <li class="font-display text-fg-color">
+                  Receives their arrears notice
+                </li>
+              </div>
+              <div
+                id="thought-1"
+                class="border-fg-color/50 ml-5 border-l py-4 pl-9"
+              >
+                <div class="bg-fg-color/10 w-fit rounded-2xl p-4">
+                  <p class="max-w-xl italic">
+                    “I’m missing a payment in December? But my employer should
+                    have paid this month!”
+                  </p>
+                </div>
+              </div>
+              <div id="step-2" class="flex items-center gap-4">
+                <span
+                  class="material-symbols-outlined bg-calm-100 text-calm-600 dark:bg-calm-900 dark:text-calm-400 flex h-10 w-10 rounded-2xl p-2"
+                  >alternate_email</span
+                >
+                <li class="font-display text-fg-color">
+                  Checks their dues dashboard to find the missed payment
+                </li>
+              </div>
+              <div
+                id="thought-2"
+                class="border-fg-color/50 ml-5 border-l py-4 pl-9"
+              >
+                <div class="bg-fg-color/10 w-fit rounded-2xl p-4">
+                  <p class="max-w-xl italic">
+                    “This just says the same thing! I still can’t tell if my
+                    employer paid...”
+                  </p>
+                </div>
+              </div>
+              <div id="step-3" class="flex items-center gap-4">
+                <span
+                  class="material-symbols-outlined bg-grit-100 text-grit-600 dark:bg-grit-900 dark:text-grit-400 flex h-10 w-10 rounded-2xl p-2"
+                  >alternate_email</span
+                >
+                <li class="font-display text-fg-color">
+                  Calls the office to ask admin
+                </li>
+              </div>
+            </section>
+          </div>
         </section>
 
         <!-- Bridging the Gap ------------------------------------------------------>
 
         <section
           id="section-3"
-          class="border-fg-color/20 flex flex-col gap-10 border-b px-6 py-16 md:px-60"
+          class="border-fg-color/20 flex flex-col gap-10 border-b py-16"
         >
-          <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
-            Bridging the Gap
-          </h3>
-          <p class="max-w-xl opacity-80">
-            The thing was,
-            <strong>all the information was in the system</strong>—what payments
-            were being missed, who was responsible for them—it just wasn’t being
-            shown to the members. <br /><br />I suggested that they didn’t need
-            to overhaul the program, they just had to
-            <strong> change how it was being communicated. </strong>
-            This could be done by updating the
-            <strong> existing payment history page.</strong>
-          </p>
-          <figure>
-            <img
-              id="bridging-the-gap"
-              src="/assets/Dues Dashboard/bridging_gap_graphic_V.svg"
-              alt="FILL_IN_ALT_TEXT"
-            />
-          </figure>
-          <p class="max-w-xl opacity-80">
-            With the information readily available, members wouldn’t have to
-            call the office in the first place. This would prevent costly
-            changes to the database and keep the system that the administrators
-            knew best.
-          </p>
+          <div class="flex flex-col gap-10 px-6 md:px-60">
+            <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+              Bridging the Gap
+            </h3>
+            <p class="max-w-xl opacity-80">
+              The thing was, all the information was in the system—what payments
+              were being missed, who was responsible for them—it just wasn’t
+              being shown to the members.
+            </p>
+          </div>
+          <div class="bg-calm-100 dark:bg-calm-900 gap-6 px-6 py-14 md:px-60">
+            <p class="text-calm-900 dark:text-calm-100 font-display text-2xl">
+              I suggested that they could alleviate members’ confusion by
+              updating the dues dashboard with better information.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-10 px-6 md:px-60">
+            <p class="max-w-xl opacity-80">
+              With the information readily available, members wouldn’t have to
+              call the office in the first place. This would prevent costly
+              changes to the database and keep the system that the
+              administrators knew best.
+            </p>
+            <section id="member-journey-updated" class="flex flex-col">
+              <div id="step-1" class="flex items-center gap-4 opacity-80">
+                <span
+                  class="material-symbols-outlined bg-vigor-100 text-vigor-600 dark:bg-vigor-900 dark:text-vigor-400 flex h-10 w-10 rounded-2xl p-2"
+                  >alternate_email</span
+                >
+                <p class="font-display text-fg-color">
+                  Receives their arrears notice
+                </p>
+              </div>
+              <div
+                id="thought-1"
+                class="border-fg-color/50 ml-5 border-l py-4 pl-9"
+              ></div>
+              <div id="step-1" class="flex items-center gap-4">
+                <span
+                  class="material-symbols-outlined bg-calm-100 text-calm-600 dark:bg-calm-900 dark:text-calm-400 flex h-10 w-10 rounded-2xl p-2"
+                  >alternate_email</span
+                >
+                <p class="font-display text-fg-color">
+                  Checks their dues dashboard to find the missed payment
+                </p>
+              </div>
+              <div
+                id="thought-1"
+                class="border-fg-color/50 ml-5 border-l py-4 pl-9"
+              >
+                <div class="bg-fg-color/10 w-fit rounded-2xl p-4">
+                  <p class="max-w-xl italic">
+                    “Oh I see... I missed a payment while I was between work”
+                  </p>
+                </div>
+              </div>
+              <div id="step-1" class="flex items-center gap-4">
+                <span
+                  class="material-symbols-outlined bg-fresh-100 text-fresh-600 dark:bg-fresh-900 dark:text-fresh-400 flex h-10 w-10 rounded-2xl p-2"
+                  >alternate_email</span
+                >
+                <p class="font-display text-fg-color">
+                  Understands their outstanding dues
+                </p>
+              </div>
+            </section>
+            <p class="max-w-xl opacity-80">
+              Targeting the dues dashboard instead of the dues application would
+              eliminate the need for costly changes and keep the system that the
+              administrators knew best.
+            </p>
+          </div>
         </section>
 
         <!-- Redesigning the Payment Page --------------------------------------------->
@@ -1064,6 +1173,13 @@
           </div>
         </section>
       </article>
+      <a
+        id="case-study-link"
+        href="/portfolio.html"
+        class="bg-calm-600 text-bg-color dark:bg-calm-400 flex justify-center self-stretch py-4 underline"
+      >
+        See more projects
+      </a>
     </main>
 
     <footer></footer>

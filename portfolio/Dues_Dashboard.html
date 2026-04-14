@@ -64,16 +64,16 @@
       </p>
       <!-- Change text between desktop & mobile?? -->
     </a>
-    <main class="sticky flex flex-col">
+    <main class="flex flex-col">
       <!-- Introduction -------------------------------------------------------------->
 
       <section class="border-fg-color/20 flex h-svh flex-col gap-4 border-b">
         <div
-          class="border-fg-color/20 flex grow flex-col-reverse lg:flex-row lg:items-center lg:gap-12 lg:border-t"
+          class="border-fg-color/20 flex grow flex-col-reverse lg:flex-row lg:items-center lg:gap-16 lg:border-t"
         >
           <div
             id="intro-text"
-            class="flex flex-col gap-10 px-6 py-10 md:px-60 lg:pr-0"
+            class="flex flex-col gap-10 px-6 py-10 md:px-60 lg:flex-1 lg:pr-0"
           >
             <h2 class="font-display text-4xl lg:max-w-xl lg:text-5xl">
               Reducing Member Complaints With A Simple UI Fix
@@ -95,7 +95,7 @@
             </div>
           </div>
           <div
-            class="flex flex-1 basis-0 overflow-hidden lg:h-auto lg:self-stretch"
+            class="flex flex-1 basis-0 overflow-hidden lg:h-auto lg:flex-2 lg:self-stretch"
           >
             <img
               id="hero-shot"
@@ -111,7 +111,7 @@
 
         <section
           id="section-1"
-          class="border-fg-color/20 flex flex-col gap-14 border-b py-16"
+          class="border-fg-color/20 flex flex-col gap-16 border-b py-16"
         >
           <div class="flex flex-col gap-8 px-6 md:px-60">
             <h3
@@ -127,9 +127,7 @@
               were having.
             </p>
           </div>
-          <div
-            class="text-fg-color/80 flex h-fit flex-col gap-10 self-stretch lg:flex-row"
-          >
+          <div class="text-fg-color/80 flex h-fit flex-col gap-10 self-stretch">
             <!-- Members' Complaints -->
             <div class="flex flex-col gap-8 px-6 md:px-60">
               <h4 class="font-display text-fg-color text-xl font-medium">
@@ -144,16 +142,17 @@
             <!-- Problem Storyboard -->
             <div
               id="problem-storyboard"
-              class="flex h-svh flex-col divide-x divide-y self-stretch overflow-hidden border"
+              class="border-fg-color/20 divide-fg-color/20 flex h-svh flex-col divide-x divide-y self-stretch overflow-hidden border lg:h-fit lg:flex-row"
             >
               <figure
+                id="panel1"
                 class="flex min-w-0 flex-1 basis-0 flex-col self-stretch overflow-hidden"
               >
                 <div
-                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden"
+                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden lg:flex-0 lg:basis-auto"
                 >
                   <img
-                    class="min-w-0 flex-1 basis-0 object-cover"
+                    class="min-w-0 flex-1 basis-0 object-cover opacity-90"
                     src="/assets/Dues Dashboard/problem_comic_1.png"
                     alt="Drawing of a member looking at an envelope with a warning symbol on it."
                   />
@@ -170,10 +169,10 @@
                 class="flex min-w-0 flex-1 basis-0 flex-col self-stretch overflow-hidden"
               >
                 <div
-                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden"
+                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden lg:flex-0 lg:basis-auto"
                 >
                   <img
-                    class="min-w-0 flex-1 basis-0 object-cover"
+                    class="min-w-0 flex-1 basis-0 object-cover opacity-90"
                     src="/assets/Dues Dashboard/problem_comic_2.png"
                     alt="Drawing of a member calling the office with their mobile phone while reading their arrears notice. A thought bubble beside the person's head reads: '??'"
                   />
@@ -191,10 +190,10 @@
                 class="flex min-w-0 flex-1 basis-0 flex-col self-stretch overflow-hidden"
               >
                 <div
-                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden"
+                  class="flex min-w-0 flex-1 basis-0 self-stretch overflow-hidden lg:flex-0 lg:basis-auto"
                 >
                   <img
-                    class="min-w-0 flex-1 basis-0 object-cover"
+                    class="min-w-0 flex-1 basis-0 object-cover opacity-90"
                     src="/assets/Dues Dashboard/problem_comic_3.png"
                     alt="Drawing of a member having a conversation with one of the administrators over the phone. The member looks angry and the administrator looks stressed. Overlapping speech bubbles imply it is a heated conversation."
                   />
@@ -209,13 +208,11 @@
             </div>
           </div>
           <!-- The Problem -->
-          <div
-            class="text-fg-color/80 flex flex-col gap-8 px-6 md:px-60 lg:flex-row lg:items-center"
-          >
-            <div class="flex flex-col gap-8">
-              <h4 class="font-display text-fg-color text-xl font-medium">
-                Fixing the dues application
-              </h4>
+          <div class="text-fg-color/80 flex flex-col gap-8 px-6 md:px-60">
+            <h4 class="font-display text-fg-color text-xl font-medium">
+              Fixing the dues application
+            </h4>
+            <div class="flex flex-col gap-10 lg:flex-row xl:justify-between">
               <p class="max-w-xl">
                 Some union staff had suggested that they change how the payments
                 were recorded, so that admin could explain it more easily. But
@@ -226,49 +223,54 @@
                 more experienced admin were used to how the application worked
                 and would have to learn a new system.
               </p>
-            </div>
-            <div
-              id="pros-cons-summary"
-              class="flex gap-4 self-stretch font-medium lg:self-center"
-            >
-              <div id="pros" class="flex flex-col gap-6">
-                <div id="pro1" class="flex gap-4 lg:items-center">
-                  <div
-                    class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl lg:text-5xl"
-                    aria-label="Pro:"
-                  >
-                    arrow_circle_up
+              <!-- Pros & Cons -->
+              <div
+                id="pros-cons-summary"
+                class="flex gap-4 self-stretch font-medium lg:shrink-0 lg:flex-col lg:gap-10 xl:self-center 2xl:flex-row"
+              >
+                <div id="pros" class="flex flex-col gap-6 lg:shrink-0">
+                  <div id="pro1" class="flex gap-4 lg:items-center">
+                    <div
+                      class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                      aria-hidden="true"
+                    >
+                      arrow_circle_up
+                    </div>
+                    <span class="sr-only">Pro:</span>
+                    <p class="flex-1">Reduce member complaints</p>
                   </div>
-                  <p class="flex-1 lg:text-xl">Reduce member complaints</p>
+                  <div id="pro2" class="flex gap-4 lg:items-center">
+                    <div
+                      class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                      aria-hidden="true"
+                    >
+                      arrow_circle_up
+                    </div>
+                    <span class="sr-only">Pro:</span>
+                    <p class="flex-1">Simpler to understand</p>
+                  </div>
                 </div>
-                <div id="pro2" class="flex gap-4 lg:items-center">
-                  <div
-                    class="bg-fresh-100 dark:bg-fresh-900 dark:text-fresh-400 text-fresh-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
-                    aria-label="Pro:"
-                  >
-                    arrow_circle_up
+                <div id="cons" class="flex flex-col gap-6">
+                  <div id="con1" class="flex gap-4 lg:items-center">
+                    <div
+                      class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                      aria-hidden="true"
+                    >
+                      arrow_circle_down
+                    </div>
+                    <span class="sr-only">Con:</span>
+                    <p class="flex-1">Costly implementation</p>
                   </div>
-                  <p class="flex-1">Simpler to understand</p>
-                </div>
-              </div>
-              <div id="cons" class="flex flex-col gap-6">
-                <div id="con1" class="flex gap-4 lg:items-center">
-                  <div
-                    class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
-                    aria-label="Con:"
-                  >
-                    arrow_circle_down
+                  <div id="con2" class="flex gap-4 lg:items-center">
+                    <div
+                      class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
+                      aria-hidden="true"
+                    >
+                      arrow_circle_down
+                    </div>
+                    <span class="sr-only">Con:</span>
+                    <p class="flex-1">Admin have to learn a new system</p>
                   </div>
-                  <p class="flex-1">Costly implementation</p>
-                </div>
-                <div id="con2" class="flex gap-4 lg:items-center">
-                  <div
-                    class="bg-vigor-100 dark:bg-vigor-900 dark:text-vigor-400 text-vigor-600 material-symbols-outlined h-fit w-fit shrink-0 grow-0 rounded-lg p-1 text-2xl"
-                    aria-label="Con:"
-                  >
-                    arrow_circle_down
-                  </div>
-                  <p class="flex-1">Admin have to learn a new system</p>
                 </div>
               </div>
             </div>
@@ -292,7 +294,7 @@
           id="section-2"
           class="border-fg-color/20 flex flex-col gap-14 border-b py-20"
         >
-          <div class="flex flex-col gap-8 px-6 md:px-60">
+          <div id="s2-intro" class="flex flex-col gap-8 px-6 md:px-60">
             <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
               Finding the Miscommunication
             </h3>
@@ -304,21 +306,27 @@
           </div>
 
           <!-- Question 1 -->
-          <section id="q1" class="text-fg-color/80 flex flex-col gap-10">
-            <div class="text-fg-color/80 flex flex-col gap-10 px-6 md:px-60">
+          <section
+            id="q1"
+            class="text-fg-color/80 flex flex-col lg:gap-4 lg:px-60"
+          >
+            <div
+              id="q1-line"
+              class="border-fg-color/20 text-fresh-900 dark:text-fresh-100 mx-6 flex flex-col border-t pt-6 md:mx-60 lg:mx-0"
+            >
+              <p class="opacity-70">My first question was...</p>
+            </div>
+            <div
+              class="flex flex-col items-start gap-10 self-stretch lg:flex-row lg:justify-between"
+            >
               <div
-                id="q1-header"
-                class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
+                id="q1-heading"
+                class="text-fresh-900 dark:text-fresh-100 flex items-center justify-between gap-4 self-stretch px-6 md:px-60 lg:flex-1 lg:flex-col lg:items-start lg:self-auto lg:px-0"
               >
-                <div
-                  class="text-fresh-900 dark:text-fresh-100 flex flex-col gap-4"
-                >
-                  <p class="opacity-70">My first question was...</p>
-                  <h4 class="font-display text-xl font-medium">
-                    What did the arrears notice tell members?
-                  </h4>
-                </div>
-                <div class="w-20 shrink-0 grow-0">
+                <h4 class="font-display text-xl font-medium">
+                  What did the arrears notice tell members?
+                </h4>
+                <div class="w-20 shrink-0 grow-0 lg:w-32">
                   <img
                     src="\assets\Dues Dashboard\arrears-notice.svg"
                     alt="Icon of an envelope with a warning symbol on it."
@@ -326,50 +334,60 @@
                   />
                 </div>
               </div>
-              <p class="max-w-xl">
-                If members still had outstanding payments after a certain amount
-                of time, they would be sent an arrears notice that looks
-                something like this:
-              </p>
-            </div>
-            <figure class="bg-hatch px-6 py-6 md:px-60">
-              <div class="">
-                <img
-                  id="example-arrears-notice"
-                  src="/assets/Dues Dashboard/notice_of_arrears_sample.svg"
-                  class="align-center bg-hatch text-center"
-                  alt="Mockup of the arrears notice letter. The notice reads 'Notice of Arrears: You are hereby notified that you are behind in your dues by the amount of $43.00 There is a table below showing month owing and amount. It says 'Due Dec-2025', Amount:43.00"
-                />
+              <div
+                class="flex flex-col items-start gap-8 self-stretch lg:flex-2"
+              >
+                <p class="mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  If members still had outstanding payments after a certain
+                  amount of time, they would be sent an arrears notice that
+                  looks something like this:
+                </p>
+                <figure
+                  class="bg-hatch flex justify-center self-stretch px-6 py-6 md:px-60 lg:px-6"
+                >
+                  <div class="">
+                    <img
+                      id="example-arrears-notice"
+                      src="/assets/Dues Dashboard/notice_of_arrears_sample.svg"
+                      class="align-center bg-hatch text-center"
+                      alt="Mockup of the arrears notice letter. The notice reads 'Notice of Arrears: You are hereby notified that you are behind in your dues by the amount of $43.00 There is a table below showing month owing and amount. It says 'Due Dec-2025', Amount:43.00"
+                    />
+                  </div>
+                </figure>
+                <p class="mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  From this notice, you might assume that you owed $43.00 from a
+                  missed payment for December 2025. <br /><br />
+                  <strong>
+                    However, this was not always true—it could be the case that
+                    the missed payment was from a different month.
+                  </strong>
+                </p>
               </div>
-            </figure>
-            <div class="px-6 md:px-60">
-              <p class="max-w-xl">
-                From this notice, you might assume that you owed $43.00 from a
-                missed payment for December 2025. <br /><br />
-                <strong>
-                  However, this was not always true—it could be the case that
-                  the missed payment was from a different month.
-                </strong>
-              </p>
             </div>
           </section>
 
           <!-- Question 2-->
-          <section id="q2" class="text-fg-color/80 flex flex-col gap-10">
-            <div class="flex flex-col gap-10 px-6 md:px-60">
+          <section
+            id="q2"
+            class="text-fg-color/80 flex flex-col lg:gap-4 lg:px-60"
+          >
+            <div
+              id="q2-line"
+              class="border-fg-color/20 text-fresh-900 dark:text-fresh-100 mx-6 flex flex-col border-t pt-6 md:mx-60 lg:mx-0"
+            >
+              <p class="opacity-70">This led me to ask...</p>
+            </div>
+            <div
+              class="flex flex-col items-start gap-10 self-stretch lg:flex-row lg:justify-between"
+            >
               <div
-                id="q2-header"
-                class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
+                id="q2-heading"
+                class="text-fresh-900 dark:text-fresh-100 flex items-center justify-between gap-4 self-stretch px-6 md:px-60 lg:flex-1 lg:flex-col lg:items-start lg:self-auto lg:px-0"
               >
-                <div
-                  class="text-fresh-900 dark:text-fresh-100 flex flex-col gap-4"
-                >
-                  <p class="opacity-70">This led me to ask...</p>
-                  <h4 class="font-display text-xl font-medium">
-                    How did the dues application keep track of payments?
-                  </h4>
-                </div>
-                <div class="w-20 shrink-0 grow-0">
+                <h4 class="font-display text-xl font-medium">
+                  How did the dues application keep track of payments?
+                </h4>
+                <div class="w-20 shrink-0 grow-0 lg:w-32">
                   <img
                     src="\assets\Dues Dashboard\database.svg"
                     alt="Icon of a computer screen showing a database."
@@ -377,128 +395,130 @@
                   />
                 </div>
               </div>
-              <p class="text-fg-color/80 max-w-xl">
-                In order to understand how the date on the arrears notice could
-                be “wrong”, we have to understand how the admin application
-                keeps track of dues payments:
-              </p>
-            </div>
-
-            <!-- Measuring Cup Diagrams -->
-            <div
-              class="text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 border-fresh-400 divide-fresh-400 dark:divide-fresh-600 bg-hatch-fresh-100 dark:bg-hatch-fresh-900 flex flex-col divide-y border-t border-b lg:border"
-            >
-              <figure id="fig-1" class="flex justify-between">
-                <figcaption class="max-w-xl p-6 text-sm">
-                  In the application, a member’s balance can be thought of like
-                  a measuring cup, with each line representing a month of dues.
-                </figcaption>
-
+              <div
+                class="flex flex-col items-start gap-8 self-stretch lg:flex-2"
+              >
+                <p class="text-fg-color/80 mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  In order to understand how the date on the arrears notice
+                  could be “wrong”, we have to understand how the admin
+                  application keeps track of dues payments:
+                </p>
+                <!-- Measuring Cup Diagrams -->
                 <div
-                  class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
+                  class="text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 border-fresh-400 divide-fresh-400 dark:divide-fresh-600 bg-hatch-fresh-100 dark:bg-hatch-fresh-900 flex flex-col divide-y border-t border-b md:mx-60 lg:mx-0"
                 >
-                  <img
-                    src="/assets/Dues Dashboard/measuring_cup.png"
-                    alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the July line."
-                    class="themed"
-                  />
+                  <figure id="fig-1" class="flex justify-between">
+                    <figcaption class="max-w-xl p-6 text-sm">
+                      In the application, a member’s balance can be thought of
+                      like a measuring cup, with each line representing a month
+                      of dues.
+                    </figcaption>
+                    <div
+                      class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6 xl:w-48"
+                    >
+                      <img
+                        src="/assets/Dues Dashboard/measuring_cup.png"
+                        alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the July line."
+                        class="themed"
+                      />
+                    </div>
+                  </figure>
+                  <figure id="fig-2" class="flex justify-between">
+                    <figcaption class="max-w-xl p-6 text-sm">
+                      When a member makes a payment, the cup fills to the next
+                      line. If a payment was missed, the next one would
+                      contribute to the previous month.
+                    </figcaption>
+                    <div
+                      class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6 xl:w-48"
+                    >
+                      <img
+                        src="/assets/Dues Dashboard/making_payment.png"
+                        class="themed"
+                        alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. Above the cup is the text '$42' and an arrow showing it is going into the cup. The cup is filled to the August line."
+                      />
+                    </div>
+                  </figure>
+                  <figure id="fig-3" class="flex flex-col 2xl:flex-row">
+                    <figcaption class="max-w-xl p-6 text-sm">
+                      When an arrears notice is generated the application would
+                      use this “measurement” to say which periods were missing.
+                    </figcaption>
+                    <div class="bg-hatch p-6">
+                      <img
+                        src="/assets/Dues Dashboard/measurement_reading.png"
+                        class="themed"
+                        alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the August line and the level betweeen August and September is hatched in red to indicate a missed payment. An arrow points from the cup to the text 'Month owing: SEPT-2025'"
+                      />
+                    </div>
+                  </figure>
                 </div>
-              </figure>
-
-              <figure id="fig-2" class="flex justify-between">
-                <figcaption class="max-w-xl p-6 text-sm">
-                  When a member makes a payment, the cup fills to the next line.
-                  If a payment was missed, the next one would contribute to the
-                  previous month.
-                </figcaption>
-
-                <div
-                  class="bg-hatch flex aspect-square w-36 shrink-0 items-center justify-center px-4 py-6"
+                <p class="mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  So when we look at the
+                  <a
+                    class="decoration-fg-color/50 hover:decoration-fg-color underline underline-offset-2"
+                    href="#example-arrears-notice"
+                    >example arrears notice</a
+                  >
+                  it could be that the member missed their December payment or
+                  it could be a scenario like this:
+                </p>
+                <figure
+                  id="fig-4"
+                  class="border-fresh-400 text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 bg-hatch-fresh-100 dark:bg-hatch-fresh-900 flex flex-col border-t border-b xl:flex-row"
                 >
-                  <img
-                    src="/assets/Dues Dashboard/making_payment.png"
-                    class="themed"
-                    alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. Above the cup is the text '$42' and an arrow showing it is going into the cup. The cup is filled to the August line."
-                  />
-                </div>
-              </figure>
-              <figure id="fig-3" class="flex flex-col lg:flex-row">
-                <figcaption class="max-w-xl p-6 text-sm">
-                  When an arrears notice is generated the application would use
-                  this “measurement” to say which periods were missing.
-                </figcaption>
-
-                <div class="bg-hatch p-6">
-                  <img
-                    src="/assets/Dues Dashboard/measurement_reading.png"
-                    class="themed"
-                    alt="A measuring cup that has each measurement line labelled with a month, going from June at the bottom to December at the top. The cup is filled to the August line and the level betweeen August and September is hatched in red to indicate a missed payment. An arrow points from the cup to the text 'Month owing: SEPT-2025'"
-                  />
-                </div>
-              </figure>
-            </div>
-
-            <div class="px-6 md:px-60">
-              <p class="max-w-xl">
-                So when we look at the
-                <a
-                  class="decoration-fg-color/50 hover:decoration-fg-color underline underline-offset-2"
-                  href="#example-arrears-notice"
-                  >example arrears notice</a
-                >
-                it could be that the member missed their December payment or it
-                could be a scenario like this:
-              </p>
-            </div>
-
-            <figure
-              id="fig-4"
-              class="border-fresh-400 text-fresh-600 dark:text-fresh-400 dark:border-fresh-600 bg-hatch-fresh-100 dark:bg-hatch-fresh-900 flex flex-col border-t border-b lg:flex-row"
-            >
-              <figcaption class="max-w-xl p-6 text-sm">
-                Say in one year, you worked January-September and
-                November-December, and in October you had forgotten to pay your
-                dues while in between jobs.
-              </figcaption>
-
-              <div class="bg-hatch flex flex-col items-center gap-4 px-6 py-4">
-                <img
-                  src="/assets/Dues Dashboard/missed_payment.png"
-                  class="themed"
-                  alt="A series of measuring cups showing the sequence of the months of October, November, and December. In October, it shows $0 being added to the cup and it's filled to the September line. In November, it shows $42 being added to the cup, now filled to the October line. In December, it shows $42 being added to the cup, now filled to the November line."
-                />
-                <p class="text-fg-color text-xl font-semibold">
-                  Month owing: DEC-2025
+                  <figcaption class="max-w-xl p-6 text-sm">
+                    Say in one year, you worked January-September and
+                    November-December, and in October you had forgotten to pay
+                    your dues while in between jobs.
+                  </figcaption>
+                  <div
+                    class="bg-hatch flex flex-col items-center gap-4 px-6 py-4"
+                  >
+                    <img
+                      src="/assets/Dues Dashboard/missed_payment.png"
+                      class="themed"
+                      alt="A series of measuring cups showing the sequence of the months of October, November, and December. In October, it shows $0 being added to the cup and it's filled to the September line. In November, it shows $42 being added to the cup, now filled to the October line. In December, it shows $42 being added to the cup, now filled to the November line."
+                    />
+                    <p class="text-fg-color text-xl font-semibold">
+                      Month owing: DEC-2025
+                    </p>
+                  </div>
+                </figure>
+                <p class="mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  This made sense to the admin because they had the complete
+                  records which showed when the payment was made, who it was
+                  made by, how much was paid, etc. But since the members were
+                  only given the period of the missing payment, they had to fill
+                  in the gaps themselves.
                 </p>
               </div>
-            </figure>
-            <div class="px-6 md:px-60">
-              <p class="text-vigor-600 max-w-xl">
-                | EDIT THIS | This made sense to the admin because they were
-                used to the application and also knew when the payment was made,
-                who it was made by, how much was paid, etc., but without further
-                information, members were being left in the dark.
-              </p>
             </div>
           </section>
 
           <!-- Question 3 -->
-          <section id="q3" class="text-fg-color/80 flex flex-col gap-10">
-            <div class="flex flex-col gap-10 px-6 md:px-60">
+          <section
+            id="q3"
+            class="text-fg-color/80 flex flex-col lg:gap-4 lg:px-60"
+          >
+            <div
+              id="q3-line"
+              class="border-fg-color/20 text-fresh-900 dark:text-fresh-100 mx-6 flex flex-col border-t pt-6 md:mx-60 lg:mx-0"
+            >
+              <p class="opacity-70">This made me think...</p>
+            </div>
+            <div
+              class="flex flex-col items-start gap-10 self-stretch lg:flex-row lg:justify-between"
+            >
               <div
-                id="q2-header"
-                class="border-fg-color/20 flex items-center justify-between gap-6 border-t pt-6"
+                id="q3-heading"
+                class="text-fresh-900 dark:text-fresh-100 flex items-center justify-between gap-4 self-stretch px-6 md:px-60 lg:flex-1 lg:flex-col lg:items-start lg:self-auto lg:px-0"
               >
-                <div
-                  class="text-fresh-900 dark:text-fresh-100 flex flex-col gap-4"
-                >
-                  <p class="opacity-70">This made me think...</p>
-                  <h4 class="font-display text-xl font-medium">
-                    Were there any other options for members to check their dues
-                    payments?
-                  </h4>
-                </div>
-                <div class="w-20 shrink-0 grow-0">
+                <h4 class="font-display text-xl font-medium">
+                  Was there any other way for members to check their dues
+                  payments?
+                </h4>
+                <div class="w-20 shrink-0 grow-0 lg:w-32">
                   <img
                     src="\assets\Dues Dashboard\payment-history.svg"
                     alt="Icon of a receipt with a magnifying glass over it."
@@ -506,37 +526,40 @@
                   />
                 </div>
               </div>
-              <p class="text-fg-color/80 max-w-xl">
-                I asked the developer if there were any other sources of
-                information that members could access before calling the office.
-                <br />
-                <br />He said there was one other option: the dues dashboard on
-                the member portal.
-              </p>
+              <div
+                class="text-fg-color/80 flex flex-col items-start gap-8 self-stretch lg:flex-2"
+              >
+                <p class="mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  I asked the developer if there were any other sources of
+                  information that members could access before calling the
+                  office. He said there was one other option: <br /><br />
+                  <strong>The dues dashboard on the member's portal</strong>
+                </p>
+                <figure
+                  class="bg-hatch flex flex-col items-center gap-2 px-6 pt-8 pb-4"
+                >
+                  <img
+                    src="/assets/Dues Dashboard/old_desktop.png"
+                    class="bg-hatch text-center italic"
+                    alt="Screenshot of the desktop version of the dues dashboard."
+                  />
+                  <figcaption class="font-semibold">
+                    Dues Dashboard - Desktop
+                  </figcaption>
+                </figure>
+                <p class="mx-6 max-w-xl md:mx-60 lg:mx-0">
+                  This page showed their payment history, but as you can see,
+                  this could be hard to read and didn’t provide information on
+                  who was responsible for the missed payment.
+                </p>
+              </div>
             </div>
-            <figure
-              class="bg-hatch flex flex-col items-center gap-2 px-6 pt-8 pb-4"
-            >
-              <img
-                src="/assets/Dues Dashboard/old_desktop.png"
-                class="bg-hatch text-center italic"
-                alt="Screenshot of the desktop version of the dues dashboard."
-              />
-              <figcaption class="font-semibold">
-                Dues Dashboard - Desktop
-              </figcaption>
-            </figure>
           </section>
 
           <!-- Answer -->
 
-          <div class="flex flex-col gap-8 px-6 md:px-60">
-            <p class="max-w-xl">
-              This page showed their payment history, but as you can see, this
-              could be hard to read and didn’t provide information on who was
-              responsible for the missed payment.
-            </p>
-            <h4 class="font-display text-fg-color text-xl font-medium">
+          <div class="text-fg-color/80 flex flex-col gap-8 px-6 md:px-60">
+            <h4 class="font-display text-fg-color text-xl">
               So why were members calling the office?
             </h4>
             <p class="max-w-xl">
@@ -545,7 +568,7 @@
               information to clear up their concerns. The only way to get this
               information was to call the office.
             </p>
-            <section id="member-journey" class="flex flex-col">
+            <ol id="member-journey" class="flex appearance-none flex-col">
               <div id="step-1" class="flex items-center gap-4">
                 <span
                   class="material-symbols-outlined bg-vigor-100 text-vigor-600 dark:bg-vigor-900 dark:text-vigor-400 flex h-10 w-10 rounded-2xl p-2"
@@ -560,6 +583,7 @@
                 class="border-fg-color/50 ml-5 border-l py-4 pl-9"
               >
                 <div class="bg-fg-color/10 w-fit rounded-2xl p-4">
+                  <span class="sr-only">Member's thoughts:</span>
                   <p class="max-w-xl italic">
                     “I’m missing a payment in December? But my employer should
                     have paid this month!”
@@ -580,6 +604,7 @@
                 class="border-fg-color/50 ml-5 border-l py-4 pl-9"
               >
                 <div class="bg-fg-color/10 w-fit rounded-2xl p-4">
+                  <span class="sr-only">Member's thoughts:</span>
                   <p class="max-w-xl italic">
                     “This just says the same thing! I still can’t tell if my
                     employer paid...”
@@ -595,7 +620,7 @@
                   Calls the office to ask admin
                 </li>
               </div>
-            </section>
+            </ol>
           </div>
         </section>
 
@@ -603,19 +628,23 @@
 
         <section
           id="section-3"
-          class="border-fg-color/20 flex flex-col gap-10 border-b py-16"
+          class="border-fg-color/20 bg-calm-100/50 dark:bg-calm-900/50 text-fg-color/80 flex flex-col gap-10 border-b py-16"
         >
           <div class="flex flex-col gap-10 px-6 md:px-60">
-            <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+            <h3
+              class="font-display text-fg-color/70 text-3xl font-thin lg:text-5xl"
+            >
               Bridging the Gap
             </h3>
-            <p class="max-w-xl opacity-80">
+            <p class="max-w-xl">
               The thing was, all the information was in the system—what payments
               were being missed, who was responsible for them—it just wasn’t
               being shown to the members.
             </p>
           </div>
-          <div class="bg-calm-100 dark:bg-calm-900 gap-6 px-6 py-14 md:px-60">
+          <div
+            class="bg-calm-100 border-calm-400 dark:border-calm-600 dark:bg-calm-900 gap-6 border-t border-b px-6 py-14 md:px-60"
+          >
             <p class="text-calm-900 dark:text-calm-100 font-display text-2xl">
               I suggested that they could alleviate members’ confusion by
               updating the dues dashboard with better information.
@@ -623,12 +652,12 @@
           </div>
 
           <div class="flex flex-col gap-10 px-6 md:px-60">
-            <p class="max-w-xl opacity-80">
+            <p class="max-w-xl">
               With the information readily available, members wouldn’t have to
               call the office in the first place.
             </p>
             <section id="member-journey-updated" class="flex flex-col">
-              <div id="step-1" class="flex items-center gap-4 opacity-80">
+              <div id="step-1" class="flex items-center gap-4">
                 <span
                   class="material-symbols-outlined bg-vigor-100 text-vigor-600 dark:bg-vigor-900 dark:text-vigor-400 flex h-10 w-10 rounded-2xl p-2"
                   >mail</span
@@ -720,15 +749,17 @@
                     id="k1-details"
                     class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
                   >
-                    <div class="bg-hatch flex w-full justify-center px-6">
+                    <div
+                      class="bg-hatch flex w-full flex-2 justify-center px-6"
+                    >
                       <img
                         class="object-cover"
                         src="/assets/Dues Dashboard/kc1-before.png"
-                        alt="FILL_IN_ALT_TEXT"
+                        alt="A screenshot of the payment history table on the dues dashboard page, labelled with the numbers 1 to 3.The header row of the table has three columns: Date, Description, and Amount. Beside each title is a downward arrow button indicating they are sortable. The date column shows a date in day-month-year format. The description column shows a month (Mar-2024, Feb-2024, etc). The month column shows dollar amounts in Canadian dollars."
                       />
                     </div>
                     <figcaption
-                      class="flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                      class="flex flex-1 flex-col gap-6 self-stretch px-6 pt-6 pb-10"
                     >
                       <p class="text-fg-color/80 max-w-xl">
                         In the previous version, the table displaying the
@@ -765,19 +796,21 @@
                     Updated Version
                   </summary>
                   <figure
-                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
+                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
                   >
-                    <div class="bg-hatch flex w-full justify-center px-6">
+                    <div
+                      class="bg-hatch flex w-full flex-2 justify-center px-6"
+                    >
                       <img
                         class="object-cover"
                         src="/assets/Dues Dashboard/kc1-after.png"
-                        alt="FILL_IN_ALT_TEXT"
+                        alt="A mockup of a redesigned payment history table labelled with the numbers 1 to 3. The header row of the table has four columns: Period, Payment(CAD), Paid By, and Balance(CAD). There are no arrows beside the titles. The period column shows the month (Mar-2024, Feb-2024, etc). The payment column shows dues paid in Canadian dollars. The paid by column shows the text 'Paid by' followed by the payee. The balance column shows the running balance during that period in Canadian dollars."
                       />
                     </div>
                     <figcaption
-                      class="flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                      class="flex flex-1 flex-col gap-6 self-stretch px-6 pt-6 pb-10"
                     >
-                      <p class="text-fg-color/80">
+                      <p class="text-fg-color/80 max-w-xl">
                         To provide members with the complete picture of their
                         payment history, columns could be renamed and more data
                         could be added.
@@ -818,19 +851,21 @@
                   </summary>
                   <figure
                     id="k2-details"
-                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
                   >
-                    <div class="bg-hatch flex w-full justify-center px-6">
+                    <div
+                      class="bg-hatch flex w-full flex-2 justify-center px-6"
+                    >
                       <img
                         class="object-cover"
                         src="/assets/Dues Dashboard/kc2-before.png"
-                        alt="FILL_IN_ALT_TEXT"
+                        alt="A screenshot of the mobile version of the dues dashboard, labelled with the numbers 1 and 2. All text in the table is bold and, instead of being laid out in columns, each rows' cells are stacked vertically. The background colour of these 'rows' alternates to separate them."
                       />
                     </div>
                     <figcaption
-                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                      class="flex flex-1 flex-col gap-6 self-stretch px-6 pt-6 pb-10"
                     >
-                      <p>
+                      <p class="text-fg-color/80 max-w-xl">
                         A lack of visual hierarchy made it difficult to find
                         what you were looking for, and there were some
                         challenges with the responsive design on mobile devices.
@@ -859,19 +894,21 @@
                     Updated Version
                   </summary>
                   <figure
-                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
                   >
-                    <div class="bg-hatch flex w-full justify-center px-6">
+                    <div
+                      class="bg-hatch flex w-full flex-2 justify-center px-6"
+                    >
                       <img
                         class="object-cover"
                         src="/assets/Dues Dashboard/kc2-after.png"
-                        alt="FILL_IN_ALT_TEXT"
+                        alt="A mockup of a redesigned mobile layout for the payment history, labelled with the numbers 1 to 3. The payment history table's rows are displayed horizontally, like in the desktop version. Text in each column is formatted differently, with the payment and balance information bolded. Positive amounts in the balance column are coloured red and negative amounts are coloured green."
                       />
                     </div>
                     <figcaption
-                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                      class="flex flex-1 flex-col gap-6 self-stretch px-6 pt-6 pb-10"
                     >
-                      <p>
+                      <p class="text-fg-color/80 max-w-xl">
                         To improve readability, I thought it would be best to
                         preserve the table formatting on mobile. Further styling
                         could be used to make important information stand out.
@@ -895,7 +932,6 @@
             </div>
 
             <!-- Key Change 3 -->
-
             <div class="flex flex-col gap-10">
               <div class="px-6 md:px-60">
                 <p class="font-display text-fg-color max-w-xl text-xl">
@@ -913,19 +949,21 @@
                   </summary>
                   <figure
                     id="k3-details"
-                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                    class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
                   >
-                    <div class="bg-hatch flex w-full justify-center px-6">
+                    <div
+                      class="bg-hatch flex w-full flex-2 justify-center px-6"
+                    >
                       <img
                         class="object-cover"
                         src="/assets/Dues Dashboard/kc3-before.png"
-                        alt="The top of the payment history page with labelled with numbers."
+                        alt="The top of the payment history page with labelled with the number 1. This shows that above the table, there is a button labelled 'Make Payment'"
                       />
                     </div>
                     <figcaption
-                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                      class="flex flex-1 flex-col gap-6 self-stretch px-6 pt-6 pb-10"
                     >
-                      <p>
+                      <p class="text-fg-color/80 max-w-xl">
                         When a member opened the dues dashboard, there was no
                         summary of their account or overall balance.
                       </p>
@@ -952,19 +990,21 @@
                     Updated Version
                   </summary>
                   <figure
-                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                    class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
                   >
-                    <div class="bg-hatch flex w-full justify-center px-6">
+                    <div
+                      class="bg-hatch flex w-full flex-2 justify-center px-6"
+                    >
                       <img
                         class="object-cover"
                         src="/assets/Dues Dashboard/kc3-after.png"
-                        alt="FILL_IN_ALT_TEXT"
+                        alt="A mockup of the top of the dues dashboard, labelled with the numbers 1 to 3. There is a section added above the 'Make Payment' button which contains the text: 'Current Balance: $85.00'. Below the text 'Current Balance' it says:'Due May 1 2025' with an hourglass icon. Below the text '$85.00' it says 'In Arrears' with an exclamation point inside a circle."
                       />
                     </div>
                     <figcaption
-                      class="text-fg-color/80 flex flex-col gap-6 self-stretch px-6 pt-6 pb-10"
+                      class="flex flex-1 flex-col gap-6 self-stretch px-6 pt-6 pb-10"
                     >
-                      <p>
+                      <p class="text-fg-color/80 max-w-xl">
                         To make the experience as seamless as possible, a
                         summary could be added to allow members to see their
                         account status at a glance.
@@ -983,14 +1023,14 @@
             </div>
           </div>
           <!-- Final Concepts -->
-          <div class="flex h-svh flex-col gap-10 overflow-hidden">
-            <div class="px-6 md:px-60">
-              <p class="max-w-xl">
-                I put together three different versions of the dues dashboard,
-                showing different desktop/mobile layout at different levels of
-                effort of implementation.
-              </p>
-            </div>
+          <div
+            class="text-fg-color/80 flex h-svh flex-col gap-10 overflow-hidden lg:h-auto"
+          >
+            <p class="mx-6 max-w-xl md:mx-60">
+              I put together three different versions of the dues dashboard,
+              showing different desktop/mobile layout at different levels of
+              effort of implementation.
+            </p>
             <div
               id="concept-carousel"
               class="flex flex-1 snap-x snap-mandatory gap-6 self-stretch overflow-x-scroll overflow-y-hidden px-6 lg:justify-between lg:overflow-auto lg:px-60"
@@ -999,9 +1039,11 @@
                 class="flex w-full min-w-0 shrink-0 snap-center flex-col items-center gap-6 self-stretch overflow-hidden lg:w-auto lg:shrink"
               >
                 <figcaption class="flex shrink-0 flex-col items-center gap-2">
-                  <h4 class="font-display text-xl lg:text-2xl">Concept 1</h4>
+                  <h4 class="font-display text-fg-color text-xl lg:text-2xl">
+                    Concept 1
+                  </h4>
                   <p
-                    class="text-fg-color/80 bg-grit-100 dark:bg-grit-900 rounded-lg px-1.5 py-[3px]"
+                    class="bg-grit-100 dark:bg-grit-900 rounded-lg px-1.5 py-[3px]"
                   >
                     Scrollable Table
                   </p>
@@ -1010,7 +1052,7 @@
                   <img
                     class="h-full object-contain"
                     src="/assets/Dues Dashboard/concept_1.png"
-                    alt="FILL_IN_ALT_TEXT"
+                    alt="A mockup of concept 1. The column titles in view are: 'Period', 'Dues', 'Payment' and 'Paid By' but the table is cut off by the edge of the screen."
                   />
                 </div>
               </figure>
@@ -1019,9 +1061,11 @@
                 class="flex w-full shrink-0 snap-center flex-col items-center gap-6 self-stretch overflow-hidden lg:w-auto lg:shrink"
               >
                 <figcaption class="flex shrink-0 flex-col items-center gap-2">
-                  <h4 class="font-display text-xl lg:text-2xl">Concept 2</h4>
+                  <h4 class="text-fg-color font-display text-xl lg:text-2xl">
+                    Concept 2
+                  </h4>
                   <p
-                    class="text-fg-color/80 bg-fresh-100 dark:bg-fresh-900 rounded-lg px-1.5 py-[3px]"
+                    class="bg-fresh-100 dark:bg-fresh-900 rounded-lg px-1.5 py-[3px]"
                   >
                     Condensed Table
                   </p>
@@ -1030,7 +1074,7 @@
                   <img
                     class="h-full object-contain"
                     src="/assets/Dues Dashboard/concept_2.png"
-                    alt="FILL_IN_ALT_TEXT"
+                    alt="A mockup of concept 2. The column titles are 'Period', 'Dues', 'Payment', and 'Balance' and the table is not cut off. In the payment column, each cell shows the payment amount in dollars and who it was paid by in smaller text below."
                   />
                 </div>
               </figure>
@@ -1038,9 +1082,11 @@
                 class="flex w-full shrink-0 snap-center flex-col items-center gap-6 self-stretch overflow-hidden lg:w-auto lg:shrink"
               >
                 <figcaption class="flex shrink-0 flex-col items-center gap-2">
-                  <h4 class="font-display text-xl lg:text-2xl">Concept 3</h4>
+                  <h4 class="text-fg-color font-display text-xl lg:text-2xl">
+                    Concept 3
+                  </h4>
                   <p
-                    class="text-fg-color/80 bg-calm-100 dark:bg-calm-900 rounded-lg px-1.5 py-[3px]"
+                    class="bg-calm-100 dark:bg-calm-900 rounded-lg px-1.5 py-[3px]"
                   >
                     Condensed With Break
                   </p>
@@ -1049,7 +1095,7 @@
                   <img
                     class="h-full object-contain"
                     src="/assets/Dues Dashboard/concept_3.png"
-                    alt="FILL_IN_ALT_TEXT"
+                    alt="A mockup of concept 3. The column titles are 'Period', 'Payment', and 'Balance' and the table is not cut off. The cells of the payment column are the same as concept 2. Rows are grouped into years, with a break row  at the top that shows the year and the amount for the dues payment."
                   />
                 </div>
               </figure>
@@ -1059,40 +1105,66 @@
 
         <!-- Introducing the New Design -->
 
-        <section id="section-5" class="flex flex-col gap-10 py-16">
-          <div class="px-6 md:px-60">
-            <h3 class="font-display text-3xl font-thin opacity-70 lg:text-5xl">
+        <section
+          id="section-5"
+          class="text-fg-color/80 flex flex-col gap-10 py-16"
+        >
+          <div class="flex flex-col gap-8 px-6 md:px-60">
+            <h3
+              class="font-display text-fg-color/70 text-3xl font-thin lg:text-5xl"
+            >
               Introducing the New Design
             </h3>
-            <p class="text-fg-color/80">
-              In the end, the team agreed to proceed with
-              <strong>Concept 3</strong>.
+            <p class="max-w-xl">
+              In the end, the team agreed to proceed with Concept 3.
             </p>
           </div>
-          <!-- Final Concept -->
+          <div
+            id="final-renders"
+            class="bg-fresh-400 flex flex-col items-center overflow-clip md:flex-row md:pl-20 xl:items-end xl:px-60"
+          >
+            <div
+              class="flex-1 self-stretch overflow-hidden px-20 py-10 md:px-0 xl:self-auto xl:py-10 xl:pr-6"
+            >
+              <img
+                src="/assets/Dues Dashboard/final-concept_mobile_transparent.png"
+                alt="A phone screen showing the redesigned dues dashboard."
+              />
+            </div>
+            <div
+              class="-mb-6 flex flex-1 self-stretch overflow-hidden pl-6 md:flex-2 md:pt-10 xl:-mt-80 xl:flex-3 xl:items-end xl:pl-0"
+            >
+              <img
+                src="/assets/Dues Dashboard/final-concept_desktop_transparent.png"
+                alt="A laptope screen showing the redesigned dues dashboard."
+                class="aspect-square object-cover object-top-left xl:object-contain xl:object-bottom"
+              />
+            </div>
+          </div>
+          <!-- Final Documentation -->
           <div id="final-concept" class="viewer relative flex">
             <details class="fc-t group peer flex flex-col" open>
               <summary
                 tabindex="-1"
                 id="fc-t1-btn"
-                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 text-fg-color relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
               >
                 Overview
               </summary>
               <figure
                 id="fc-details"
-                class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                class="vfig border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
               >
                 <div
-                  class="bg-hatch flex w-full justify-center px-6 py-16 lg:px-60"
+                  class="bg-hatch flex w-full flex-2 justify-center px-6 py-16"
                 >
                   <img
                     class="object-cover"
                     src="/assets/Dues Dashboard/overview.png"
-                    alt="FILL_IN_ALT_TEXT"
+                    alt="The final mobile and desktop layouts, labelled with callouts pointing to the new and updated elements. Along with the addition of the current balance section and updates to the payment history table, it shows the addition of a page number at the top of the payment history table which reads 'Page 1 of 2'"
                   />
                 </div>
-                <figcaption class="self-stretch px-6 pt-4 pb-10 opacity-80">
+                <figcaption class="flex-1 self-stretch px-6 pt-4 pb-10">
                   <p>The completed mobile and desktop layouts.</p>
                 </figcaption>
               </figure>
@@ -1100,25 +1172,23 @@
             <details id="fc-t2" class="fc-t group peer flex flex-col">
               <summary
                 id="fc-t2-btn"
-                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 text-fg-color relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
               >
                 Features & API
               </summary>
               <figure
-                class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
               >
                 <div
-                  class="bg-hatch flex w-full justify-center overflow-x-scroll px-10 py-16"
+                  class="bg-hatch flex w-full flex-2 justify-center px-6 py-16"
                 >
                   <img
                     class="object-cover"
                     src="/assets/Dues Dashboard/feat_api_0.png"
-                    alt="FILL_IN_ALT_TEXT"
+                    alt="A close-up view of the mobile layout. Elements of the payment history table are labelled with names and a box with monospace text inside, indicating API variables."
                   />
                 </div>
-                <figcaption
-                  class="gap-2 self-stretch px-6 pt-4 pb-10 opacity-80"
-                >
+                <figcaption class="flex-1 gap-2 self-stretch px-6 pt-4 pb-10">
                   <p>
                     Documentation describing how to call for data in the table.
                   </p>
@@ -1128,23 +1198,23 @@
             <details id="fc-t3" class="fc-t group peer flex flex-col">
               <summary
                 id="fc-t3-btn"
-                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
+                class="fc-btn font-display border-fg-color/50 active:bg-fg-color/5 text-fg-color relative w-fit cursor-pointer border px-3 pt-3 pb-2.5 font-medium group-open:pointer-events-none group-open:font-bold group-open:underline hover:underline"
               >
                 Current Balance
               </summary>
               <figure
-                class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex w-full flex-col divide-y border"
+                class="border-fg-color/50 divide-fg-color/20 absolute left-0 flex h-auto w-full flex-col divide-y border lg:flex-row lg:divide-x lg:divide-y-0"
               >
-                <div class="bg-hatch flex w-full justify-center px-10 py-16">
+                <div
+                  class="bg-hatch flex w-full flex-2 justify-center px-6 py-16"
+                >
                   <img
                     class="object-cover"
                     src="/assets/Dues Dashboard/current_bal.png"
-                    alt="FILL_IN_ALT_TEXT"
+                    alt="A series of annotated images outlining the specifications for the current balance section. Elements of the section are labelled with names and a box with monospace text inside, indicating API variables. Examples are shown of the section in different states: 'Paid up', 'Credit', and 'Owing'. when the member is. When paid up, the member is shown a balance of $0.00 and a green checkmark icon is displayed beside the due date. When a member has credit, the balance is negative and coloured green, with a green checkmark icon displayed beside the due date. When a member is owing, the balance is coloured red. Detailed styling specifications such as padding, colours, borders, and font styles are shown as well."
                   />
                 </div>
-                <figcaption
-                  class="gap-2 self-stretch px-6 pt-4 pb-10 opacity-80"
-                >
+                <figcaption class="flex-1 gap-2 self-stretch px-6 pt-4 pb-10">
                   <p>
                     Documentation for the different states and styling of the
                     "Current Balance" section.
@@ -1154,25 +1224,24 @@
             </details>
           </div>
           <!-- Final Summary -->
-          <div class="px-6 md:px-60">
-            <p class="max-w-xl opacity-80">
-              Since hand-off, the new payment history page has been implemented
-              and is now being used by members. So far, responses have been
-              positive and according to the office staff, calls have reduced.
-              <br /><br /><br />Although I only had a small role in updating
-              this system, I learned a lot about navigating the interconnected
-              needs of the people who use it. It’s difficult, especially when
-              every change has an effect on so many people, but to me this shows
-              that there is immense potential for improvement simply through
-              bridging some gaps.
-            </p>
-          </div>
+          <p class="font-display mx-6 max-w-xl text-xl md:mx-60">
+            Since hand-off, the new payment history page has been implemented
+            and is now being used by members. So far, responses have been
+            positive and according to the office staff, calls have reduced.
+          </p>
+          <p class="mx-6 max-w-xl md:mx-60">
+            Although I only had a small role in updating this system, I learned
+            a lot about navigating the interconnected needs of the people who
+            use it. It’s difficult, especially when every change has an effect
+            on so many people, but to me this shows that there is immense
+            potential for improvement simply through bridging some gaps.
+          </p>
         </section>
       </article>
       <a
         id="case-study-link"
         href="/portfolio.html"
-        class="bg-calm-600 text-bg-color dark:bg-calm-400 flex justify-center self-stretch py-4 underline"
+        class="hover:bg-hatch flex justify-center self-stretch border-t border-b py-6 underline"
       >
         See more projects
       </a>

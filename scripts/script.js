@@ -141,7 +141,7 @@ function addFooter() {
             role="button"
             tabindex="0"
             target="_blank"
-            class="text-fresh-600 dark:text-fresh-400 flex items-center gap-2"
+            class="text-fresh-600 dark:text-fresh-400 flex items-center gap-2 hover:bg-fresh-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-fresh-100/50 dark:active:bg-fresh-900/50 dark:hover:bg-fresh-900"
           >
             <span aria-hidden="true" class="material-symbols-outlined">alternate_email</span>
             <p class="font-bold underline decoration-2 underline-offset-2">
@@ -154,7 +154,7 @@ function addFooter() {
             role="button"
             tabindex="0"
             target="_blank"
-            class="text-calm-600 dark:text-calm-400 flex items-center gap-2"
+            class="text-calm-600 dark:text-calm-400 flex items-center gap-2 hover:bg-calm-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-calm-100/50 dark:active:bg-calm-900/50 dark:hover:bg-calm-900"
           >
             <span aria-hidden="true" class="material-symbols-outlined">work</span>
             <p class="font-bold underline decoration-2 underline-offset-2">
@@ -163,7 +163,7 @@ function addFooter() {
           </a>
           <a
             href="https://github.com/camdotod"
-            class="text-vigor-600 dark:text-vigor-400 flex items-center gap-2"
+            class="text-vigor-600 dark:text-vigor-400 flex items-center gap-2 hover:bg-vigor-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-vigor-100/50 dark:active:bg-vigor-900/50 dark:hover:bg-vigor-900"
             id="github-button"
             role="button"
             target="_blank"

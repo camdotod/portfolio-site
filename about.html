@@ -54,41 +54,51 @@
     <header id="header">
       <noscript>Your browser does not support JavaScript</noscript>
     </header>
-    <main class="flex flex-col gap-10 px-6 md:gap-20 md:px-60">
+    <main class="text-fg-color/80 flex flex-col gap-10 px-6 md:gap-20 md:px-60">
       <h1 class="font-display font-medium md:text-xl">About</h1>
-      <section class="flex flex-col gap-20 self-stretch">
+      <section class="flex flex-col gap-16 self-stretch">
         <div
-          class="flex flex-col gap-6 self-stretch lg:flex-row-reverse lg:justify-between"
+          class="font-display flex justify-between gap-6 self-stretch overflow-hidden lg:flex-row"
         >
-          <img
-            src="/assets/CODonnell-Headshot-300x300.png"
-            alt="Close-up photo of Camryn"
-            class="size-40 shrink rounded-4xl lg:size-64"
-          />
-          <p class="max-w-xl opacity-80">
-            Hi! My name is Camryn
-            <em class="text-grit-600 dark:text-grit-400 text-sm"
-              >(they/them)</em
-            >
-            <br /><br />
-            I'm a multidisciplinary designer based in Toronto, Ontario, Canada.
-            <br /><br />
-            I’ve had experience working in a number of settings, including
-            commercial product design, app development, and community projects.
-            <br /><br />I started my education in design at Carleton University,
-            where I completed a Bachelor’s in Industrial Design, and hope to
-            pursue a graduate degree in the future.
-          </p>
+          <div class="flex flex-1 flex-col justify-end gap-6 self-stretch">
+            <p class="text-fg-color max-w-xl text-xl lg:text-2xl">
+              Hi! My name is Camryn O'Donnell
+              <em class="text-grit-900 dark:text-grit-100 text-sm opacity-60"
+                >(they/them)</em
+              >
+            </p>
+            <p>
+              I'm a multidisciplinary designer based in Toronto, Ontario,
+              Canada.
+            </p>
+          </div>
+          <div
+            class="flex flex-1 self-stretch overflow-hidden rounded-4xl lg:size-60 lg:flex-auto lg:grow-0 lg:self-auto"
+          >
+            <img
+              src="/assets/headshot.jpg"
+              alt="Close-up photo of Camryn"
+              class="object-cover lg:aspect-square"
+            />
+          </div>
         </div>
+        <p class="max-w-xl">
+          I’ve had experience working in a number of settings, including
+          commercial product design, app development, and community projects.
+          <br /><br />I started my education in design at Carleton University,
+          where I completed a Bachelor’s in Industrial Design, and hope to
+          pursue a graduate degree in the future.
+        </p>
+
         <div
           id="resume-callout"
-          class="bg-hatch flex max-w-xl items-center justify-between gap-10 p-4"
+          class="bg-hatch font-display flex max-w-xl items-center justify-between gap-10 p-4"
         >
-          <p class="font-medium">Check out my resume:</p>
+          <p class="text-fg-color font-medium">Check out my resume:</p>
           <a
             role="button"
             tabindex="0"
-            class="bg-calm-600 text-bg-color dark:text-fg-color flex items-center gap-2 rounded-lg px-4 py-2"
+            class="bg-calm-600 text-bg-color dark:text-fg-color flex items-center gap-2 rounded-lg py-2 pr-4 pl-3"
             href="/assets/documents/Camryn-ODonnell_Resume.pdf"
             ><span class="material-symbols-outlined" aria-hidden>download</span
             >Download</a
@@ -103,17 +113,17 @@
           I believe in design for everyone, and I hope to continue learning how
           to facilitate positive change in our world.
         </p>
+        <p class="max-w-xl pb-6">
+          When I’m not working, I enjoy experimenting with different crafts and
+          working on personal projects. I love to draw, sew, cook, and
+          <a
+            href="https://crosshare.org/crosswords/aWY0Aj2vgJbqm9d0Hn1s/show-and-tell"
+            class="hover:decoration-fg-color hover:dark:text-grit-100 hover:text-grit-900 hover:dark:bg-grit-900 decoration-fg-color/50 hover:bg-grit-100/50 -mx-1 inline-block rounded-lg px-1.5 underline decoration-wavy decoration-1 underline-offset-2 active:opacity-60"
+          >
+            make crosswords!</a
+          >
+        </p>
       </section>
-      <p class="max-w-xl">
-        When I’m not working, I enjoy experimenting with different crafts and
-        working on personal projects. I love to draw, sew, cook, and
-        <a
-          href="https://crosshare.org/crosswords/aWY0Aj2vgJbqm9d0Hn1s/show-and-tell"
-          class="hover:decoration-fg-color decoration-fg-color/50 underline underline-offset-2 active:opacity-60"
-        >
-          make crosswords!</a
-        >
-      </p>
     </main>
     <footer>
       <noscript>Your browser does not support JavaScript</noscript>

@@ -141,117 +141,178 @@
 
       <!-- Modal -->
       <div
-        id="project-modal"
-        class="bg-bg-color fixed top-0 z-10 hidden h-svh w-svw touch-none flex-col divide-y border shadow-2xl lg:top-24 lg:mx-60 lg:mb-24 lg:h-auto lg:w-auto"
+        id="project-modal-overlay"
+        class="bg-hatch-light dark:bg-hatch-dark bg-bg-color/50 fixed top-0 left-0 z-20 hidden h-lvh w-lvw lg:px-40 lg:py-12"
       >
-        <div class="font-display flex items-center px-6 pt-16 pb-3 text-2xl">
-          <!-- Title -->
-          <p id="project-title" class="grow">LiUNA Dues Dashboard</p>
-
-          <!-- Close Button -->
-          <button
-            id="close-button"
-            class="active:bg-fg-color/10 h-10 w-10 rounded-2xl active:opacity-80"
-            aria-label="Close project details"
+        <div
+          id="project-modal"
+          class="bg-bg-color flex h-svh w-svw touch-none flex-col divide-y overflow-hidden border shadow-2xl lg:h-auto lg:w-full lg:touch-auto lg:self-stretch"
+        >
+          <!-- Project Header-->
+          <div
+            class="font-display flex items-center self-stretch px-6 pt-10 pb-3 text-2xl lg:pt-4"
           >
-            <span
-              id="menu-button-icon"
-              class="material-symbols-outlined align-middle"
-              >collapse_content</span
+            <!-- Title -->
+            <p id="project-title" class="grow">LiUNA Dues Dashboard</p>
+            <!-- Close Button -->
+            <button
+              id="close-button"
+              class="active:bg-fg-color/10 h-10 w-10 rounded-2xl active:opacity-80"
+              aria-label="Close project details"
             >
-          </button>
-        </div>
-        <div
-          id="project-detals"
-          class="flex items-baseline gap-3 divide-x px-6"
-        >
-          <p id="project-tags" class="grow py-2 text-sm">UX/UI Design</p>
-          <p id="project-yr" class="text-sm">2025</p>
-        </div>
-        <div
-          id="project-carousel"
-          class="relative flex grow touch-pan-x gap-0 overflow-x-scroll lg:h-60 lg:grow-0"
-        >
-          <div class="flex w-svw shrink-0 self-stretch">
-            <img
-              id="project-img-1"
-              class="object-cover"
-              src="/assets/Dues Dashboard/Dues_Dashboard-Image_0.png"
-              alt="ENTER_ALT_TEXT"
-            />
+              <span
+                id="menu-button-icon"
+                class="material-symbols-outlined align-middle"
+                >collapse_content</span
+              >
+            </button>
           </div>
-          <div class="flex w-svw shrink-0 self-stretch border">
-            <img
-              id="project-img-2"
-              class="object-cover"
-              src="/assets/Dues Dashboard/Dues_Dashboard-Image_3.png"
-              alt="ENTER_ALT_TEXT"
-            />
+          <!-- Project Details-->
+          <div
+            id="project-details"
+            class="divide-fg-color/50 flex items-baseline gap-3 divide-x self-stretch px-6"
+          >
+            <p id="project-tags" class="font-display grow py-2 text-sm">
+              UX/UI Design
+            </p>
+            <p id="project-yr" class="font-display text-sm">2025</p>
           </div>
-          <div class="flex w-svw shrink-0 self-stretch overflow-hidden">
-            <img
-              id="project-img-3"
-              class="object-cover"
-              src="/assets/Dues Dashboard/Dues_Dashboard-Image_4.png"
-              alt="ENTER_ALT_TEXT"
-            />
+          <div
+            id="project-carousel"
+            class="carousel bg-hatch relative flex flex-1 touch-pan-x snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll"
+          >
+            <div
+              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+            >
+              <img
+                id="project-img-1"
+                class="flex-1 self-stretch object-contain"
+                src="/assets/Dues Dashboard/Dues_Dashboard-Image_0.png"
+                alt="ENTER_ALT_TEXT"
+              />
+            </div>
+            <div
+              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+            >
+              <img
+                id="project-img-2"
+                class="flex-1 self-stretch object-contain"
+                src="/assets/Dues Dashboard/Dues_Dashboard-Image_3.png"
+                alt="ENTER_ALT_TEXT"
+              />
+            </div>
+            <div
+              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+            >
+              <img
+                id="project-img-3"
+                class="flex-1 self-stretch object-contain"
+                src="/assets/Dues Dashboard/Dues_Dashboard-Image_4.png"
+                alt="ENTER_ALT_TEXT"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          class="flex grow flex-col divide-y lg:flex-row lg:divide-x lg:divide-y-0"
-        >
-          <div id="project-desc" class="grow p-6">
-            In partnership with the organization’s admin and developers, I
-            redesigned the payment history page on the member portal to be more
-            clear and transparent about payments and current balances.
-          </div>
-          <a href="#project-img-1">
+          <div
+            id="project-description"
+            class="divide-fg-color/50 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden lg:flex-row lg:divide-x lg:divide-y-0"
+          >
+            <div id="project-desc" class="grow p-6 lg:flex-3 lg:self-stretch">
+              In partnership with the organization’s admin and developers, I
+              redesigned the payment history page on the member portal to be
+              more clear and transparent about payments and current balances.
+            </div>
+            <!-- Image 1 Desc -->
             <div
               id="caption-1"
-              class="block px-6 py-3 md:flex-col lg:flex lg:gap-2"
+              class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
             >
-              <p class="inline text-sm opacity-80">Image 1:</p>
-              <p class="inline text-sm lg:text-base">
-                Final design for mobile and desktop platforms
-              </p>
+              <label
+                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                onClick="window.location='#project-img-1';"
+              >
+                <input
+                  type="radio"
+                  name="carousel"
+                  class="peer hidden"
+                  aria-hidden="true"
+                  checked
+                />
+                <p
+                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                >
+                  Image 1:
+                </p>
+                <p
+                  class="inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base lg:text-base"
+                >
+                  Documentation documentation something something
+                </p>
+              </label>
             </div>
-          </a>
-          <a href="#project-img-2">
+            <!-- Image 2 Desc -->
             <div
               id="caption-2"
-              class="bg-hatch block self-stretch truncate px-6 py-3 md:flex-col lg:flex lg:gap-2"
+              class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
             >
-              <p class="inline text-sm opacity-80">Image 2:</p>
-              <p class="inline w-full border text-sm opacity-80 lg:text-base">
-                Speaking with the developer, I found that through all the
-                touchpoints, members were not able to easily access this key
-                information. One of these touchpoints was a
-                <strong>web-based portal</strong>, which members could access on
-                their phone or desktop. Since members were already familiar with
-                this, it could be a great place to put this information, so it
-                was decided that this would be redesigned.
-              </p>
+              <label
+                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                onClick="window.location='#project-img-2';"
+              >
+                <input
+                  type="radio"
+                  name="carousel"
+                  class="peer hidden"
+                  aria-hidden="true"
+                />
+                <p
+                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                >
+                  Image 2:
+                </p>
+                <p
+                  class="inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base lg:text-base"
+                >
+                  Documentation for something else
+                </p>
+              </label>
             </div>
-          </a>
-          <a href="#project-img-3">
+            <!-- Image 3 Desc -->
             <div
               id="caption-3"
-              class="bg-hatch block truncate px-6 py-3 md:flex-col lg:flex lg:gap-2"
+              class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
             >
-              <p class="inline text-sm opacity-80">Image 3:</p>
-              <p class="inline text-sm opacity-80 lg:text-base">
-                Documentation given to 3rd party developers
-              </p>
+              <label
+                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                onClick="window.location='#project-img-3';"
+                role="caption"
+              >
+                <input
+                  type="radio"
+                  name="carousel"
+                  class="peer hidden"
+                  aria-hidden="true"
+                />
+                <p
+                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                >
+                  Image 3:
+                </p>
+                <p
+                  class="inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base lg:text-base"
+                >
+                  Documentation given to 3rd party
+                </p>
+              </label>
             </div>
+          </div>
+          <a
+            id="case-study-link"
+            href="portfolio/Dues_Dashboard.html"
+            class="bg-calm-600 text-bg-color dark:bg-calm-400 flex justify-center self-stretch py-4 underline"
+          >
+            Read the case study →
           </a>
         </div>
-        <a
-          id="case-study-link"
-          href="portfolio/Dues_Dashboard.html"
-          class="bg-calm-600 text-bg-color dark:bg-calm-400 flex justify-center self-stretch py-4 underline"
-        >
-          Read the case study →
-        </a>
       </div>
     </main>
     <footer>

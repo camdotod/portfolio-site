@@ -24,7 +24,7 @@
 @layer utilities {
   :root .material-icons.md-36 {
     font-size: 36px;
-    --text-color:                                                  
+    --text-color:                                                                                                                            
 ;
   }
 }
@@ -107,4 +107,18 @@ details summary::-webkit-details-marker {
 
 strong {
   opacity: 100% !important;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 16px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background-color: rgb(var(--backgroundColor));
+}
+
+/* Handle */
+.carousel::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--textColor));
+  border: 3px double rgb(var(--backgroundColor));
 }

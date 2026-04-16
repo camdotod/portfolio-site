@@ -1,13 +1,37 @@
 import { projects } from "./projects.js";
 
-let dateSortBtn = document.getElementById("date-sort");
-let nameSortBtn = document.getElementById("name-sort");
-let tagsSortBtn = document.getElementById("tags-sort");
+// Get page URL
+// const baseUrl = new URL(window.location.href);
+// console.log(baseUrl);
+
+// const basePathname = baseUrl.pathname;
+// console.log(basePathname);
+
+// let state = { modal: false };
+
+// history.replaceState(state, "", baseUrl);
+
+const dateSortBtn = document.getElementById("date-sort");
+const nameSortBtn = document.getElementById("name-sort");
+const tagsSortBtn = document.getElementById("tags-sort");
 const radiogroup = document.querySelectorAll('[name="sort"]');
-let dateSortLabel = document.getElementById("date-sort-label");
-let nameSortLabel = document.getElementById("name-sort-label");
-let tagsSortLabel = document.getElementById("tags-sort-label");
+const dateSortLabel = document.getElementById("date-sort-label");
+const nameSortLabel = document.getElementById("name-sort-label");
+const tagsSortLabel = document.getElementById("tags-sort-label");
 let projectList = document.getElementById("project-list");
+
+const modal = document.querySelector("#project-modal-overlay");
+
+const projectTitle = document.getElementById("project-title");
+const projectYr = document.getElementById("project-yr");
+const projectTags = document.getElementById("project-tags");
+const projectDesc = document.getElementById("project-desc");
+const projectImage1 = document.getElementById("project-img-1");
+const modalCarousel = document.getElementById("project-carousel");
+const caseStudyLink = document.getElementById("case-study-link");
+
+const modalCloseButton = document.querySelector("#close-button");
+
 let categoryNames = [];
 
 /**
@@ -37,7 +61,7 @@ const popCategory = (sort) => {
 
 const addProject = (project, index) => {
   projectList.innerHTML += `
-    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/20 border hover:bg-fg-color/10 active:bg-fg-color/5" tabindex="0" data-name="${project.name}">
+    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/50 border hover:bg-fg-color/5 active:bg-fg-color/5 hover:border-double hover:border-4 active:border-double active:border-3" tabindex="0" data-name="${project.name}">
         <div
           id="project-details-${index}"
           class="flex items-baseline gap-3 divide-x divide-fg-color/20 px-3"
@@ -49,10 +73,11 @@ const addProject = (project, index) => {
           <h2 class="grow font-display group-hover:font-medium group-active:font-medium">${project.name}</h2>
           <span class="material-symbols-outlined">expand_content</span>
         </div>
-        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80">
+        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80 flex flex-1 self-stretch">
           <img
             src="${project.heroimg}"
             alt="${project.heroalt}"
+            class="object-cover"
           />
         </div>
     </li>
@@ -149,6 +174,7 @@ const handleKeyDown = (key, sort) => {
 
 setSort("date-sort");
 dateSortBtn.setAttribute("checked", true);
+watchTiles();
 
 //Detect which button is pushed
 tagsSortBtn.addEventListener("click", (e) => {
@@ -173,58 +199,75 @@ dateSortLabel.addEventListener("keydown", (e) =>
   handleKeyDown(e.code, e.target.id),
 );
 
-const projectTiles = document.querySelectorAll("li");
-const modal = document.querySelector("#project-modal");
-const modalCloseButton = document.querySelector("#close-button");
-
-const projectTitle = document.getElementById("project-title");
-const projectYr = document.getElementById("project-yr");
-const projectTags = document.getElementById("project-tags");
-const projectDesc = document.getElementById("project-desc");
-const projectImage1 = document.getElementById("project-img-1");
-const caseStudyLink = document.getElementById("case-study-link");
-
-projectTiles.forEach((tile) => {
-  tile.addEventListener("click", (event) => {
-    console.log("Clicked " + tile.getAttribute("data-name"));
-    toggleClass(modal, "hidden", "flex");
-
-    let projectName = tile.getAttribute("data-name");
-    let clickedProject = projects.filter((prj) => {
-      return prj.name === projectName;
-    });
-
-    if (projectName == "Dues Dashboard") {
-      caseStudyLink.classList.remove("hidden");
-      caseStudyLink.classList.add("flex");
-    } else {
-      caseStudyLink.classList.remove("flex");
-      caseStudyLink.classList.add("hidden");
-    }
-
-    projectTitle.innerText = projectName;
-    projectYr.innerText = clickedProject[0].year;
-    projectTags.innerText = clickedProject[0].tags;
-    projectDesc.innerText = clickedProject[0].summary;
-
-    projectImage1.setAttribute("src", clickedProject[0].heroimg);
-    projectImage1.setAttribute("alt", clickedProject[0].heroalt);
-  });
+// Modal
+const observer = new MutationObserver(() => {
+  console.log("A mutation has been observed..");
+  watchTiles();
 });
 
+observer.observe(projectList, { subtree: true, childList: true });
+
 modalCloseButton.addEventListener("click", (event) => {
+  console.log("Closing modal...");
+
+  // Reset interactions
+  modalCarousel.scrollTo(0, 0);
+
+  // Reset the radio button
+  document.querySelector("#caption-1 > label > input").checked = true;
+
+  //Reset URL
+
+  // state.modal = false;
+  // history.replaceState(state, "", baseUrl);
+
+  // Close modal
   toggleClass(modal, "hidden", "flex");
 });
 
-/*projectList.innerHTML = `
-   <div id="sortName-category-0"class="flex flex-col gap-8">
-      <h2 class="font-semibold"></h2>
-   </div>
-   `;
+function watchTiles() {
+  const projectTiles = document.querySelectorAll("li");
 
-<div class="grid md:grid-cols-2 gap-5 md:gap-x-10 gap-y-5">
-   <a href="">${projects[0].name}</a>
-</div>*/
+  projectTiles.forEach((tile) => {
+    tile.addEventListener("click", (event) => {
+      let projectName = tile.getAttribute("data-name");
+      console.log("Clicked " + projectName);
 
-// Old list item:
-/*<li><a class="after:content-[''] hover:after:content-['→'] hover:underline after:absolute after:pl-1 after:transition-transform hover:after:translate-x-2" href="./portfolio/${project.name.replaceAll(" ", "_")}.html" tabindex="0">${project.name}</a></li>*/
+      toggleClass(modal, "hidden", "flex");
+
+      // state.modal = true;
+      // let newUrl = baseUrl + "/" + projectName.replace(" ", "_");
+      // history.pushState(state, "", newUrl);
+      let clickedProject = projects.filter((prj) => {
+        return prj.name === projectName;
+      });
+
+      if (projectName == "Dues Dashboard") {
+        caseStudyLink.classList.remove("hidden");
+        caseStudyLink.classList.add("flex");
+      } else {
+        caseStudyLink.classList.remove("flex");
+        caseStudyLink.classList.add("hidden");
+      }
+
+      projectTitle.innerText = projectName;
+      projectYr.innerText = clickedProject[0].year;
+      projectTags.innerText = clickedProject[0].tags;
+      projectDesc.innerText = clickedProject[0].summary;
+
+      projectImage1.setAttribute("src", clickedProject[0].heroimg);
+      projectImage1.setAttribute("alt", clickedProject[0].heroalt);
+    });
+  });
+}
+// window.addEventListener("popstate", (event) => {
+//   console.log("popstate triggered");
+//   if (event.state) {
+//     console.log(event.state);
+//     if (event.state.modal == false) {
+//       toggleClass(modal, "hidden", "flex");
+//     }
+//   } else {
+//     console.log("skipped");
+//   }
+// });

@@ -655,6 +655,18 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-3 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 3px;
+  }
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+  }
+  .border-b-5 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 5px;
+  }
   .border-l {
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
@@ -1070,6 +1082,12 @@
     @supports (color: color-mix(in lab, red, red)) {
       text-decoration-color: color-mix(in oklab, rgb(var(--textColor)/1) 50%, transparent);
     }
+  }
+  .decoration-dashed {
+    text-decoration-style: dashed;
+  }
+  .decoration-double {
+    text-decoration-style: double;
   }
   .decoration-wavy {
     text-decoration-style: wavy;

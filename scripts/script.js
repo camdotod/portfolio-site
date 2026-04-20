@@ -63,14 +63,14 @@ function addHeader() {
         >
           <a
             id="link-landing-page"
-            class="mr-auto flex gap-4 text-4xl active:opacity-80"
+            class="mr-auto flex gap-4 text-4xl active:opacity-80 rounded-xl overflow-clip"
             href="/"
             tabindex="0"
             aria-label="Back to home page"
           >
             <img
               src="/assets/Logo-P22.png"
-              class="aspect-square h-10 w-10 shrink-0 rounded-xl"
+              class="aspect-square h-10 w-10 shrink-0 "
               aria-hidden
             />
           </a>
@@ -176,7 +176,7 @@ function addFooter() {
           </a>
     
         </div>
-        <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right underline-offset-2 decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color self-stretch underline text-sm opacity-70">
+        <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right underline-offset-2 decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color underline text-sm opacity-70 w-fit self-end">
     Designed & Developed by Camryn O'Donnell
     </a>
 `;

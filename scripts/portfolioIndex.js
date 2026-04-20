@@ -242,7 +242,7 @@ function watchTiles() {
         return prj.name === projectName;
       });
 
-      if (projectName == "Dues Dashboard") {
+      if (projectName == "LiUNA Dues Dashboard") {
         caseStudyLink.classList.remove("hidden");
         caseStudyLink.classList.add("flex");
       } else {

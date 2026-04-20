@@ -62,7 +62,7 @@
         <div id="titles" class="flex flex-col gap-2">
           <a
             href="/about.html"
-            class="text-calm-60 dark:text-calm-400 font-display text-xl underline underline-offset-4"
+            class="text-calm-60 text-calm-600 dark:text-calm-400 font-display hover:text-calm-900 dark:hover:text-calm-100 text-xl underline underline-offset-4"
           >
             multidisciplinary designer
           </a>
@@ -71,7 +71,10 @@
           </p>
         </div>
       </div>
-      <div id="recent-projects" class="flex flex-col border-b">
+      <div
+        id="recent-projects"
+        class="border-fg-color/50 flex flex-col border-b lg:min-h-1/2"
+      >
         <div
           id="recent-projects-banner"
           class="dark:bg-hatch-light bg-hatch-dark flex items-center justify-between self-stretch px-6 md:px-60"
@@ -82,39 +85,47 @@
             id="see-all-button"
             class="flex items-center gap-0.5"
           >
-            <p class="font-display py-4 underline underline-offset-2">
+            <p
+              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color py-4 font-medium underline underline-offset-2"
+            >
               See all →
             </p>
           </a>
         </div>
         <div
           id="recent-projects-carousel"
-          class="flex snap-x snap-mandatory overflow-x-scroll"
+          class="carousel flex snap-x snap-mandatory self-stretch overflow-x-scroll lg:flex-1 lg:flex-col lg:overflow-auto"
         >
           <a
             href="portfolio/Dues_Dashboard.html"
             id="project-1"
-            class="group flex w-full shrink-0 snap-center flex-col"
+            class="group hover:bg-fg-color/5 flex w-full shrink-0 grow snap-center flex-col self-stretch lg:flex-row-reverse"
           >
-            <div class="relative flex">
+            <div class="relative flex self-stretch lg:w-1/2">
               <img
                 src="assets\Dues Dashboard/Dues_Dashboard-Image_0.png"
                 alt="Dues dashboard hero image"
                 class="aspect-square w-full object-cover group-hover:opacity-90 md:aspect-auto"
               />
               <p
-                class="bg-fg-color text-bg-color font-display absolute bottom-0 left-0 px-6 py-1 font-medium"
+                class="bg-fg-color text-bg-color font-display absolute bottom-0 left-0 px-6 py-1 font-medium lg:top-0 lg:bottom-auto"
               >
                 Case Study
               </p>
             </div>
             <div
-              class="border-fg-color/50 flex flex-col gap-4 border-t px-6 pt-5 pb-6 md:px-60"
+              class="border-fg-color/50 flex flex-col justify-center gap-4 self-stretch border-t px-6 pt-5 pb-6 md:px-60 lg:flex-1 lg:pr-10 xl:gap-6"
             >
-              <h3 id="project-title-1" class="font-display text-3xl font-light">
+              <h3
+                id="project-title-1"
+                class="font-display text-3xl font-light xl:text-4xl"
+              >
                 Reducing Member Complaints With A Simple UI Fix
               </h3>
-              <p id="description-1" class="text-fg-color/60 line-clamp-3">
+              <p
+                id="description-1"
+                class="text-fg-color/60 line-clamp-3 max-w-xl text-sm xl:text-base"
+              >
                 When working within a large organization, it can feel impossible
                 to solve day-to-day issues because they’re often tied up in the
                 foundational systems that keep it running. But by listening to
@@ -128,31 +139,6 @@
                 UX/UI Design
               </p>
             </div>
-          </a>
-          <a
-            href="portfolio/Foldable_Therapy_Space.html"
-            id="project-2"
-            class="w-full shrink-0 snap-center"
-          >
-            <div class="flex flex-col gap-4 px-6 py-8 md:px-60">
-              <h3 id="project-title-2" class="font-display text-3xl">
-                Imagining New Ways of Delivering Therapy
-              </h3>
-              <p id="description-1" class="truncate">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <img
-              src="assets\Capstone Assets\Capstone-Image_0.jpg"
-              alt="Dues dashboard hero image"
-              class="w-full"
-            />
           </a>
         </div>
       </div>
@@ -174,7 +160,7 @@
           </p>
           <a
             href="/process.html"
-            class="decoration-fg-color/50 font-display font-medium underline underline-offset-2"
+            class="decoration-fg-color/50 font-display hover:decoration-fg-color active:decoration-fg-color w-fit font-medium underline underline-offset-2"
             tabindex="0"
             >Learn more →</a
           >

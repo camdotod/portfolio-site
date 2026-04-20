@@ -38,8 +38,6 @@
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --aspect-video: 16 / 9;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-mono-font-family: var(--font-mono);
     --color-vigor-100: oklch(97% 0.014911 356.6);
     --color-vigor-400: oklch(77% 0.136222 18.5);
@@ -248,6 +246,12 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .z-1 {
+    z-index: 1;
+  }
+  .z-2 {
+    z-index: 2;
   }
   .z-10 {
     z-index: 10;
@@ -598,13 +602,11 @@
       border-color: var(--color-fresh-400);
     }
   }
+  .self-end {
+    align-self: flex-end;
+  }
   .self-stretch {
     align-self: stretch;
-  }
-  .truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .overflow-clip {
     overflow: clip;
@@ -830,9 +832,6 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
@@ -1328,6 +1327,13 @@
       }
     }
   }
+  .hover\:text-calm-900 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-calm-900);
+      }
+    }
+  }
   .hover\:text-grit-900 {
     &:hover {
       @media (hover: hover) {
@@ -1612,6 +1618,16 @@
       position: relative;
     }
   }
+  .lg\:top-0 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:bottom-auto {
+    @media (width >= 64rem) {
+      bottom: auto;
+    }
+  }
   .lg\:mx-0 {
     @media (width >= 64rem) {
       margin-inline: calc(var(--spacing) * 0);
@@ -1630,11 +1646,6 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
-    }
-  }
-  .lg\:aspect-auto {
-    @media (width >= 64rem) {
-      aspect-ratio: auto;
     }
   }
   .lg\:aspect-square {
@@ -1656,6 +1667,16 @@
   .lg\:h-fit {
     @media (width >= 64rem) {
       height: fit-content;
+    }
+  }
+  .lg\:min-h-1\/2 {
+    @media (width >= 64rem) {
+      min-height: calc(1 / 2 * 100%);
+    }
+  }
+  .lg\:w-1\/2 {
+    @media (width >= 64rem) {
+      width: calc(1 / 2 * 100%);
     }
   }
   .lg\:w-1\/6 {
@@ -1901,6 +1922,11 @@
       padding-right: calc(var(--spacing) * 0);
     }
   }
+  .lg\:pr-10 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:pb-0 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 0);
@@ -2001,6 +2027,11 @@
       justify-content: space-between;
     }
   }
+  .xl\:gap-6 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
   .xl\:gap-12 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 12);
@@ -2046,29 +2077,21 @@
       padding-left: calc(var(--spacing) * 0);
     }
   }
-  .\32 xl\:flex-auto {
-    @media (width >= 96rem) {
-      flex: auto;
+  .xl\:text-4xl {
+    @media (width >= 80rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
-  .\32 xl\:shrink {
-    @media (width >= 96rem) {
-      flex-shrink: 1;
+  .xl\:text-base {
+    @media (width >= 80rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .\32 xl\:flex-row {
     @media (width >= 96rem) {
       flex-direction: row;
-    }
-  }
-  .\32 xl\:justify-start {
-    @media (width >= 96rem) {
-      justify-content: flex-start;
-    }
-  }
-  .\32 xl\:gap-20 {
-    @media (width >= 96rem) {
-      gap: calc(var(--spacing) * 20);
     }
   }
   .dark\:divide-fresh-600 {
@@ -2232,6 +2255,15 @@
       @media (hover: hover) {
         @media (prefers-color-scheme: dark) {
           background-color: var(--color-grit-900);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-calm-100 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-calm-100);
         }
       }
     }
@@ -2498,6 +2530,9 @@ strong {
 .carousel::-webkit-scrollbar-thumb {
   background-color: rgb(var(--textColor));
   border: 3px double rgb(var(--backgroundColor));
+}
+:focus-visible {
+  outline: 4px double rgb(var(--textColor));
 }
 @property --tw-rotate-x {
   syntax: "*";

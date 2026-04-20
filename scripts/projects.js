@@ -1,7 +1,7 @@
 //Project "Database"
 export const projects = [
   {
-    name: "Dues Dashboard",
+    name: "LiUNA Dues Dashboard",
     year: "2025",
     date: "January 2025–April 2025",
     tools: "Figma",

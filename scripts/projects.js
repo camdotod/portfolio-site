@@ -7,44 +7,28 @@ export const projects = [
     tools: "Figma",
     tags: "UX/UI Design",
 
-    heroimg: "/assets/Dues Dashboard/Dues_Dashboard-Image_0.png",
-    heroalt: "",
+    img: [
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_0.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
+      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
+    ],
 
-    objective:
-      "To help union members better understand their payment status and prevent unnecessary calls to administrative staff.",
+    imgstyle: "object-right",
+
     summary:
       "In partnership with the organization’s admin and developers, I redesigned the payment history page on the member portal to be more clear and transparent about payments and current balances.",
 
-    figimg: [
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_1.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_2.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_5.png",
-    ],
-
-    figalt: [
+    alt: [
+      "Desktop and mobile versions of the dues dashboard screen. The screens are overlapped on top of a green background.",
       "A simplified journey map of an administrator dealing with members inquiring about dues.",
       "Screenshots of the previous mobile and desktop interface.",
       'One of the proposed changes to the interface. A mockup of the top half of the screen shows the mobile interface with a new section called "Current Balance". A status message is displayed below that reads "Due May 31, 2025" and the current balance is displayed to the right. To the right of the mockup are four variations of this "Current Balance" section, which represent its different states. Member is paid up: shows a check icon and tells the member they are paid until the current month. Member owes one month: shows the same state as in the mockup. Member is paid up to a future period: shows a negative balance (credit) and the month they are paid up to. Member is in arrears: shows a red warning icon and text beneath the balance.',
-      "Four slides from the developer hand of presentation. These slides show specifications for mobile and desktop layouts, states for different elements, styling and spacing for specific elements, and variable names for API calls",
-      "Screenshots of the current mobile and desktop interfaces.",
     ],
 
-    figtitle: [
-      "Understanding Members' Complaints",
-      "Identifying Where We Could Bridge Communication",
-      "Redesigning the Dues Dashboard",
-      "Developer Hand-off",
-      "Final Implementation",
-    ],
-
-    figtext: [
-      "LiUNA has over 100000 members across North America. To maintain membership, members must pay their dues each month. At the outset of this project, administrators were receiving calls from memebers who were confused about issues with their dues payments. They said that they would often deal with cases where the member had forgotten to pay their dues while between work, and thinking that they were up-to-date, thought their current employer wasn’t paying their dues. Members would ask for information about when they missed the payment and who was responsible, which the admin would have to look up manually in their database. This process was time consuming for administrators, and distressing for members. As well, there would often be troubles communicating issues because the admin's database categorized the data differently than how members understood it, leading to more frustration and miscommuniation.",
-      "Speaking with the developer, I found that through all the touchpoints, members were not able to easily access this key information. One of these touchpoints was a <strong>web-based portal</strong>, which members could access on their phone or desktop. Since members were already familiar with this, it could be a great place to put this information, so it was decided that this would be redesigned.",
-      "One simple change would be to add a “Current Balance” section. This would present members with an immediate summary of the status of their account. Further tweaks included reformatting the table to make it easier to read, and adding colour and icons to help users locate information faster.",
-      "After receiving more feedback from stakeholders, it was decided that we would move forward with implementation. An external agency was responsible for the web-portal so technical specifications would need to be prepared. In collaboration with the developer, I created detailed documentation showing the changes to the design, including mobile and desktop layout, styling, states, and specific API variables used to get data for each element.",
-      "The final design was implemented on the web-portal with the new Current Balance Section and layout. Since implementation admin has reported less calls to the office from members.",
+    caption: [
+      "The redesigned Dues Dashboard prioritized responsive design",
+      "Worked with the developer to present data from existing system in a more intuitive way",
+      "Created detailed hand-off documents for implementation.",
     ],
   },
   {
@@ -54,25 +38,24 @@ export const projects = [
     tools: "Figma",
     tags: "UX/UI Design",
 
-    heroimg: "/assets/ManeFrame/hero_placeholder.png",
-    heroalt: "Screens from the app",
+    summary:
+      "Worked on the redesign of the social media app ManeFrame. Led the design direction for feature development.",
 
-    objective: "",
-    summary: "",
-
-    figimg: [
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_1.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_2.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_5.png",
+    img: [
+      "/assets/ManeFrame/hero_placeholder.png",
+      "/assets/ManeFrame/hero_placeholder.png",
+      "/assets/ManeFrame/hero_placeholder.png",
     ],
 
-    figalt: ["", "", "", ""],
+    imgstyle: "",
 
-    figtitle: ["", "", "", "", ""],
+    alt: ["", "", ""],
 
-    figtext: ["", "", "", "", ""],
+    caption: [
+      "ManeFrame is a social media app for hairstylists",
+      "A design system was created to ensure consistency across the platform and help with hand-off",
+      "A number of features were redesigned to prepare for the launch of the platform",
+    ],
   },
   {
     name: "Kitchenwares for Canadian Tire",
@@ -81,66 +64,53 @@ export const projects = [
     tools: "SolidWorks, InDesign, Illustrator, Microsoft Office",
     tags: "Industrial Design",
 
-    heroimg: "",
-    heroalt: "Vida by Paderno hand mixer",
-
-    objective: "",
-    summary: "",
-
-    figimg: [
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_1.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_2.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_5.png",
+    img: [
+      "/assets/Kitchenwares/vida-by-paderno-variable-speed-hand-mixer-d3e5e825-56c3-4552-bb30-6db96bd1f179-jpgrendition.jpg",
+      "/assets/Kitchenwares/Air-fryer Mockup_Page_1.png",
+      "/assets/Kitchenwares/vida-11lb-5kg-usb-rechargeable-kitchen-scale-2eb3dfe0-7062-4332-b266-b65e898ac3fc.png",
     ],
 
-    figalt: ["", "", "", ""],
+    imgstyle: "",
 
-    figtitle: ["", "", "", "", ""],
+    summary:
+      "Designed for Canadian Tire's owned brands Paderno and Vida by Paderno. Worked on a variety of ODM products including kitchen appliances, cookware, and tools.",
 
-    figtext: ["", "", "", "", ""],
+    alt: ["", "", ""],
+
+    caption: [
+      "Vida by Paderno Variable Speed Hand Mixer.",
+      "Mockups of the Vida by Paderno stainless steel air fryer",
+      "I ensured that even low-touch projects fit with the brand's identity.",
+    ],
   },
   {
     name: "Counter-cartography of Housing in Ottawa",
     year: "2023",
-    date: "February 2023-April 2023",
+    date: "February 2023–April 2023",
     tools: "Figma, Illustrator",
-    tags: "Design Research, Design Anthropology",
+    tags: "Design Research,Design Anthropology",
 
-    heroimg: "/assets/Countercartography/Countercartography-Image_0.png",
-    heroalt: "An urban skyline showing a condominium under construction.",
-
-    objective:
-      "To investigate “ghost buildings” within Ottawa and produce a counter-cartography communicating the research findings.",
-    summary:
-      "Partnering with two designers and an anthropologist, desk research and observational fieldwork were conducted into the financialization of housing. This knowledge was used to craft a workshop, which was held with members of the public, to discover the relationship between people’s homes, their neighbourhoods, and their communities. A map was created using the findings and insights gained from the workshop, and an interactive report was written to document our research.",
-
-    figimg: [
-      "/assets/Countercartography/Countercartography-Image_1.png",
-      "/assets/Countercartography/Countercartography-Image_2.png",
+    img: [
+      "/assets/Countercartography/Countercartography-Image_0.png",
       "/assets/Countercartography/Countercartography-Image_3.png",
-      "/assets/Countercartography/Countercartography-Image_4.png",
       "/assets/Countercartography/Countercartography-Image_5.png",
     ],
 
-    figalt: [
-      "Three photos from different neighbourhoods of Ottawa. The first photo shows a road with student housing on the right side. The second photo shows a crane and a condo under construction beside a church. The third photo shows a street with old red-brick homes in the winter. There are construction pylons in front of the house to the left.",
-      " A flow chart showing the evolution of research activity concepts. There are 5 threads of ideas. The first thread starts with Flow of the Community, which has a callout showing a sketch of podiums with labels connected by strings. The next ideas in the thread are Footprint/Shoe Covers, String Board, City Diorama, Workbooks, and Question Cards. The second thread Starts with Create an Ideal Community, then evolves into City Diorama. City Diorama has a callout showing a sketch of people standing around a diorama of a neighbourhood. The next ideas in the thread are Fill-in the Blank and Fill in a map. Fill in a Map has a callout showing a sketch of a map of a neighbourhood with a blank space in it. The next ideas in the thread are Work/icon bank, Drawing your Community, Workbooks, and question cards. The third thread is Group Discussion. The next ideas in the thread are Sharing Stories, Drawing Your Community, and Collective Mind Map. The fourth thread has one idea in it called Lights and Buildings. The fifth thread begins with Community Character. The next ideas in the thread are Build-a-Ghost and Community Personality Rest. The third, fourth, and fifth threads merge together at the idea called Ghost Building Collage. Ghost Building Collage has a callout showing a sketch of two boards with house-shaped cards attached to them, the first titled non-ghost and the second titled ghost.",
+    imgstyle: "",
+
+    summary:
+      "To explore the effects of the financialization of housing in Ottawa I helped plan and facilitate a workshop to engage the people in discussing how this phenomenon affects their relationship to their homes and neighbourhoods.",
+
+    alt: [
+      "An urban skyline showing a condominium under construction.",
       "A collage of three photos from the workshop activity. The first photo (top left) shows people gathered around a table. On the table, there are houses cut out of construction paper and coloured markers and pens. The second photo (bottom left) shows a three by five grid of question cards that have been filled out. The third photo (right) shows a foam-core board labelled non-ghost with construction paper houses attached to it. The houses have writing on them.",
-      "Two concept maps of ghost and non-ghost communities.",
       "Two maps of non-ghost and ghost communties. The maps are isometric views of a cartoon city. There are icons of people scattered around the city, with speech bubbles above their heads containg quotes. There is a legend at the bottom explaining the colour-coding of themes and meaning of different icons attached to the quotes.",
     ],
 
-    figtitle: [
-      "What are “Ghost Buildings”?",
-      "Developing a Research Activity",
-      "Conducting a Design Workshop",
-      "Synthesizing the Findings",
-      "A Counter-cartography of Ghost Communities",
-    ],
-
-    figtext: [
+    caption: [
+      "An urban landscape in Ottawa where some condos with units bought up as investments are known as 'ghost buildings'.",
+      "Participants helped create two cityscapes: one representing a 'ghost' neighbourhood and one representing a 'non-ghost' neighbourhood",
+      "Two 'maps' which represent the",
       "As housing has become more commodified, some have hypothesized a phenomenon called “ghost buildings”—housing owned only as a financial asset without actual tenants. To investigate the validity and presence of these “ghost buildings”, we reviewed previous research on the subject and observed different neighbourhoods across Ottawa. At the end of our fieldwork, we concluded that perhaps the term “ghost buildings” could be extended to “ghost” neighbourhoods or communities.",
 
       "Armed with a foundational understanding of the context, we began developing a design workshop as a research tool to capture others’ perceptions of “ghost communities”. We wanted to investigate how “ghost buildings” are created and how they impact their surroundings. We brainstormed activities that would encourage people to share their stories and feelings about their homes and neighbourhoods.",
@@ -155,58 +125,36 @@ export const projects = [
   {
     name: "Foldable Therapy Space",
     year: "2023",
-    date: "September 2022-April 2023",
+    date: "September 2022–April 2023",
     tools: "SolidWorks, Keyshot, InDesign, Illustrator",
     tags: "Design Research,Industrial Design",
 
-    heroimg: "/assets/Capstone Assets/Capstone-Image_0.jpg",
-    heroalt:
-      "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",
-
-    objective:
-      "To investigate if alternative forms of work, such as third spaces, could benefit delivery of psychotherapy and counselling in Ontario.",
-    summary:
-      "Using design research methods, clients & therapists were interviewed to reveal core problem areas within Ontario’s mental health care system. With these perspectives in mind, a product was generated to make real the possibility of a new system for the practice of therapy.",
-
-    figimg: [
-      "/assets/Capstone Assets/Capstone Images.png",
-      "/assets/Capstone Assets/Capstone Images2.png",
+    img: [
+      "/assets/Capstone Assets/Capstone-Image_0.jpg",
+      "/assets/Capstone Assets/fake-email-vid-edit_Page_24.png",
       "/assets/Capstone Assets/Capstone Images3.png",
-      "/assets/Capstone Assets/Capstone Images4.png",
     ],
 
-    figalt: [
+    imgstyle: "",
+
+    video: "https://www.youtube.com/embed/4WZ-d4zqaCQ?si=DxugqYesuHnydEOL",
+
+    summary:
+      "A portable, modular, and customizable system that gives psychotherapists the ability to create a therapeutic environment within any private space",
+
+    alt: [
+      "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",
       "A mind map of the key stakeholders, sectors, contexts, and trends. Under “stakeholders” are clients and therapists. Under “contexts” are private residences, office buildings, and online. Under “sectors” are public and private. Under “trends” are collaborative care hubs, online & telehealth therapy, and a growing workforce.",
       "A mind map of the key stakeholders, sectors, contexts, and trends. Under “stakeholders” are clients and therapists. Under “contexts” are private residences, office buildings, and online. Under “sectors” are public and private. Under “trends” are collaborative care hubs, online & telehealth therapy, and a growing workforce.",
       "A collage of three images. The first image (left) is a sketch of a concept with two tent-like structures that lean against each other to form an arch over the client and therapist. The second image (center) is a photograph from a side angle of a person sitting in a chair beneath a full-scale model of the previous concept. The third image (right) is a comic/narrative prototype showing a therapist bringing the device to a coworking space, setting it up, and taking it apart.",
       "A collage of images showing cardboard prototypes, a moodboard, and a 3D rendering of the final concept: foldable tiles that can be assembled by stacking them on top of one another in different configurations.",
     ],
 
-    figtitle: [
-      "Learning About Mental Health Care in Ontario",
-      "Understanding Client & Therapist Perspectives",
-      "How Might We Create the Therapeutic Environment Anywhere",
-      "Refining the Portable Therapy Environment",
+    caption: [
+      "The tiles can be set up in a number of combinations to change how the space feels",
+      "Day to day, this would enable therapists to work in third spaces with private rooms.",
+      "Here's a video of how this might work",
     ],
-
-    figtext: [
-      "Statistics show that there is a high demand for therapy services, with almost half of those with therapy/counselling needs not being able to access care in 2022. Emerging trends in the field of mental health care, such as collaborative care models & virtual/online services have shown potential to improve access but professional shortages and long waitlists still restrict access to the proper standard of care.",
-
-      "User interviews allowed me to understand typical client journeys and the daily work routines of therapists. From this I learned that despite an eagerness to provide more interconnected care, new therapists in private practice don’t consider working in more collaborative environments, such as coworking spaces, because of the lack of resources available to create an atmosphere that meets both their own needs and their clients’ needs.",
-
-      "To give therapists the opportunity to expand their working environments, I explored different ways the therapeutic atmosphere could be recreated. I focused on creating a perceived division between therapy and the outside world and tested these ideas through scale models and narrative prototypes for participant feedback.",
-
-      "The final concept was a portable therapy environment that could be assembled in any environment with a private room. Final details such as the refined form, CMF, and manufacturing methods were explored. Mock-ups and renders were created with tools such as Adobe Illustrator, SolidWorks, and Keyshot.",
-    ],
-
-    panel5media: "video",
-    panel5img: "",
-    panel55alt: "",
-    panel5video:
-      "https://www.youtube.com/embed/4WZ-d4zqaCQ?si=5LVhdtpTLXymtExy",
-    panel5title: "Final Exhibition",
-    panel5text:
-      "The final project was exhibited at the grad show held by Carleton’s School of Industrial Design. A posterboard and a short video were created to present the final solution to the public. This was an ambitious project but one I found immense value in. The final product explored one approach to improving Ontario’s mental health care, but there is still much potential in tackling the multitude of interconnected problems.",
   },
 
   {
@@ -216,46 +164,26 @@ export const projects = [
     tools: "Figma, Miro",
     tags: "UX/UI Design,Design Research",
 
-    heroimg: "/assets/Early/EARLY-Image_0.png",
-    heroalt:
-      "An app icon with a looping arrow in the shape of a lowercase E and wireframes of the EARLY app showing different screens.",
-
-    objective:
-      "To create a mobile app that improves the Ottawa Public Transit experience.",
-    summary:
-      "With the help of team members, design research was conducted into the user experience of Ottawa transit riders. Participants’ experiences motivated the development of a transit app prototype, which was mocked up in Figma.",
-
-    figimg: [
-      "/assets/Early/EARLY-Image_1.jpg",
-      "/assets/Early/EARLY-Image_2.png",
-      "/assets/Early/EARLY-Image_3.png",
-      "/assets/Early/EARLY-Image_4.png",
-      "/assets/Early/EARLY-Image_5.png",
+    img: [
+      "/assets/Early/Early-Image_0.png",
+      "/assets/Early/Early-Image_2.png",
+      "/assets/Early/Early-Image_5.png",
     ],
-    figalt: [
-      "People standing at a bus stop on a winter day as an OC Transpo bus arrives.",
+
+    imgstyle: "object-right",
+
+    summary:
+      "An app to take the stress out of the daily commute for Ottawa transit riders.",
+
+    alt: [
       "User persona of Suzie Choi, 21 year old student and sales associate. Image text: Bio: Suzie is a 4th-year international student taking Computer Science at Carleton University. She works part-time at the Rideau Centre and has a busy schedule between school and work. She doesn’t have a licence and wants to save money so she relies heavily on the bus. Apps Used: Google Maps,Transit. Goals: plan her bus routes before her trips, be on schedule for work and school, secure personal space on the bus, be COVID-safe on the bus, save money by making use of her UPass. Pain Points: stressed about buses being potentially late, GPS tracking disconnecting, delayed buses making her late, crowded buses and safety measures not being practiced, concerned about the cleanliness of bus seats, handles, and buzzers. Quote: “I always leave early because I can’t fully trust the bus schedule or GPS tracking.”.",
-      "A series screens before and after user testing. First improvement: confusing visual semantics. The background of the bus route icon was removed to make it look less like a button and the reset button was changed from a trash icon to a counter-clockwise arrow icon. Second improvement: lack of feedback. Added a screen to confirm set up. Third improvement: insufficient level of detail. Added flashing animation to “Favourites” section to show changes on update. Added text under the menu icons.",
-      "A moodboard with images, app UIs, and graphic design inspiration.",
       "Three screens showcasing key design features of the EARLY app. Text for the home screen: “Daily commute forecast: incorporates weather and traffic for a complete view of your commute. Favourite Routes: through a simple set-up process, users can input information about their daily commute to get notifications and updates on the status of most-used bus routes”. Text for the search details: “Planning Tools: Route information is structured to allow new users to learn about Ottawa’s transit system while giving experienced users the most relevant information. Bus Station Info: Bus stations have additional information to help users navigate their transfers.” Text for the view of the current trip” Trip Tracking: Using a combination of official OC Transpo data, traffic data, and crowdsourced information on delays and crowdedness, EARLY provides users with the most relevant & accurate information possible. See Alternate Routes:Allows users to quickly switch routes in case of last minute delays or obstacles.”",
     ],
 
-    figtitle: [
-      "Understanding Commuter’s Journeys",
-      "Identifying Personas",
-      "Clickable Prototype & User Testing",
-      "Final Visual Design",
-      "Final Concept: A Mobile Transit Assistant",
+    caption: [
+      "Early's branding and screens",
+      "Its design centered around what we learned from talking to commuters. This was a persona created to represent who our end user was.",
+      "Early helps commuters stay on top of their schedule by learning their frequent routes, providing up-to date transit information, and allowing for on-the-go changes to navigation",
     ],
-
-    figtext: [
-      "As a team, we created a research plan to recruit and interview participants on their experiences with Ottawa’s transit system. We were able to create a journey map based on a typical commute, identifying key touchpoints, pain points, and opportunities for improvement.",
-      "Based on the data collected in the research, a persona was created to represent the target user group of the design solution. This persona, Suzie, is a busy student who tries to balance school with a part-time job and wants her daily commute to go as smoothly as possible.",
-      "Key features of the app, such as setting up a commute and live bus tracking, were identified and structured using an information architecture. From there, we created wireframes of potential screens, and then clickable prototypes of three core user flows using Figma. User testing was conducted with participants to further refine the ease of use.",
-      "With the feedback from user testing, we made tweaks to the user flows to improve the intuitiveness of the app. We also further developed the graphic design to convey a bright, calm, and trustworthy tone.",
-      "The final concept was EARLY, a transit app that acts as an assistant to your daily commute. By allowing users to input the routes they take regularly, EARLY provides proactive and relevant information to ensure that you are prepared for any roadblocks you may encounter before and during your trip. With route navigation, GPS tracking, and commute information all integrated into one app, EARLY can be the complete solution to navigating Ottawa’s public transit.",
-    ],
-
-    panel5media: "image",
   },
 ];

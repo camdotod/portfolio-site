@@ -14,25 +14,24 @@ import { projects } from "./projects.js";
 const dateSortBtn = document.getElementById("date-sort");
 const nameSortBtn = document.getElementById("name-sort");
 const tagsSortBtn = document.getElementById("tags-sort");
-const radiogroup = document.querySelectorAll('[name="sort"]');
+const sortOptions = document.querySelectorAll('[name="sort"]');
 const dateSortLabel = document.getElementById("date-sort-label");
 const nameSortLabel = document.getElementById("name-sort-label");
 const tagsSortLabel = document.getElementById("tags-sort-label");
 let projectList = document.getElementById("project-list");
 
-const modal = document.querySelector("#project-modal-overlay");
+const modal = document.querySelector("#modal-overlay");
 
-const projectTitle = document.getElementById("project-title");
-const projectYr = document.getElementById("project-yr");
-const projectTags = document.getElementById("project-tags");
-const projectDesc = document.getElementById("project-desc");
-const projectImage1 = document.getElementById("project-img-1");
-const modalCarousel = document.getElementById("project-carousel");
-const caseStudyLink = document.getElementById("case-study-link");
+const modalTitle = modal.querySelector("#modal-title");
+const modalYr = modal.querySelector("#modal-yr");
+const modalTags = modal.querySelector("#modal-tags");
+const modalCarousel = modal.querySelector("#modal-carousel");
+const modalDesc = modal.querySelector("#modal-desc");
+const modalImages = modalCarousel.querySelectorAll("img");
+const modalImgCapts = modal.querySelectorAll(".caption");
+const caseStudyLink = modal.querySelector("#case-study-link");
 
-const modalCloseButton = document.querySelector("#close-button");
-
-let categoryNames = [];
+const modalCloseButton = modal.querySelector("#close-button");
 
 /**
  * Toggle between two classes
@@ -60,25 +59,38 @@ const popCategory = (sort) => {
 };
 
 const addProject = (project, index) => {
+  let tagList = project.tags.split(",");
+  console.log(tagList);
+
+  let tagListHTML = "";
+
+  tagList.forEach((tag) => {
+    tagListHTML += `<p class="inline pr-1.5 mr-1.5">${tag}</p>`;
+  });
+
+  console.log(tagListHTML);
+
   projectList.innerHTML += `
-    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/50 border hover:bg-fg-color/5 active:bg-fg-color/5 hover:border-double hover:border-4 active:border-double active:border-3" tabindex="0" data-name="${project.name}">
+    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/50 border hover:bg-fg-color/5 active:bg-fg-color/5 hover:border-double hover:border-4 active:border-double active:border-3 font-display cursor-pointer aspect-square" tabindex="0" data-name="${project.name}">
+        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80 flex flex-1 self-stretch bg-hatch min-h-40">
+          <img
+            src="${project.img[0]}"
+            alt="${project.img[0]}"
+            class="object-cover italic flex-1 ${project.imgstyle}"
+          />
+        </div>  
+        <div id="project-title${index}" class="flex px-3 items-baseline pt-3 pb-2 text-2xl gap-6">
+          <h2 class="grow">${project.name}</h2>
+          <span class="material-symbols-outlined group-hover:scale-105">open_in_full</span>
+        </div>  
         <div
           id="project-details-${index}"
           class="flex items-baseline gap-3 divide-x divide-fg-color/20 px-3"
         >
-          <p class="grow py-2 text-sm">${project.tags}</p>
+          <div id="project-tags-${index}" class="block text-sm py-1 truncate flex-1 divide-x divide-fg-color/20 ">
+            ${tagListHTML}
+          </div>
           <p class="text-sm">${project.year}</p>
-        </div>
-        <div id="project-title${index}" class="flex items-center px-3 py-3 text-2xl">
-          <h2 class="grow font-display group-hover:font-medium group-active:font-medium">${project.name}</h2>
-          <span class="material-symbols-outlined">expand_content</span>
-        </div>
-        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80 flex flex-1 self-stretch">
-          <img
-            src="${project.heroimg}"
-            alt="${project.heroalt}"
-            class="object-cover"
-          />
         </div>
     </li>
    `;
@@ -93,69 +105,64 @@ const setSort = (sort) => {
 
   popCategory(sort);
 
-  if (sort === "name-sort") {
-    //Get project names through each project's name
-    let projectNames = projects.map((project) => project.name);
-
-    //Make category names
-    categoryNames = projectNames.map((name) => name);
-
-    //Sort alphabetically
-    categoryNames.sort(function (a, b) {
-      if (a < b) {
+  // SORTING BY DATE ---
+  if (sort === "date-sort") {
+    projects.sort(function (a, b) {
+      let aDate = new Date(a.date.split("–").pop());
+      let bDate = new Date(b.date.split("–").pop());
+      if (aDate > bDate) {
         return -1;
       }
-      if (a > b) {
+      if (aDate < bDate) {
         return 1;
       }
       return 0;
     });
 
-    //Add Projects
-    for (let i = 0; i < categoryNames.length; i++) {
-      projects.forEach((project) => {
-        if (project.name === categoryNames[i]) {
-          addProject(project, i);
-        }
-      });
-    }
-  } else if (sort === "tags-sort") {
-    categoryNames = [
-      "UX/UI Design",
-      "Design Research",
-      "Industrial Design",
-      "Design Anthropology",
+    projects.forEach((project, i) => {
+      addProject(project, i);
+    });
+  }
+  // SORTING BY Tag ---
+  else if (sort === "tags-sort") {
+    let categoryNames = [
+      { name: "UX/UI Design", color: "grit" },
+      { name: "Design Research", color: "calm" },
+      { name: "Industrial Design", color: "vigor" },
+      { name: "Design Anthropology", color: "fresh" },
     ];
 
     for (let i = 0; i < categoryNames.length; i++) {
-      projects.forEach((project) => {
-        if (project.tags.indexOf(categoryNames[i]) > -1) {
-          addProject(project, i);
+      projectList.innerHTML += `
+      <div class="flex lg:col-span-2 border-fg-color/20 py-4 border-t ${i > 0 ? "mt-6" : ""}">
+        <h3 id="${categoryNames[i].name.replace(" ", "-")}" class="text-${categoryNames[i].color}-600 dark:text-${categoryNames[i].color}-100 bg-${categoryNames[i].color}-100 dark:bg-${categoryNames[i].color}-900 block w-fit rounded-lg px-1.5 py-[3px] font-display ">
+          ${categoryNames[i].name}
+        </h3>
+      </div>
+      `;
+
+      projects.forEach((project, index) => {
+        if (project.tags.indexOf(categoryNames[i].name) > -1) {
+          addProject(project, index);
         }
       });
     }
-  } else {
-    categoryNames = projects.map((project) => project.year);
-
-    categoryNames.sort(function (a, b) {
-      if (a > b) {
+  }
+  // SORTING BY NAME ---
+  else if (sort === "name-sort") {
+    projects.sort(function (a, b) {
+      if (a.name < b.name) {
         return -1;
       }
-      if (a < b) {
+      if (a.name > b.name) {
         return 1;
       }
       return 0;
     });
-    //Remove repeated letters
-    categoryNames = [...new Set(categoryNames)];
 
-    for (let i = 0; i < categoryNames.length; i++) {
-      projects.forEach((project) => {
-        if (project.year === categoryNames[i]) {
-          addProject(project, i);
-        }
-      });
-    }
+    projects.forEach((project, i) => {
+      addProject(project, i);
+    });
   }
 };
 
@@ -164,7 +171,7 @@ const handleKeyDown = (key, sort) => {
     let buttonName = sort.replace("-label", "");
     setSort(buttonName);
     // Set radio buttons
-    radiogroup.forEach((input) => {
+    sortOptions.forEach((input) => {
       input.id === buttonName
         ? (input.checked = true)
         : (input.checked = false);
@@ -208,6 +215,38 @@ const observer = new MutationObserver(() => {
 observer.observe(projectList, { subtree: true, childList: true });
 
 modalCloseButton.addEventListener("click", (event) => {
+  closeModal();
+});
+
+modal.addEventListener("click", (event) => {
+  if (event.target == modal) {
+    closeModal();
+  }
+});
+
+// Sync radio buttons with scroll
+const captRadioBtns = modal.querySelectorAll("input");
+
+const xOptions = {
+  root: modalCarousel,
+  threshold: 0.5,
+};
+
+const observeCarousel = (caption, i) => {
+  let isVisible = null;
+
+  const xObserver = new IntersectionObserver((entries) => {
+    isVisible = entries[0].isIntersecting;
+    console.log("Intersection observer says", isVisible);
+    captRadioBtns[i].checked = isVisible;
+  }, xOptions);
+
+  xObserver.observe(modalImages[i].parentNode);
+};
+
+modalImgCapts.forEach(observeCarousel);
+
+function closeModal() {
   console.log("Closing modal...");
 
   // Reset interactions
@@ -216,14 +255,27 @@ modalCloseButton.addEventListener("click", (event) => {
   // Reset the radio button
   document.querySelector("#caption-1 > label > input").checked = true;
 
-  //Reset URL
+  modalTags.innerHTML = "";
 
+  modalImages[2].parentNode.classList.add("flex");
+  modalImages[2].parentNode.classList.remove("hidden");
+
+  let vidFrame = document.getElementById("media-frame");
+  vidFrame.classList.add("hidden");
+  vidFrame.classList.remove("flex");
+  vidFrame.children[0].setAttribute("src", "");
+
+  modalImgCapts[2].parentNode.setAttribute(
+    "onClick",
+    "window.location='#modal-img-3';",
+  );
+
+  // Reset URL
   // state.modal = false;
   // history.replaceState(state, "", baseUrl);
-
   // Close modal
   toggleClass(modal, "hidden", "flex");
-});
+}
 
 function watchTiles() {
   const projectTiles = document.querySelectorAll("li");
@@ -240,7 +292,7 @@ function watchTiles() {
       // history.pushState(state, "", newUrl);
       let clickedProject = projects.filter((prj) => {
         return prj.name === projectName;
-      });
+      })[0];
 
       if (projectName == "LiUNA Dues Dashboard") {
         caseStudyLink.classList.remove("hidden");
@@ -250,13 +302,46 @@ function watchTiles() {
         caseStudyLink.classList.add("hidden");
       }
 
-      projectTitle.innerText = projectName;
-      projectYr.innerText = clickedProject[0].year;
-      projectTags.innerText = clickedProject[0].tags;
-      projectDesc.innerText = clickedProject[0].summary;
+      // Inject content
+      modalTitle.innerText = projectName;
 
-      projectImage1.setAttribute("src", clickedProject[0].heroimg);
-      projectImage1.setAttribute("alt", clickedProject[0].heroalt);
+      let tagList = clickedProject.tags.split(",");
+      console.log(tagList);
+      tagList.forEach((tag) => {
+        modalTags.innerHTML += `<p class="inline pr-1.5 mr-1.5">${tag}</p>`;
+      });
+
+      modalYr.innerText = clickedProject.year;
+
+      modalImages.forEach((image, i) => {
+        try {
+          image.setAttribute("src", clickedProject.img[i]);
+          image.setAttribute("alt", clickedProject.alt[i]);
+        } catch (error) {
+          console.log("Project images failed to load");
+        }
+      });
+
+      if (clickedProject.video) {
+        console.log(modalImages[2].parentNode);
+        toggleClass(modalImages[2].parentNode, "flex", "hidden");
+
+        let vidFrame = document.getElementById("media-frame");
+        toggleClass(vidFrame, "flex", "hidden");
+
+        let video = vidFrame.children[0];
+        video.setAttribute("src", clickedProject.video);
+
+        modalImgCapts[2].parentNode.setAttribute(
+          "onClick",
+          "window.location='#modal-video';",
+        );
+      }
+
+      modalDesc.innerText = clickedProject.summary;
+      modalImgCapts.forEach((caption, i) => {
+        caption.innerText = clickedProject.caption[i];
+      });
     });
   });
 }

@@ -21,7 +21,7 @@
 
     <!--Material Design Symbols-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,chevron_line_up,collapse_content,deployed_code,expand_content,menu,open_in_new,work&display=block"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,chevron_line_up,close,collapse_content,deployed_code,expand_content,menu,open_in_full,open_in_new,work&display=block"
       rel="stylesheet"
     />
 
@@ -69,80 +69,86 @@
     <main class="flex h-fit flex-col items-start gap-10">
       <section
         id="portfolio-index"
-        class="flex w-full flex-col gap-10 px-6 py-10 md:px-60"
+        class="flex w-full flex-col gap-6 px-6 py-10 md:px-60 lg:flex-row-reverse lg:gap-10"
         aria-label="All Projects"
       >
-        <div
-          class="flex w-full flex-col items-start gap-0 divide-x-0 divide-y-1 md:divide-y-0 lg:flex-row-reverse lg:gap-10"
+        <fieldset
+          id="filters"
+          class="border-fg-color/50 divide-fg-color/50 font-display relative mt-8 flex h-fit w-full grow-0 divide-x border lg:w-fit lg:flex-col lg:divide-x-0 lg:divide-y"
+          role="radiogroup"
         >
-          <fieldset
-            id="filters"
-            class="flex w-full grow-0 pt-4 pb-4 lg:w-1/6 lg:flex-col lg:gap-6 lg:pb-0"
-            role="radiogroup"
+          <legend
+            class="font-display absolute -top-8 border-0 text-sm font-medium"
           >
-            <legend class="font-display text-sm">Sort By:</legend>
-            <div class="flex">
-              <input
-                id="date-sort"
-                type="radio"
-                name="sort"
-                class="peer hidden"
-              />
-              <label
-                for="date-sort"
-                id="date-sort-label"
-                class="hover:bg-calm-400/20 focus:bg-calm-400/20 peer-checked:bg-calm-400/20 peer-checked:outline-calm-400 w-fit rounded-2xl px-4 py-2 font-medium active:underline"
-                tabindex="0"
-              >
-                Date
-              </label>
-            </div>
-            <div class="flex">
-              <input
-                id="tags-sort"
-                type="radio"
-                name="sort"
-                class="peer hidden"
-              />
-              <label
-                for="tags-sort"
-                id="tags-sort-label"
-                tabindex="0"
-                class="hover:bg-fresh-400/20 focus:bg-fresh-400/20 peer-checked:bg-fresh-400/20 peer-checked:outline-fresbg-fresh-400 w-fit rounded-2xl px-4 py-2 font-medium active:underline"
-              >
-                Tags
-              </label>
-            </div>
-            <div class="flex">
-              <input
-                id="name-sort"
-                type="radio"
-                name="sort"
-                class="peer hidden"
-              />
-              <label
-                for="name-sort"
-                id="name-sort-label"
-                tabindex="0"
-                class="hover:bg-vigor-400/20 focus:bg-vigor-400/20 peer-checked:bg-vigor-400/20 peer-checked:outline-vigbg-vigor-400 w-fit rounded-2xl px-4 py-2 font-medium active:underline"
-              >
-                Name
-              </label>
-            </div>
-          </fieldset>
-          <ol
-            id="project-list"
-            class="flex w-full flex-col gap-4 pt-4 lg:grid lg:grid-cols-2"
+            Sort By:
+          </legend>
+          <div
+            class="has-checked:bg-calm-100 hover:bg-calm-100/50 dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 text-fg-color/80 has-checked:text-fg-color active:text-fg-color flex flex-1 justify-center px-6 hover:underline"
           >
-            <noscript>This content requires JavaScript to be enabled.</noscript>
-          </ol>
-        </div>
+            <input
+              id="date-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="date-sort"
+              id="date-sort-label"
+              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+              tabindex="0"
+            >
+              Date
+            </label>
+          </div>
+          <div
+            class="has-checked:bg-calm-100 text-fg-color/80 hover:bg-calm-100/50 has-checked:text-fg-color active:text-fg-color dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 flex flex-1 justify-center px-6 hover:underline"
+          >
+            <input
+              id="tags-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="tags-sort"
+              id="tags-sort-label"
+              tabindex="0"
+              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+            >
+              Tags
+            </label>
+          </div>
+          <div
+            class="has-checked:bg-calm-100 text-fg-color/80 hover:bg-calm-100/50 has-checked:text-fg-color active:text-fg-color dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 flex flex-1 justify-center px-6 hover:underline"
+          >
+            <input
+              id="name-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="name-sort"
+              id="name-sort-label"
+              tabindex="0"
+              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+            >
+              Name
+            </label>
+          </div>
+        </fieldset>
+        <ol
+          id="project-list"
+          class="flex w-full flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-y-6 lg:pt-8"
+        >
+          <noscript>This content requires JavaScript to be enabled.</noscript>
+        </ol>
       </section>
 
       <!-- Modal -->
       <div
-        id="project-modal-overlay"
-        class="bg-hatch-light dark:bg-hatch-dark bg-bg-color/50 fixed top-0 left-0 z-20 hidden h-lvh w-lvw lg:px-40 lg:py-12"
+        id="modal-overlay"
+        class="bg-hatch-light dark:bg-hatch-dark bg-bg-color/50 fixed top-0 left-0 z-20 hidden h-lvh w-lvw lg:px-40 lg:py-8"
       >
         <div
           id="project-modal"
@@ -150,73 +156,90 @@
         >
           <!-- Project Header-->
           <div
-            class="font-display flex items-center self-stretch border-b-3 border-double px-6 pt-10 pb-3 text-2xl lg:pt-4"
+            class="font-display flex items-center self-stretch border-b-3 border-double px-6 pt-10 pb-3 text-2xl lg:pt-4 lg:pb-2"
           >
             <!-- Title -->
-            <p id="project-title" class="grow">LiUNA Dues Dashboard</p>
+            <p id="modal-title" class="grow">[Project Name Placeholder]</p>
             <!-- Close Button -->
             <button
               id="close-button"
-              class="active:bg-fg-color/10 h-10 w-10 rounded-2xl active:opacity-80"
+              class="active:bg-fg-color/10 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl active:opacity-80"
               aria-label="Close project details"
             >
               <span
                 id="menu-button-icon"
                 class="material-symbols-outlined align-middle"
-                >collapse_content</span
+                >close</span
               >
             </button>
           </div>
           <!-- Project Details-->
           <div
-            id="project-details"
+            id="modal-details"
             class="divide-fg-color/50 flex items-baseline gap-3 divide-x self-stretch px-6"
           >
-            <p id="project-tags" class="font-display grow py-2 text-sm">
-              UX/UI Design
-            </p>
-            <p id="project-yr" class="font-display text-sm">2025</p>
+            <div
+              id="modal-tags"
+              class="divide-fg-color/20 font-display block flex-1 divide-x truncate py-1 text-sm"
+            ></div>
+            <p id="modal-yr" class="font-display text-sm">2025</p>
           </div>
+          <!-- Modal Carousel-->
           <div
-            id="project-carousel"
-            class="carousel bg-hatch relative flex flex-1 touch-pan-x snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll"
+            id="modal-carousel"
+            class="carousel bg-hatch relative flex flex-1 touch-pan-x snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll scroll-smooth"
           >
             <div
               class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
             >
               <img
-                id="project-img-1"
-                class="flex-1 self-stretch object-contain"
-                src="/assets/Dues Dashboard/Dues_Dashboard-Image_0.png"
-                alt="ENTER_ALT_TEXT"
+                id="modal-img-1"
+                class="flex-1 self-stretch object-cover"
+                src=""
+                alt=""
               />
             </div>
             <div
               class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
             >
               <img
-                id="project-img-2"
-                class="flex-1 self-stretch object-contain"
-                src="/assets/Dues Dashboard/Dues_Dashboard-Image_3.png"
-                alt="ENTER_ALT_TEXT"
+                id="modal-img-2"
+                class="flex-1 self-stretch object-cover"
+                src=""
+                alt=""
               />
             </div>
             <div
-              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              class="flex w-svw shrink-0 snap-start items-center justify-center self-stretch overflow-hidden lg:w-full"
             >
               <img
-                id="project-img-3"
-                class="flex-1 self-stretch object-contain"
-                src="/assets/Dues Dashboard/Dues_Dashboard-Image_4.png"
-                alt="ENTER_ALT_TEXT"
+                id="modal-img-3"
+                class="flex-1 self-stretch object-cover"
+                src=""
+                alt=""
               />
+            </div>
+            <div
+              id="media-frame"
+              class="hidden w-svw shrink-0 snap-start items-center justify-center self-stretch overflow-hidden lg:w-full"
+            >
+              <iframe
+                id="modal-video"
+                src=""
+                class="h-full w-full"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
           <div
-            id="project-description"
+            id="modal-description"
             class="divide-fg-color/50 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden lg:flex-row lg:divide-x lg:divide-y-0"
           >
-            <div id="project-desc" class="grow p-6 lg:flex-3 lg:self-stretch">
+            <div id="modal-desc" class="grow p-6 lg:flex-2 lg:self-stretch">
               In partnership with the organization’s admin and developers, I
               redesigned the payment history page on the member portal to be
               more clear and transparent about payments and current balances.
@@ -227,8 +250,8 @@
               class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
-                onClick="window.location='#project-img-1';"
+                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                onClick="window.location='#modal-img-1';"
               >
                 <input
                   type="radio"
@@ -240,10 +263,10 @@
                 <p
                   class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
                 >
-                  Image 1:
+                  1.
                 </p>
                 <p
-                  class="inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base lg:text-base"
+                  class="caption inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -257,7 +280,7 @@
             >
               <label
                 class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
-                onClick="window.location='#project-img-2';"
+                onClick="window.location='#modal-img-2';"
               >
                 <input
                   type="radio"
@@ -268,10 +291,10 @@
                 <p
                   class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
                 >
-                  Image 2:
+                  2.
                 </p>
                 <p
-                  class="inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base lg:text-base"
+                  class="caption inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -285,7 +308,7 @@
             >
               <label
                 class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
-                onClick="window.location='#project-img-3';"
+                onClick="window.location='#modal-img-3';"
                 role="caption"
               >
                 <input
@@ -297,10 +320,10 @@
                 <p
                   class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
                 >
-                  Image 3:
+                  3.
                 </p>
                 <p
-                  class="inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base lg:text-base"
+                  class="caption inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

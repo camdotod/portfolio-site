@@ -71,12 +71,12 @@ const addProject = (project, index) => {
   console.log(tagListHTML);
 
   projectList.innerHTML += `
-    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/50 border hover:bg-fg-color/5 active:bg-fg-color/5 hover:border-double hover:border-4 active:border-double active:border-3 font-display cursor-pointer aspect-square" tabindex="0" data-name="${project.name}">
-        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80 flex flex-1 self-stretch bg-hatch min-h-40">
+    <li id="portfolio-item-${index}" class="group flex flex-col divide-y divide-fg-color/50 border hover:bg-fg-color/5 active:bg-fg-color/5 overflow-hidden hover:border-double hover:border-4 active:border-double active:border-3 font-display cursor-pointer aspect-3/2" tabindex="0" data-name="${project.name}">
+        <div id="project-preview${index}" class="group-hover:opacity-80 group-active:opacity-80 flex flex-1 basis-0 self-stretch bg-hatch overflow-hidden">
           <img
             src="${project.img[0]}"
             alt="${project.img[0]}"
-            class="object-cover italic flex-1 ${project.imgstyle}"
+            class="object-cover italic self-stretch flex flex-1 ${project.imgstyle}"
           />
         </div>  
         <div id="project-title${index}" class="flex px-3 items-baseline pt-3 pb-2 text-2xl gap-6">
@@ -85,9 +85,9 @@ const addProject = (project, index) => {
         </div>  
         <div
           id="project-details-${index}"
-          class="flex items-baseline gap-3 divide-x divide-fg-color/20 px-3"
+          class="flex items-baseline gap-3 divide-x divide-fg-color/20 px-3 text-fg-color/80"
         >
-          <div id="project-tags-${index}" class="block text-sm py-1 truncate flex-1 divide-x divide-fg-color/20 ">
+          <div id="project-tags-${index}" class="block text-sm py-1 truncate flex-1 divide-x divide-fg-color/20">
             ${tagListHTML}
           </div>
           <p class="text-sm">${project.year}</p>
@@ -294,6 +294,7 @@ function watchTiles() {
         return prj.name === projectName;
       })[0];
 
+      // Refactor this by adding a "case study link property to the portfolio objects"
       if (projectName == "LiUNA Dues Dashboard") {
         caseStudyLink.classList.remove("hidden");
         caseStudyLink.classList.add("flex");

@@ -24,7 +24,7 @@
 @layer utilities {
   :root .material-icons.md-36 {
     font-size: 36px;
-    --text-color:                                                                                                                                     
+    --text-color:                                                                                                                                                               
 ;
   }
 }
@@ -125,4 +125,20 @@ strong {
 
 :focus-visible {
   outline: 4px double rgb(var(--textColor));
+}
+
+@property --_y {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+#caption-1 {
+  position: relative;
+  --h: var(--_y);
+}
+
+#caption-1::after {
+  content: var(--h);
+  counter-reset: h var(--h);
 }

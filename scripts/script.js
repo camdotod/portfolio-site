@@ -69,7 +69,7 @@ function addHeader() {
             aria-label="Back to home page"
           >
             <img
-              src="/assets/Logo-P22.png"
+              src="/assets/CO-logo.png"
               class="aspect-square h-10 w-10 shrink-0 "
               aria-hidden
             />

@@ -14,7 +14,7 @@
     />
     <meta name="author" content="Camryn O'Donnell" />
 
-    <link rel="icon" type="image/x-icon" href="/assets/Logo-P22.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/CO-logo.png" />
 
     <!--Stylesheet-->
     <link rel="stylesheet" href="/styles/main.css" />
@@ -139,7 +139,7 @@
         </fieldset>
         <ol
           id="project-list"
-          class="flex w-full flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-y-6 lg:pt-8"
+          class="flex w-full flex-col gap-4 lg:pt-8 xl:grid xl:grid-cols-2 xl:gap-y-6"
         >
           <noscript>This content requires JavaScript to be enabled.</noscript>
         </ol>
@@ -156,7 +156,7 @@
         >
           <!-- Project Header-->
           <div
-            class="font-display flex items-center self-stretch border-b-3 border-double px-6 pt-10 pb-3 text-2xl lg:pt-4 lg:pb-2"
+            class="font-display flex items-center self-stretch border-b-3 border-double px-6 pt-8 pb-3 text-2xl lg:pt-4 lg:pb-2"
           >
             <!-- Title -->
             <p id="modal-title" class="grow">[Project Name Placeholder]</p>
@@ -237,20 +237,19 @@
           </div>
           <div
             id="modal-description"
-            class="divide-fg-color/50 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden lg:flex-row lg:divide-x lg:divide-y-0"
+            class="divide-fg-color/50 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden xl:flex-row xl:divide-x xl:divide-y-0"
           >
-            <div id="modal-desc" class="grow p-6 lg:flex-2 lg:self-stretch">
-              In partnership with the organization’s admin and developers, I
-              redesigned the payment history page on the member portal to be
-              more clear and transparent about payments and current balances.
+            <div id="modal-desc" class="grow p-6 xl:flex-2 xl:self-stretch">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
             <!-- Image 1 Desc -->
             <div
               id="caption-1"
-              class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
+              class="hover:bg-fg-color/5 flex min-h-10 flex-col self-stretch xl:flex-1 xl:gap-1 xl:has-checked:flex-2"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                class="group not-has-checked:bg-hatch border-fg-color block grow basis-0 self-stretch px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 xl:not-has-checked:whitespace-normal xl:has-checked:border-b-4 xl:has-checked:border-l-0"
                 onClick="window.location='#modal-img-1';"
               >
                 <input
@@ -266,7 +265,7 @@
                   1.
                 </p>
                 <p
-                  class="caption inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
+                  class="caption inline border text-sm opacity-80 group-hover:opacity-90 peer-not-checked:line-clamp-[var(--h)] peer-checked:text-base 2xl:text-base"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -276,10 +275,10 @@
             <!-- Image 2 Desc -->
             <div
               id="caption-2"
-              class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
+              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:flex-1 xl:gap-1 xl:has-checked:flex-2"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                class="group not-has-checked:bg-hatch border-fg-color block shrink basis-0 self-stretch px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 xl:grow xl:not-has-checked:whitespace-normal xl:has-checked:border-b-4 xl:has-checked:border-l-0"
                 onClick="window.location='#modal-img-2';"
               >
                 <input
@@ -294,7 +293,7 @@
                   2.
                 </p>
                 <p
-                  class="caption inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
+                  class="caption inline min-h-0 text-sm opacity-80 group-hover:opacity-90 peer-not-checked:line-clamp-[var(--h)] peer-checked:text-base 2xl:text-base"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -304,10 +303,10 @@
             <!-- Image 3 Desc -->
             <div
               id="caption-3"
-              class="hover:bg-fg-color/5 block min-h-10 self-stretch lg:flex lg:flex-1 lg:gap-1 lg:has-checked:flex-2"
+              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:flex-1 xl:gap-1 xl:has-checked:flex-2"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 lg:flex lg:grow lg:flex-col lg:gap-2 lg:not-has-checked:overflow-auto lg:not-has-checked:whitespace-normal lg:has-checked:border-b-4 lg:has-checked:border-l-0"
+                class="group not-has-checked:bg-hatch border-fg-color block shrink basis-0 self-stretch px-6 py-4 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-2 xl:grow xl:not-has-checked:whitespace-normal xl:has-checked:border-b-4 xl:has-checked:border-l-0"
                 onClick="window.location='#modal-img-3';"
                 role="caption"
               >
@@ -323,7 +322,7 @@
                   3.
                 </p>
                 <p
-                  class="caption inline text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
+                  class="caption inline min-h-0 text-sm opacity-80 group-hover:opacity-90 peer-checked:text-base 2xl:text-base"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

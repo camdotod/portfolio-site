@@ -1,16 +1,16 @@
 //Project "Database"
 export const projects = [
   {
-    name: "LiUNA — Dues Dashboard",
+    name: "LiUNA Dues Dashboard",
     year: "2025",
     date: "January 2025–April 2025",
     tools: "Figma",
     tags: "UX/UI Design",
 
     img: [
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_0.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_3.png",
-      "/assets/Dues Dashboard/Dues_Dashboard-Image_4.png",
+      "/assets/Dues Dashboard/DD-img_0.png",
+      "/assets/Dues Dashboard/DD-img_1.png",
+      "/assets/Dues Dashboard/DD-img_2.png",
     ],
 
     imgstyle: "object-right",
@@ -20,9 +20,8 @@ export const projects = [
 
     alt: [
       "Desktop and mobile versions of the dues dashboard screen. The screens are overlapped on top of a green background.",
-      "A simplified journey map of an administrator dealing with members inquiring about dues.",
-      "Screenshots of the previous mobile and desktop interface.",
-      'One of the proposed changes to the interface. A mockup of the top half of the screen shows the mobile interface with a new section called "Current Balance". A status message is displayed below that reads "Due May 31, 2025" and the current balance is displayed to the right. To the right of the mockup are four variations of this "Current Balance" section, which represent its different states. Member is paid up: shows a check icon and tells the member they are paid until the current month. Member owes one month: shows the same state as in the mockup. Member is paid up to a future period: shows a negative balance (credit) and the month they are paid up to. Member is in arrears: shows a red warning icon and text beneath the balance.',
+      "",
+      "",
     ],
 
     caption: [
@@ -42,9 +41,9 @@ export const projects = [
       "Building on existing branding and business goals, I led the UX/UI design for the start-up ManeFrame, a social platform for beauty professionals.",
 
     img: [
-      "/assets/ManeFrame/hero_placeholder.png",
-      "/assets/ManeFrame/hero_placeholder.png",
-      "/assets/ManeFrame/hero_placeholder.png",
+      "/assets/ManeFrame/MF-img_0.png",
+      "/assets/ManeFrame/MF-img_1.png",
+      "/assets/ManeFrame/MF-img_2.png",
     ],
 
     imgstyle: "",
@@ -58,16 +57,16 @@ export const projects = [
     ],
   },
   {
-    name: "Canadian Tire — Kitchenwares",
+    name: "Canadian Tire Kitchenware",
     year: "2022",
     date: "August 2021–August 2022",
     tools: "SolidWorks, InDesign, Illustrator, Microsoft Office",
     tags: "Industrial Design",
 
     img: [
-      "/assets/Kitchenwares/vida-by-paderno-variable-speed-hand-mixer-d3e5e825-56c3-4552-bb30-6db96bd1f179-jpgrendition.jpg",
-      "/assets/Kitchenwares/Air-fryer Mockup_Page_1.png",
-      "/assets/Kitchenwares/vida-11lb-5kg-usb-rechargeable-kitchen-scale-2eb3dfe0-7062-4332-b266-b65e898ac3fc.png",
+      "/assets/Kitchenwares/CT-img_0.jpg",
+      "/assets/Kitchenwares/CT-img_1.png",
+      "/assets/Kitchenwares/CT-img_2.png",
     ],
 
     imgstyle: "object-cover",
@@ -95,9 +94,9 @@ export const projects = [
     tags: "Design Research,Design Anthropology",
 
     img: [
-      "/assets/Countercartography/Countercartography-Image_0.png",
-      "/assets/Countercartography/Countercartography-Image_3.png",
-      "/assets/Countercartography/Countercartography-Image_5.png",
+      "/assets/Countercartography/CC-img_0.png",
+      "/assets/Countercartography/CC-img_1.png",
+      "/assets/Countercartography/CC-img_2.png",
     ],
 
     imgstyle: "",
@@ -125,9 +124,8 @@ export const projects = [
     tags: "Design Research,Industrial Design",
 
     img: [
-      "/assets/Capstone Assets/Capstone-Image_0.jpg",
-      "/assets/Capstone Assets/fake-email-vid-edit_Page_24.png",
-      "/assets/Capstone Assets/Capstone Images3.png",
+      "/assets/Capstone Assets/FT-img_0.jpg",
+      "/assets/Capstone Assets/FT-img_1.png",
     ],
 
     imgstyle: "",
@@ -161,9 +159,9 @@ export const projects = [
     tags: "UX/UI Design,Design Research",
 
     img: [
-      "/assets/Early/Early-Image_0.png",
+      "/assets/Early/LY-img_0.png",
       "/assets/Early/JourneyMap-Section3.png",
-      "/assets/Early/Early-Image_5.png",
+      "/assets/Early/LY-img_2.png",
     ],
 
     imgstyle: "object-left",

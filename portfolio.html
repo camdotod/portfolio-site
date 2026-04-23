@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark light" />
 
     <!--Site Info-->
-    <title>Projects - Camryn O'Donnell</title>
+    <title>Portfolio - Camryn O'Donnell</title>
     <meta
       name="description"
       content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design."
@@ -62,7 +62,7 @@
       id="page-title"
       class="font-display px-6 font-medium md:px-60 md:text-xl"
     >
-      Projects
+      Portfolio
     </h1>
 
     <!--Projects-->
@@ -152,11 +152,11 @@
       >
         <div
           id="project-modal"
-          class="bg-bg-color divide-fg-color/80 flex h-svh w-svw touch-none flex-col divide-y overflow-hidden shadow-2xl lg:h-auto lg:w-full lg:touch-auto lg:self-stretch xl:border"
+          class="bg-bg-color divide-fg-color/80 flex h-svh w-svw touch-none flex-col divide-y overflow-hidden shadow-2xl lg:h-auto lg:w-full lg:touch-auto lg:self-stretch lg:border"
         >
           <!-- Project Header-->
           <div
-            class="font-display flex items-center self-stretch border-b-3 border-double px-6 pt-8 pb-3 text-2xl lg:pt-4 lg:pb-2"
+            class="font-display flex shrink-0 items-center self-stretch border-b-3 border-double px-6 pt-8 pb-3 text-2xl lg:pt-4 lg:pb-2"
           >
             <!-- Title -->
             <p id="modal-title" class="grow">[Project Name Placeholder]</p>
@@ -184,160 +184,154 @@
             ></div>
             <p id="modal-yr" class="font-display text-sm">2025</p>
           </div>
-          <!-- Modal Carousel-->
+
+          <!-- Modal Content -->
           <div
-            id="modal-carousel"
-            class="carousel bg-hatch relative flex flex-1 snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll"
+            class="flex flex-1 flex-col self-stretch overflow-hidden xl:flex-row"
           >
+            <!-- Modal Carousel-->
             <div
-              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              id="modal-carousel"
+              class="carousel bg-hatch relative flex flex-1 snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll border xl:flex-3"
             >
-              <img
-                id="modal-img-1"
-                class="flex-1 self-stretch object-cover"
-                src=""
-                alt=""
-              />
+              <div
+                id="project-image-1"
+                class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              >
+                <img class="flex-1 self-stretch object-cover" src="" alt="" />
+              </div>
+              <div
+                id="project-image-2"
+                class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              >
+                <img class="flex-1 self-stretch object-cover" src="" alt="" />
+              </div>
+              <div
+                id="project-image-3"
+                class="flex w-svw shrink-0 snap-start items-center justify-center self-stretch overflow-hidden lg:w-full"
+              >
+                <img class="flex-1 self-stretch object-cover" src="" alt="" />
+                <iframe
+                  id="project-video"
+                  src=""
+                  class="hidden h-full w-full"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
+
+            <!-- Modal Description -->
             <div
-              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              id="modal-description"
+              class="divide-fg-color/30 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden xl:h-auto xl:flex-1"
             >
-              <img
-                id="modal-img-2"
-                class="flex-1 self-stretch object-cover"
-                src=""
-                alt=""
-              />
-            </div>
-            <div
-              class="flex w-svw shrink-0 snap-start items-center justify-center self-stretch overflow-hidden lg:w-full"
-            >
-              <img
-                id="modal-img-3"
-                class="flex-1 self-stretch object-cover"
-                src=""
-                alt=""
-              />
-            </div>
-            <div
-              id="media-frame"
-              class="hidden w-svw shrink-0 snap-start items-center justify-center self-stretch overflow-hidden lg:w-full"
-            >
-              <iframe
-                id="modal-video"
-                src=""
-                class="h-full w-full"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+              <!-- Summary -->
+              <div id="modal-desc" class="grow p-6 xl:flex-2 xl:self-stretch">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+              <!-- Image 1 Desc -->
+              <div
+                id="caption-1"
+                class="hover:bg-fg-color/5 flex min-h-10 flex-col self-stretch xl:gap-1"
+              >
+                <label
+                  class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                  onClick="window.location='#project-image-1';"
+                >
+                  <input
+                    type="radio"
+                    name="carousel"
+                    class="peer hidden"
+                    aria-hidden="true"
+                    checked
+                  />
+                  <p
+                    class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                  >
+                    1.
+                  </p>
+                  <p
+                    class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </label>
+              </div>
+              <!-- Image 2 Desc -->
+              <div
+                id="caption-2"
+                class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:gap-1"
+              >
+                <label
+                  class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                  onClick="window.location='#project-image-2';"
+                >
+                  <input
+                    type="radio"
+                    name="carousel"
+                    class="peer hidden"
+                    aria-hidden="true"
+                  />
+                  <p
+                    class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                  >
+                    2.
+                  </p>
+                  <p
+                    class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </label>
+              </div>
+              <!-- Image 3 Desc -->
+              <div
+                id="caption-3"
+                class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:gap-1"
+              >
+                <label
+                  class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                  onClick="window.location='#project-image-3';"
+                  role="caption"
+                >
+                  <input
+                    type="radio"
+                    name="carousel"
+                    class="peer hidden"
+                    aria-hidden="true"
+                  />
+                  <p
+                    class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                  >
+                    3.
+                  </p>
+                  <p
+                    class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </label>
+              </div>
+              <a
+                id="case-study-link"
+                href="portfolio/Dues_Dashboard.html"
+                class="bg-calm-600 text-bg-color dark:text-fg-color active:bg-calm-600/90 decoration-bg-color/50 dark:decoration-fg-color/50 hover:decoration-bg-color dark:hover:decoration-fg-color font-display flex shrink-0 justify-center self-stretch py-4 underline underline-offset-2"
+              >
+                Read the case study &rarr;
+              </a>
             </div>
           </div>
-          <div
-            id="modal-description"
-            class="divide-fg-color/30 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden xl:flex-row xl:divide-x xl:divide-y-0"
-          >
-            <!-- Summary -->
-            <div id="modal-desc" class="grow p-6 xl:flex-2 xl:self-stretch">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-            <!-- Image 1 Desc -->
-            <div
-              id="caption-1"
-              class="hover:bg-fg-color/5 flex min-h-10 flex-col self-stretch xl:flex-1 xl:gap-1 xl:has-checked:flex-2"
-            >
-              <label
-                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4 xl:py-4 xl:not-has-checked:whitespace-normal xl:has-checked:border-b-4 xl:has-checked:border-l-0"
-                onClick="window.location='#modal-img-1';"
-              >
-                <input
-                  type="radio"
-                  name="carousel"
-                  class="peer hidden"
-                  aria-hidden="true"
-                  checked
-                />
-                <p
-                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
-                >
-                  1.
-                </p>
-                <p
-                  class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </label>
-            </div>
-            <!-- Image 2 Desc -->
-            <div
-              id="caption-2"
-              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:flex-1 xl:gap-1 xl:has-checked:flex-2"
-            >
-              <label
-                class="group not-has-checked:bg-hatch border-fg-color block shrink self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4 xl:grow xl:py-4 xl:not-has-checked:whitespace-normal xl:has-checked:border-b-4 xl:has-checked:border-l-0"
-                onClick="window.location='#modal-img-2';"
-              >
-                <input
-                  type="radio"
-                  name="carousel"
-                  class="peer hidden"
-                  aria-hidden="true"
-                />
-                <p
-                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
-                >
-                  2.
-                </p>
-                <p
-                  class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </label>
-            </div>
-            <!-- Image 3 Desc -->
-            <div
-              id="caption-3"
-              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:flex-1 xl:gap-1 xl:has-checked:flex-2"
-            >
-              <label
-                class="group not-has-checked:bg-hatch border-fg-color block shrink self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4 xl:grow xl:py-4 xl:not-has-checked:whitespace-normal xl:has-checked:border-b-4 xl:has-checked:border-l-0"
-                onClick="window.location='#modal-img-3';"
-                role="caption"
-              >
-                <input
-                  type="radio"
-                  name="carousel"
-                  class="peer hidden"
-                  aria-hidden="true"
-                />
-                <p
-                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
-                >
-                  3.
-                </p>
-                <p
-                  class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </label>
-            </div>
-          </div>
-          <a
-            id="case-study-link"
-            href="portfolio/Dues_Dashboard.html"
-            class="bg-calm-600 text-bg-color dark:text-fg-color active:bg-calm-600/90 decoration-bg-color/50 dark:decoration-fg-color/50 hover:decoration-bg-color dark:hover:decoration-fg-color font-display flex justify-center self-stretch py-4 underline underline-offset-2"
-          >
-            Read the case study &rarr;
-          </a>
         </div>
       </div>
     </main>

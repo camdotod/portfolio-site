@@ -26,8 +26,10 @@ const modalTitle = modal.querySelector("#modal-title");
 const modalYr = modal.querySelector("#modal-yr");
 const modalTags = modal.querySelector("#modal-tags");
 const modalCarousel = modal.querySelector("#modal-carousel");
+const carouselSlides = modalCarousel.querySelectorAll("div");
 const modalDesc = modal.querySelector("#modal-desc");
 const modalImages = modalCarousel.querySelectorAll("img");
+const vidFrame = document.getElementById("project-video");
 const modalImgCapts = modal.querySelectorAll(".caption");
 const caseStudyLink = modal.querySelector("#case-study-link");
 
@@ -42,6 +44,11 @@ const modalCloseButton = modal.querySelector("#close-button");
 const toggleClass = (element, class0, class1) => {
   element.classList.toggle(class0);
   element.classList.toggle(class1);
+};
+
+const replaceClass = (element, class0, class1) => {
+  element.classList.remove(class0);
+  element.classList.add(class1);
 };
 
 /**
@@ -244,7 +251,7 @@ const observeCarousel = (caption, i) => {
   xObserver.observe(modalImages[i].parentNode);
 };
 
-modalImgCapts.forEach(observeCarousel);
+carouselSlides.forEach(observeCarousel);
 
 function closeModal() {
   console.log("Closing modal...");
@@ -257,18 +264,9 @@ function closeModal() {
 
   modalTags.innerHTML = "";
 
-  modalImages[2].parentNode.classList.add("flex");
-  modalImages[2].parentNode.classList.remove("hidden");
+  replaceClass(modalImages[2], "hidden", "flex");
 
-  let vidFrame = document.getElementById("media-frame");
-  vidFrame.classList.add("hidden");
-  vidFrame.classList.remove("flex");
-  vidFrame.children[0].setAttribute("src", "");
-
-  modalImgCapts[2].parentNode.setAttribute(
-    "onClick",
-    "window.location='#modal-img-3';",
-  );
+  replaceClass(vidFrame, "flex", "hidden");
 
   // Reset URL
   // state.modal = false;
@@ -296,11 +294,9 @@ function watchTiles() {
 
       // Refactor this by adding a "case study link property to the portfolio objects"
       if (projectName == "LiUNA Dues Dashboard") {
-        caseStudyLink.classList.remove("hidden");
-        caseStudyLink.classList.add("flex");
+        replaceClass(caseStudyLink, "hidden", "flex");
       } else {
-        caseStudyLink.classList.remove("flex");
-        caseStudyLink.classList.add("hidden");
+        replaceClass(caseStudyLink, "flex", "hidden");
       }
 
       // Inject content
@@ -325,18 +321,10 @@ function watchTiles() {
 
       if (clickedProject.video) {
         console.log(modalImages[2].parentNode);
-        toggleClass(modalImages[2].parentNode, "flex", "hidden");
+        replaceClass(modalImages[2], "flex", "hidden");
+        replaceClass(vidFrame, "hidden", "flex");
 
-        let vidFrame = document.getElementById("media-frame");
-        toggleClass(vidFrame, "flex", "hidden");
-
-        let video = vidFrame.children[0];
-        video.setAttribute("src", clickedProject.video);
-
-        modalImgCapts[2].parentNode.setAttribute(
-          "onClick",
-          "window.location='#modal-video';",
-        );
+        vidFrame.setAttribute("src", clickedProject.video);
       }
 
       modalDesc.innerHTML = clickedProject.summary;

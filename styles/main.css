@@ -250,6 +250,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .z-1 {
+    z-index: 1;
+  }
   .z-10 {
     z-index: 10;
   }
@@ -309,6 +312,12 @@
   }
   .-mb-6 {
     margin-bottom: calc(var(--spacing) * -6);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
   }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
@@ -378,6 +387,9 @@
   }
   .min-h-10 {
     min-height: calc(var(--spacing) * 10);
+  }
+  .min-h-fit {
+    min-height: fit-content;
   }
   .w-2 {
     width: calc(var(--spacing) * 2);
@@ -480,6 +492,9 @@
   }
   .flex-col-reverse {
     flex-direction: column-reverse;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -745,6 +760,12 @@
   .bg-calm-100 {
     background-color: var(--color-calm-100);
   }
+  .bg-calm-100\/20 {
+    background-color: color-mix(in srgb, oklch(97.8% 0.031779 196.6) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-calm-100) 20%, transparent);
+    }
+  }
   .bg-calm-100\/50 {
     background-color: color-mix(in srgb, oklch(97.8% 0.031779 196.6) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -774,6 +795,12 @@
   }
   .bg-vigor-100 {
     background-color: var(--color-vigor-100);
+  }
+  .bg-vigor-100\/20 {
+    background-color: color-mix(in srgb, oklch(97% 0.014911 356.6) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-vigor-100) 20%, transparent);
+    }
   }
   .bg-vigor-100\/50 {
     background-color: color-mix(in srgb, oklch(97% 0.014911 356.6) 50%, transparent);
@@ -1504,6 +1531,11 @@
       margin-inline: calc(var(--spacing) * 60);
     }
   }
+  .md\:ml-60 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 60);
+    }
+  }
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
@@ -1865,6 +1897,12 @@
       overflow: auto;
     }
   }
+  .lg\:border {
+    @media (width >= 64rem) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .lg\:border-0 {
     @media (width >= 64rem) {
       border-style: var(--tw-border-style);
@@ -1959,9 +1997,19 @@
       margin-top: calc(var(--spacing) * -80);
     }
   }
+  .xl\:mb-16 {
+    @media (width >= 80rem) {
+      margin-bottom: calc(var(--spacing) * 16);
+    }
+  }
   .xl\:grid {
     @media (width >= 80rem) {
       display: grid;
+    }
+  }
+  .xl\:h-auto {
+    @media (width >= 80rem) {
+      height: auto;
     }
   }
   .xl\:w-48 {
@@ -1997,6 +2045,11 @@
   .xl\:flex-row {
     @media (width >= 80rem) {
       flex-direction: row;
+    }
+  }
+  .xl\:items-center {
+    @media (width >= 80rem) {
+      align-items: center;
     }
   }
   .xl\:items-end {
@@ -2055,9 +2108,24 @@
       align-self: auto;
     }
   }
+  .xl\:self-baseline {
+    @media (width >= 80rem) {
+      align-self: baseline;
+    }
+  }
+  .xl\:self-baseline-last {
+    @media (width >= 80rem) {
+      align-self: last baseline;
+    }
+  }
   .xl\:self-center {
     @media (width >= 80rem) {
       align-self: center;
+    }
+  }
+  .xl\:self-end {
+    @media (width >= 80rem) {
+      align-self: flex-end;
     }
   }
   .xl\:self-stretch {
@@ -2081,6 +2149,16 @@
       object-position: bottom;
     }
   }
+  .xl\:px-10 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:px-40 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 40);
+    }
+  }
   .xl\:px-60 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 60);
@@ -2099,6 +2177,11 @@
   .xl\:pr-6 {
     @media (width >= 80rem) {
       padding-right: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:pr-60 {
+    @media (width >= 80rem) {
+      padding-right: calc(var(--spacing) * 60);
     }
   }
   .xl\:pl-0 {
@@ -2189,6 +2272,14 @@
       background-color: var(--color-calm-900);
     }
   }
+  .dark\:bg-calm-900\/20 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, oklch(27% 0.176145 265.1) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-calm-900) 20%, transparent);
+      }
+    }
+  }
   .dark\:bg-calm-900\/50 {
     @media (prefers-color-scheme: dark) {
       background-color: color-mix(in srgb, oklch(27% 0.176145 265.1) 50%, transparent);
@@ -2210,6 +2301,14 @@
   .dark\:bg-vigor-900 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-vigor-900);
+    }
+  }
+  .dark\:bg-vigor-900\/20 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, oklch(27.1% 0.107507 26.6) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-vigor-900) 20%, transparent);
+      }
     }
   }
   .dark\:bg-vigor-900\/50 {

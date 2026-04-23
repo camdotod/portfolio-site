@@ -93,7 +93,7 @@ function addHeader() {
             class="focus-visible:outline-fg-color flex h-10 w-fit items-center underline underline-offset-2 decoration-fg-color/50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-solid active:opacity-80 hover:decoration-fg-color active:decoration-fg-color"
             href="${folder}/portfolio.html"
             tabindex="0"
-            ><span>projects</span></a
+            ><span>portfolio</span></a
           >
           <a
             id="link-process"

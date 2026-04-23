@@ -133,7 +133,7 @@ export const projects = [
     video: "https://www.youtube.com/embed/4WZ-d4zqaCQ?si=DxugqYesuHnydEOL",
 
     summary:
-      "For my capstone project, I explored ways that access to mental healthcare could be improved through the use of third-spaces. Through my research, I developed a foldable therapy space that lets psychotherapists create a therapeutic environment within any private space.",
+      "For my capstone project, I explored ways that access to mental healthcare could be improved through the use of third-spaces. Through my research, I developed a tool that lets psychotherapists create a therapeutic environment within any private space.",
 
     alt: [
       "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",

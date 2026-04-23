@@ -20,8 +20,8 @@ export const projects = [
 
     alt: [
       "Desktop and mobile versions of the dues dashboard screen showing members' dues payment history. The screens are overlapped on top of a green background.",
-      "",
-      "",
+      "The mobile version of the dues dashboard before and after the redesign. The previous version of the page shows a “Make Payment” button at the top, with a section labelled 'Payment History' below. The items in the list contain a “Date” in DD/MM/YYYY format, a “Description”, which shows the month and year of the payment period, and an “Amount” in dollars. The items in the alternate colour for separation.  On the update version, the label “NEW” calls out the addition of a section at the top of the page which shows the current balance and a message saying if the member is up to date. An “UPDATED” label calls out the updates made to the payment history section, which is now laid out like a table with the columns: “Period”, “Payment”, and “Balance”. The table also has a break that shows what the dues are for that year and beneath each payment it shows who it was paid by.",
+      "Examples of documentation specifying the features, styles, and layouts of the new design. The top section shows the elements of the “Current Balance” section and what to display when a member is paid up, has credit, or is owing dues. The bottom section shows the payment history’s features and what variables the API should call to get the necessary data.",
     ],
 
     caption: [
@@ -48,7 +48,11 @@ export const projects = [
 
     imgstyle: "",
 
-    alt: ["", "", ""],
+    alt: [
+      "ManeFrame’s app logo and wordmark beside a rendering of a phone showing ManeFrame’s home page on a black background. Going across the background, behind the screen are portraits of people with different hairstyles. The home page shows posts in a timeline/list view. At the top of the page is a “Trending” section which is a carousel of images. The bottom navigation bar shows these tabs from left to right: “Home” with a home icon, “Discover” with a magnifying glass icon, “Post” with a camera icon, “Notifications” with a bell icon, and “Saved” with a bookmark icon. The top of the screen has a header with the following elements going from left to right: a circular image showing the user’s avatar, the ManeFrame wordmark,and  a chat bubble icon. ",
+      "The “Edit Profile” and “Profile” screens.",
+      "A template for a post, with elements labelled with the corresponding components and properties from ManeFrame’s design system.",
+    ],
 
     caption: [
       "The app was designed to help beauty professionals build industry connections, learn new skills, and find community.",
@@ -137,8 +141,7 @@ export const projects = [
 
     alt: [
       "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",
-      "",
-      "",
+      "A rendering of the foldable therapy tiles set up in a room. The background looks like it is sketched-in. Overlayed on the rendering is a series of circles radiating from the center of the image. Around the circumference of the circle are 3 labels with icons: “privacy” with an icon of window blinds, “comfort” with an icon of a couch, and “ownership” with an icon of a person inside a circle.",
     ],
 
     caption: [

@@ -20,7 +20,8 @@ module.exports = {
         display: ["Archivo", "Public Sans"],
       },
       content: {
-        arrow: '" →"',
+        rarrow: '" →"',
+        larrow: '"← "',
       },
       backgroundImage: {
         lines: 'url("/assets/line-distortions-4-transparentcolours.png")',

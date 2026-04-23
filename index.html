@@ -50,9 +50,7 @@
     />
   </head>
 
-  <body
-    class="bg-bg-color text-fg-color flex h-screen flex-col bg-white font-sans"
-  >
+  <body class="bg-bg-color text-fg-color flex flex-col bg-white font-sans">
     <header id="header">
       <noscript>Your browser does not support JavaScript</noscript>
     </header>
@@ -82,10 +80,10 @@
           <a
             id="see-more-button"
             href="portfolio.html"
-            class="flex items-center gap-0.5"
+            class="-mr-2 flex items-center gap-0.5 rounded-2xl"
           >
             <p
-              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color after:content-rarrow py-4 font-medium underline underline-offset-2"
+              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color after:content-rarrow px-2 py-4 font-medium underline underline-offset-2"
             >
               See more
             </p>
@@ -98,22 +96,10 @@
           <a
             href="portfolio/Dues_Dashboard.html"
             id="project-1"
-            class="group hover:bg-fg-color/5 flex w-full shrink-0 grow snap-center flex-col self-stretch lg:flex-row-reverse"
+            class="group hover:bg-fg-color/5 focus-visible:bg-fg-color/5 flex w-full shrink-0 grow snap-center flex-col-reverse self-stretch overflow-hidden lg:flex-row"
             aria-labelledby="project-title-1"
             tabindex="0"
           >
-            <div class="relative flex self-stretch lg:w-1/2">
-              <img
-                src="assets/Dues Dashboard/DD-img_0.png"
-                alt="Desktop and mobile versions of the dues dashboard screen showing members' dues payment history. The screens are overlapped on top of a green background."
-                class="aspect-square w-full object-cover object-[75%_50%] group-hover:opacity-90 md:aspect-auto"
-              />
-              <p
-                class="bg-fg-color text-bg-color font-display absolute bottom-0 left-0 px-6 py-1 font-medium lg:top-0 lg:bottom-auto"
-              >
-                Case Study
-              </p>
-            </div>
             <div
               class="border-fg-color/50 flex flex-col justify-center gap-4 self-stretch border-t px-6 pt-5 pb-6 md:px-60 lg:flex-1 lg:pr-10 xl:gap-6"
             >
@@ -140,13 +126,25 @@
                 UX/UI Design
               </p>
             </div>
+            <div class="relative flex self-stretch lg:w-1/2">
+              <img
+                src="assets/Dues Dashboard/DD-img_0.png"
+                alt="Desktop and mobile versions of the dues dashboard screen showing members' dues payment history. The screens are overlapped on top of a green background."
+                class="group-focus-visible::opacity-90 aspect-square w-full object-cover object-[75%_50%] group-hover:opacity-90 md:aspect-auto"
+              />
+              <p
+                class="bg-fg-color text-bg-color font-display absolute bottom-0 left-0 px-6 py-1 font-medium lg:top-0 lg:bottom-auto"
+              >
+                Case Study
+              </p>
+            </div>
           </a>
         </div>
       </section>
       <div id="design-process" class="flex flex-col gap-10 px-6 py-20 md:px-60">
         <h2 class="font-display text-xl italic">About the design process</h2>
         <div
-          class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+          class="flex flex-col gap-8 xl:flex-row xl:items-end xl:justify-between"
         >
           <p class="max-w-xl opacity-80">
             The design process is at the foundation of all of my work, no matter
@@ -162,7 +160,7 @@
           </p>
           <a
             href="/process.html"
-            class="decoration-fg-color/50 font-display hover:decoration-fg-color active:decoration-fg-color after:content-rarrow w-fit font-medium underline underline-offset-2"
+            class="decoration-fg-color/50 font-display hover:decoration-fg-color active:decoration-fg-color after:content-rarrow w-fit rounded-lg font-medium whitespace-nowrap underline underline-offset-2"
             tabindex="0"
             >Learn more about the design process</a
           >

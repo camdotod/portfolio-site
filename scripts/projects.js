@@ -19,7 +19,7 @@ export const projects = [
       "In partnership with the organization’s admin and developers, I redesigned their members’ payment history page to help clear up confusion about overdue payments.",
 
     alt: [
-      "Desktop and mobile versions of the dues dashboard screen. The screens are overlapped on top of a green background.",
+      "Desktop and mobile versions of the dues dashboard screen showing members' dues payment history. The screens are overlapped on top of a green background.",
       "",
       "",
     ],
@@ -75,9 +75,9 @@ export const projects = [
       "Developed a number of <abbr title='Original Design Manufacturer'>ODM</abbr> kitchen products for Canadian Tire’s owned brands Paderno and Vida by Paderno.",
 
     alt: [
-      "Photo of a shiny black hand mixer with stainless steel accents, sitting upright on a white surface. The handle is facing towards the viewer so you can see the speed dial and turbo button. The edges of the turbo button have an orange accent colour. The handle is flat on top with rounded edges and a curved underside and the plastic on the inside of the opening has more of a matte finish. Spiral-shaped dough hooks are attached to the mixer. To the left is a clear plastic storage container that the hand mixer would fit on top of and two sets of attachments: one whisk, and two egg-beaters.",
+      "A shiny black hand mixer with stainless steel accents, sitting upright on a white surface. The handle is facing towards the viewer so you can see the speed dial and turbo button. The edges of the turbo button have an orange accent colour. The handle is flat on top with rounded edges and a curved underside and the plastic on the inside of the opening has more of a matte finish. Spiral-shaped dough hooks are attached to the mixer. To the left is a clear plastic storage container that the hand mixer would fit on top of and two sets of attachments: one whisk, and two egg-beaters.",
       "A series of realistic-looking renderings of the front of a black air fryer. It has a black digital screen and a vertical handle in the center to pull out the basket. There are four renderings total, each with a different design for the icons on the screen and stainless steel accents on the basket.",
-      "Photo of a black digital food scale (left) and black instant-read thermometer (right) staged in a meal-prep scene with food storage containers full of salad and sliced grilled chicken on a cutting board. The scale is flat and rectangular and has a digital screen with white segmented numbers. The scale has a unit button to the left of the screen and a power/tare button to the right. The Vida by Paderno logo, a filled-in circle with a V inside, is printed on the bottom right corner of the scale. The top of the thermometer’s body is circular and has an arrow that follows its circumference to show how the probe rotates open.",
+      "A black digital food scale (left) and black instant-read thermometer (right) staged in a meal-prep scene with food storage containers full of salad and sliced grilled chicken on a cutting board. The scale is flat and rectangular and has a digital screen with white segmented numbers. The scale has a unit button to the left of the screen and a power/tare button to the right. The Vida by Paderno logo, a filled-in circle with a V inside, is printed on the bottom right corner of the scale. The top of the thermometer’s body is circular and has an arrow that follows its circumference to show how the probe rotates open.",
     ],
 
     caption: [
@@ -139,9 +139,6 @@ export const projects = [
       "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",
       "",
       "",
-      "A mind map of the key stakeholders, sectors, contexts, and trends. Under “stakeholders” are clients and therapists. Under “contexts” are private residences, office buildings, and online. Under “sectors” are public and private. Under “trends” are collaborative care hubs, online & telehealth therapy, and a growing workforce.",
-      "A collage of three images. The first image (left) is a sketch of a concept with two tent-like structures that lean against each other to form an arch over the client and therapist. The second image (center) is a photograph from a side angle of a person sitting in a chair beneath a full-scale model of the previous concept. The third image (right) is a comic/narrative prototype showing a therapist bringing the device to a coworking space, setting it up, and taking it apart.",
-      "A collage of images showing cardboard prototypes, a moodboard, and a 3D rendering of the final concept: foldable tiles that can be assembled by stacking them on top of one another in different configurations.",
     ],
 
     caption: [

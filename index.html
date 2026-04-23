@@ -60,18 +60,17 @@
       <div id="introduction" class="flex flex-col gap-10 px-6 md:px-60">
         <h1 class="font-display font-medium md:text-xl">Camryn O'Donnell</h1>
         <div id="titles" class="flex flex-col gap-2">
-          <a
-            href="/about.html"
-            class="text-calm-60 text-calm-600 dark:text-calm-400 font-display hover:text-calm-900 dark:hover:text-calm-100 text-xl underline underline-offset-4"
+          <p
+            class="text-calm-600 dark:text-calm-400 font-display text-xl underline decoration-wavy decoration-1 underline-offset-4"
           >
             multidisciplinary designer
-          </a>
+          </p>
           <p class="text-sm">
             ux/ui design | service design | industrial design | graphic design
           </p>
         </div>
       </div>
-      <div
+      <section
         id="recent-projects"
         class="border-fg-color/50 flex flex-col border-b lg:min-h-1/2"
       >
@@ -81,14 +80,14 @@
         >
           <h2 class="font-display text-xl font-medium">Featured Projects:</h2>
           <a
+            id="see-more-button"
             href="portfolio.html"
-            id="see-all-button"
             class="flex items-center gap-0.5"
           >
             <p
-              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color py-4 font-medium underline underline-offset-2"
+              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color after:content-rarrow py-4 font-medium underline underline-offset-2"
             >
-              See all →
+              See more
             </p>
           </a>
         </div>
@@ -100,11 +99,13 @@
             href="portfolio/Dues_Dashboard.html"
             id="project-1"
             class="group hover:bg-fg-color/5 flex w-full shrink-0 grow snap-center flex-col self-stretch lg:flex-row-reverse"
+            aria-labelledby="project-title-1"
+            tabindex="0"
           >
             <div class="relative flex self-stretch lg:w-1/2">
               <img
                 src="assets/Dues Dashboard/DD-img_0.png"
-                alt="Dues dashboard hero image"
+                alt="Desktop and mobile versions of the dues dashboard screen showing members' dues payment history. The screens are overlapped on top of a green background."
                 class="aspect-square w-full object-cover object-[75%_50%] group-hover:opacity-90 md:aspect-auto"
               />
               <p
@@ -141,28 +142,29 @@
             </div>
           </a>
         </div>
-      </div>
+      </section>
       <div id="design-process" class="flex flex-col gap-10 px-6 py-20 md:px-60">
         <h2 class="font-display text-xl italic">About the design process</h2>
         <div
           class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
         >
           <p class="max-w-xl opacity-80">
-            The design process is at the
-            <strong>foundation of all of my work</strong>, no matter what the
-            end product looks like. <br /><br />It’s a way of thinking about
-            problems as a whole, with consideration for the people and systems
-            surrounding them. It involves building relationships with people,
-            looking at things from different perspectives, and allowing yourself
-            to question what is possible. <br /><br />To me, the practice of
-            design is a commitment to creating things that truly address the
-            needs of people.
+            The design process is at the foundation of all of my work, no matter
+            what the end product looks like.<br aria-hidden="true" /><br
+              aria-hidden="true"
+            />It’s a way of thinking about problems as a whole, with
+            consideration for the people and systems surrounding them. It
+            involves building relationships with people, looking at things from
+            different perspectives, and allowing yourself to question what is
+            possible. <br aria-hidden="true" /><br aria-hidden="true" />To me,
+            the practice of design is a commitment to creating things that truly
+            address the needs of people.
           </p>
           <a
             href="/process.html"
-            class="decoration-fg-color/50 font-display hover:decoration-fg-color active:decoration-fg-color w-fit font-medium underline underline-offset-2"
+            class="decoration-fg-color/50 font-display hover:decoration-fg-color active:decoration-fg-color after:content-rarrow w-fit font-medium underline underline-offset-2"
             tabindex="0"
-            >Learn more →</a
+            >Learn more about the design process</a
           >
         </div>
       </div>

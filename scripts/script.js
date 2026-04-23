@@ -176,7 +176,7 @@ function addFooter() {
           </a>
     
         </div>
-        <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right underline-offset-2 decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color underline text-sm opacity-70 w-fit self-end">
+        <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right underline-offset-2 decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color underline text-sm opacity-70 w-fit self-end" aria-label="GitHub repository for this website">
     Designed & Developed by Camryn O'Donnell
     </a>
 `;

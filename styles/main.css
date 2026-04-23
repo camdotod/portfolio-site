@@ -1262,6 +1262,12 @@
       animation: slide-right 1s infinite alternate ease-in;
     }
   }
+  .after\:content-rarrow {
+    &::after {
+      --tw-content: " →";
+      content: var(--tw-content);
+    }
+  }
   .hover\:rotate-0 {
     &:hover {
       @media (hover: hover) {

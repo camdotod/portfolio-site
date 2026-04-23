@@ -127,56 +127,60 @@ function addHeader() {
  * @returns HTML Element
  */
 function addFooter() {
-  addClasses(footer, "flex flex-col gap-6 px-6 border-t mt-10 py-10 md:px-60");
+  addClasses(
+    footer,
+    "flex flex-col gap-6 px-6 border-t mt-10 py-10 md:px-60 relative",
+  );
 
   footer.innerHTML = `
     <div id="footer-text" class="flex flex-col gap-4">
-          <h2 class="text-xl font-display">Contact Me</h2>
-          <p class="text-sm opacity-80">Interested in my work?</p>
-        </div>
-        <div id="social-buttons" class="flex gap-20 flex-wrap gap-y-4">
-          <a
-            href="https://mailto:camryn.odonnell@gmail.com"
-            id="email-button"
-            role="button"
-            tabindex="0"
-            target="_blank"
-            class="text-fresh-600 dark:text-fresh-400 flex items-center gap-2 hover:bg-fresh-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-fresh-100/50 dark:active:bg-fresh-900/50 dark:hover:bg-fresh-900"
-          >
-            <span aria-hidden="true" class="material-symbols-outlined">alternate_email</span>
-            <p class="font-bold underline decoration-2 underline-offset-2">
-              Email
-            </p>
-          </a>
-          <a
+      <h2 class="text-xl font-display">Contact Me</h2>
+      <p class="text-sm opacity-80">Interested in my work?</p>
+    </div>
+    <div id="social-buttons" class="flex gap-20 flex-wrap gap-y-4">
+      <a
+        href="https://mailto:camryn.odonnell@gmail.com"
+        id="email-button"
+        role="button"
+        tabindex="0"
+        target="_blank"
+        class="text-fresh-600 dark:text-fresh-400 flex items-center gap-2 hover:bg-fresh-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-fresh-100/50 dark:active:bg-fresh-900/50 dark:hover:bg-fresh-900"
+      >
+        <span aria-hidden="true" class="material-symbols-outlined">alternate_email</span>
+        <p class="font-bold underline decoration-2 underline-offset-2">
+          Email
+        </p>
+        </a>
+        <a
             href="https://www.linkedin.com/in/camryn-odonnell/"
             id="linkedin-button"
             role="button"
             tabindex="0"
             target="_blank"
             class="text-calm-600 dark:text-calm-400 flex items-center gap-2 hover:bg-calm-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-calm-100/50 dark:active:bg-calm-900/50 dark:hover:bg-calm-900"
-          >
-            <span aria-hidden="true" class="material-symbols-outlined">work</span>
-            <p class="font-bold underline decoration-2 underline-offset-2">
+        >
+          <span aria-hidden="true" class="material-symbols-outlined">work</span>
+          <p class="font-bold underline decoration-2 underline-offset-2">
               LinkedIn
-            </p>
-          </a>
-          <a
+          </p>
+        </a>
+        <a
             href="https://github.com/camdotod"
             class="text-vigor-600 dark:text-vigor-400 flex items-center gap-2 hover:bg-vigor-100 pl-2 pr-3 py-2 -mx-2 rounded-2xl active:bg-vigor-100/50 dark:active:bg-vigor-900/50 dark:hover:bg-vigor-900"
             id="github-button"
             role="button"
             target="_blank"
             tabindex="0"
-          >
+        >
             <p aria-hidden="true" class="material-symbols-outlined">deployed_code</p>
             <p class="font-bold underline decoration-2 underline-offset-2">
               GitHub
             </p>
-          </a>
+        </a>
     
         </div>
-        <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right underline-offset-2 decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color underline text-sm opacity-70 w-fit self-end" aria-label="GitHub repository for this website">
+    
+    <a href="https://github.com/camdotod/portfolio-site" class="mt-10 text-right underline-offset-2 decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color underline text-sm opacity-70 w-fit self-end" aria-label="GitHub repository for this website">
     Designed & Developed by Camryn O'Donnell
     </a>
 `;

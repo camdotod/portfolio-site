@@ -72,7 +72,7 @@ export const projects = [
     imgstyle: "object-cover",
 
     summary:
-      "Developed a number of ODM kitchen products for Canadian Tire’s owned brands Paderno and Vida by Paderno.",
+      "Developed a number of <abbr title='Original Design Manufacturer'>ODM</abbr> kitchen products for Canadian Tire’s owned brands Paderno and Vida by Paderno.",
 
     alt: [
       "Photo of a shiny black hand mixer with stainless steel accents, sitting upright on a white surface. The handle is facing towards the viewer so you can see the speed dial and turbo button. The edges of the turbo button have an orange accent colour. The handle is flat on top with rounded edges and a curved underside and the plastic on the inside of the opening has more of a matte finish. Spiral-shaped dough hooks are attached to the mixer. To the left is a clear plastic storage container that the hand mixer would fit on top of and two sets of attachments: one whisk, and two egg-beaters.",

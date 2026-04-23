@@ -339,9 +339,9 @@ function watchTiles() {
         );
       }
 
-      modalDesc.innerText = clickedProject.summary;
+      modalDesc.innerHTML = clickedProject.summary;
       modalImgCapts.forEach((caption, i) => {
-        caption.innerText = clickedProject.caption[i];
+        caption.innerHTML = clickedProject.caption[i];
       });
     });
   });

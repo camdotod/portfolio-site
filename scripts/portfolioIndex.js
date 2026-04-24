@@ -143,7 +143,7 @@ const setSort = (sort) => {
 
     for (let i = 0; i < categoryNames.length; i++) {
       projectList.innerHTML += `
-      <h3 class="flex lg:col-span-2 border-fg-color/20 py-4 border-t ${i > 0 ? "mt-6" : ""}">
+      <div class="flex lg:col-span-2 border-fg-color/20 py-4 border-t ${i > 0 ? "mt-6" : ""}">
         <h3 id="${categoryNames[i].name.replace(" ", "-")}" class="text-${categoryNames[i].color}-600 dark:text-${categoryNames[i].color}-100 bg-${categoryNames[i].color}-100 dark:bg-${categoryNames[i].color}-900 block w-fit rounded-lg px-1.5 py-[3px] font-display ">
           ${categoryNames[i].name}
         </h3>

@@ -1,15 +1,5 @@
 import { projects } from "./projects.js";
 
-// Get page URL
-// const baseUrl = new URL(window.location.href);
-// console.log(baseUrl);
-
-// const basePathname = baseUrl.pathname;
-// console.log(basePathname);
-
-// let state = { modal: false };
-
-// history.replaceState(state, "", baseUrl);
 const projectIndex = document.querySelector("main");
 const dateSortBtn = document.getElementById("date-sort");
 const nameSortBtn = document.getElementById("name-sort");
@@ -46,6 +36,12 @@ const toggleClass = (element, class0, class1) => {
   element.classList.toggle(class1);
 };
 
+/**
+ * Replace a class with another class
+ * @param {HTMLElement} element - Element to edit
+ * @param {string} class0 - Class being removed
+ * @param {string} class1 - Class being added
+ */
 const replaceClass = (element, class0, class1) => {
   element.classList.remove(class0);
   element.classList.add(class1);
@@ -67,15 +63,12 @@ const popCategory = (sort) => {
 
 const addProject = (project, index) => {
   let tagList = project.tags.split(",");
-  console.log(tagList);
 
   let tagListHTML = "";
 
   tagList.forEach((tag) => {
     tagListHTML += `<p class="inline pr-1.5 mr-1.5">${tag}</p>`;
   });
-
-  console.log(tagListHTML);
 
   projectList.innerHTML += `
     <article id="portfolio-item-${index}" class="group flex flex-col-reverse border hover:bg-fg-color/5 active:bg-fg-color/5 overflow-hidden hover:border-double hover:border-4 active:border-double active:border-3 font-display cursor-pointer aspect-3/2" tabindex="0" data-name="${project.name}" role='link' aria-labelledby='project-name${index}'">
@@ -218,18 +211,11 @@ dateSortLabel.addEventListener("keydown", (e) =>
 // Modal
 var modalIsOpen = false;
 
-const observer = new MutationObserver(() => {
-  console.log("A mutation has been observed..");
-  watchTiles();
-});
-
-observer.observe(projectList, { subtree: true, childList: true });
-
+// Modal Event Listeners
 modalCloseButton.addEventListener("click", (event) => {
   closeModal();
 });
 
-// Close modal using escape key
 document.addEventListener("keydown", (event) => {
   if (event.code === "Escape" && modalIsOpen) {
     closeModal();
@@ -242,6 +228,13 @@ modal.addEventListener("click", (event) => {
   }
 });
 
+const observer = new MutationObserver(() => {
+  watchTiles();
+});
+
+observer.observe(projectList, { subtree: true, childList: true });
+
+// Modal Interactions -----------
 // Sync radio buttons with scroll
 const captRadioBtns = modal.querySelectorAll("input");
 
@@ -255,7 +248,6 @@ const observeCarousel = (caption, i) => {
 
   const xObserver = new IntersectionObserver((entries) => {
     isVisible = entries[0].isIntersecting;
-    console.log("Intersection observer says", isVisible);
     captRadioBtns[i].checked = isVisible;
   }, xOptions);
 
@@ -264,9 +256,11 @@ const observeCarousel = (caption, i) => {
 
 carouselSlides.forEach(observeCarousel);
 
+// Open/Close Modal Functions 
 function closeModal() {
-  modalIsOpen = false;
   console.log("Closing modal...");
+  
+  modalIsOpen = false;
   document.title = "Portfolio - Camryn O'Donnell";
   projectIndex.setAttribute("tabindex", 0);
 
@@ -280,10 +274,6 @@ function closeModal() {
 
   replaceClass(vidFrame, "flex", "hidden");
 
-  // Reset URL
-  // state.modal = false;
-  // history.replaceState(state, "", baseUrl);
-  // Close modal
   toggleClass(modal, "hidden", "flex");
 }
 
@@ -302,20 +292,19 @@ function watchTiles() {
   });
 
   function createModal(tile) {
+    // Get project name
     let projectName = tile.getAttribute("data-name");
     console.log("Clicked " + projectName);
 
+    // Set title & isolate modal
     document.title = `Portfolio - ${projectName}`;
     projectIndex.setAttribute("tabindex", -1);
 
-    // state.modal = true;
-    // let newUrl = baseUrl + "/" + projectName.replace(" ", "_");
-    // history.pushState(state, "", newUrl);
+    // Get project
     let clickedProject = projects.filter((prj) => {
       return prj.name === projectName;
     })[0];
 
-    // Refactor this by adding a "case study link property to the portfolio objects"
     if (projectName == "LiUNA Dues Dashboard") {
       replaceClass(caseStudyLink, "hidden", "flex");
     } else {
@@ -327,7 +316,6 @@ function watchTiles() {
 
     modalTags.innerHTML = `<span class="sr-only">Tags:</span>`;
     let tagList = clickedProject.tags.split(",");
-    console.log(tagList);
     tagList.forEach((tag) => {
       modalTags.innerHTML += `<p class="inline pr-1.5 mr-1.5">${tag}</p>`;
     });
@@ -344,7 +332,6 @@ function watchTiles() {
     });
 
     if (clickedProject.video) {
-      console.log(modalImages[2].parentNode);
       replaceClass(modalImages[2], "flex", "hidden");
       replaceClass(vidFrame, "hidden", "flex");
 
@@ -356,20 +343,10 @@ function watchTiles() {
       caption.innerHTML = clickedProject.caption[i];
     });
 
+    // Show modal
     toggleClass(modal, "hidden", "flex");
     modalIsOpen = true;
 
     modal.focus();
   }
 }
-// window.addEventListener("popstate", (event) => {
-//   console.log("popstate triggered");
-//   if (event.state) {
-//     console.log(event.state);
-//     if (event.state.modal == false) {
-//       toggleClass(modal, "hidden", "flex");
-//     }
-//   } else {
-//     console.log("skipped");
-//   }
-// });

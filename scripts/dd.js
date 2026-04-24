@@ -48,12 +48,6 @@ const FCBtns = document.querySelectorAll(".fc-btn");
  * @param {Element} details - figure
  */
 function resizeViewer(element, btn, details) {
-  // console.log("The element being resized is:", element);
-  // console.log("This should be the figure element", details);
-  // console.log(btn.offsetHeight, details.offsetHeight);
-  console.log(element.id, element.style.height);
-  console.log(btn.offsetHeight);
-  console.log(details.offsetHeight);
   element.style.height = `${btn.offsetHeight + details.offsetHeight}px`;
 }
 
@@ -96,8 +90,6 @@ function watchTabs(tabs, btns) {
 
   // Second Tab
   tabs[1].addEventListener("click", (event) => {
-    console.log(event.target);
-
     btns[1].setAttribute("tabIndex", -1);
 
     tabs[0].open = false;

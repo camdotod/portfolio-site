@@ -1,2 +1,3 @@
 #Ignore Archive Folder
 site-version-archive/
+node_modules/

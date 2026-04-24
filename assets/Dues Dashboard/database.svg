@@ -1,0 +1,72 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="80" cy="80" r="80" fill="url(#pattern0_2437_1093)"/>
+<circle cx="80" cy="80" r="80" fill="#496631" fill-opacity="0.85" style="mix-blend-mode:color-burn"/>
+<rect x="30" y="77" width="101" height="15" fill="url(#pattern1_2437_1093)"/>
+<path d="M113 135C113 135.552 112.552 136 112 136H50C49.4477 136 49 135.552 49 135V129C49 128.448 49.4477 128 50 128H68C68.5523 128 69 127.552 69 127V121C69 120.448 68.5523 120 68 120H24C23.4477 120 23 119.552 23 119V38C23 37.4477 23.4477 37 24 37H137C137.552 37 138 37.4477 138 38V119C138 119.552 137.552 120 137 120H94C93.4477 120 93 120.448 93 121V127C93 127.552 93.4477 128 94 128H112C112.552 128 113 128.448 113 129V135Z" fill="white"/>
+<path d="M112 136V134.5H50V136V137.5H112V136ZM49 135H50.5V129H49H47.5V135H49ZM50 128V129.5H68V128V126.5H50V128ZM69 127H70.5V121H69H67.5V127H69ZM68 120V118.5H24V120V121.5H68V120ZM23 119H24.5V38H23H21.5V119H23ZM24 37V38.5H137V37V35.5H24V37ZM138 38H136.5V119H138H139.5V38H138ZM137 120V118.5H94V120V121.5H137V120ZM93 121H91.5V127H93H94.5V121H93ZM94 128V129.5H112V128V126.5H94V128ZM113 129H111.5V135H113H114.5V129H113ZM112 128V129.5C111.724 129.5 111.5 129.276 111.5 129H113H114.5C114.5 127.619 113.381 126.5 112 126.5V128ZM93 127H91.5C91.5 128.381 92.6193 129.5 94 129.5V128V126.5C94.2761 126.5 94.5 126.724 94.5 127H93ZM94 120V118.5C92.6193 118.5 91.5 119.619 91.5 121H93H94.5C94.5 121.276 94.2761 121.5 94 121.5V120ZM138 119H136.5C136.5 118.724 136.724 118.5 137 118.5V120V121.5C138.381 121.5 139.5 120.381 139.5 119H138ZM137 37V38.5C136.724 38.5 136.5 38.2761 136.5 38H138H139.5C139.5 36.6193 138.381 35.5 137 35.5V37ZM23 38H24.5C24.5 38.2761 24.2761 38.5 24 38.5V37V35.5C22.6193 35.5 21.5 36.6193 21.5 38H23ZM24 120V118.5C24.2761 118.5 24.5 118.724 24.5 119H23H21.5C21.5 120.381 22.6193 121.5 24 121.5V120ZM69 121H70.5C70.5 119.619 69.3807 118.5 68 118.5V120V121.5C67.7239 121.5 67.5 121.276 67.5 121H69ZM68 128V129.5C69.3807 129.5 70.5 128.381 70.5 127H69H67.5C67.5 126.724 67.7239 126.5 68 126.5V128ZM49 129H50.5C50.5 129.276 50.2761 129.5 50 129.5V128V126.5C48.6193 126.5 47.5 127.619 47.5 129H49ZM50 136V134.5C50.2761 134.5 50.5 134.724 50.5 135H49H47.5C47.5 136.381 48.6193 137.5 50 137.5V136ZM112 136V137.5C113.381 137.5 114.5 136.381 114.5 135H113H111.5C111.5 134.724 111.724 134.5 112 134.5V136Z" fill="black"/>
+<rect x="29" y="43" width="103" height="71" stroke="black" stroke-width="2"/>
+<path d="M52 60L52 114" stroke="black" stroke-width="2"/>
+<path d="M94 60L94 113" stroke="black" stroke-width="2"/>
+<path d="M117 60V114" stroke="black" stroke-width="2"/>
+<path d="M131 76H30" stroke="black" stroke-width="2"/>
+<path d="M129 49L28 49" stroke="black" stroke-width="2"/>
+<path d="M131 92H30" stroke="black" stroke-width="2"/>
+<path d="M131 108H30" stroke="black" stroke-width="2"/>
+<rect x="30" y="48" width="21" height="12" fill="black"/>
+<rect x="53" y="48" width="40" height="12" fill="black"/>
+<rect x="95" y="48" width="21" height="12" fill="black"/>
+<rect x="118" y="48" width="15" height="12" fill="black"/>
+<path d="M34 68H47" stroke="black" stroke-width="2"/>
+<path d="M34 84H47" stroke="black" stroke-width="2"/>
+<path d="M34 100H47" stroke="black" stroke-width="2"/>
+<path d="M57 68H88" stroke="black" stroke-width="2"/>
+<path d="M57 84H88" stroke="black" stroke-width="2"/>
+<path d="M57 100H88" stroke="black" stroke-width="2"/>
+<path d="M110 81L111.067 102.905L115.333 97.4286L118.533 104L122.8 101.81L119.6 95.2381L126 94.1429L110 81Z" fill="white" stroke="black" stroke-width="3"/>
+<path d="M69 120H93" stroke="black" stroke-width="3"/>
+<path d="M69 128H93" stroke="black" stroke-width="3"/>
+<defs>
+<pattern id="pattern0_2437_1093" patternUnits="userSpaceOnUse" patternTransform="matrix(16 0 0 32 72 0)" preserveAspectRatio="none" viewBox="0 0 16 32" width="1" height="1">
+<use xlink:href="#pattern0_2437_1093_inner" transform="translate(-16 0)"/>
+<g id="pattern0_2437_1093_inner">
+<rect width="1" height="1" fill="#D9D9D9"/>
+<rect y="4" width="1" height="1" fill="#D9D9D9"/>
+<rect y="8" width="1" height="1" fill="#D9D9D9"/>
+<rect y="12" width="2" height="2" fill="#D9D9D9"/>
+<rect x="4" width="1" height="1" fill="#D9D9D9"/>
+<rect x="4" y="4" width="1" height="1" fill="#D9D9D9"/>
+<rect x="4" y="8" width="2" height="2" fill="#D9D9D9"/>
+<rect x="4" y="12" width="1" height="1" fill="#D9D9D9"/>
+<rect x="8" width="1" height="1" fill="#D9D9D9"/>
+<rect x="8" y="4" width="2" height="2" fill="#D9D9D9"/>
+<rect x="8" y="8" width="1" height="1" fill="#D9D9D9"/>
+<rect x="8" y="12" width="1" height="1" fill="#D9D9D9"/>
+<rect x="12" width="2" height="2" fill="#D9D9D9"/>
+<rect x="12" y="4" width="1" height="1" fill="#D9D9D9"/>
+<rect x="12" y="8" width="1" height="1" fill="#D9D9D9"/>
+<rect x="12" y="12" width="1" height="1" fill="#D9D9D9"/>
+</g>
+<use xlink:href="#pattern0_2437_1093_inner" transform="translate(-8 16)"/>
+<use xlink:href="#pattern0_2437_1093_inner" transform="translate(8 16)"/>
+</pattern><pattern id="pattern1_2437_1093" patternUnits="userSpaceOnUse" patternTransform="matrix(11.3137 0 0 11.3137 69.1855 73.1863)" preserveAspectRatio="none" viewBox="-0.00074482 0 11.3137 11.3137" width="1" height="1">
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(-22.6274 -22.6274)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(-11.3137 -22.6274)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(0 -22.6274)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(-22.6274 -11.3137)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(-11.3137 -11.3137)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(0 -11.3137)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(-22.6274 0)"/>
+<use xlink:href="#pattern1_2437_1093_inner" transform="translate(-11.3137 0)"/>
+<g id="pattern1_2437_1093_inner">
+<g clip-path="url(#clip0_2437_1093)">
+<rect x="11.3137" width="1" height="16" transform="rotate(45 11.3137 0)" fill="#D9D9D9"/>
+<rect x="14.1418" y="2.82861" width="1" height="16" transform="rotate(45 14.1418 2.82861)" fill="#D9D9D9"/>
+<rect x="16.97" y="5.65674" width="1" height="16" transform="rotate(45 16.97 5.65674)" fill="#D9D9D9"/>
+<rect x="19.7981" y="8.48535" width="1" height="16" transform="rotate(45 19.7981 8.48535)" fill="#D9D9D9"/>
+</g>
+</g>
+</pattern><clipPath id="clip0_2437_1093">
+<rect width="16" height="16" fill="white" transform="translate(11.3137) rotate(45)"/>
+</clipPath>
+</defs>
+</svg>

@@ -3,51 +3,77 @@ import { projects } from "./projects.js";
 
 //Testing
 //Get container to insert elements into
-const projectContainer = document.getElementById("portfolio-content");
+const projectContainer = document.getElementsByClassName("portfolio-item");
+//console.log(projectContainer[0].id);
+const pageName = projectContainer[0].id.replaceAll("_", " ");
 
-//Create Project Elements
-projects.forEach((project) => {
-   const tags = project.tags.split(",");
-   const id = project.name.toLowerCase().replaceAll(" ", "-");
+const projectNames = projects.map((project) => project.name);
+const projectIndex = projectNames.indexOf(pageName);
+const projectTags = projects[projectIndex].tags.split(",");
 
-   projectContainer.innerHTML += `
+/*const portfolioItem = document.getElementsByClassName("portfolio-item");
+const details = document.getElementsByClassName("details");
+const accBtn = document.getElementsByClassName("portfolio-item--accordion-button");
+const modal = document.getElementById("modal");
+const modalButton = document.getElementById("modal-button");
 
-   <details id="${id}" class="portfolio-item">
+for (let i = 0; i < portfolioItem.length; i++) {
+   portfolioItem[i].addEventListener("toggle", (event) => {
+      if (portfolioItem[i].open) {
+         accBtn[i].classList.add("portfolio-item--accordion-button_active");
+         portfolioItem[i].ariaLabel = "Expanded";
+         toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
+      }
+
+      else {
+         toggleClass(details[i], 'portfolio-item--details', 'portfolio-item--details_collapsed');
+         accBtn[i].classList.remove("portfolio-item--accordion-button_active");
+         portfolioItem[i].ariaLabel = "Collapsed";
+      }
+
+   });
+}*/
+
+/**
+ * Create main layout and container for the page
+ * @returns HTML Elements
+ */
+function createProject() {
+  //console.log("Making the Project...");
+  projectContainer[0].innerHTML += `
+<div id="${projectContainer[0].id}" class="w-full flex flex-col gap-10">
 
    <!--Project Title & Info-->
-   <summary id="${id}_summary" class="portfolio-item--header">
-      <h3 id="${id}_title" class="portfolio-item--name">${project.name}<span class="sr-only">.</span>
-      </h3>
-      <p id="${id}_date" class="portfolio-item--date"><span class="sr-only">Date: </span>${project.date}<span class="sr-only">.</span>
-      </p>
-      <div id="${id}_tags" class="portfolio-item--taglist">
-         <span class="sr-only">Tags:</span>
-         <p class="portfolio-item--tag">${tags[0]}</p>
-         <span class="sr-only">,</span>
-         <p class="portfolio-item--tag">${tags[1]}</p>
+   <div class="w-full h-fit gap-10 md:gap-20 md:flex-row flex flex-col-reverse">
+      <div id="${projectContainer[0].id}_details"
+         class="w-full md:w-1/6 flex flex-col justify-start items-start gap-6 md:gap-10">
+         <div class="self-stretch flex-col md:flex-col justify-start items-start gap-4 md:gap-6 flex">
+            <h1 id="${projectContainer.id}_title" class="text-5xl">${projects[projectIndex].name}<span
+                  class="sr-only">.</span>
+            </h1>
+            <div id="${projectContainer[0].id}_tags" class="flex flex-col justify-start items-start gap-4">
+               <span class="sr-only">Tags:</span>
+               <p class="w-fit tag p-2 text-xl border border-solid">${projectTags[0]}</p>
+               <span class="sr-only">,</span>
+               ${projectTags[1] ? `<p class="w-fit text-xl tag p-2 border">${projectTags[1]}</p>` : ""}
+            </div>
+            <p id="${projectContainer[0].id}_date" class="opacity-70"><span class="sr-only">Date:
+               </span>${projects[projectIndex].date}<span class="sr-only">.</span>
+            </p>
+         </div>
+         <div id="${projectContainer[0].id}_objective" class="flex flex-col justify-start items-start gap-4">
+            <h2 class="font-bold text-xl">Objective</h2>
+            <p class="">${projects[projectIndex].objective}</p>
+         </div>
+         <div class="flex flex-col justify-start items-start gap-4">
+            <h2 class="font-bold text-xl">Tools</h2>
+            <p class="">${projects[projectIndex].tools}</p>
+         </div>
       </div>
-      <span id="${id}_toggle-button" class="material-icons md-36 portfolio-item--accordion-button"
-         aria-hidden="true">expand_more</span>
-   </summary>
-
-   <!--Content Block--------->
-   <div class="details portfolio-item--details_collapsed">
-
       <!--Hero Image-->
-      <img id="${id}_hero" class="portfolio-item--image_hero" src="${project.heroimg}" alt="${project.heroalt}">
-
-      <!--Objective & Summary-->
-
-      <div id="${id}_introduction" class="portfolio-item--container_rows">
-         <div id="${id}_objective" class="portfolio-item--description_objective">
-            <h4 class="figure--heading heading3">Objective</h4>
-            <p class="figure--text objective-desc">${project.objective}</p>
-         </div>
-         <div id="${id}_summary" class="portfolio-item--description_summary">
-            <h4 class="figure--heading heading3">Summary</h4>
-            <p class="figure--text objective-desc summary-desc">${project.summary}</p>
-         </div>
-      </div>
+      <img id="${projectContainer[0].id}_hero" class="flex-1 min-w-0 self-stretch object-cover"
+         src="${projects[projectIndex].heroimg}" alt="${projects[projectIndex].heroalt}">
+   </div>
 
       <!--Panels-->
 
@@ -81,13 +107,20 @@ projects.forEach((project) => {
             </figcaption>
          </figure>
       </div>
-      <figure id="${id}_panel-5" class="portfolio-item--figure figure">
-      </figure>
    </div>
-</details>
+</div>
    `;
+}
 
-   const panel5 = document.getElementById(`${id}_panel-5`);
+/**<!--Next/Previous Page------>
+   <div class="flex justify-between">
+      <a href="" class="underline" tabindex="0" ><< Previous Project</a>
+      <a href="" class="underline" tabindex="0">Next Project >></a>
+   </div> */
+
+function createPanel(index) {
+  const panelContainer = document.getElementById("process");
+  //console.log("Creating Panel");
 
    if (project.panel5media === "video") {
       panel5.innerHTML += `

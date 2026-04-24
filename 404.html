@@ -1,53 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="">
+  <head>
+    <!--Meta Tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
 
-<head>
-   <!--Meta Tags-->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="color-scheme" content="dark light">
+    <!--Site Info-->
+    <title>Camryn O'Donnell</title>
+    <link rel="icon" type="image/x-icon" href="CO-logo.png" />
 
-   <!--Site Info-->
-   <title>Camryn O'Donnell - Portfolio</title>
-   <link rel="icon" type="image/x-icon" href="camod-logo-white@2x.png">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/styles/main.css" />
 
-   <!--Stylesheet-->
-   <link rel="stylesheet" href="/styles/styles.css">
+    <!--Material Design Symbols-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,arrow_right_alt,chevron_line_up,deployed_code,menu,work&display=block"
+      rel="stylesheet"
+    />
 
-   <!--Material Design Icons-->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
-
-   <!--IBM Plex Sans-->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link
+    <!--IBM Plex Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet">
-</head>
+      rel="stylesheet"
+    />
+    <!--Public Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="body">
-   <header id="header" class="body--section_header section">
-      <nav id="nav-bar" class="navigation">
-         <a id="link-about-me" class="section--link_with-icon_lg" href="index.html" tabindex="0">
-            <span id="camod-logo"></span>
-            <p id="camod-name" class="section--heading_lg">Camryn O'Donnell</p>
-         </a>
-         <a id="link-portfolio" class="section--link section--heading_sm" href="index.html#portfolio-anchor"
-            tabindex="0">portfolio</a>
-         <a id="link-contact" class="section--link section--heading_sm" href="index.html#contact" tabindex="0">contact</a>
-      </nav>
-   </header>
-   <main>
-      <section id="error-message" class="body--section_error">
-         <h2 class="section--heading_xl">404</h2>
-         <p class="section--heading_md">Sorry! Looks like that page wasn't found.</p>
+  <body class="body">
+    <header id="header">
+      <noscript>Please enable JavaScript for the full site experience</noscript>
+    </header>
+    <main>
+      <section
+        id="error-message"
+        class="flex flex-col gap-10 px-6 py-10 md:px-60"
+      >
+        <h1 class="font-display flex flex-col gap-4 text-6xl">
+          404
+          <span class="font-display text-fg-color/80 -mt-4 text-2xl font-light"
+            >Not Found</span
+          >
+        </h1>
+        <p class="opacity-80">Sorry! We couldn't find that page!</p>
+        <a
+          href="/index.html"
+          class="decoration-fg-color/50 font-display hover:decoration-fg-color active:decoration-fg-color before:content-larrow after:animate-point-right w-fit font-medium underline underline-offset-2"
+          tabindex="0"
+          >Return to Home Page</a
+        >
       </section>
-   </main>
-   <footer class="body--section_footer">
-      <button id="toggle-theme" aria-label="Toggle Light/Dark Theme" class="toggle-button" tabindex="0"></button>
-      <p class="section--paragraph">Designed and Developed by Camryn O'Donnell</p>
-   </footer>
-</body>
-<script src="/scripts/script.js"></script>
+    </main>
+    <footer id="footer">
+      <noscript>Your browser does not support JavaScript</noscript>
+    </footer>
+  </body>
+  <script src="/scripts/script.js"></script>
 </html>

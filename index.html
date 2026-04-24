@@ -1,10 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="">
    <head>
       <!--Meta Tags-->
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="color-scheme" content="dark light" />
+  <head>
+    <!--Meta Tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
 
       <!--Site Info-->
       <title>Camryn O'Donnell - Portfolio</title>
@@ -12,19 +17,34 @@
          name="description"
          content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design." />
       <meta name="author" content="Camryn O'Donnell" />
+    <!--Site Info-->
+    <title>Camryn O'Donnell</title>
+    <meta
+      name="description"
+      content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design."
+    />
+    <meta name="author" content="Camryn O'Donnell" />
 
       <link
          rel="icon"
          type="image/x-icon"
          href="/assets/SVG/camod-logo-black.svg" />
+    <link rel="icon" type="image/x-icon" href="/assets/CO-logo.png" />
 
       <!--Stylesheet-->
       <link rel="stylesheet" href="/styles/styles.css" />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/styles/main.css" />
 
       <!--Material Design Icons-->
       <link
          href="https://fonts.googleapis.com/icon?family=Material+Icons"
          rel="stylesheet" />
+    <!--Material Design Symbols-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,arrow_right_alt,chevron_line_up,deployed_code,menu,work&display=block"
+      rel="stylesheet"
+    />
 
       <!--IBM Plex Sans-->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,6 +53,30 @@
          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
          rel="stylesheet" />
    </head>
+    <!--IBM Plex Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Public Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
    <body class="body">
       <header id="header" class="body--section_header">
@@ -184,6 +228,81 @@
                      Download<span class="sr-only">Portfolio</span>
                   </a>
                </div>
+  <body class="bg-bg-color text-fg-color flex flex-col bg-white font-sans">
+    <header id="header">
+      <noscript>Your browser does not support JavaScript</noscript>
+    </header>
+    <main class="flex flex-col gap-10">
+      <div id="introduction" class="flex flex-col gap-10 px-6 md:px-60">
+        <h1 class="font-display font-medium md:text-xl">Camryn O'Donnell</h1>
+        <div id="titles" class="flex flex-col gap-2">
+          <p
+            class="text-calm-600 dark:text-calm-400 font-display text-xl underline decoration-wavy decoration-1 underline-offset-4"
+          >
+            multidisciplinary designer
+          </p>
+          <p class="text-sm">
+            ux/ui design | design research | industrial design | graphic design
+          </p>
+        </div>
+      </div>
+      <section
+        id="recent-projects"
+        class="border-fg-color/50 flex flex-col border-b lg:min-h-1/2"
+      >
+        <div
+          id="featured-projects-banner"
+          class="bg-hatch flex items-center justify-between self-stretch px-6 md:px-60"
+        >
+          <h2 class="font-display text-xl font-medium">Featured Projects:</h2>
+          <a
+            id="see-more-button"
+            href="portfolio.html"
+            class="-mr-2 flex items-center"
+          >
+            <p
+              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color after:content-rarrow px-2 py-4 font-medium underline underline-offset-2"
+            >
+              See more
+            </p>
+          </a>
+        </div>
+        <div
+          id="recent-projects-carousel"
+          class="carousel flex snap-x snap-mandatory self-stretch overflow-x-scroll overflow-y-hidden lg:flex-1 lg:flex-col lg:overflow-auto"
+        >
+          <a
+            href="portfolio/Dues_Dashboard.html"
+            id="project-1"
+            class="group hover:bg-fg-color/5 focus-visible:bg-fg-color/5 active:bg-fg-color/5 flex w-full shrink-0 grow snap-center flex-col-reverse self-stretch lg:flex-row"
+            aria-labelledby="project-title-1"
+            tabindex="0"
+          >
+            <div
+              class="border-fg-color/50 flex flex-col justify-center gap-4 self-stretch border-t px-6 pt-5 pb-6 md:px-60 lg:flex-1 lg:pr-10 xl:gap-6"
+            >
+              <h3
+                id="project-title-1"
+                class="font-display text-3xl font-light xl:text-4xl"
+              >
+                Reducing Member Complaints With A Simple UI Fix
+              </h3>
+              <p
+                id="description-1"
+                class="text-fg-color/60 line-clamp-3 max-w-xl text-sm xl:text-base"
+              >
+                When working within a large organization, it can feel impossible
+                to solve day-to-day issues because they’re often tied up in the
+                foundational systems that keep it running. But by listening to
+                the people these issues affect and understanding how they work
+                together, we can sometimes find the solution in fixing a simple
+                miscommunication.
+              </p>
+              <p
+                class="text-grit-600 dark:text-grit-400 bg-grit-100 dark:bg-grit-900 block w-fit rounded-lg px-1.5 py-[3px] text-sm"
+              >
+                UX/UI Design
+              </p>
             </div>
          </section>
          <!--Contact-->
@@ -221,6 +340,17 @@
                      <span class="section--heading_md blue">LinkedIn</span>
                   </a>
                </div>
+            <div class="relative flex self-stretch lg:w-1/2">
+              <img
+                src="assets/Dues Dashboard/DD-img_0.png"
+                alt="Desktop and mobile versions of the dues dashboard screen showing members' dues payment history. The screens are overlapped on top of a green background."
+                class="aspect-square w-full object-cover object-[75%_50%] group-hover:opacity-90 group-focus-visible:opacity-90 md:aspect-auto"
+              />
+              <p
+                class="bg-fg-color text-bg-color font-display absolute bottom-0 left-0 px-6 py-1 font-medium lg:top-0 lg:bottom-auto"
+              >
+                Case Study
+              </p>
             </div>
             <div class="section--container_row_space-between">
                <p class="section--heading_sm">You can also find me on:</p>
@@ -251,4 +381,35 @@
    </body>
 
    <script src="/scripts/script.js"></script>
+          </a>
+        </div>
+      </section>
+      <div id="design-process" class="flex flex-col gap-10 px-6 py-20 md:px-60">
+        <h2 class="font-display text-xl italic">About the design process</h2>
+        <div
+          class="flex flex-col gap-8 xl:flex-row xl:items-end xl:justify-between"
+        >
+          <p class="max-w-xl opacity-80">
+            The design process is at the foundation of all of my work, no matter
+            what the end product looks like.<br aria-hidden="true" /><br
+              aria-hidden="true"
+            />It’s a way of thinking about problems as a whole, with
+            consideration for the people and systems surrounding them. It
+            involves building relationships with people, looking at things from
+            different perspectives, and allowing yourself to question what is
+            possible. <br aria-hidden="true" /><br aria-hidden="true" />To me,
+            the practice of design is a commitment to creating things that truly
+            address the needs of people.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <noscript
+        >For the optimal site experience, please enable Javascript</noscript
+      >
+    </footer>
+  </body>
+  <script src="/scripts/script.js"></script>
 </html>
+

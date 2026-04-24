@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Meta Tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!--Site Info-->
+    <title>Portfolio - Camryn O'Donnell</title>
+    <meta
+      name="description"
+      content="Camryn O'Donnell is a multidisciplinary designer with experience in design research, UX/UI design, and product design."
+    />
+    <meta name="author" content="Camryn O'Donnell" />
+
+    <link rel="icon" type="image/x-icon" href="/assets/CO-logo.png" />
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/styles/main.css" />
+
+    <!--Material Design Symbols-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&icon_names=alternate_email,chevron_line_up,close,collapse_content,deployed_code,expand_content,menu,open_in_full,open_in_new,work&display=block"
+      rel="stylesheet"
+    />
+
+    <!--IBM Plex Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Public Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Archivo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="text-fg-color bg-bg-color font-sans">
+    <header>
+      <noscript
+        >JavaScript must be enabled for this content to display</noscript
+      >
+    </header>
+
+    <!--Projects Header-->
+    <h1
+      id="page-title"
+      class="font-display px-6 font-medium md:px-60 md:text-xl"
+    >
+      Portfolio
+    </h1>
+
+    <!--Projects-->
+    <main class="flex h-fit flex-col items-start gap-10">
+      <section
+        id="portfolio-index"
+        class="flex w-full flex-col gap-6 px-6 py-10 md:px-60 lg:flex-row-reverse lg:gap-10"
+        aria-label="All Projects"
+      >
+        <fieldset
+          id="filters"
+          class="border-fg-color/50 divide-fg-color/50 font-display relative mt-8 flex h-fit w-full grow-0 divide-x border lg:w-fit lg:flex-col lg:divide-x-0 lg:divide-y"
+          role="radiogroup"
+        >
+          <legend
+            class="font-display absolute -top-8 border-0 text-sm font-medium"
+          >
+            Sort By:
+          </legend>
+          <div
+            class="has-checked:bg-calm-100 hover:bg-calm-100/50 dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 text-fg-color/80 has-checked:text-fg-color active:text-fg-color active:bg-fg-color/5 flex flex-1 justify-center px-6 hover:underline"
+          >
+            <input
+              id="date-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="date-sort"
+              id="date-sort-label"
+              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+              tabindex="0"
+            >
+              Date
+            </label>
+          </div>
+          <div
+            class="has-checked:bg-calm-100 text-fg-color/80 hover:bg-calm-100/50 has-checked:text-fg-color active:text-fg-color dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 active:bg-fg-color/5 flex flex-1 justify-center px-6 hover:underline"
+          >
+            <input
+              id="tags-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="tags-sort"
+              id="tags-sort-label"
+              tabindex="0"
+              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+            >
+              Tags
+            </label>
+          </div>
+          <div
+            class="has-checked:bg-calm-100 text-fg-color/80 hover:bg-calm-100/50 has-checked:text-fg-color active:text-fg-color dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 active:bg-fg-color/5 flex flex-1 justify-center px-6 hover:underline"
+          >
+            <input
+              id="name-sort"
+              type="radio"
+              name="sort"
+              class="peer hidden"
+            />
+            <label
+              for="name-sort"
+              id="name-sort-label"
+              tabindex="0"
+              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+            >
+              Name
+            </label>
+          </div>
+        </fieldset>
+        <section
+          id="project-list"
+          class="flex w-full flex-col gap-4 lg:pt-8 xl:grid xl:grid-cols-2 xl:gap-y-6"
+        >
+          <noscript>This content requires JavaScript to be enabled.</noscript>
+        </section>
+      </section>
+    </main>
+    <!-- Modal -->
+    <article
+      id="modal-overlay"
+      class="bg-hatch-light dark:bg-hatch-dark bg-bg-color/50 fixed top-0 left-0 z-20 hidden h-lvh w-lvw lg:px-40 lg:py-8"
+      tabindex="-1"
+      aria-labelledby="modal-title"
+      aria-modal="true"
+    >
+      <div
+        id="project-modal"
+        class="bg-bg-color divide-fg-color/80 flex h-svh w-svw touch-none flex-col divide-y overflow-hidden shadow-2xl lg:h-auto lg:w-full lg:touch-auto lg:self-stretch lg:border"
+      >
+        <!-- Project Header-->
+        <div
+          class="font-display flex shrink-0 items-center self-stretch border-b-3 border-double px-6 pt-8 pb-3 text-2xl lg:pt-4 lg:pb-2"
+        >
+          <!-- Title -->
+          <h2 id="modal-title" class="grow">[Project Name Placeholder]</h2>
+          <!-- Close Button -->
+          <button
+            id="close-button"
+            class="active:bg-fg-color/10 flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-2xl active:opacity-80"
+            aria-label="Close project details"
+            tabindex="0"
+          >
+            <span
+              id="menu-button-icon"
+              class="material-symbols-outlined align-middle"
+              >close</span
+            >
+          </button>
+        </div>
+        <!-- Project Details-->
+        <div
+          id="modal-details"
+          class="divide-fg-color/50 flex items-baseline gap-3 divide-x self-stretch px-6"
+        >
+          <div
+            id="modal-tags"
+            class="divide-fg-color/20 font-display block flex-1 divide-x truncate py-1 text-sm"
+          >
+            Tags
+          </div>
+          <p id="modal-yr" class="font-display text-sm">Date</p>
+        </div>
+
+        <!-- Modal Content -->
+        <div
+          class="flex flex-1 flex-col-reverse self-stretch overflow-hidden xl:flex-row"
+        >
+          <!-- Modal Description -->
+          <section
+            id="modal-description"
+            class="divide-fg-color/30 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden xl:h-auto xl:flex-1"
+          >
+            <!-- Summary -->
+            <p id="modal-desc" class="grow p-6 xl:flex-2 xl:self-stretch">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <!-- Image 1 Desc -->
+            <div
+              id="caption-1"
+              class="hover:bg-fg-color/5 flex min-h-10 flex-col self-stretch xl:gap-1"
+              aria-flowto="project-image-1"
+            >
+              <label
+                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                onClick="window.location='#project-image-1';"
+                role="caption"
+              >
+                <input
+                  type="radio"
+                  name="carousel"
+                  class="peer hidden"
+                  aria-hidden="true"
+                  checked
+                />
+                <p
+                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                >
+                  1.
+                </p>
+                <p
+                  class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </label>
+            </div>
+            <!-- Image 2 Desc -->
+            <div
+              id="caption-2"
+              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:gap-1"
+              aria-flowto="project-image-2"
+            >
+              <label
+                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                onClick="window.location='#project-image-2';"
+                role="caption"
+              >
+                <input
+                  type="radio"
+                  name="carousel"
+                  class="peer hidden"
+                  aria-hidden="true"
+                />
+                <p
+                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                >
+                  2.
+                </p>
+                <p
+                  class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </label>
+            </div>
+            <!-- Image 3 Desc -->
+            <div
+              id="caption-3"
+              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:gap-1"
+              aria-flowto="project-image-3"
+            >
+              <label
+                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                onClick="window.location='#project-image-3';"
+                role="caption"
+              >
+                <input
+                  type="radio"
+                  name="carousel"
+                  class="peer hidden"
+                  aria-hidden="true"
+                />
+                <p
+                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                >
+                  3.
+                </p>
+                <p
+                  class="caption inline text-sm opacity-80 peer-checked:text-base peer-checked:opacity-100 2xl:text-base"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </label>
+            </div>
+            <a
+              id="case-study-link"
+              href="portfolio/Dues_Dashboard.html"
+              class="bg-calm-600 text-bg-color dark:text-fg-color active:bg-calm-600/90 decoration-bg-color/50 dark:decoration-fg-color/50 hover:decoration-bg-color dark:hover:decoration-fg-color font-display flex shrink-0 justify-center self-stretch py-4 underline underline-offset-2"
+            >
+              Read the case study &rarr;
+            </a>
+          </section>
+          <!-- Modal Carousel-->
+          <div
+            id="modal-carousel"
+            class="carousel bg-hatch relative flex flex-1 snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll border xl:flex-3"
+            role="region"
+            aria-label="Gallery"
+          >
+            <div
+              id="project-image-1"
+              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              aria-flowto="caption-2"
+              role="figure"
+              aria-labelledby="caption-1"
+            >
+              <img class="flex-1 self-stretch object-cover" src="" alt="" />
+            </div>
+            <div
+              id="project-image-2"
+              class="flex w-svw shrink-0 snap-start self-stretch overflow-hidden lg:w-full"
+              aria-flowto="caption-3"
+              role="figure"
+              aria-labelledby="caption-2"
+            >
+              <img class="flex-1 self-stretch object-cover" src="" alt="" />
+            </div>
+            <div
+              id="project-image-3"
+              class="flex w-svw shrink-0 snap-start items-center justify-center self-stretch overflow-hidden lg:w-full"
+              role="figure"
+              aria-labelledby="caption-3"
+            >
+              <img class="flex-1 self-stretch object-cover" src="" alt="" />
+              <iframe
+                id="project-video"
+                src=""
+                class="hidden h-full w-full"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <noscript
+        >For optimal site experience, please enable Javascript.</noscript
+      >
+    </footer>
+  </body>
+  <script type="module" src="/scripts/portfolioIndex.js"></script>
+  <script src="/scripts/script.js"></script>
+</html>

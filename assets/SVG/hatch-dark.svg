@@ -1,0 +1,14 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="24" height="24" fill="url(#pattern0_2662_4316)"/>
+<defs>
+<pattern id="pattern0_2662_4316" patternUnits="userSpaceOnUse" patternTransform="matrix(5.98254 0 0 3.42496 9.39843 0)" preserveAspectRatio="none" viewBox="-0.000639372 0 8.19526 4.69173" width="1" height="1">
+<use xlink:href="#pattern0_2662_4316_inner" transform="translate(-4.09763 -2.34586)"/>
+<use xlink:href="#pattern0_2662_4316_inner" transform="translate(4.09763 -2.34586)"/>
+<use xlink:href="#pattern0_2662_4316_inner" transform="translate(-8.19526 0)"/>
+<g id="pattern0_2662_4316_inner">
+<rect x="6.62631" width="1" height="7.65141" transform="rotate(60 6.62631 0)" fill="rgba(13,8,14,0.2)"/>
+</g>
+<use xlink:href="#pattern0_2662_4316_inner" transform="translate(-4.09763 2.34586)"/>
+<use xlink:href="#pattern0_2662_4316_inner" transform="translate(4.09763 2.34586)"/>
+</pattern></defs>
+</svg>

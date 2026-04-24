@@ -1,0 +1,62 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="80" cy="80" r="80" fill="url(#pattern0_2437_1122)"/>
+<circle cx="80" cy="80" r="80" fill="#496631" fill-opacity="0.85" style="mix-blend-mode:color-burn"/>
+<g clip-path="url(#clip0_2437_1122)">
+<mask id="path-18-inside-1_2437_1122" fill="white">
+<rect x="20" y="50" width="120" height="60" rx="1"/>
+</mask>
+<rect x="20" y="50" width="120" height="60" rx="1" fill="white" stroke="black" stroke-width="6" mask="url(#path-18-inside-1_2437_1122)"/>
+<rect x="103" y="59" width="29" height="7" fill="url(#pattern1_2437_1122)" stroke="black" stroke-width="2"/>
+<path d="M70 83H102" stroke="black" stroke-width="2"/>
+<path d="M70 89H102" stroke="black" stroke-width="2"/>
+<path d="M46.2679 70C47.0377 68.6667 48.9623 68.6667 49.7321 70L63.5885 94C64.3583 95.3333 63.396 97 61.8564 97H34.1436C32.604 97 31.6417 95.3333 32.4115 94L46.2679 70Z" fill="black"/>
+<path d="M46.9591 88.7566L46 77H50L49.0994 88.7566H46.9591ZM46.1287 94V90.3319H49.8596V94H46.1287Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_2437_1122">
+<rect width="120" height="60" fill="white" transform="translate(20 50)"/>
+</clipPath>
+<pattern id="pattern0_2437_1122" patternUnits="userSpaceOnUse" patternTransform="matrix(16 0 0 32 72 0)" preserveAspectRatio="none" viewBox="0 0 16 32" width="1" height="1">
+<use xlink:href="#pattern0_2437_1122_inner" transform="translate(-16 0)"/>
+<g id="pattern0_2437_1122_inner">
+<rect width="1" height="1" fill="#D9D9D9"/>
+<rect y="4" width="1" height="1" fill="#D9D9D9"/>
+<rect y="8" width="1" height="1" fill="#D9D9D9"/>
+<rect y="12" width="2" height="2" fill="#D9D9D9"/>
+<rect x="4" width="1" height="1" fill="#D9D9D9"/>
+<rect x="4" y="4" width="1" height="1" fill="#D9D9D9"/>
+<rect x="4" y="8" width="2" height="2" fill="#D9D9D9"/>
+<rect x="4" y="12" width="1" height="1" fill="#D9D9D9"/>
+<rect x="8" width="1" height="1" fill="#D9D9D9"/>
+<rect x="8" y="4" width="2" height="2" fill="#D9D9D9"/>
+<rect x="8" y="8" width="1" height="1" fill="#D9D9D9"/>
+<rect x="8" y="12" width="1" height="1" fill="#D9D9D9"/>
+<rect x="12" width="2" height="2" fill="#D9D9D9"/>
+<rect x="12" y="4" width="1" height="1" fill="#D9D9D9"/>
+<rect x="12" y="8" width="1" height="1" fill="#D9D9D9"/>
+<rect x="12" y="12" width="1" height="1" fill="#D9D9D9"/>
+</g>
+<use xlink:href="#pattern0_2437_1122_inner" transform="translate(-8 16)"/>
+<use xlink:href="#pattern0_2437_1122_inner" transform="translate(8 16)"/>
+</pattern><pattern id="pattern1_2437_1122" patternUnits="userSpaceOnUse" patternTransform="matrix(11.3137 0 0 11.3137 106.186 51.1863)" preserveAspectRatio="none" viewBox="-0.00074482 0 11.3137 11.3137" width="1" height="1">
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(-22.6274 -22.6274)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(-11.3137 -22.6274)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(0 -22.6274)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(-22.6274 -11.3137)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(-11.3137 -11.3137)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(0 -11.3137)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(-22.6274 0)"/>
+<use xlink:href="#pattern1_2437_1122_inner" transform="translate(-11.3137 0)"/>
+<g id="pattern1_2437_1122_inner">
+<g clip-path="url(#clip1_2437_1122)">
+<rect x="11.3137" width="1" height="16" transform="rotate(45 11.3137 0)" fill="#D9D9D9"/>
+<rect x="14.1418" y="2.82861" width="1" height="16" transform="rotate(45 14.1418 2.82861)" fill="#D9D9D9"/>
+<rect x="16.97" y="5.65674" width="1" height="16" transform="rotate(45 16.97 5.65674)" fill="#D9D9D9"/>
+<rect x="19.7981" y="8.48535" width="1" height="16" transform="rotate(45 19.7981 8.48535)" fill="#D9D9D9"/>
+</g>
+</g>
+</pattern><clipPath id="clip1_2437_1122">
+<rect width="16" height="16" fill="white" transform="translate(11.3137) rotate(45)"/>
+</clipPath>
+</defs>
+</svg>

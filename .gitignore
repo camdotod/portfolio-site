@@ -1,3 +1,8 @@
 #Ignore Archive Folder
 site-version-archive/
 **/node_modules
+tailwind.config.js
+esling.config.js
+package-lock.json
+package.json
+.prettierrc.json

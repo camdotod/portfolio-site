@@ -131,4 +131,3 @@ function watchTabs(tabs, btns) {
 watchTabs(K1Tabs, K1Btns);
 watchTabs(K2Tabs, K2Btns);
 watchTabs(K3Tabs, K3Btns);
-watchTabs(FCTabs, FCBtns);

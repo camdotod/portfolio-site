@@ -1,4 +1,4 @@
-# Personal Portfolio Site
+# Portfolio Site
 Repository for my personal website: [camrynodonnell.com](https://camrynodonnell.com)
 
 ## Made with:

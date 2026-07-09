@@ -91,7 +91,7 @@ export const projects = [
     ],
   },
   {
-    name: "Foldable Therapy Space",
+    name: "Fold-up Therapy Space",
     year: "2023",
     date: "September 2022–April 2023",
     tools: "SolidWorks, Keyshot, InDesign, Illustrator",
@@ -111,13 +111,13 @@ export const projects = [
 
     alt: [
       "A client and a therapist sitting in a room facing one another. They are surrounded by foldable therapy tiles, which are stacked using interlocking slots to create a space divider around them.",
-      "A rendering of the foldable therapy tiles set up in a room. The background looks like it is sketched-in. Overlayed on the rendering is a series of circles radiating from the center of the image. Around the circumference of the circle are 3 labels with icons: “privacy” with an icon of window blinds, “comfort” with an icon of a couch, and “ownership” with an icon of a person inside a circle.",
+      "A rendering of the fold-up therapy tiles set up in a room. The background looks like it is sketched-in. Overlayed on the rendering is a series of circles radiating from the center of the image. Around the circumference of the circle are 3 labels with icons: “privacy” with an icon of window blinds, “comfort” with an icon of a couch, and “ownership” with an icon of a person inside a circle.",
     ],
 
     caption: [
       "The product is a portable, modular, and customizable system of interlocking tiles, made from recycled PET board.",
       "In a place like a soundproof meeting room or doctor’s office, the boundary created by the tiles dispels the sense of exposure and austerity that previously prevented therapists & clients from feeling comfortable in these spaces.",
-      "Therapists can easily transport and set-up the foldable therapy space, allowing it to fit seamlessly into their busy schedules.",
+      "Therapists can easily transport and set-up the fold-up therapy space, allowing it to fit seamlessly into their busy schedules.",
     ],
   },
 

@@ -280,7 +280,7 @@ function watchTiles() {
       return prj.name === projectName;
     })[0];
 
-    if (projectName == "LiUNA Dues Dashboard") {
+    if (projectName == "Dues Dashboard") {
       replaceClass(caseStudyLink, "hidden", "flex");
     } else {
       replaceClass(caseStudyLink, "flex", "hidden");

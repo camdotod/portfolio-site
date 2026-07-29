@@ -1067,6 +1067,9 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .outline-bg-color {
+    outline-color: rgb(var(--backgroundColor)/1);
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }

@@ -83,7 +83,7 @@
             Sort By:
           </legend>
           <div
-            class="flex flex-1 justify-center px-6 text-fg-color/80 hover:bg-calm-100/50 hover:underline active:bg-fg-color/5 active:text-fg-color has-checked:bg-calm-100 has-checked:text-fg-color dark:hover:bg-calm-900/50 dark:has-checked:bg-calm-900"
+            class="flex flex-1 justify-center text-fg-color/80 focus-within:bg-calm-100/50 focus-within:underline hover:bg-calm-100/50 hover:underline active:bg-fg-color/5 active:text-fg-color has-checked:bg-calm-100 has-checked:text-fg-color dark:focus-within:bg-calm-900/50 dark:hover:bg-calm-900/50 dark:has-checked:bg-calm-900"
           >
             <input
               id="date-sort"
@@ -94,14 +94,14 @@
             <label
               for="date-sort"
               id="date-sort-label"
-              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+              class="peer -checked:underline flex h-10 grow items-center justify-center px-6 underline-offset-2"
               tabindex="0"
             >
               Date
             </label>
           </div>
           <div
-            class="flex flex-1 justify-center px-6 text-fg-color/80 hover:bg-calm-100/50 hover:underline active:bg-fg-color/5 active:text-fg-color has-checked:bg-calm-100 has-checked:text-fg-color dark:hover:bg-calm-900/50 dark:has-checked:bg-calm-900"
+            class="flex flex-1 justify-center text-fg-color/80 focus-within:bg-calm-100/50 focus-within:underline hover:bg-calm-100/50 hover:underline active:bg-fg-color/5 active:text-fg-color has-checked:bg-calm-100 has-checked:text-fg-color dark:focus-within:bg-calm-900/50 dark:hover:bg-calm-900/50 dark:has-checked:bg-calm-900"
           >
             <input
               id="tags-sort"
@@ -113,7 +113,7 @@
               for="tags-sort"
               id="tags-sort-label"
               tabindex="0"
-              class="flex h-10 grow items-center justify-center underline-offset-2 peer-checked:underline"
+              class="flex h-10 grow items-center justify-center px-6 underline-offset-2 peer-checked:underline"
             >
               Tags
             </label>
@@ -281,7 +281,8 @@
             <a
               id="case-study-link"
               href="portfolio/Dues_Dashboard.html"
-              class="flex shrink-0 justify-center self-stretch bg-calm-600 py-4 font-display text-bg-color underline decoration-bg-color/50 underline-offset-2 hover:decoration-bg-color active:bg-calm-600/90 dark:text-fg-color dark:decoration-fg-color/50 dark:hover:decoration-fg-color"
+              class="flex shrink-0 justify-center self-stretch bg-calm-600 py-4 font-display text-bg-color underline decoration-bg-color/50 underline-offset-2 hover:decoration-bg-color focus-visible:decoration-bg-color active:bg-calm-600/90 dark:text-fg-color dark:decoration-fg-color/50 dark:hover:decoration-fg-color dark:focus-visible:decoration-fg-color"
+              tabindex="0"
             >
               Read the case study &rarr;
             </a>

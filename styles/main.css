@@ -1146,6 +1146,21 @@
     --tw-content: " →";
     content: var(--tw-content);
   }
+  .focus-within\:bg-calm-100\/50:focus-within {
+    background-color: color-mix(in srgb, oklch(97.8% 0.031779 196.6) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-calm-100) 50%, transparent);
+    }
+  }
+  .focus-within\:bg-vigor-100\/50:focus-within {
+    background-color: color-mix(in srgb, oklch(97% 0.014911 356.6) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-vigor-100) 50%, transparent);
+    }
+  }
+  .focus-within\:underline:focus-within {
+    text-decoration-line: underline;
+  }
   @media (hover: hover) {
     .hover\:rotate-0:hover {
       rotate: 0deg;
@@ -1199,6 +1214,14 @@
     .hover\:bg-vigor-100:hover {
       background-color: var(--color-vigor-100);
     }
+    .hover\:bg-vigor-100\/50:hover {
+      background-color: color-mix(in srgb, oklch(97% 0.014911 356.6) 50%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-vigor-100\/50:hover {
+        background-color: color-mix(in oklab, var(--color-vigor-100) 50%, transparent);
+      }
+    }
     .hover\:underline:hover {
       text-decoration-line: underline;
     }
@@ -1207,6 +1230,12 @@
     }
     .hover\:decoration-fg-color:hover {
       text-decoration-color: rgb(var(--textColor)/1);
+    }
+  }
+  .focus-visible\:bg-calm-100\/50:focus-visible {
+    background-color: color-mix(in srgb, oklch(97.8% 0.031779 196.6) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-calm-100) 50%, transparent);
     }
   }
   .focus-visible\:bg-calm-600\/20:focus-visible {
@@ -1220,6 +1249,12 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, rgb(var(--textColor)/1) 5%, transparent);
     }
+  }
+  .focus-visible\:underline:focus-visible {
+    text-decoration-line: underline;
+  }
+  .focus-visible\:decoration-bg-color:focus-visible {
+    text-decoration-color: rgb(var(--backgroundColor)/1);
   }
   .focus-visible\:decoration-fg-color:focus-visible {
     text-decoration-color: rgb(var(--textColor)/1);
@@ -1315,6 +1350,9 @@
   }
   .has-checked\:bg-calm-100:has(:checked) {
     background-color: var(--color-calm-100);
+  }
+  .has-checked\:bg-vigor-100:has(:checked) {
+    background-color: var(--color-vigor-100);
   }
   .has-checked\:py-4:has(:checked) {
     padding-block: calc(var(--spacing) * 4);
@@ -1788,6 +1826,18 @@
       --tw-invert: invert(60%);
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
     }
+    .dark\:focus-within\:bg-calm-900\/50:focus-within {
+      background-color: color-mix(in srgb, oklch(27% 0.176145 265.1) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-calm-900) 50%, transparent);
+      }
+    }
+    .dark\:focus-within\:bg-vigor-900\/50:focus-within {
+      background-color: color-mix(in srgb, oklch(27.1% 0.107507 26.6) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-vigor-900) 50%, transparent);
+      }
+    }
     @media (hover: hover) {
       .dark\:hover\:bg-calm-900:hover {
         background-color: var(--color-calm-900);
@@ -1806,9 +1856,20 @@
       .dark\:hover\:bg-vigor-900:hover {
         background-color: var(--color-vigor-900);
       }
+      .dark\:hover\:bg-vigor-900\/50:hover {
+        background-color: color-mix(in srgb, oklch(27.1% 0.107507 26.6) 50%, transparent);
+      }
+      @supports (color: color-mix(in lab, red, red)) {
+        .dark\:hover\:bg-vigor-900\/50:hover {
+          background-color: color-mix(in oklab, var(--color-vigor-900) 50%, transparent);
+        }
+      }
       .dark\:hover\:decoration-fg-color:hover {
         text-decoration-color: rgb(var(--textColor)/1);
       }
+    }
+    .dark\:focus-visible\:decoration-fg-color:focus-visible {
+      text-decoration-color: rgb(var(--textColor)/1);
     }
     .dark\:active\:bg-calm-900\/50:active {
       background-color: color-mix(in srgb, oklch(27% 0.176145 265.1) 50%, transparent);
@@ -1833,6 +1894,9 @@
     }
     .dark\:has-checked\:bg-calm-900:has(:checked) {
       background-color: var(--color-calm-900);
+    }
+    .dark\:has-checked\:bg-vigor-900:has(:checked) {
+      background-color: var(--color-vigor-900);
     }
   }
   @layer theme, base, components, utilities;

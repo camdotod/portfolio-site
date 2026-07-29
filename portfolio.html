@@ -50,7 +50,7 @@
     />
   </head>
 
-  <body class="text-fg-color bg-bg-color font-sans">
+  <body class="bg-bg-color font-sans text-fg-color">
     <header>
       <noscript
         >JavaScript must be enabled for this content to display</noscript
@@ -60,7 +60,7 @@
     <!--Projects Header-->
     <h1
       id="page-title"
-      class="font-display px-6 font-medium md:px-60 md:text-xl"
+      class="px-6 font-display font-medium md:px-60 md:text-xl"
     >
       Portfolio
     </h1>
@@ -74,16 +74,16 @@
       >
         <fieldset
           id="filters"
-          class="border-fg-color/50 divide-fg-color/50 font-display relative mt-8 flex h-fit w-full grow-0 divide-x border lg:w-fit lg:flex-col lg:divide-x-0 lg:divide-y"
+          class="relative mt-8 flex h-fit w-full grow-0 divide-x divide-fg-color/50 border border-fg-color/50 font-display lg:w-fit lg:flex-col lg:divide-x-0 lg:divide-y"
           role="radiogroup"
         >
           <legend
-            class="font-display absolute -top-8 border-0 text-sm font-medium"
+            class="absolute -top-8 border-0 font-display text-sm font-medium"
           >
             Sort By:
           </legend>
           <div
-            class="has-checked:bg-calm-100 hover:bg-calm-100/50 dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 text-fg-color/80 has-checked:text-fg-color active:text-fg-color active:bg-fg-color/5 flex flex-1 justify-center px-6 hover:underline"
+            class="flex flex-1 justify-center px-6 text-fg-color/80 hover:bg-calm-100/50 hover:underline active:bg-fg-color/5 active:text-fg-color has-checked:bg-calm-100 has-checked:text-fg-color dark:hover:bg-calm-900/50 dark:has-checked:bg-calm-900"
           >
             <input
               id="date-sort"
@@ -101,7 +101,7 @@
             </label>
           </div>
           <div
-            class="has-checked:bg-calm-100 text-fg-color/80 hover:bg-calm-100/50 has-checked:text-fg-color active:text-fg-color dark:has-checked:bg-calm-900 dark:hover:bg-calm-900/50 active:bg-fg-color/5 flex flex-1 justify-center px-6 hover:underline"
+            class="flex flex-1 justify-center px-6 text-fg-color/80 hover:bg-calm-100/50 hover:underline active:bg-fg-color/5 active:text-fg-color has-checked:bg-calm-100 has-checked:text-fg-color dark:hover:bg-calm-900/50 dark:has-checked:bg-calm-900"
           >
             <input
               id="tags-sort"
@@ -130,25 +130,25 @@
     <!-- Modal -->
     <article
       id="modal-overlay"
-      class="bg-hatch-light dark:bg-hatch-dark bg-bg-color/50 fixed top-0 left-0 z-20 hidden h-lvh w-lvw lg:px-40 lg:py-8"
+      class="fixed top-0 left-0 z-20 hidden h-lvh w-lvw bg-bg-color/50 bg-hatch-light lg:px-40 lg:py-8 dark:bg-hatch-dark"
       tabindex="-1"
       aria-labelledby="modal-title"
       aria-modal="true"
     >
       <div
         id="project-modal"
-        class="bg-bg-color divide-fg-color/80 flex h-svh w-svw touch-none flex-col divide-y overflow-hidden shadow-2xl lg:h-auto lg:w-full lg:touch-auto lg:self-stretch lg:border"
+        class="flex h-svh w-svw touch-none flex-col divide-y divide-fg-color/80 overflow-hidden bg-bg-color shadow-2xl lg:h-auto lg:w-full lg:touch-auto lg:self-stretch lg:border"
       >
         <!-- Project Header-->
         <div
-          class="font-display flex shrink-0 items-center self-stretch border-b-3 border-double px-6 pt-8 pb-3 text-2xl lg:pt-4 lg:pb-2"
+          class="flex shrink-0 items-center self-stretch border-b-3 border-double px-6 pt-8 pb-3 font-display text-2xl lg:pt-4 lg:pb-2"
         >
           <!-- Title -->
           <h2 id="modal-title" class="grow">[Project Name Placeholder]</h2>
           <!-- Close Button -->
           <button
             id="close-button"
-            class="active:bg-fg-color/10 flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-2xl active:opacity-80"
+            class="flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-2xl active:bg-fg-color/10 active:opacity-80"
             aria-label="Close project details"
             tabindex="0"
           >
@@ -162,11 +162,11 @@
         <!-- Project Details-->
         <div
           id="modal-details"
-          class="divide-fg-color/50 flex items-baseline gap-3 divide-x self-stretch px-6"
+          class="flex items-baseline gap-3 divide-x divide-fg-color/50 self-stretch px-6"
         >
           <div
             id="modal-tags"
-            class="divide-fg-color/20 font-display block flex-1 divide-x truncate py-1 text-sm"
+            class="block flex-1 divide-x divide-fg-color/20 truncate py-1 font-display text-sm"
           >
             Tags
           </div>
@@ -180,7 +180,7 @@
           <!-- Modal Description -->
           <section
             id="modal-description"
-            class="divide-fg-color/30 text-fg-color/80 border-fg-color/50 flex h-fit flex-col divide-y self-stretch overflow-hidden xl:h-auto xl:flex-1"
+            class="flex h-fit flex-col divide-y divide-fg-color/30 self-stretch overflow-hidden border-fg-color/50 text-fg-color/80 xl:h-auto xl:flex-1"
           >
             <!-- Summary -->
             <p id="modal-desc" class="grow p-6 xl:flex-2 xl:self-stretch">
@@ -190,11 +190,11 @@
             <!-- Image 1 Desc -->
             <div
               id="caption-1"
-              class="hover:bg-fg-color/5 flex min-h-10 flex-col self-stretch xl:gap-1"
+              class="flex min-h-10 flex-col self-stretch hover:bg-fg-color/5 xl:gap-1"
               aria-flowto="project-image-1"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                class="group block grow self-stretch border-fg-color px-6 py-3 not-has-checked:cursor-pointer not-has-checked:overflow-hidden not-has-checked:bg-hatch not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
                 onClick="window.location='#project-image-1';"
                 role="caption"
               >
@@ -206,7 +206,7 @@
                   checked
                 />
                 <p
-                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                  class="inline font-display text-sm font-medium text-fg-color opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
                 >
                   1.
                 </p>
@@ -221,11 +221,11 @@
             <!-- Image 2 Desc -->
             <div
               id="caption-2"
-              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:gap-1"
+              class="flex min-h-10 shrink flex-col self-stretch overflow-hidden hover:bg-fg-color/5 xl:gap-1"
               aria-flowto="project-image-2"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                class="group block grow self-stretch border-fg-color px-6 py-3 not-has-checked:cursor-pointer not-has-checked:overflow-hidden not-has-checked:bg-hatch not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
                 onClick="window.location='#project-image-2';"
                 role="caption"
               >
@@ -236,7 +236,7 @@
                   aria-hidden="true"
                 />
                 <p
-                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                  class="inline font-display text-sm font-medium text-fg-color opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
                 >
                   2.
                 </p>
@@ -251,11 +251,11 @@
             <!-- Image 3 Desc -->
             <div
               id="caption-3"
-              class="hover:bg-fg-color/5 flex min-h-10 shrink flex-col self-stretch overflow-hidden xl:gap-1"
+              class="flex min-h-10 shrink flex-col self-stretch overflow-hidden hover:bg-fg-color/5 xl:gap-1"
               aria-flowto="project-image-3"
             >
               <label
-                class="group not-has-checked:bg-hatch border-fg-color block grow self-stretch px-6 py-3 not-has-checked:overflow-hidden not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
+                class="group block grow self-stretch border-fg-color px-6 py-3 not-has-checked:cursor-pointer not-has-checked:overflow-hidden not-has-checked:bg-hatch not-has-checked:text-ellipsis not-has-checked:whitespace-nowrap has-checked:border-l-4 has-checked:py-4"
                 onClick="window.location='#project-image-3';"
                 role="caption"
               >
@@ -266,7 +266,7 @@
                   aria-hidden="true"
                 />
                 <p
-                  class="text-fg-color font-display inline text-sm font-medium opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
+                  class="inline font-display text-sm font-medium text-fg-color opacity-60 group-hover:opacity-100 peer-checked:opacity-100"
                 >
                   3.
                 </p>
@@ -281,7 +281,7 @@
             <a
               id="case-study-link"
               href="portfolio/Dues_Dashboard.html"
-              class="bg-calm-600 text-bg-color dark:text-fg-color active:bg-calm-600/90 decoration-bg-color/50 dark:decoration-fg-color/50 hover:decoration-bg-color dark:hover:decoration-fg-color font-display flex shrink-0 justify-center self-stretch py-4 underline underline-offset-2"
+              class="flex shrink-0 justify-center self-stretch bg-calm-600 py-4 font-display text-bg-color underline decoration-bg-color/50 underline-offset-2 hover:decoration-bg-color active:bg-calm-600/90 dark:text-fg-color dark:decoration-fg-color/50 dark:hover:decoration-fg-color"
             >
               Read the case study &rarr;
             </a>
@@ -289,7 +289,7 @@
           <!-- Modal Carousel-->
           <div
             id="modal-carousel"
-            class="carousel bg-hatch relative flex flex-1 snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll border xl:flex-3"
+            class="carousel relative flex flex-1 snap-x snap-mandatory gap-0 self-stretch overflow-x-scroll border bg-hatch xl:flex-3"
             role="region"
             aria-label="Gallery"
           >
@@ -309,7 +309,7 @@
               role="figure"
               aria-labelledby="caption-2"
             >
-              <img class="flex-1 self-stretch object-cover" src="" alt="" />
+              <img class="flex-1 self-stretch object-contain" src="" alt="" />
             </div>
             <div
               id="project-image-3"

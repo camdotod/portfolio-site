@@ -53,57 +53,28 @@ function addHeader() {
   }
 
   header.innerHTML = `
-<nav
-        id="nav-bar"
-        class="relative inline-block w-full gap-4 lg:flex lg:flex-row lg:items-end lg:justify-between lg:gap-8 xl:gap-12"
-      >
-        <div
-          id="nav-header"
-          class="flex self-stretch px-6 pt-8 pb-6 md:pr-60 md:pl-60 lg:pr-0"
-        >
-          <a
-            id="link-landing-page"
-            class="mr-auto flex gap-4 text-4xl active:opacity-80 rounded-xl overflow-clip"
-            href="/"
-            tabindex="0"
-            aria-label="Back to home page"
-          >
-            <img
-              src="/assets/CO-logo.png"
-              class="aspect-square h-10 w-10 shrink-0 "
-              aria-hidden
-            />
-          </a>
-          <button
-            id="menu-button"
-            class="active:bg-fg-color/10 h-10 w-10 rounded-2xl active:opacity-80 lg:hidden"
-            aria-label="Open Menu"
-          >
-            <span id="menu-button-icon" class="material-symbols-outlined align-middle"
-              >menu</span
-            >
-          </button>
-        </div>
-        <div
-          id="nav-links"
-          class="bg-bg-color z-10 font-display absolute w-full flex-col border-t border-b px-6 py-6 md:pr-60 md:pl-60 lg:relative lg:flex lg:w-auto lg:flex-row lg:gap-6 lg:border-0 lg:py-0 lg:pb-6 lg:pl-0 hidden"
-        >
-          <a
-            id="link-portfolio"
-            class="focus-visible:outline-fg-color flex h-10 w-fit items-center underline underline-offset-2 decoration-fg-color/50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-solid active:opacity-80 hover:decoration-fg-color active:decoration-fg-color"
-            href="${folder}/portfolio.html"
-            tabindex="0"
-            ><span>portfolio</span></a
-          >
-          <a
-            id="link-about"
-            class="focus-visible:outline-fg-color flex h-10 w-fit items-center underline underline-offset-2 decoration-fg-color/50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-solid active:opacity-80 hover:decoration-fg-color active:decoration-fg-color"
-            href="${folder}/about.html"
-            tabindex="0"
-            ><span>about</span></a
-          >
-        </div>
-        </nav>
+  <nav id="nav-bar"
+  class="relative inline-block w-full gap-4 lg:flex lg:flex-row lg:items-end lg:justify-between lg:gap-8 xl:gap-12">
+    <div id="nav-header" class="flex self-stretch px-6 pt-8 pb-6 md:pr-60 md:pl-60 lg:pr-0">
+      <a id="link-landing-page" class="mr-auto flex gap-4 text-4xl active:opacity-80 rounded-xl overflow-clip" href="/"
+        tabindex="0" aria-label="Back to home page">
+        <img src="/assets/CO-logo.png" class="aspect-square h-10 w-10 shrink-0 " aria-hidden />
+      </a>
+      <button id="menu-button" class="active:bg-fg-color/10 h-10 w-10 rounded-2xl active:opacity-80 lg:hidden"
+        aria-label="Open Menu">
+        <span id="menu-button-icon" class="material-symbols-outlined align-middle">menu</span>
+      </button>
+    </div>
+    <div id="nav-links"
+      class="bg-bg-color z-10 font-display absolute w-full flex-col border-t border-b px-6 py-6 md:pr-60 md:pl-60 lg:relative lg:flex lg:w-auto lg:flex-row lg:gap-6 lg:border-0 lg:py-0 lg:pb-6 lg:pl-0 hidden">
+      <a id="link-portfolio"
+        class="focus-visible:outline-fg-color flex h-10 w-fit items-center underline underline-offset-2 decoration-fg-color/50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-solid active:opacity-80 hover:decoration-fg-color focus-visible:decoration-fg-color rounded-xl active:decoration-fg-color"
+        href="${folder}/portfolio.html" tabindex="0"><span>portfolio</span></a>
+      <a id="link-about"
+        class="focus-visible:outline-fg-color flex h-10 w-fit items-center underline underline-offset-2 decoration-fg-color/50 focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-solid active:opacity-80 hover:decoration-fg-color focus-visible:decoration-fg-color rounded-xl active:decoration-fg-color"
+        href="${folder}/about.html" tabindex="0"><span>about</span></a>
+    </div>
+</nav>
 `;
 
   if (url.indexOf("portfolio.html") > -1) {

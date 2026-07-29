@@ -1221,6 +1221,9 @@
       background-color: color-mix(in oklab, rgb(var(--textColor)/1) 5%, transparent);
     }
   }
+  .focus-visible\:decoration-fg-color:focus-visible {
+    text-decoration-color: rgb(var(--textColor)/1);
+  }
   .focus-visible\:outline-1:focus-visible {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;

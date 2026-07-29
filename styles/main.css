@@ -1169,6 +1169,14 @@
         background-color: color-mix(in oklab, var(--color-calm-100) 50%, transparent);
       }
     }
+    .hover\:bg-calm-600\/20:hover {
+      background-color: color-mix(in srgb, oklch(47% 0.25462 267.7) 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-calm-600\/20:hover {
+        background-color: color-mix(in oklab, var(--color-calm-600) 20%, transparent);
+      }
+    }
     .hover\:bg-fg-color\/5:hover {
       background-color: rgb(var(--textColor)/1);
     }
@@ -1179,6 +1187,14 @@
     }
     .hover\:bg-fresh-100:hover {
       background-color: var(--color-fresh-100);
+    }
+    .hover\:bg-grit-600\/20:hover {
+      background-color: color-mix(in srgb, oklch(47% 0.136952 40.5) 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-grit-600\/20:hover {
+        background-color: color-mix(in oklab, var(--color-grit-600) 20%, transparent);
+      }
     }
     .hover\:bg-vigor-100:hover {
       background-color: var(--color-vigor-100);
@@ -1191,6 +1207,12 @@
     }
     .hover\:decoration-fg-color:hover {
       text-decoration-color: rgb(var(--textColor)/1);
+    }
+  }
+  .focus-visible\:bg-calm-600\/20:focus-visible {
+    background-color: color-mix(in srgb, oklch(47% 0.25462 267.7) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-calm-600) 20%, transparent);
     }
   }
   .focus-visible\:bg-fg-color\/5:focus-visible {
@@ -1227,6 +1249,9 @@
       background-color: color-mix(in oklab, var(--color-calm-100) 50%, transparent);
     }
   }
+  .active\:bg-calm-600:active {
+    background-color: var(--color-calm-600);
+  }
   .active\:bg-calm-600\/90:active {
     background-color: color-mix(in srgb, oklch(47% 0.25462 267.7) 90%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1251,14 +1276,26 @@
       background-color: color-mix(in oklab, var(--color-fresh-100) 50%, transparent);
     }
   }
+  .active\:bg-grit-600:active {
+    background-color: var(--color-grit-600);
+  }
   .active\:bg-vigor-100\/50:active {
     background-color: color-mix(in srgb, oklch(97% 0.014911 356.6) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-vigor-100) 50%, transparent);
     }
   }
+  .active\:bg-vigor-600:active {
+    background-color: var(--color-vigor-600);
+  }
+  .active\:text-bg-color:active {
+    color: rgb(var(--backgroundColor)/1);
+  }
   .active\:text-fg-color:active {
     color: rgb(var(--textColor)/1);
+  }
+  .active\:decoration-bg-color:active {
+    text-decoration-color: rgb(var(--backgroundColor)/1);
   }
   .active\:decoration-fg-color:active {
     text-decoration-color: rgb(var(--textColor)/1);
@@ -1787,6 +1824,9 @@
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-vigor-900) 50%, transparent);
       }
+    }
+    .dark\:active\:text-fg-color:active {
+      color: rgb(var(--textColor)/1);
     }
     .dark\:has-checked\:bg-calm-900:has(:checked) {
       background-color: var(--color-calm-900);

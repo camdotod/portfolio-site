@@ -54,7 +54,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-bg-color text-fg-color flex flex-col bg-white font-sans">
+  <body class="bg-white flex flex-col bg-bg-color font-sans text-fg-color">
     <header id="header">
       <noscript>Your browser does not support JavaScript</noscript>
     </header>
@@ -63,7 +63,7 @@
         <h1 class="font-display font-medium md:text-xl">Camryn O'Donnell</h1>
         <div id="titles" class="flex flex-col gap-2">
           <p
-            class="text-calm-600 dark:text-calm-400 font-display text-xl underline decoration-wavy decoration-1 underline-offset-4"
+            class="font-display text-xl text-calm-600 underline decoration-wavy decoration-1 underline-offset-4 dark:text-calm-400"
           >
             multidisciplinary designer
           </p>
@@ -74,24 +74,15 @@
       </div>
       <section
         id="recent-projects"
-        class="border-fg-color/50 flex flex-col border-b lg:min-h-1/2"
+        class="flex flex-col border-b border-fg-color/50 lg:min-h-1/2"
       >
         <div
           id="featured-projects-banner"
-          class="bg-hatch flex items-center justify-between self-stretch px-6 md:px-60"
+          class="flex items-center justify-between self-stretch bg-hatch px-6 md:px-60"
         >
-          <h2 class="font-display text-xl font-medium">Featured Project:</h2>
-          <a
-            id="see-more-button"
-            href="portfolio.html"
-            class="-mr-2 flex items-center"
-          >
-            <p
-              class="font-display decoration-fg-color/50 hover:decoration-fg-color active:decoration-fg-color after:content-rarrow px-2 py-4 font-medium underline underline-offset-2"
-            >
-              See more
-            </p>
-          </a>
+          <h2 class="py-4 font-display text-xl font-medium">
+            Featured Project
+          </h2>
         </div>
         <div
           id="recent-projects-carousel"
@@ -100,12 +91,12 @@
           <a
             href="portfolio/Dues_Dashboard.html"
             id="project-1"
-            class="group hover:bg-fg-color/5 focus-visible:bg-fg-color/5 active:bg-fg-color/5 flex w-full shrink-0 grow snap-center flex-col-reverse self-stretch lg:flex-row"
+            class="group flex w-full shrink-0 grow snap-center flex-col-reverse self-stretch hover:bg-fg-color/5 focus-visible:bg-fg-color/5 active:bg-fg-color/5 lg:flex-row"
             aria-labelledby="project-title-1"
             tabindex="0"
           >
             <div
-              class="border-fg-color/50 flex flex-col justify-center gap-4 self-stretch border-t px-6 pt-5 pb-6 md:px-60 lg:flex-1 lg:pr-10 xl:gap-6"
+              class="flex flex-col justify-center gap-4 self-stretch border-t border-fg-color/50 px-6 pt-5 pb-6 md:px-60 lg:flex-1 lg:pr-10 xl:gap-6"
             >
               <h3
                 id="project-title-1"
@@ -115,7 +106,7 @@
               </h3>
               <p
                 id="description-1"
-                class="text-fg-color/60 line-clamp-3 max-w-xl text-sm xl:text-base"
+                class="line-clamp-3 max-w-xl text-sm text-fg-color/60 xl:text-base"
               >
                 When working within a large organization, it can feel impossible
                 to solve day-to-day issues because they’re often tied up in the
@@ -125,7 +116,7 @@
                 miscommunication.
               </p>
               <p
-                class="text-grit-600 dark:text-grit-400 bg-grit-100 dark:bg-grit-900 block w-fit rounded-lg px-1.5 py-0.75 text-sm"
+                class="block w-fit rounded-lg bg-grit-100 px-1.5 py-0.75 text-sm text-grit-600 dark:bg-grit-900 dark:text-grit-400"
               >
                 UX/UI Design
               </p>
@@ -137,13 +128,21 @@
                 class="aspect-square w-full object-cover object-[75%_50%] group-hover:opacity-90 group-focus-visible:opacity-90 md:aspect-auto"
               />
               <p
-                class="bg-fg-color text-bg-color font-display absolute bottom-0 left-0 px-6 py-1 font-medium lg:top-0 lg:bottom-auto"
+                class="absolute bottom-0 left-0 bg-fg-color px-6 py-1 font-display font-medium text-bg-color lg:top-0 lg:bottom-auto"
               >
                 Case Study
               </p>
             </div>
           </a>
         </div>
+        <a
+          id="case-study-link"
+          href="portfolio.html"
+          class="dark:active:text-fg-coutline-bg-color z-10 flex shrink-0 justify-center self-stretch border-t border-fg-color/50 py-4 font-display text-fg-color underline decoration-fg-color/50 underline-offset-2 hover:bg-calm-600/20 hover:decoration-fg-color focus-visible:bg-calm-600/20 active:bg-calm-600 active:text-bg-color active:decoration-bg-color dark:text-fg-color dark:decoration-fg-color/50 dark:hover:decoration-fg-color"
+          tabindex="0"
+        >
+          See more of my work &rarr;
+        </a>
       </section>
       <div id="design-process" class="flex flex-col gap-10 px-6 py-20 md:px-60">
         <h2 class="font-display text-xl italic">About the design process</h2>

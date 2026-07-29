@@ -73,7 +73,7 @@ const addProject = (project, index) => {
         <div class="flex flex-col divide-y divide-fg-color/50 border-t border-fg-color/50">
           <div id="project-title${index}" class="flex px-3 items-baseline pt-3 pb-2 text-2xl gap-6">
             <h2 id="project-name${index}" class="grow">${project.name}</h2>
-            <span class="material-symbols-outlined group-hover:scale-105" aria-hidden="true">open_in_full</span>
+            <span class="material-symbols-outlined group-hover:scale-110" aria-hidden="true">open_in_full</span>
           </div>
           <div
             id="project-details-${index}"

@@ -69,7 +69,7 @@ const addProject = (project, index) => {
   });
 
   projectList.innerHTML += `
-    <article id="portfolio-item-${index}" class="group flex flex-col-reverse border hover:bg-fg-color/5 active:bg-fg-color/5 overflow-hidden hover:border-double hover:border-4 active:border-double active:border-3 font-display cursor-pointer aspect-3/2" tabindex="0" data-name="${project.name}" role='link' aria-labelledby='project-name${index}'">
+    <article id="portfolio-item-${index}" class="group flex flex-col-reverse border hover:bg-fg-color/5 active:bg-fg-color/5 overflow-hidden hover:border-double hover:border-4 active:border-double active:border-3 font-display cursor-pointer aspect-square md:aspect-3/2" tabindex="0" data-name="${project.name}" role='link' aria-labelledby='project-name${index}'">
         <div class="flex flex-col divide-y divide-fg-color/50 border-t border-fg-color/50">
           <div id="project-title${index}" class="flex px-3 items-baseline pt-3 pb-2 text-2xl gap-6">
             <h2 id="project-name${index}" class="grow">${project.name}</h2>
@@ -231,10 +231,10 @@ const observeCarousel = (caption, i) => {
 
 carouselSlides.forEach(observeCarousel);
 
-// Open/Close Modal Functions 
+// Open/Close Modal Functions
 function closeModal() {
   console.log("Closing modal...");
-  
+
   modalIsOpen = false;
   document.title = "Portfolio - Camryn O'Donnell";
   projectIndex.setAttribute("tabindex", 0);

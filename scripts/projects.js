@@ -1,9 +1,11 @@
 //Project "Database"
 export const projects = [
   {
-    name: "LiUNA Dues Dashboard",
+    name: "Dues Dashboard",
     year: "2025",
     date: "January 2025–April 2025",
+    client: "LiUNA Local 1059",
+    product: "Web & mobile application",
     tools: "Figma",
     tags: "UX/UI Design",
 
@@ -31,9 +33,11 @@ export const projects = [
     ],
   },
   {
-    name: "Canadian Tire Kitchenware",
+    name: "Vida By Paderno Kitchenware",
     year: "2022",
     date: "August 2021–August 2022",
+    company: "Canadian Tire",
+    product: "Kitchen appliances & tools",
     tools: "SolidWorks, InDesign, Illustrator, Microsoft Office",
     tags: "Industrial Design",
 
@@ -61,9 +65,10 @@ export const projects = [
     ],
   },
   {
-    name: "Counter-cartography of Housing",
+    name: "Counter-cartography of Housing in Ottawa",
     year: "2023",
     date: "February 2023–April 2023",
+    product: "Workshop & research report",
     tools: "Figma, Illustrator",
     tags: "Design Research,Design Anthropology",
 
@@ -94,6 +99,7 @@ export const projects = [
     name: "Fold-up Therapy Space",
     year: "2023",
     date: "September 2022–April 2023",
+    product: "Office furniture",
     tools: "SolidWorks, Keyshot, InDesign, Illustrator",
     tags: "Design Research,Industrial Design",
 
@@ -125,6 +131,7 @@ export const projects = [
     name: "EARLY Transit App",
     year: "2021",
     date: "September 2021–December 2021",
+    product: "Mobile application",
     tools: "Figma, Miro",
     tags: "UX/UI Design,Design Research",
 
@@ -134,7 +141,7 @@ export const projects = [
       "/assets/Early/LY-img_2.png",
     ],
 
-    imgstyle: "object-left",
+    imgstyle: "object-right md:object-left",
 
     summary:
       "Along with a team, I helped design EARLY, an app to take the stress out of the daily commute for Ottawa transit riders.",

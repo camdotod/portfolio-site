@@ -2,11 +2,9 @@ import { projects } from "./projects.js";
 
 const projectIndex = document.querySelector("main");
 const dateSortBtn = document.getElementById("date-sort");
-const nameSortBtn = document.getElementById("name-sort");
 const tagsSortBtn = document.getElementById("tags-sort");
 const sortOptions = document.querySelectorAll('[name="sort"]');
 const dateSortLabel = document.getElementById("date-sort-label");
-const nameSortLabel = document.getElementById("name-sort-label");
 const tagsSortLabel = document.getElementById("tags-sort-label");
 let projectList = document.getElementById("project-list");
 
@@ -150,22 +148,6 @@ const setSort = (sort) => {
       });
     }
   }
-  // SORTING BY NAME ---
-  else if (sort === "name-sort") {
-    projects.sort(function (a, b) {
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    });
-
-    projects.forEach((project, i) => {
-      addProject(project, i);
-    });
-  }
 };
 
 const handleKeyDown = (key, sort) => {
@@ -191,13 +173,6 @@ tagsSortBtn.addEventListener("click", (e) => {
   console.log("Sorted by tag");
 });
 tagsSortLabel.addEventListener("keydown", (e) =>
-  handleKeyDown(e.code, e.target.id),
-);
-nameSortBtn.addEventListener("click", (e) => {
-  setSort(e.target.id);
-  console.log("Sorted by name");
-});
-nameSortLabel.addEventListener("keydown", (e) =>
   handleKeyDown(e.code, e.target.id),
 );
 dateSortBtn.addEventListener("click", (e) => {

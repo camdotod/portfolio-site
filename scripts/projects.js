@@ -65,6 +65,36 @@ export const projects = [
     ],
   },
   {
+    name: "ManeFrame",
+    year: "2025",
+    date: "July 2024–October 2025",
+    tools: "Figma",
+    tags: "UX/UI Design",
+
+    summary:
+      "Building on existing branding and business goals, I led the UX/UI design for the start-up ManeFrame, a social platform for beauty professionals.",
+
+    img: [
+      "/assets/ManeFrame/MF-img_0.png",
+      "/assets/ManeFrame/MF-img_1.png",
+      "/assets/ManeFrame/MF-img_2.png",
+    ],
+
+    imgstyle: "",
+
+    alt: [
+      "ManeFrame’s app logo and wordmark beside a rendering of a phone showing ManeFrame’s home page on a black background. Going across the background, behind the screen are portraits of people with different hairstyles. The home page shows posts in a timeline/list view. At the top of the page is a “Trending” section which is a carousel of images. The bottom navigation bar shows these tabs from left to right: “Home” with a home icon, “Discover” with a magnifying glass icon, “Post” with a camera icon, “Notifications” with a bell icon, and “Saved” with a bookmark icon. The top of the screen has a header with the following elements going from left to right: a circular image showing the user’s avatar, the ManeFrame wordmark,and  a chat bubble icon. ",
+      "The “Edit Profile” and “Profile” screens.",
+      "A template for a post, with elements labelled with the corresponding components and properties from ManeFrame’s design system.",
+    ],
+
+    caption: [
+      "The app was designed to help beauty professionals build industry connections, learn new skills, and find community.",
+      "Community and life-long learning are priorities for beauty professionals, so it was important to include industry knowledge and give users different ways to express their identities.",
+      "To ensure consistency in branding and implementation, I developed ManeFrame’s design system in collaboration with the developers.",
+    ],
+  },
+  {
     name: "Counter-cartography of Housing in Ottawa",
     year: "2023",
     date: "February 2023–April 2023",

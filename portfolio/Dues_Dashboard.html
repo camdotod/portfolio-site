@@ -629,7 +629,7 @@
 
         <section
           id="section-3"
-          class="flex flex-col gap-10 border-b border-fg-color/20 bg-calm-100/50 py-16 text-fg-color/80 dark:bg-calm-900/50"
+          class="flex flex-col gap-10 border-b border-fg-color/20 py-16 text-fg-color/80"
         >
           <div class="flex flex-col gap-10 px-6 md:px-60">
             <h3
@@ -643,6 +643,25 @@
               being shown to the members.
             </p>
           </div>
+          <figure class="flex flex-col gap-8 md:w-auto"
+            ><figcaption class="px-6 md:px-60"
+              ><h4
+                class="font-display text-xl font-medium text-calm-600 dark:text-calm-400"
+                >Service Blueprint: Getting Information on Arrears Notices</h4
+              ></figcaption
+            >
+            <div
+              class="self-stretch overflow-x-auto overflow-y-hidden md:px-6 lg:px-60"
+            >
+              <div class="flex w-max md:h-auto md:w-auto">
+                <img
+                  class="themed h-100 object-cover px-6 pb-6 md:h-auto md:px-0"
+                  src="/assets/Dues Dashboard/service-blueprint.svg"
+                  alt="A service blueprint showing how members might get information on their arrears notices. It begins with the member being in arrears, prompting a backstage action of automatically sending the arrears notice by mail, using data from the dues application. In 1-2 days, the member receives the notice, which shows which months they missed payments. If they have questions, they might then double check their payment history on the dues dashboard. Backstage, the dues dashboard, which is part of the members' portal, fetches the information from the dues application. This might take 5 minutes. Finally, if their questions still aren't answered, they might call the administrators about the arrears notice. The admin try to help the member by looking up the members payment history in the dues application. This call might take 15 to 20 minutes. The lines connecting what the member portal fetches and displays, and the between the member and admin during the phone call are coloured red and have a warning symbol on them."
+                />
+              </div>
+            </div>
+          </figure>
           <div
             class="gap-6 border-t border-b border-calm-400/20 bg-calm-100 px-6 py-14 md:px-60 dark:border-calm-600/20 dark:bg-calm-900"
           >
@@ -654,6 +673,12 @@
           </div>
 
           <div class="flex flex-col gap-10 px-6 md:px-60">
+            <p class="max-w-xl">
+              Since I was working directly with the developer, this would be the
+              easiest option to implement, and eliminate the need for costly
+              changes and keep the system that the administrators knew best.
+            </p>
+
             <p class="max-w-xl">
               With the information readily available, members wouldn’t have to
               call the office in the first place.
@@ -705,11 +730,6 @@
                 </p>
               </li>
             </ol>
-            <p class="max-w-xl opacity-80">
-              Targeting the dues dashboard instead of the dues application would
-              also eliminate the need for costly changes and keep the system
-              that the administrators knew best.
-            </p>
           </div>
         </section>
 

@@ -1,7 +1,5 @@
 // Images
-const measuringCupImgs = document
-  .querySelector("#q2")
-  .querySelectorAll(".themed");
+const darkModeImgs = document.querySelectorAll(".themed");
 
 //Change elements for dark theme
 const darkModeMql =
@@ -10,6 +8,7 @@ const darkModeMql =
 function replaceDarkImg(img, ext) {
   try {
     let source = img.src.slice(0, img.src.indexOf(ext));
+    console.log(`${source}_dark${ext}`);
     img.src = `${source}_dark${ext}`;
   } catch (error) {
     console.error(error);
@@ -18,8 +17,8 @@ function replaceDarkImg(img, ext) {
 
 if (darkModeMql && darkModeMql.matches) {
   // dark mode
-  measuringCupImgs.forEach((img) => {
-    replaceDarkImg(img, ".png");
+  darkModeImgs.forEach((img) => {
+    replaceDarkImg(img, `.${img.src.split(".").pop()}`);
   });
 } else {
   // light mode
